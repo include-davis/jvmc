@@ -4,6 +4,7 @@ export default function Volunteer() {
     return (
       <main>
         <div>Volunteer</div>
+        {/* VolunteerCard components */}
       </main>
     );
   }
