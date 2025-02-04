@@ -23,8 +23,13 @@
     );
   // use background: var(--rainbow-gradient);
 
+  // Text color
+  --text-black: var(--color-space);
+  --text-green-light: var(--color-green);
+  --text-green-dark: var(--color-green);
+
   // Text sizes
-  --text-title: 3.5rem;
+  --text-title-size: 3.5rem;
   --text-header-1: 3.25rem;
   --text-header-2: 2.25rem;
   --subheading: 1.5rem; 
@@ -33,8 +38,11 @@
   --vertical-card-gap: 100px;
   --card-padding: 60px;
   --rectangle-radius: 20px;
-  --drop-shadow: 0px, 0px, 50px, 0px #adadad; // use box-shadow: var(--drop-shadow);
-  --drop-shadow-green: 0px, 0px, 50px, 0px #1b5e49;
+  --drop-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.35); // For bigger shapes
+  --drop-shadow-green: 0px 0px 50px 0px rgba(171, 220, 207, 0.35); 
+  --drop-shadow-small: 0px 0px 50px 0px rgba(173, 173, 173, 0.25); // For small shapes
+  --drop-shadow-green-small: 0px 0px 50px 0px rgba(171, 220, 207, 0.25);
+  // use box-shadow: var(--drop-shadow);
 
   // font sizes: ALWAYS IN REM
 }
