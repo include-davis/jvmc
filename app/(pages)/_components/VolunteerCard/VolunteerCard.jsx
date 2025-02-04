@@ -1,8 +1,9 @@
 import styles from "./VolunteerCard.module.scss";
 
-export default function VolunteerCard() {
+export default function VolunteerCard({ title, titleIcon, mainText, image, link, linkText }) {
     return (
-      <div>
+      <div className="styles.card">
+        hi
       </div>
     );
 }
