@@ -1,6 +1,9 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .card {
+    display: flex;
+    border: 1px;
+    border-style: solid;
     background-color: white;
-    box-shadow: 10px, 10px, 8px, gray;
+    box-shadow: 10px, 10px, 2px, gray;
 }
