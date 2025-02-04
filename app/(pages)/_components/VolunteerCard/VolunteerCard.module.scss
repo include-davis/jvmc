@@ -1,9 +1,50 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+
+.cardComponent {
+    width: 1040px;
+    border: solid;
+    position: relative;
+    min-height: 350px;
+}
+
 .card {
     display: flex;
-    border: 1px;
-    border-style: solid;
+    width: 952px;
+    min-height: 350px;
+    align-items: center;
     background-color: white;
-    box-shadow: 10px, 10px, 2px, gray;
+    box-shadow: 0 5px 10px rgba(27, 94, 73, 0.1), 0 10px 15px rgba(173, 173, 173, 0.2);
+    border-radius: 20px;
+    padding: 60px 60px;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.cardTitle {
+    border: solid;
+}
+
+.cardBody {
+    border: solid;
+}
+
+.cardLink {
+    border: solid;
+}
+
+.cardImage {
+    border: solid;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
 }
