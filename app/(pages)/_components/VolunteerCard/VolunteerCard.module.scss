@@ -22,13 +22,8 @@
     width: 952px;
     min-height: 350px;
     background-color: white;
-<<<<<<< HEAD
     box-shadow: var(--drop-shadow-green);
     // box-shadow: 0 5px 10px rgba(27, 94, 73, 0.1), 0 10px 15px rgba(173, 173, 173, 0.2);
-=======
-    // box-shadow: var(--drop-shadow-green);
-    box-shadow: 0 5px 10px rgba(27, 94, 73, 0.1), 0 10px 15px rgba(173, 173, 173, 0.2);
->>>>>>> 9e477552327fe2b7281d8936f0cbbb4e57a5b3b5
     border-radius: var(--rectangle-radius);
 }
 
@@ -43,19 +38,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-<<<<<<< HEAD
     row-gap: 30px;
-=======
->>>>>>> 9e477552327fe2b7281d8936f0cbbb4e57a5b3b5
     min-height: 350px;
     max-width: 617px;
     margin-top: var(--card-padding);
     margin-bottom: var(--card-padding);
     font-family: var(--font-inter);
-<<<<<<< HEAD
     color: var(--color-green);
-=======
->>>>>>> 9e477552327fe2b7281d8936f0cbbb4e57a5b3b5
 }
 
 .cardTitle {
@@ -64,21 +53,14 @@
     column-gap: 1rem;
     font-size: var(--subheading);
     font-weight: 700;
-<<<<<<< HEAD
     line-height: 48px;
-=======
-    color: var(--color-space);
->>>>>>> 9e477552327fe2b7281d8936f0cbbb4e57a5b3b5
 }
 
 .icon {
     display: flex;
     align-items: center;
     font-size: 3rem;
-<<<<<<< HEAD
     color: var(--gradient-blue);
-=======
->>>>>>> 9e477552327fe2b7281d8936f0cbbb4e57a5b3b5
 }
 
 .cardBody {
@@ -87,7 +69,6 @@
     line-height: 27px;
 }
 
-<<<<<<< HEAD
 .cardBody ul {
     padding-left: 30px; /* Increase this value for more indentation */
 }
@@ -117,14 +98,6 @@
 
 .cardImage {
     border: solid var(--color-mint);
-=======
-.cardLink {
-    border: solid;
-}
-
-.cardImage {
-    border: solid;
->>>>>>> 9e477552327fe2b7281d8936f0cbbb4e57a5b3b5
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
