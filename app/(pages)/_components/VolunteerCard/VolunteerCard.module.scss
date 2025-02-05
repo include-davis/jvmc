@@ -2,10 +2,20 @@
 
 
 .cardComponent {
+    display: flex;
     width: 1040px;
     border: solid;
     position: relative;
     min-height: 350px;
+}
+
+// Place Image on left or right
+.cardComponent.left {
+    flex-direction: row-reverse;
+}
+
+.cardComponent.right {
+    flex-direction: row;
 }
 
 .card {
@@ -16,7 +26,13 @@
     background-color: white;
     box-shadow: 0 5px 10px rgba(27, 94, 73, 0.1), 0 10px 15px rgba(173, 173, 173, 0.2);
     border-radius: 20px;
+}
+
+.card.right {
     padding: 60px 60px;
+}
+.card.left {
+    padding-left: 322px;
 }
 
 .cardText {
@@ -41,10 +57,17 @@
     border: solid;
     position: absolute;
     top: 50%;
-    right: 0;
     transform: translateY(-50%);
     border-radius: 50%;
     width: 350px;
     height: 350px;
     overflow: hidden;
+}
+
+.cardComponent.left .cardImage {
+    left: 0;
+}
+
+.cardComponent.right .cardImage {
+    right: 0;
 }
