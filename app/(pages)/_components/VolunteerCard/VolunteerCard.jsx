@@ -16,11 +16,7 @@ export default function VolunteerCard({ title, direction, image, altText, icon, 
               {mainText}
             </div>
             <div className={styles.cardLink}>
-<<<<<<< HEAD
               {linkText}
-=======
-              link
->>>>>>> 9e477552327fe2b7281d8936f0cbbb4e57a5b3b5
             </div>
           </div>
         </div>
