@@ -1,6 +1,8 @@
 import styles from './page.module.scss';
 import VolunteerCard from '../_components/VolunteerCard/VolunteerCard';
 import { PiStudent } from "react-icons/pi";
+import { LuStethoscope } from "react-icons/lu";
+import { MdOutlineMedicalServices } from "react-icons/md";
 
 const cards = [
   {
@@ -19,31 +21,47 @@ const cards = [
           <li>Be able to commit to 3 quarters of volunteer work</li>
           <li>Be able to attend our weekly meetings</li>
         </ul>
-        Please email <a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a> with questions about recruitment and/or volunteering. Fill out our interest form if you would like to keep up to date with our recruitment cycle!
+        <br />
+        Please email <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b> with questions about recruitment and/or volunteering. <b>Fill out our interest form if you would like to keep up to date with our recruitment cycle!</b>
       </>
     ),
     link: "",
-    linkText: "",
+    linkText: "Volunteer Form",
   },
   {
-    title: "Undergraduate Students at UC Davis", 
+    title: "Physicians", 
     direction: "left", 
     image: "/images/magpie.png",
     altText: "A magpie",
-    icon: <PiStudent />,
-    mainText: "This is the workshop on React and Next.js. Hope to see you there!",
+    icon: <LuStethoscope />,
+    mainText: (
+      <>
+        To qualify as a physician volunteer with JVMC you must be covered by UC Davis School of Medicine's malpractice insurance.<br/><br/>
+
+        As a UC Davis Physician you are automatically covered!<br/><br/>
+
+        <b>If you are not a part of the UC Davis Health System and would still love to volunteer, please contact us via email!</b>
+
+      </>
+    ),
     link: "",
-    linkText: "",
+    linkText: "Email Us",
   },
   {
-    title: "Undergraduate Students at UC Davis", 
+    title: "Medical Students: MD, PA, & NP Students", 
     direction: "right", 
     image: "/images/magpie.png",
     altText: "A magpie",
-    icon: <PiStudent />,
-    mainText: "This is the workshop on React and Next.js. Hope to see you there!",
+    icon: <MdOutlineMedicalServices />,
+    mainText: (
+      <>
+        If you are looking to volunteer with JVMC as a Medical Students, please arrive at the clinic location at 12:30 PM. Clinic hours are from 1:00 PM-5:00 PM.<br/><br/>
+
+        Please wear a scrub top and jeans or scrub bottoms instead of your white coats to be respectful to our patients. Additionally, please bring your student ID card and a stethoscope to the clinic.
+      </>
+    ),
     link: "",
-    linkText: "",
+    linkText: "Contact Us",
   }, 
 ];
 
