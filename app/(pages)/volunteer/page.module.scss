@@ -1,1 +1,8 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.volunteerCards {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--vertical-card-gap);
+    align-items: center;
+}

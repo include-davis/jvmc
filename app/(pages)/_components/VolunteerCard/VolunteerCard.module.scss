@@ -4,7 +4,6 @@
 .cardComponent {
     display: flex;
     width: 1040px;
-    border: solid;
     position: relative;
     min-height: 350px;
 }
@@ -22,14 +21,14 @@
     display: flex;
     width: 952px;
     min-height: 350px;
-    align-items: center;
     background-color: white;
+    // box-shadow: var(--drop-shadow-green);
     box-shadow: 0 5px 10px rgba(27, 94, 73, 0.1), 0 10px 15px rgba(173, 173, 173, 0.2);
-    border-radius: 20px;
+    border-radius: var(--rectangle-radius);
 }
 
 .card.right {
-    padding: 60px 60px;
+    padding: 0px var(--card-padding);
 }
 .card.left {
     padding-left: 322px;
@@ -38,15 +37,33 @@
 .cardText {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    justify-content: space-between;
+    min-height: 350px;
+    max-width: 617px;
+    margin-top: var(--card-padding);
+    margin-bottom: var(--card-padding);
+    font-family: var(--font-inter);
 }
 
 .cardTitle {
-    border: solid;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-size: var(--subheading);
+    font-weight: 700;
+    color: var(--color-space);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
 }
 
 .cardBody {
-    border: solid;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
 }
 
 .cardLink {

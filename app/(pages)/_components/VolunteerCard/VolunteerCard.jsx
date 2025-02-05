@@ -1,16 +1,19 @@
 import styles from "./VolunteerCard.module.scss";
 import Image from "next/image";
 
-export default function VolunteerCard({ direction, image, titleIcon, title, mainText, link, linkText }) {
+export default function VolunteerCard({ title, direction, image, altText, icon, mainText, link, linkText }) {
     return (
       <div className={`${styles.cardComponent} ${styles[direction]}`}>
         <div className={`${styles.card} ${styles[direction]}`}>
           <div className={styles.cardText}>
             <div className={styles.cardTitle}>
-              Title
+              <div className={styles.icon}>
+                {icon}
+              </div> 
+              {title}
             </div>
             <div className={styles.cardBody}>
-              bodybodybody<br/>bodybodybody<br/>bodybodybody<br/>bodybodybody
+              {mainText}
             </div>
             <div className={styles.cardLink}>
               link
@@ -18,7 +21,7 @@ export default function VolunteerCard({ direction, image, titleIcon, title, main
           </div>
         </div>
         <div className={styles.cardImage}>
-          <Image src="/images/magpie.png" alt="temp" layout="fill" objectFit="cover"/>
+          <Image src={image} alt={altText} layout="fill" objectFit="cover"/>
         </div>
       </div>
     );
