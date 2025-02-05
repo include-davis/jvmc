@@ -3,6 +3,7 @@ import VolunteerCard from '../_components/VolunteerCard/VolunteerCard';
 import { PiStudent } from "react-icons/pi";
 import { LuStethoscope } from "react-icons/lu";
 import { MdOutlineMedicalServices } from "react-icons/md";
+import Link from 'next/link';
 
 const cards = [
   {
@@ -25,8 +26,7 @@ const cards = [
         Please email <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b> with questions about recruitment and/or volunteering. <b>Fill out our interest form if you would like to keep up to date with our recruitment cycle!</b>
       </>
     ),
-    link: "",
-    linkText: "Volunteer Form",
+    link: "Volunteer Form",
   },
   {
     title: "Physicians", 
@@ -44,8 +44,9 @@ const cards = [
 
       </>
     ),
-    link: "",
-    linkText: "Email Us",
+    link: (
+      <><a href="mailto:example@example.com">Email Us</a></>
+    ),
   },
   {
     title: "Medical Students: MD, PA, & NP Students", 
@@ -60,8 +61,7 @@ const cards = [
         Please wear a scrub top and jeans or scrub bottoms instead of your white coats to be respectful to our patients. Additionally, please bring your student ID card and a stethoscope to the clinic.
       </>
     ),
-    link: "",
-    linkText: "Contact Us",
+    link: <Link href="/contact-us">Contact Us</Link>,
   }, 
 ];
 
@@ -82,8 +82,7 @@ export default function Volunteer() {
                   altText={cards.altText}
                   icon={cards.icon}
                   mainText={cards.mainText}
-                  link={cards.link}
-                  linkText={cards.linkText}></VolunteerCard>
+                  link={cards.link}></VolunteerCard>
               </div>
             )
           })

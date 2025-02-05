@@ -75,6 +75,7 @@
 
 .cardBody a {
     color: var(--color-teal);
+    text-decoration: none;
 }
 
 .cardBody b {
@@ -93,6 +94,11 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
+    color: white;
+}
+
+.cardLink a {
+    text-decoration: none;
     color: white;
 }
 
