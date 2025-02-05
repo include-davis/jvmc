@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function VolunteerCard({ direction, image, titleIcon, title, mainText, link, linkText }) {
     return (
-      <div className={styles.cardComponent}>
-        <div className={styles.card}>
+      <div className={`${styles.cardComponent} ${styles[direction]}`}>
+        <div className={`${styles.card} ${styles[direction]}`}>
           <div className={styles.cardText}>
             <div className={styles.cardTitle}>
               Title
