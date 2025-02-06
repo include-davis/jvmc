@@ -68,9 +68,9 @@ const cards = [
 export default function Volunteer() {
     return (
       <main>
-        <div>Volunteer</div>
         {/* VolunteerCard components */}
         <div className={styles.volunteerCards}>
+          <div className={styles.cardHeading}>Ready to Volunteer with Us?</div>
         {
           cards.map((cards, idx) => {
             return (

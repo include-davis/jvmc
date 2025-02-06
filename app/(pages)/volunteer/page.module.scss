@@ -6,3 +6,10 @@
     row-gap: var(--vertical-card-gap);
     align-items: center;
 }
+
+.cardHeading {
+    font-family: "Merriweather", serif;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: auto;
+}
