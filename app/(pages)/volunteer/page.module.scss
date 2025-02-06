@@ -22,7 +22,7 @@
     text-align: center;
 
     /* Subheading 1 */
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -31,9 +31,10 @@
 }
 .text{
     text-align: center;
+    align-self: stretch;
     color: #353935;
 
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -42,6 +43,12 @@
 
 .aboutUs{
     color:#01887A;
+    align-self: stretch;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 27px */
 }
 .buttn{
     border: 5px black;
@@ -63,7 +70,7 @@
     text-align: center;
     color: #FFF;
 
-    font-family: Inter;
+    font-family: 'Inter' , sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
