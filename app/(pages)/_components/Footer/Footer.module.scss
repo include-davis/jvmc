@@ -1,1 +1,29 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.footer {
+    width: 100%;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px;
+    background-color: #fff;
+
+}
+
+.logoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    // place holder till I get the logo
+}
+
+.socialLinks {
+    display: flex;
+    gap: 15px;
+}
