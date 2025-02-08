@@ -1,1 +1,17 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.aboutUs {
+    font-family: Merriweather, serif;
+    font-size: 50px;
+    font-weight: 550;
+    color: #353935;
+    text-align: center;
+}
+
+.phrase {
+    color: #094935;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial;
+    text-align: center;
+  }
