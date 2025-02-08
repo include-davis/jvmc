@@ -70,7 +70,7 @@ export default function Volunteer() {
       <main>
         {/* VolunteerCard components */}
         <div className={styles.volunteerCards}>
-          <div className={styles.cardHeading}>Ready to Volunteer with Us?</div>
+          <h1 className={styles.header}>Ready to Volunteer with Us?</h1>
         {
           cards.map((cards, idx) => {
             return (

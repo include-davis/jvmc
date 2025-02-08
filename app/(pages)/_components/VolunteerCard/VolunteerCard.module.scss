@@ -3,9 +3,9 @@
 
 .cardComponent {
     display: flex;
-    width: 1040px;
+    width: 65em;
     position: relative;
-    min-height: 350px;
+    min-height: 21.875em;
 }
 
 // Place Image on left or right
@@ -19,12 +19,11 @@
 
 .card {
     display: flex;
-    width: 952px;
-    min-height: 350px;
-    background-color: white;
-    box-shadow: var(--drop-shadow-green);
-    // box-shadow: 0 5px 10px rgba(27, 94, 73, 0.1), 0 10px 15px rgba(173, 173, 173, 0.2);
-    border-radius: var(--rectangle-radius);
+    width: 59.5em;
+    min-height: 21.875em;
+    background-color: var(--card-background);
+    box-shadow: var(--drop-shadow);
+    border-radius: var(--card-border-radius);
 }
 
 .card.right {
@@ -38,63 +37,61 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 30px;
-    min-height: 350px;
-    max-width: 617px;
+    row-gap: 2em;
+    min-height: 21.875em;
+    max-width: 38.563em;
     margin-top: var(--card-padding);
     margin-bottom: var(--card-padding);
-    font-family: var(--font-inter);
-    color: var(--color-green);
+    color: var(--dark-grey);
 }
 
 .cardTitle {
     display: flex;
     align-items: center;
     column-gap: 1rem;
-    font-size: var(--subheading);
-    font-weight: 700;
-    line-height: 48px;
+    color: var(--emerald);
 }
 
 .icon {
     display: flex;
     align-items: center;
     font-size: 3rem;
-    color: var(--gradient-blue);
+    color: var(--light-blue);
 }
 
 .cardBody {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 150%;
+    font-family: var(--font2);
 }
 
 .cardBody ul {
-    padding-left: 30px; /* Increase this value for more indentation */
+    padding-left: 1.875em; /* Indentation */
 }
 
 .cardBody a {
-    color: var(--color-teal);
+    color: var(--teal);
     text-decoration: none;
 }
 
 .cardBody b {
-    color: var(--color-space);
-    font-weight: 700;
+    font-weight: var(--bold);
 }
 
 .cardLink {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-teal);
-    width: 181px;
-    height: 48px;
+    background-color: var(--teal);
+    width: 11.313em;
+    height: 3em;
     border-radius: 100px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
     color: white;
+}
+
+.cardLink b {
+    font-weight: var(--bold);
 }
 
 .cardLink a {
@@ -103,13 +100,13 @@
 }
 
 .cardImage {
-    border: solid var(--color-mint);
+    border: solid var(--mint);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
-    width: 350px;
-    height: 350px;
+    width: 21.875em;
+    height: 21.875em;
     overflow: hidden;
 }
 

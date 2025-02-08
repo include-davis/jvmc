@@ -10,13 +10,13 @@ export default function VolunteerCard({ title, direction, image, altText, icon, 
               <div className={styles.icon}>
                 {icon}
               </div> 
-              {title}
+              <h4>{title}</h4>
             </div>
             <div className={styles.cardBody}>
               {mainText}
             </div>
             <div className={styles.cardLink}>
-              {link}
+              <p><b>{link}</b></p>
             </div>
           </div>
         </div>
