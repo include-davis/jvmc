@@ -1,14 +1,14 @@
 import styles from "./Footer.module.scss";
 import { FaInstagram} from "react-icons/fa";
 import { LuFacebook } from "react-icons/lu";
-// how to import JVMC logo here
+
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.topSection}>
         <div className={styles.logoSection}>
-          <img src="/jvmc-logo.png" alt="JVMC Logo" className={styles.logo} />
+          <img src="/apple-icon.png" alt="JVMC Logo" className={styles.logo} />
           <ul className={styles.socialLinks}>
             <li>
               <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
