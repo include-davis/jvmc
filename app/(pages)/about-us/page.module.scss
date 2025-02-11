@@ -1,1 +1,60 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.title_body{
+
+    // Color Palette for Title Section
+    /*
+    Title Section Body: #1F0322
+    Title: #8A1C7C
+    Subtitle: #DA4167
+    Button: #F0BCD4
+    */
+    background-color: var(--offwhite);
+    border: 8px solid #1F0322 ;
+
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    
+}
+
+.title_body h1 {
+    border: 8px solid #8A1C7C ;
+    padding: 8px;
+
+    font: var(--font1);
+    font-size: 3.5rem;
+    color: var(--emerald);
+}
+.title_body h4 {
+    border: 8px solid #DA4167 ;
+    padding: 8px;
+    margin: 16px 0;
+
+    font: var(--font2);
+    color: var(--dark-grey);
+
+    
+}
+
+.title_body button
+{
+    border: 8px solid #F0BCD4
+}
+
+
+
+.btn
+{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 100px;
+    color:var(--offwhite);
+    background-color: var(--teal);
+    font-weight: var(--bold);
+    cursor: pointer;
+}
