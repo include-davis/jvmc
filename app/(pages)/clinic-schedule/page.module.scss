@@ -8,30 +8,81 @@
 }
 
 .header {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    color: #353935;
+    gap: 4px;
 }
 
 .header h1{
     color: #353935;
+    text-align: center;
+    font-family: Merriweather;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .header h3{
     color: #094935;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 200%;
 }
 
 .infocards{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 64px;
+    width: 836px;
 }
 
 .infocards div {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 60px;
+    align-items: flex-start;
     background-color: #FFF;
+    border-radius: 20px;
+    align-self: stretch;
+    box-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25);
 }
 
 .infocards div h4 {
     color: #094935;
+}
+
+.key{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+
+}
+
+.cir1{
+    background-color: #ABDCCF;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.cir2{
+    background-color: #094935;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.cir3{
+    background-color: #01887A;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
 }
