@@ -33,3 +33,11 @@
       @content;
     }
   }
+  
+  // Font template for text
+  @mixin fontStyle($size, $weight, $line-height, $family) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    font-family: $family;
+  }
