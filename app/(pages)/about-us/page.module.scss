@@ -1,4 +1,11 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+.tempNavbar{
+    h1{
+        text-align: center;
+        border: 8px solid red;
+    }
+}
+
 
 .title_body{
 
@@ -9,55 +16,68 @@
     Subtitle: #DA4167
     Button: #F0BCD4
     */
-    background-color: var(--offwhite);
-    border: 8px solid #1F0322 ;
+    //background-color: var(--offwhite);
+   // border: 8px solid #1F0322 ;
 
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
 
     text-align: center;
 
-    
-}
-
-.title_body h1 {
-    border: 8px solid #8A1C7C ;
-    padding: 8px;
-
-    font: var(--font1);
-    font-size: 3.5rem;
-    color: var(--emerald);
-}
-.title_body h4 {
-    border: 8px solid #DA4167 ;
-    padding: 8px;
-    margin: 16px 0;
-
-    font: var(--font2);
-    color: var(--dark-grey);
+    margin-top: 6rem;
 
     
 }
+
+// .title_body h1 {
+//     border: 8px solid #8A1C7C ;
+//     width: 75%;
+//     margin-top: 32px;
+//     //padding:  32px 8px 0px;
+     
+    
+//     // font-size: 4rem;
+//     // // font-weight: 700;
+//     // font-family: var(--bold);
+//     //color: var(--emerald);
+// }
+// .title_body h4 {
+//    //border: 8px solid #DA4167 ;
+//     padding: 32px;
+//     //margin: 2px auto 16px;
+//     margin-top: 8px;
+//     margin-bottom: 24px;
+
+//     font-size: 1rem;
+//     color: var(--dark-grey);
+//     font-weight: 200;
+
+//     // font: var(--font2);
+    
+
+    
+// }
 
 .title_body button{
 
     border: 8px solid #F0BCD4;
     margin-top: 8px;
+
+    // reduce button width
 }
 
 
 
-.btn{
-    width: 10rem;
-    height: 3rem;
-    border-radius: 100px;
-    color:var(--offwhite);
-    background-color: var(--teal);
-    font-weight: var(--bold);
-    cursor: pointer;
-}
+// .btn{
+//     width: 10rem;
+//     height: 3rem;
+//     border-radius: 100px;
+//     color:var(--offwhite);
+//     background-color: var(--teal);
+//     font-weight: var(--bold);
+//     cursor: pointer;
+// }
 
 .homepage_body{
 
@@ -73,15 +93,15 @@
 
 .homepage_body h4 {
     border: 8px solid blue;
-    padding: 80px;
+    padding: 40px;
     margin:0;
 
     background-image: url("/subtitleheader.png");
     background-size: cover;
     background-position: center;
-    font:var(--font2);
-    font-weight: var(--bold);
-    font-size: 24px;
+    // font:var(--font2);
+    //font-weight: var(--bold);
+    //font-size: 24px;
     
     z-index:1;
 }
