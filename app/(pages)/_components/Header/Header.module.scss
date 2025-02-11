@@ -1,42 +1,39 @@
-@use "@/app/(pages)/_globals/mixins.scss";
+    @use "@/app/(pages)/_globals/mixins.scss";
 
-.header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 26px 30px;
-    background-color: white;
-    //color: white;
-    box-shadow: 0px 5px 50px grey;
-}
+    .header {
+        position:relative;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 26px 30px;
+        background-color: var(--color);
+        box-shadow: var(--drop-shadow-header);
+    }
 
-.headerImage {
-    margin-left: 30px;
-}
+    .headerImage {
+        margin-left: 30px;
+    }
 
-.headerLinks {
-    display: flex;
-}
+    .headerLinks {
+        display: flex;
+        padding: 26px 41px;
+        align-items: center;
+    }
 
-.headerItems {
-    margin-left: 50px; 
-    text-decoration: none;
-    color: #353935; 
-    transition: color 0.3s;
-    font-family: Inter;
-    gap: 10px;
-}
+    .headerItems {
+        margin-left: 50px; 
+        text-decoration: none;
+        color: var(--color); // Use the global variable for color
+    }
 
-.headerContact {
-    margin-left: 50px;
-    border-radius: 100px;
-    background: #01887A;    
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-family: Inter;
-}
-
-.headerItems:hover {
-    color: #00bcd4; /* Change color on hover */
-}
+    .headerContact {
+        margin-left: 50px;
+        border-radius: 100px;
+        padding: 10px 30px;
+        background: #01887A;    
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-family: var(--font2); // Use the global variable for font
+    }
