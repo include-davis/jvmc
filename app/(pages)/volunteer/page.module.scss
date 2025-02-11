@@ -1,9 +1,16 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+
+}
 .learn_more{
     border: 1px solid black; /*DELETE once done*/
     margin: 398px;
-    background-color: #FFF;
+    background-color: var(--white);
     border-radius: 20px; 
 
     display: flex;
@@ -18,7 +25,7 @@
     
     /*color: var(--Emerald, #094935);*/
 
-    color: #094935;
+    color: var(--emerald);
     text-align: center;
 
     /* Subheading 1 */
@@ -32,9 +39,9 @@
 .text{
     text-align: center;
     align-self: stretch;
-    color: #353935;
+    color: var(--dark-grey);
 
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font2);
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -42,7 +49,7 @@
 }
 
 .aboutUs{
-    color:#01887A;
+    color: var(--teal); /*#01887A;*/
     align-self: stretch;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
@@ -50,7 +57,8 @@
     font-weight: 700;
     line-height: 150%; /* 27px */
 }
-.buttn{
+
+/*.buttn{
     border: 5px black;
     display:flex;
     flex-direction: row;
@@ -60,20 +68,23 @@
     width: 181px;
     height: 48px;  
     border-radius: 25px; 
-    background-color: #01887A;
+    background-color: var(--teal);
     
-}   
+}   */
 
+/*
 .buttnText{
 
     border: 2px black;
     text-align: center;
-    color: #FFF;
+    color: var(--white);
 
     font-family: 'Inter' , sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 150%; /* 27px */
-}
+    line-height: 150%;} /* 27px */
+
+
+
 

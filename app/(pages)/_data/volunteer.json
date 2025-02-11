@@ -1,3 +1,6 @@
 {
-    
+    "bottom_title": "Interested in learning more about each role?",
+    "Title": "Volunteer at JVMC",
+    "bottom_button": "About Us",
+    "bottom_text": "For more information on each volunteering role, please navigate to the <span className={styles.aboutUs}>About Us</span> page. There you will find out more about what each role in the clinic entails."
 }
