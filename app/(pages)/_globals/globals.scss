@@ -51,23 +51,19 @@
 
 * {
   box-sizing: border-box;
-  font-family: var(--font2);
-  color: var(--dark-grey);
-  background-color: var(--offwhite);
   padding: 0;
   margin: 0;
 }
 
-@mixin fontStyle($size, $weight, $line-height, $family) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-  font-family: $family;
+body {
+  background-color: var(--offwhite);
+  font-family: var(--font2);
+  color: var(--dark-grey);
 }
 
 // Title
 h1 {
-  @include fontStyle(3.5rem, 700, auto, var(--font1));
+  @include mixins.fontStyle(3.5rem, 700, auto, var(--font1));
   
   @include mixins.sm-desktop {
     // Slightly alter styles for smaller screen sizes
@@ -76,30 +72,36 @@ h1 {
 
 // Heading 1
 h2 {
-  @include fontStyle(3rem, 700, auto, var(--font1));
+  @include mixins.fontStyle(3rem, 700, auto, var(--font1));
 }
 
 // Heading 2
 h3 {
-  @include fontStyle(2.25rem, 700, auto, var(--font1));
+  @include mixins.fontStyle(2.25rem, 700, auto, var(--font1));
 }
 
 // Subheading
 h4 {
   color: var(--emerald);
-  @include fontStyle(1.5rem, 700, 200%, var(--font2));
+  @include mixins.fontStyle(1.5rem, 700, 200%, var(--font2));
 }
 
 // Body
 p { 
-  @include fontStyle(1.1rem, 400, 150%, var(--font2));
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
 }
 
+// Button styles
 .btn {
-  cursor: pointer;
-  border-radius: 100%;
-  background-color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 100px;
   
   color: var(--offwhite);
+  background-color: var(--teal);
   font-weight: var(--bold);
+  cursor: pointer;
 }
