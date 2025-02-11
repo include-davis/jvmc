@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import styles from './page.module.scss';
 import VolunteerCard from '../_components/VolunteerCard/VolunteerCard';
+
 import { PiStudent } from "react-icons/pi";
 import { LuStethoscope } from "react-icons/lu";
 import { MdOutlineMedicalServices } from "react-icons/md";
-import Link from 'next/link';
 
 const cards = [
   {

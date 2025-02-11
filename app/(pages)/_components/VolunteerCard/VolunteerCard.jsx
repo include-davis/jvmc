@@ -1,5 +1,5 @@
-import styles from "./VolunteerCard.module.scss";
 import Image from "next/image";
+import styles from "./VolunteerCard.module.scss";
 
 export default function VolunteerCard({ title, direction, image, altText, icon, mainText, link }) {
     return (
