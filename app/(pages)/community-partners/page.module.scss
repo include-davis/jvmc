@@ -1,1 +1,21 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.titleText{
+    font-family: Merriweather;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #353935;
+    text-align: center;
+}   
+
+.subtitleText{
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 200%; /* 48px */
+    color: #094935;
+    text-align: center;
+}
