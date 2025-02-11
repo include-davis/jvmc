@@ -14,7 +14,7 @@ const cards = [
     icon: <PiStudent />,
     mainText: (
       <>
-        New cohorts are recruited during Winter Quarter annually. More information regarding the application process as an undergraduate student at UC Davis can be found on our instagram page, <a href="https://instagram.com/jvmcstudents">@jvmcstudents</a>.<br /><br />
+        New cohorts are recruited during Winter Quarter annually. More information regarding the application process as an undergraduate student at UC Davis can be found on our instagram page, <b><a href="https://instagram.com/jvmcstudents" target="_blank">@jvmcstudents</a></b>.<br /><br />
         
         To qualify as a volunteer, undergraduates must:
         <ul>
@@ -26,7 +26,7 @@ const cards = [
         Please email <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b> with questions about recruitment and/or volunteering. <b>Fill out our interest form if you would like to keep up to date with our recruitment cycle!</b>
       </>
     ),
-    link: "Volunteer Form",
+    link: <a href="https://forms.gle/5STumqF28u1dvUmTA" target="_blank">Volunteer Form</a>,
   },
   {
     title: "Physicians", 
