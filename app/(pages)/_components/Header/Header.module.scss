@@ -24,7 +24,7 @@
     .headerItems {
         margin-left: 50px; 
         text-decoration: none;
-        color: var(--color); // Use the global variable for color
+        color: var(--color); 
     }
 
     .headerContact {
@@ -35,5 +35,5 @@
         text-decoration: none;
         color: white;
         font-size: 18px;
-        font-family: var(--font2); // Use the global variable for font
+        font-family: var(--font2);
     }
