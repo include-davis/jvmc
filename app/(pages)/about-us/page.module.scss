@@ -41,15 +41,15 @@
     
 }
 
-.title_body button
-{
-    border: 8px solid #F0BCD4
+.title_body button{
+
+    border: 8px solid #F0BCD4;
+    margin-top: 8px;
 }
 
 
 
-.btn
-{
+.btn{
     width: 10rem;
     height: 3rem;
     border-radius: 100px;
@@ -58,3 +58,31 @@
     font-weight: var(--bold);
     cursor: pointer;
 }
+
+.homepage_body{
+
+    background-color: var(--offwhite);
+    margin-top: 40px;
+    border: 8px solid red ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.homepage_body h4 {
+    border: 8px solid blue;
+    padding: 80px;
+    margin:0;
+
+    background-image: url("/subtitleheader.png");
+    background-size: cover;
+    background-position: center;
+    font:var(--font2);
+    font-weight: var(--bold);
+    font-size: 24px;
+    
+    z-index:1;
+}
+

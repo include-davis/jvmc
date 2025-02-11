@@ -6,11 +6,14 @@ export default function About() {
         <div className = {styles.body}>
           <div className = {styles.title_body}>
             <h1> Welcome to Joan Viteri Medical Clinic </h1>
-            <h4>Serving health care needs of uninsured drug users, sex workers, trans folks, and their families.</h4>
+            <h4>Serving health care needs of uninsured drug users, sex workers, <br></br> trans folks, and their families.</h4>
             <button className = {styles.btn}>Contact Us</button>
           </div>
 
-          <p> Here will go the cards. Below the title </p>
+          <div className = {styles.homepage_body}>
+          <h4> Serving the Oak Park Community </h4>
+          </div>
+          
           
           
         </div>
