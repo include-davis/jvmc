@@ -19,3 +19,38 @@
     color: #094935;
     text-align: center;
 }
+
+.partnersGrid{
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   flex-wrap: wrap;
+}
+
+.partnersCard {
+    background-color: var(--Off-White, #F8F8F8);
+    border-radius: 20px;
+    width: 606px;
+    height: 440px;
+    padding: 60px;
+    text-align: center;
+ }
+
+ .partnersName {
+    color: var(--Emerald, #094935);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 200%; /* 48px */
+}
+
+ .partnersDescription {
+    color: var(--Dark-Gray, #353935);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+ }
