@@ -31,8 +31,7 @@ export default function Volunteer() {
               <span className={styles.aboutUs}>{text.bottom_text["chunk2"]}</span>
               {text.bottom_text["chunk3"]}
             </p>
-            <Link href="/about-us" className="btn" >{text.bottom_button}</Link>
-            {/*button className={styles.buttn} onClick={handle_click}></button>*/}
+            <Link href="/about-us" className="btn">{text.bottom_button}</Link>
           </div>
         </div>  
       </main>

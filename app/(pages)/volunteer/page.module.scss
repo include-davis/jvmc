@@ -77,9 +77,6 @@
     align-items: center; /*primarily used for buttn to fit About Us text*/
 }
 .header{
-    
-    /*color: var(--Emerald, #094935);*/
-
     color: var(--emerald);
     text-align: center;
 
@@ -89,13 +86,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: 200%; /* 48px */
-
 }
 .text{
     text-align: center;
     align-self: stretch;
     color: var(--dark-grey);
-
 }
 .aboutUs{
     color: var(--teal); /*#01887A;*/
@@ -106,34 +101,3 @@
     font-weight: 700;
     line-height: 150%; /* 27px */
 }
-
-/*.buttn{
-    border: 5px black;
-    display:flex;
-    flex-direction: row;
-    padding: 10px;
-    justify-content: center;
-
-    width: 181px;
-    height: 48px;  
-    border-radius: 25px; 
-    background-color: var(--teal);
-    
-}   */
-
-/*
-.buttnText{
-
-    border: 2px black;
-    text-align: center;
-    color: var(--white);
-
-    font-family: 'Inter' , sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;} /* 27px */
-
-
-
-
