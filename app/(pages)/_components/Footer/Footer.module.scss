@@ -10,23 +10,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 96px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--mint);
+  padding: 0 96px;
 }
 
 .logoSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 5px;
 }
 
 .logo {
-  width: 35%;
+  width: 40%;
   height: 80%;
   margin-top: 50px;
-  margin-left: 25px;
 }
 
 .socialLinks {
@@ -51,8 +49,6 @@
   list-style: none;
   display: flex;
   gap: 50px;
-  padding: 75px;
-  margin-left: 500px;
 
   li a {
     text-decoration: none;
@@ -68,12 +64,12 @@
 }
 
 .bottomSection {
-  text-indent: 165px;
-  display: flex;
-  font-size: 1.0rem;
-  background-color: var(--teal);
-  color: var(--offwhite);
-  font-family: var(--font2);
-  padding: 15px;
-  font-weight: var(--light);
+    padding: 16px 96px;
+    display: flex;
+    margin: 0;
+    font-size: 1.0rem;
+    background-color: var(--teal);
+    color: var(--offwhite);
+    font-family: var(--font2);
+    font-weight: var(--light);
 }
