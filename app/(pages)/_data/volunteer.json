@@ -1,3 +1,17 @@
 {
-    
+    "title" : "Volunteer at JVMC",
+    "sub_title" : "JVMC runs smoothly with the help of our volunteers caring for our patients.",
+    "intro_1" : "Once a month, our clinic conducts a mobile outreach program. There our volunteers work alongside Sacramento’s Gender Hormone Clinic and the Stockton Harm Reduction Program to provide the best care to our patients.",
+    "intro_2" : "Outside of our clinic, our undergraduate volunteers work in one of our seven committees to build and reinforce projects in the Oak Park Community, hosting events such as the Health Fair and the Harm Reduction Conference." ,
+    "entrance_pic" : "/volunteer-entrance.png",
+    "entrance_pic_descript" : "JVMC volunteers posing at a drive in Sacramento",
+
+    "bottom_title" : "Interested in learning more about each role?",
+    "bottom_button" : "About Us",
+    "bottom_text" : {
+        "chunk_1" : "For more information on each volunteering role, please navigate to the",
+        "chunk_2" : " About Us ",
+        "chunk_3" : "page. There you will find out more about what each role in the clinic entails."
+    }
+
 }
