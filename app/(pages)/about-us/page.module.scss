@@ -5,16 +5,12 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    
-
-
-
     position: relative;
     background-color: var(--color-white) ;//#F8F8F8;
 
 
-    height: 100vh;
-    width: 100%;
+    //height: 200vh;
+    //width: 100%;
     padding-top: 3%;
 
 
@@ -27,50 +23,121 @@
         color: #094935;
         font-family: Inter;
         font-size: 24px;
+        padding-bottom: 50px;
     }
-   
-    .card{
-        position: absolute;
+    /*position: absolute;
         top: 22%;
         left: 20%;
         text-align: left;
-        width: 50%; /* Adjust as needed */
-        height: 25%;
-        background-color: #FFF;
-       // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 50%;  //Adjust as needed 
+        height: 25%;  */ 
+
+    .card{
+       // position: relative; 
+
+       // width: 50%;  //Adjust as needed 
+        //width: 1200px;
+        width: 50%;
+        height:  20vh;
+        padding: 2.5% 3% 3% 4%;
+        margin-right: 15%;
+        margin-bottom: 2%;
+
+       
+
+       display: flex;
+       flex-direction: column;
+       background-color: #FFF;
        box-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25);
-        //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      //  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-        border-radius: 20px;
-        flex-direction: row;
-        span{
-            padding-top: 5%;
-            padding-left: 5%;
+       border-radius: 20px;
+        .cardTop{
+          display: flex;
+          align-items: center; 
+          gap: 10px;  // for the top section with the image and header 
+          margin-bottom: 10px; 
         }
 
+
         h2{
-            padding-top: 5%;
-            padding-left: 5%;
+          flex-grow: 1;
             font-family: Merriweather;
             font-size: 36px;
             color: #094935;
         }
+        p{
+          flex-grow: 1;
+          // come back here 
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 27px */
+        }
+        .circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            top: 22%;
+        left: 80%;
+        text-align: left;
+          
+            background-color: blue; /* Add a background color if desired */
+          
+          }
     }
+  
     .card2{
-        position: absolute;
-        top: 55%;
-        right: 20%;
-        width: 100%;
-        margin: 0;
-        text-align: center;
+       // position: relative; 
 
-        width: 50%; /* Adjust as needed */
-        height: 25%;
-        background-color: #FFF;
-       // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       // width: 50%;  //Adjust as needed 
+        //width: 1200px;
+        width: 50%;
+        height:  20vh;
+        padding: 2.5% 3% 3% 4%;
+        margin-left: 15%;
+        margin-bottom: 2%;
+
+       
+
+       display: flex;
+       flex-direction: column;
+       background-color: #FFF;
        box-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25);
-        //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      //  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-        border-radius: 20px;
+       border-radius: 20px;
+        .cardTop{
+          display: flex;
+          align-items: center; 
+          gap: 10px;  // for the top section with the image and header 
+          margin-bottom: 10px; 
+        }
+
+        h2{
+          flex-grow: 1;
+            font-family: Merriweather;
+            font-size: 36px;
+            color: #094935;
+        }
+        p{
+          flex-grow: 1;
+          // come back here 
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 27px */
+        }
+        .circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            top: 22%;
+        left: 80%;
+        text-align: left;
+          
+            background-color: blue; /* Add a background color if desired */
+          
+          }
     }
 }
