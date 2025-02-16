@@ -7,8 +7,8 @@ export default function Volunteer() {
 
     return (
       <main>
-        <h1 className={styles.title}>{text.Title}</h1>
-        <h4 className={styles.sub_title}>{text.subTitle}</h4>
+        <h1 className={styles.title}>{text.title}</h1>
+        <h4 className={styles.sub_title}>{text.sub_title}</h4>
 
         <div className={styles.opening}>
           <Image
@@ -25,11 +25,11 @@ export default function Volunteer() {
         </div>
         <div className={styles.bottom}>
           <div className={styles.learn_more}>
-            <h1 className={styles.header}>{text.bottom_title}</h1>
+            <h4 className={styles.bottom_title}>{text.bottom_title}</h4>
             <p className={styles.text}>
-              {text.bottom_text["chunk1"]} 
-              <span className={styles.aboutUs}>{text.bottom_text["chunk2"]}</span>
-              {text.bottom_text["chunk3"]}
+              {text.bottom_text["chunk_1"]} 
+              <span className={styles.about_us}>{text.bottom_text["chunk_2"]}</span>
+              {text.bottom_text["chunk_3"]}
             </p>
             <Link href="/about-us" className="btn">{text.bottom_button}</Link>
           </div>

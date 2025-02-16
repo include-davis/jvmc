@@ -6,10 +6,8 @@
     align-items:center;
 
     height: auto;
-    /*margin: 234px 241px 0px;*/
-    padding: 234px 16.7% 0px;
-
-    border: 1px solid black; /*DELETE once done*/
+    /*figma padding: 234px 241px 0px;*/
+    padding: 232px 16.7% 0px;
 
 }
 .sub_title{
@@ -18,21 +16,19 @@
     align-items:center;
 
     height:auto;
-    /*margin: 0px 241px;*/
+    /*figma padding: 0px 241px;*/
     padding: 0px 16.7% 0px;
-    border: 1px solid black; /*DELETE once done*/
 }
 
 .opening{
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 38px;
+    column-gap: 40px;
 
-    border: 1px solid black; /*DELETE once done*/
-
+    
+    /*figma padding: 100px 200px 0px;*/
     padding: 100px 14% 0px;
-    /*padding: 100px 200px 0px;  switching to percentages*/
 }
 .landing_photo{
     /*width: 521px; /*50% of opening box width 
@@ -45,15 +41,13 @@
     background: lightgray 50% / cover no-repeat;
 
     /* mint-drop-shadow, not same as globals var */
-    box-shadow: 0px 0px 50px 0px rgba(171, 220, 207, 0.35);
+    box-shadow: 0px 0px 48px 0px rgba(171, 220, 207, 0.35);
 }
 .intro{
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 25px;
-
-    border: 1px solid black; /*DELETE once done*/
+    row-gap: 24px;
 
     /*481px*/
     width: auto;
@@ -64,39 +58,29 @@
 }
 
 .learn_more{
-    border: 1px solid black; /*DELETE once done*/
     background-color: var(--white);
-    border-radius: 20px; 
+    border-radius: 24px; 
 
     display: flex;
     box-shadow: var(--drop-shadow);
     flex-direction: column;
-    row-gap: 30px;
-    padding: 60px;
+    row-gap: 32px;
+    padding: 64px;
     
     align-items: center; /*primarily used for buttn to fit About Us text*/
 }
-.header{
-    color: var(--emerald);
+.bottom_title{
     text-align: center;
-
-    /* Subheading 1 */
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 200%; /* 48px */
 }
 .text{
     text-align: center;
     align-self: stretch;
-    color: var(--dark-grey);
 }
-.aboutUs{
+.about_us{
     color: var(--teal); /*#01887A;*/
     align-self: stretch;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 27px */
