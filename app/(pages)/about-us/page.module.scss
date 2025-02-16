@@ -12,21 +12,14 @@
     padding-top: 3%;
 
     h4{
-      padding-bottom: 2.5%;
+      padding-bottom: 4%;
     }
-    /*position: absolute;
-        top: 22%;
-        left: 20%;
-        text-align: left;
-        width: 50%;  //Adjust as needed 
-        height: 25%;  */ 
-
     .card{
-        width: 50%;
+        width: 50%; // used to be 50%
         height:  20vh;
-        padding: 2.5% 3% 3% 4%;
-        margin-right: 15%;
-        margin-bottom: 2%;
+        padding: 2.5% 3% 4% 4%;
+        margin-right: 10%;
+        margin-bottom: 5.5%;
 
        display: flex;
        flex-direction: column;
@@ -40,27 +33,29 @@
           margin-bottom: 10px; 
         }
 
-
         h3{
           color: var(--emerald);
           flex-grow: 1;
-           
         }
         p{
           flex-grow: 1;
         }
-        .circle {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            top: 22%;
-        left: 80%;
-        text-align: left;
-          
-            background-color: blue; /* Add a background color if desired */
-          
-          }
+
+        .img{
+          position: absolute;
+          top: 10%;
+          right: 23%; // 23
+          width: 12%;
+          height: 12%;
+        }
+        .img2{
+          position: absolute;
+          top: 52%;
+          right: 23%;
+          width: 12%;
+          height: 12%;
+        }
+
     }
   
     .card2{
@@ -71,8 +66,8 @@
         width: 50%;
         height:  20vh;
         padding: 2.5% 3% 3% 4%;
-        margin-left: 15%;
-        margin-bottom: 2%;
+        margin-left: 2%;
+        margin-bottom: 5.5%;
 
        display: flex;
        flex-direction: column;
@@ -85,6 +80,20 @@
           gap: 15px;  // for the top section with the image and header 
           margin-bottom: 10px; 
         }
+        .img{
+          position: absolute;
+          top: 31%;
+          left: 19%;
+          width: 12%;
+          height: 12%;
+        }
+        .img2{
+          position: absolute;
+          top: 73%; // +42
+          left: 19%;
+          width: 12%;
+          height: 12%;
+        }
 
         h3{
           flex-grow: 1;
@@ -93,17 +102,6 @@
         p{
           flex-grow: 1;
         }
-        .circle {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            top: 22%;
-        left: 80%;
-        text-align: left;
-          
-            background-color: blue; /* Add a background color if desired */
-          
-          }
+       
     }
 }
