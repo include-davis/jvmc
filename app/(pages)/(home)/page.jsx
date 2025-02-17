@@ -12,8 +12,11 @@ export default function Home() {
         <div className = "body">
 
             <div className = {styles.titleWithButton}>
-                  <h1> {HomeData.homePageTitle} </h1>
-                  <h4> {HomeData.homePageSubtitle} </h4>
+              <div className = {styles.titleAndSubtitle}>
+                <h1> {HomeData.homePageTitle} </h1>
+                <h4> {HomeData.homePageSubtitle} </h4>
+              </div>
+                  
                   <button className ="btn"> {HomeData.buttonMsg} </button>
             </div>
 

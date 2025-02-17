@@ -1,1 +1,19 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+
+.titleWithButton{
+    border: 8px solid red;
+    
+}
+
+// .titleWithButton h1{
+//     border: 8px solid blue;
+// }
+
+// .titleWithButton h4{
+//     border: 8px solid orange;
+// }
+
+.titleAndSubtitle{
+    border: 8px solid yellow;
+}
