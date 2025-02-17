@@ -25,7 +25,6 @@
 
     text-align: center;
 
-    margin-top: 6rem;
 
     
 }
@@ -62,27 +61,12 @@
 .title_body button{
 
     border: 8px solid #F0BCD4;
-    margin-top: 8px;
-
-    // reduce button width
 }
 
-
-
-// .btn{
-//     width: 10rem;
-//     height: 3rem;
-//     border-radius: 100px;
-//     color:var(--offwhite);
-//     background-color: var(--teal);
-//     font-weight: var(--bold);
-//     cursor: pointer;
-// }
 
 .homepage_body{
 
     background-color: var(--offwhite);
-    margin-top: 40px;
     border: 8px solid red ;
 
     display: flex;
@@ -94,8 +78,7 @@
 .homepage_body h4 {
     border: 8px solid blue;
     padding: 40px;
-    margin:0;
-
+    
     background-image: url("/subtitleheader.png");
     background-size: cover;
     background-position: center;

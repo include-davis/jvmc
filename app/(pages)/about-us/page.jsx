@@ -1,5 +1,5 @@
 import styles from './page.module.scss';
-import HomePageCard from '@/app/HomePageCard/HomePageCard';
+import aboutUs from '@/app/(pages)/_data/about-us.json';
 
 
 export default function About() {
@@ -9,10 +9,11 @@ export default function About() {
           <div className = {styles.tempNavbar}>
             <h1>Temp Navbar</h1>
           </div>
+
           <div className = {styles.title_body}>
-            <h1 className> Welcome to Joan Viteri Memorial Clinic </h1>
-            <h4 className> Serving health care needs of uninsured drug users, sex workers, <br></br> trans folks, and their families.</h4>
-            <button className ="btn">Contact Us</button>
+            <h1> {aboutUs.homePageTitle} </h1>
+            <h4> {aboutUs.homePageSubtitle} </h4>
+            <button className ="btn"> {aboutUs.buttonMsg} </button>
           </div>
 
           <div className = {styles.homepage_body}>
