@@ -2,6 +2,8 @@ import styles from './page.module.scss';
 import HomeData from '@/app/(pages)/_data/home.json';
 import Image from 'next/image';
 
+import { CiMedicalCross } from "react-icons/ci";
+
 export default function Home() {
   return (
     <main>
@@ -15,7 +17,7 @@ export default function Home() {
 
             <div className = {styles.mainCardSection}>
               <div className={styles.mainCardSectionTitle}>
-                <h4>{HomeData.mainCardSection_Title}</h4>
+                <h3>{HomeData.mainCardSection_Title}</h3>
               </div>
               <div className = {styles.cards_Section}>
                   <div className = {styles.card_1}>
@@ -30,7 +32,11 @@ export default function Home() {
                       
                     </div>
                     <div className = {styles.card_1_TextBox}>
-                    
+                    <div className = {styles.card_1_TitleAndLogo}>
+                    <CiMedicalCross className = {styles.icon}/>
+                    <h3>{HomeData.card1_Title}</h3>
+                    </div>
+
 
                     </div>
 
