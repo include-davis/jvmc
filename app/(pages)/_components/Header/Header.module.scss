@@ -6,23 +6,25 @@
         display: flex;
         justify-content: space-between; 
         align-items: center;
-        padding: 26px 30px;
+        padding: 24px 32px;
         background-color: var(--white);
         box-shadow: var(--drop-shadow-header);
+
     }
 
     .headerImage {
-        margin-left: 30px;
+        margin-left: 32px;
         background-color: var(--white);
     }
 
     .headerLinks {
         display: flex;
-        padding: 26px 40px;
+        padding: 24px 40px;
         align-items: center;
         justify-content: space-between;
         background-color: var(--white);
         width: 75%;
+        text-align: center;
     }
 
     .headerItems {
@@ -30,13 +32,3 @@
         color: var(--dark-grey); 
         background-color: var(--white);
     }
-
-    // .headerContact {
-    //     border-radius: 100px;
-    //     padding: 10px 30px;
-    //     background: #01887A;    
-    //     text-decoration: none;
-    //     color: white;
-    //     font-size: 18px;
-    //     font-family: var(--font2);
-    // }
