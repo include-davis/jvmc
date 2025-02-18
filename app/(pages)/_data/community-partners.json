@@ -1,6 +1,13 @@
 {
     "iconImages": {
         "location": "/location.svg",
-        "calendarIcon": "/calendarIcon.svg"
+        "calendarIcon": "/calendarIcon.svg",
+        "appointmentIcon": "/appointmentIcon.svg"
+    },
+
+    "images": {
+        "HRS": "/HRS.svg",
+        "GHC": "/GHC.svg",
+        "SHRC": "/SHRC.svg"
     }
 }
