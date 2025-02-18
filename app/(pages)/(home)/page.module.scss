@@ -1,6 +1,12 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 
+.body{
+    border: 8px solid black;
+    display:flex;
+    flex-direction: column;
+    gap:320px;
+}
 .titleWithButton{
     border: 8px solid red;
 
@@ -50,6 +56,11 @@
 
 .mainCardSection{
     border: 8px solid orange;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
 }
 
 .mainCardSectionTitle{

@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <main>
-        <div className = "body">
+        <div className = {styles.body}>
 
             <div className = {styles.titleWithButton}>
               <div className = {styles.titleAndSubtitle}>
