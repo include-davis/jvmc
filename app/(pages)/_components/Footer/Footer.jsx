@@ -1,5 +1,6 @@
 import styles from "./Footer.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 import { FaInstagram} from "react-icons/fa";
 import { LuFacebook } from "react-icons/lu";
 
@@ -9,7 +10,14 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.topSection}>
         <div className={styles.logoSection}>
-          <img src="logo.png" alt="JVMC Logo" className={styles.logo} />
+        <div className={styles.logo}>
+            <Image
+              src={"/logo.png"}
+              alt={"JVMC Logo"}
+              style={{ objectFit: "fill" }}
+              fill={true}
+            />
+          </div>
           <ul className={styles.socialLinks}>
             <li>
               <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">

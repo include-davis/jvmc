@@ -1,4 +1,6 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+$logo-height: calc(8px * 15);
+$logo-width: calc(8px * 20);
 
 .footer {
   background-color: var(--white);
@@ -10,28 +12,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--mint);
-  padding: 0 96px;
+  gap: 10%;
+  padding: 40px 96px;
 }
 
 .logoSection {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 16px;
 }
 
 .logo {
-  width: 40%;
-  height: 80%;
-  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  height: $logo-height;
+  width: $logo-width;
 }
 
 .socialLinks {
   list-style: none;
   display: flex;
   padding: 20px;
-  gap: 20px;
+  gap: 24px;
 
   li a {
     font-size: 1.5rem;
@@ -52,10 +55,9 @@
 
   li a {
     text-decoration: none;
-    font-family: var(--font2);
-    font-weight: var(--light);
-    transition: color 0.3s;
+    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
     color: var(--dark-grey);
+    transition: color 0.3s;
   }
 
   li a:hover {
