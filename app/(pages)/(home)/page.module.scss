@@ -87,7 +87,7 @@
     justify-content: center;
     
     flex-direction: column;
-    gap: 24px;
+    gap: 96px;
 }
 
 .card_1{
@@ -140,19 +140,61 @@
     flex-direction: column;
     list-style-type: none;
     width: 80%;
-    padding-left: 24px;
-    
-    
-    
-
-
-}
-
-.card_1_TextBox ul{
+    padding-left: 24px; 
     gap: 24px;
-    
+
 }
+
 
 .card_2{
     border: 8px solid pink;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card_2_TextBox{
+    border: 8px solid green;
+    width: 50%;
+    
+}
+
+.card_2_TitleAndLogo h3{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+
+.card_2_TextBox p{
+    width: 85%;
+    display:flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+.card_2_TextBox ul {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // list-style-type: none;
+    width: 80%;
+    padding-left: 24px; 
+    gap: 24px;
+
+}
+
+
+.card_2_ImageBox{
+    border: 8px solid black;
+    width: 40%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    // padding-left: 80px;
 }

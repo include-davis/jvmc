@@ -3,9 +3,11 @@ import HomeData from '@/app/(pages)/_data/home.json';
 import Image from 'next/image';
 
 import { CiMedicalCross } from "react-icons/ci";
+import { IoPeopleOutline } from "react-icons/io5";
 
 export default function Home() {
   const {Sentence_1, Sentence_2, Sentence_3} = HomeData.text_Block1
+  const {bulletpoint_1,bulletpoint_2,bulletpoint_3} = HomeData.text_Block2
 
   return (
     <main>
@@ -61,7 +63,35 @@ export default function Home() {
 
                   <div className = {styles.card_2}>
                     {/* left side has text and right side has image */}
+                    <div className = {styles.card_2_TextBox}>
+                    <div className = {styles.card_2_TitleAndLogo}>
+                    <IoPeopleOutline className = {styles.icon}/>
+                    <h3>{HomeData.card2_Title}</h3>
+                    </div>
 
+                    <p>{HomeData.card2_Subtitle}</p>
+                  
+                    <ul>{HomeData.text_Block2Subtext}
+                        <li>{bulletpoint_1}</li>
+                        <li>{bulletpoint_2}</li>
+                        <li>{bulletpoint_3}</li>
+
+                    </ul>
+                    </div>
+
+                    <div className = {styles.card_2_ImageBox}>
+                    <Image
+                      src={HomeData.image2_Link}
+                      alt="Image Text" 
+                      width={350}  // Width of the image
+                      height={500} // Height of the image
+                    />
+                      
+                    </div>
+
+
+
+                    
                   </div>
               </div>
 
