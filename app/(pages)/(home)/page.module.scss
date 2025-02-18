@@ -12,7 +12,8 @@
     width: 70%;
     height: 400px;
     margin: 0 auto;
-    // background-color: red;
+
+
 }
 
 .infoContainer {
@@ -47,16 +48,18 @@
     align-items: center;
     justify-content: flex-end;
     height: 100%;
+    width: 100%;
     flex: 1;
+
 
 }
 
 .image {
     height: 100%;
-    width: 80%;
+    width: 100%;
     border-radius: 50%;
     object-fit: cover;
-
+    margin-left: 24px;
     box-shadow: var(--drop-shadow);
     border: var(--mint-border);
     position: relative;
@@ -65,10 +68,11 @@
 
 .gradientCircle {
     position: absolute;
-    width: 80%; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     height: 100%;
     border-radius: 50%;
     background: var(--green-gradient-light);
+
     right: -24px; /* Moves it slightly to the right */
     z-index: 0; /* Keeps it behind the image */
 }  

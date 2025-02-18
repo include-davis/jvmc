@@ -1,6 +1,6 @@
 import styles from './page.module.scss';
 import Image from 'next/image';
-import { FaHome, FaClock, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaClock, FaEnvelope} from 'react-icons/fa';
 import Link from "next/link";
 
 export default function Home() {
