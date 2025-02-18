@@ -1,1 +1,77 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.contactCard {
+    border-radius: var(--card-border-radius);
+    //padding: var(--card-padding);
+    margin-bottom: var(--vertical-card-gap);
+    background: var(--offwhite);
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    height: 400px;
+    margin: 0 auto;
+    // background-color: red;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: space-between;
+    // background-color: red;  
+    flex: 1;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    gap: 24px;
+    padding-left: 16px;
+    padding: 16px;
+    // background-color: red;
+    // border: 2px solid black;
+}
+
+.infoText {
+    flex-direction: column;
+
+}
+
+.imageContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    flex: 1;
+
+}
+
+.image {
+    height: 100%;
+    width: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+
+    box-shadow: var(--drop-shadow);
+    border: var(--mint-border);
+    position: relative;
+    z-index: 1;
+}
+
+.gradientCircle {
+    position: absolute;
+    width: 80%; /* Adjust as needed */
+    height: 100%;
+    border-radius: 50%;
+    background: var(--green-gradient-light);
+    right: -24px; /* Moves it slightly to the right */
+    z-index: 0; /* Keeps it behind the image */
+}  
+
+
+  
