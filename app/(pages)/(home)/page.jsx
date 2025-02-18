@@ -7,7 +7,7 @@ import { IoPeopleOutline } from "react-icons/io5";
 
 export default function Home() {
   const {Sentence_1, Sentence_2, Sentence_3} = HomeData.text_Block1
-  const {bulletpoint_1,bulletpoint_2,bulletpoint_3} = HomeData.text_Block2
+  const {bulletpoint_1, bulletpoint_2, bulletpoint_3, bulletpoint_4} = HomeData.text_Block2
 
   return (
     <main>
@@ -75,6 +75,7 @@ export default function Home() {
                         <li>{bulletpoint_1}</li>
                         <li>{bulletpoint_2}</li>
                         <li>{bulletpoint_3}</li>
+                        <li>{bulletpoint_4}</li>
 
                     </ul>
                     </div>

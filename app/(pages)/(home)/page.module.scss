@@ -88,6 +88,8 @@
     
     flex-direction: column;
     gap: 96px;
+
+    padding-bottom: 96px;
 }
 
 .card_1{
@@ -166,6 +168,7 @@
     align-items: center;
     padding-left: 16px;
     padding-bottom: 16px;
+    font-size: 32px;
 }
 
 
@@ -180,13 +183,17 @@
 .card_2_TextBox ul {
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
     // list-style-type: none;
-    width: 80%;
-    padding-left: 24px; 
-    gap: 24px;
+    width: 90%;
+    padding-left: 16px; 
+    list-style-position: inside;
+    
+}
 
+.card_2_TextBox li {
+  padding-left: 16px; 
 }
 
 
