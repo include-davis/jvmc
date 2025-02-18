@@ -10,8 +10,9 @@
     display:flex;
     flex-direction: column;
     gap:320px;
-}
 
+    // position: relative;
+}
 .titleWithButton{
     // border: 8px solid red;
 
@@ -20,13 +21,12 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    gap:24px;
-    padding-top: 80px; // spacing for the top of the home page
+    gap:36px;
+    padding-top: 160px; // spacing for the top of the home page
     
 }
 
 .titleWithButton button{
-    // border: 8px solid blue;
     width: 10%;
     height: 9%;
     font-size: 16px;
@@ -93,10 +93,10 @@
 .mainCardSectionTitle h3{
    // border: 8px solid purple;
     position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    // top: 95%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // z-index: 1;
     width: 20%;
 }
 
@@ -141,7 +141,7 @@
 .image1{
     //border:2px solid red; // not needed but can help to see the image's border
     border-radius:5%;
-    transform: rotate(-1.9deg);
+    transform: rotate(-2.174deg);
     box-shadow: var(--drop-shadow-small);
     
 }
@@ -282,6 +282,6 @@
 .image2{
     //border:2px solid red; // not needed but can help to see the image's border
     border-radius:5%;
-    transform: rotate(1.9deg);
+    transform: rotate(1.717deg);
     box-shadow: var(--drop-shadow-small);
 }

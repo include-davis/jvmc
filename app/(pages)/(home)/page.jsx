@@ -22,6 +22,7 @@ export default function Home() {
                   <button className ="btn"> {HomeData.buttonMsg} </button>
             </div>
 
+
             <div className = {styles.mainCardsSection}>
               <div className={styles.mainCardSectionTitle}>
                 <h3>{HomeData.mainCardSection_Title}</h3>
