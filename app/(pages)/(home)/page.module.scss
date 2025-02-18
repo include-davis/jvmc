@@ -9,25 +9,42 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    gap:24px;
     
 }
 
 .titleWithButton button{
     border: 8px solid blue;
+    width: 10%;
+    height: 9%;
+    font-size: 16px;
+    padding: 8px;
 }
-
-// .titleWithButton h1{
-//     border: 8px solid blue;
-// }
-
-// .titleWithButton h4{
-//     border: 8px solid orange;
-// }
 
 
 
 .titleAndSubtitle{
     border: 8px solid yellow;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // gap:8px;
+    // width: 80%;
+}
+
+.titleAndSubtitle h1{
+    color: var(--emerald);
+    font-size: 56px;
+    font-weight: 540;
+
+}
+.titleAndSubtitle h4{
+    color: var(--dark-grey);
+    text-align: center;
+    font-size: 16px;
+    width: 45%;
+    font-weight: 350;
 }
 
 
