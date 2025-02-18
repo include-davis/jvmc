@@ -1,6 +1,7 @@
 "use client";
 import styles from './page.module.scss';
 import text from '@/app/(pages)/_data/community-partners.json'
+import Image from 'next/image'
 
 export default function CommunityPartners() {
   const partners = [
@@ -37,7 +38,11 @@ export default function CommunityPartners() {
               <p className={styles.partnersDescription}>{partners.description}</p>
               <p className={styles.locationText}>{partners.location}</p>
               <p className={styles.dateText}>{partners.date}</p>
-              <p className={styles.appointmentText}>{partners.appointment}</p>
+              <p className={styles.appointmentText}>{partners.appointment}
+                <Image 
+                src={text.iconImages["calendarIcon"]} width={39} height={39} alt="calendarIcon">
+                </Image>
+              </p>
               <button
                 className={styles.button}
                 onClick={() => window.location.href = partners.website}>

@@ -1,5 +1,6 @@
 {
     "iconImages": {
-        "location": "/location.svg"
+        "location": "/location.svg",
+        "calendarIcon": "/calendarIcon.svg"
     }
 }
