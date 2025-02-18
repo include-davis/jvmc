@@ -3,7 +3,17 @@
 
 .titleWithButton{
     border: 8px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
     
+}
+
+.titleWithButton button{
+    border: 8px solid blue;
 }
 
 // .titleWithButton h1{
@@ -14,6 +24,30 @@
 //     border: 8px solid orange;
 // }
 
+
+
 .titleAndSubtitle{
     border: 8px solid yellow;
+}
+
+
+.mainCardSection{
+    border: 8px solid orange;
+}
+
+.mainCardSectionTitle{
+    border: 8px solid purple;
+}
+
+
+.cards_Section{
+    border: 8px solid brown;
+}
+
+.card_1{
+    border: 8px solid cyan;
+}
+
+.card_2{
+    border: 8px solid pink;
 }
