@@ -1,5 +1,6 @@
 "use client";
 import styles from './page.module.scss';
+import text from '@/app/(pages)/_data/community-partners.json'
 
 export default function CommunityPartners() {
   const partners = [
@@ -28,7 +29,11 @@ export default function CommunityPartners() {
           {partners.map((partners, index) => 
             <div key={index} className={styles.partnersCard}>
               <h2 className={styles.partnersName}>{partners.name}</h2>
-              <p className={styles.partnersDescription}>{partners.description}</p>
+              <p className={styles.partnersDescription}>{partners.description}
+                <Image 
+                src={text.iconImages["location"]} width={39} height={39} alt="location">
+                </Image>
+              </p>
               <p className={styles.locationText}>{partners.location}</p>
               <p className={styles.dateText}>{partners.date}</p>
               <p className={styles.appointmentText}>{partners.appointment}</p>
