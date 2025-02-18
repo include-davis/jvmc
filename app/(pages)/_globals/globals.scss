@@ -1,4 +1,5 @@
 @use "./mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
   // Primary colors
@@ -29,7 +30,7 @@
   // Text
   --bold: 700; // font-weight: var(--bold);
   --font1: "Merriweather", serif;
-  --font2: "Inter", sans-serif;
+  --font2: "Inter", serif;
 
   // Cards
   --vertical-card-gap: 100px;

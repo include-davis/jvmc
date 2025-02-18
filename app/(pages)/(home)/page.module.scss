@@ -13,7 +13,6 @@
     height: 400px;
     margin: 0 auto;
 
-
 }
 
 .infoContainer {
@@ -51,12 +50,14 @@
     width: 100%;
     flex: 1;
 
-
+    @include mixins.sm-desktop {
+        height: 80%;
+    }
 }
 
 .image {
     height: 100%;
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
     object-fit: cover;
     margin-left: 24px;
@@ -68,12 +69,13 @@
 
 .gradientCircle {
     position: absolute;
-    width: 100%; /* Adjust as needed */
+    width: 80%; /* Adjust as needed */
     height: 100%;
     border-radius: 50%;
     background: var(--green-gradient-light);
+    box-shadow: var(--drop-shadow);
 
-    right: -24px; /* Moves it slightly to the right */
+    right: -16px; /* Moves it slightly to the right */
     z-index: 0; /* Keeps it behind the image */
 }  
 
