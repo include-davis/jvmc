@@ -82,6 +82,12 @@
 .cards_Section{
     border: 8px solid brown;
     width: 70%;
+
+    display:flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    gap: 24px;
 }
 
 .card_1{
@@ -95,7 +101,9 @@
 .card_1_ImageBox{
     border: 8px solid black;
     width: 40%;
-    // align-items: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     // padding-left: 80px;
 }
 
@@ -107,18 +115,21 @@
 
 .card_1_TitleAndLogo{
     display:flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
 
 }
 
 .icon{
     font-size: 32px;
-    justify-content: center;
+    // justify-content: center;
 }
 
 .card_1_TitleAndLogo h3{
     font-size: 32px;
+    padding-left: 16px;
     
 }
 
@@ -129,6 +140,7 @@
     flex-direction: column;
     list-style-type: none;
     width: 80%;
+    padding-left: 24px;
     
     
     
