@@ -1,88 +1,74 @@
-@use "@/app/(pages)/_globals/mixins.scss";
-
 .page {
-    background-color:#F8F8F8;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
 
 .header {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
 }
 
-.header h1{
-    color: #353935;
-    text-align: center;
-    font-family: Merriweather;
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.key {
+    display: flex;
+    flex-direction: row;
+    //align-items: auto;
+    border-radius: 20px;
+    background-color: var(--white);
+    //width: 72%;
+    align-items: center;
 }
 
-.header h3{
-    color: #094935;
-    text-align: center;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 200%;
+.key h4{
+    color: var(--dark-grey); 
+}
+
+.keyElem{
+    display: flex;
+    flex-direction: row;
+}
+
+.circ{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
 }
 
 .infocards{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 64px;
-    width: 836px;
 }
 
-.infocards div {
+.card {
     display: flex;
-    width: 100%;
-    height: auto;
     flex-direction: column;
-    padding: 60px;
-    align-items: flex-start;
-    background-color: #FFF;
+    width: 60%;
+    background-color: var(--white);
+    box-shadow: --drop-shadow;
     border-radius: 20px;
-    align-self: stretch;
-    box-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25);
+    padding: 60px;
 }
 
-.infocards div h4 {
-    color: #094935;
-}
-
-.key{
+.info {
     display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-
+    flex-direction: column;
+    width: 85%;
+    gap: 12px;
 }
 
-.cir1{
-    background-color: #ABDCCF;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
+.tm {
+    display: flex;
+    flex-direction: column;
 }
 
-.cir2{
-    background-color: #094935;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-}
-
-.cir3{
-    background-color: #01887A;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
+.appt{
+    color: var(--teal);
+    font-family:  var(--font2);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
 }
