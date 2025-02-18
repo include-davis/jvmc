@@ -12,7 +12,7 @@ $logo-width: calc(8px * 20);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10%;
+  gap: 32px;
   padding: 40px 96px;
 }
 
@@ -33,7 +33,7 @@ $logo-width: calc(8px * 20);
 .socialLinks {
   list-style: none;
   display: flex;
-  padding: 20px;
+  padding: 16px;
   gap: 24px;
 
   li a {
@@ -51,7 +51,7 @@ $logo-width: calc(8px * 20);
 .navLinks {
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 48px;
 
   li a {
     text-decoration: none;
