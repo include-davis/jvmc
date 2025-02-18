@@ -1,7 +1,7 @@
 "use client";
 import styles from './page.module.scss';
-import text from '@/app/(pages)/_data/community-partners.json';
-import Image from 'next/image';
+import text from '@/app/(pages)/_data/community-partners.json'
+import Image from 'next/image'
 
 export default function CommunityPartners() {
   const partners = [
@@ -47,10 +47,25 @@ export default function CommunityPartners() {
       <p className={styles.subtitleText}>Our trusted allies supporting our mission beyond the our clinics.</p>
       <div className={styles.partnersGrid}>
         {partners.map((partner, index) => {
+          // Set class based on index and reverse if it is the first or third image
+          let containerClass = styles.cardContainer;
+          if (index === 0 || index === 2) {
+            containerClass += ' ' + styles.reverse;
+          }
+
           return (
-            <div key={index} className={styles.partnerContainer}>
+            <div key={index} className={containerClass}>
+              <div className={styles.imageWrapper}>
+                <Image 
+                  src={partnerImages[index]} 
+                  width={434} 
+                  height={453.5} 
+                  alt={`partner-image-${index}`} 
+                  className={styles.partnerImage}
+                />
+              </div>
+
               <div className={styles.partnersCard}>
-                {/* Card Content */}
                 <div className={styles.cardContent}>
                   <h2 className={styles.partnersName}>{partner.name}</h2>
                   <p className={styles.partnersDescription}>{partner.description}</p>
@@ -81,17 +96,6 @@ export default function CommunityPartners() {
                     {partner.buttonText}
                   </button>
                 </div>
-              </div>
-
-              {/* Image outside the card */}
-              <div className={styles.imageWrapper}>
-                <Image 
-                  src={partnerImages[index]} 
-                  width={434} 
-                  height={440.014} 
-                  alt={`partner-image-${index}`} 
-                  className={styles.partnerImage}
-                />
               </div>
             </div>
           );
