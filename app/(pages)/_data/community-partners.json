@@ -1,3 +1,7 @@
 {
-    
+    "bottom_title": "Where we've gone",
+    "bottom_subtitle": "See our community in action",
+    "carousel_images": {
+        "img_1": "public/logo.png"
+    }
 }
