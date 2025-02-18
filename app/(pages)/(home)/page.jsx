@@ -30,9 +30,6 @@ export default function Home() {
                   alt="Main Card Section Title Image"
                   width={780}
                   height={280}
-                  // layout="fill"
-                  // objectFit="cover"
-                  // objectPosition="center"
                   className={styles.headerBackGroundImage}
                   
                 />
@@ -44,8 +41,8 @@ export default function Home() {
                     <Image
                       src={HomeData.image1_Link}
                       alt="Image Text" 
-                      width={325}  // Width of the image
-                      height={420} // Height of the image
+                      width={325}  
+                      height={420} 
                       className={styles.image1}
                     />
                       
@@ -90,8 +87,8 @@ export default function Home() {
                     <Image
                       src={HomeData.image2_Link}
                       alt="Image Text" 
-                      width={325}  // Width of the image
-                      height={420} // Height of the image
+                      width={325}  
+                      height={420}
                       className={styles.image2}
                     />
                       
