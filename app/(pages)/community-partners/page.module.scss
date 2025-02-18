@@ -1,7 +1,7 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .titleText {
-   font-family: Merriweather;
+   font-family: var(--font1);
    font-size: 3.5rem;
    color: #353935;
    text-align: center;
@@ -15,11 +15,11 @@
 }
 
 .partnersGrid {
-  padding: 20px;
+  padding: var(--card-padding);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: var(--vertical-card-gap);
 }
 
 .partnerContainer {
@@ -29,13 +29,14 @@
 }
 
 .partnersCard {
-   background-color: white;
+   background-color: var(--white);
    border-radius: 20px;
    width: 606px;
    height: 452px;
    padding: 60px;
    text-align: left;
-   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   //box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   box-shadow: var(--drop-shadow);
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -86,7 +87,7 @@
 }
 
 .partnersName {
-   color: #1b5e49;
+   color: var(--green);
    font-family: "Inter", serif;
    font-size: 1.5rem;
    font-style: normal;
@@ -95,7 +96,7 @@
 }
 
 .partnersDescription {
-   color: #353935;
+   color: var(--dark-grey);
    font-family: "Inter", serif;
    font-size: 1.05rem;
    font-style: normal;
@@ -104,7 +105,7 @@
 }
 
 .locationText {
-   color: #353935;
+   color: var(--emerald);
    font-family: "Inter", serif;
    font-size: 1.05rem;
    font-style: normal;
@@ -113,7 +114,7 @@
 }
 
 .dateText {
-   color: #353935;
+   color: var(--emerald);
    font-family: "Inter", serif;
    font-size: 1.05rem;
    font-style: normal;
@@ -122,7 +123,7 @@
 }
 
 .appointmentText {
-   color: #353935;
+   color: var(--emerald);
    font-family: "Inter", serif;
    font-size: 1.05rem;
    font-style: normal;
