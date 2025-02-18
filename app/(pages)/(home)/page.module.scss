@@ -10,8 +10,8 @@
     display:flex;
     flex-direction: column;
     gap:320px;
-
 }
+
 .titleWithButton{
     // border: 8px solid red;
 
@@ -21,6 +21,7 @@
     flex-direction: column;
     text-align: center;
     gap:24px;
+    padding-top: 80px; // spacing for the top of the home page
     
 }
 
@@ -60,7 +61,7 @@
 
 
 .mainCardsSection{
-    border: 8px solid orange;
+    //border: 8px solid orange;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -70,22 +71,34 @@
 
 
 .mainCardSectionTitle{
-    border: 8px solid purple;
+    
+    position: 'relative';
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
 
+
     color: var(--emerald);
     width: 20%;
 }
 
-.headerBackGroundImage
-{
+.mainCardSection_Title Image{
     box-shadow: var(--drop-shadow-small);
+    background-color: transparent;
+
 }
 
+.mainCardSectionTitle h3{
+   // border: 8px solid purple;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 20%;
+}
 
 
 

@@ -29,7 +29,10 @@ export default function Home() {
                   src={HomeData.mainCardSection_TitleImage}
                   alt="Main Card Section Title Image"
                   width={780}
-                  height={250}
+                  height={280}
+                  // layout="fill"
+                  // objectFit="cover"
+                  // objectPosition="center"
                   className={styles.headerBackGroundImage}
                   
                 />
