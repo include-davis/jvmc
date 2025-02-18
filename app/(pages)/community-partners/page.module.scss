@@ -1,16 +1,17 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .titleText {
+   //@extend h1;
    font-family: var(--font1);
    font-size: 3.5rem;
-   color: #353935;
+   color: var(--dark-grey);
    text-align: center;
 }   
 
 .subtitleText {
    font-family: Inter;
    font-size: 1.5rem;
-   color: #1b5e49;
+   color: var(--green);
    text-align: center;
 }
 
@@ -25,7 +26,6 @@
 .partnerContainer {
   display: flex;
   align-items: center;
-  //gap: 20px; /* Space between card and image */
 }
 
 .partnersCard {
@@ -35,7 +35,6 @@
    height: 452px;
    padding: 60px;
    text-align: left;
-   //box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
    box-shadow: var(--drop-shadow);
    display: flex;
    flex-direction: column;
@@ -49,7 +48,6 @@
 .cardContainer {
    display: flex;
    align-items: center;
-   //gap: 20px; /* Space between card and image */
  }
 
 .imageWrapper {
@@ -58,27 +56,24 @@
    margin-left: -25px;
    margin-right: -25px;
    border-radius: 0 12px 12px 0;
-   //margin-left: 20px; /* Adjust this value as needed to push the image further */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  //margin-left: -50px; /* Moves the image outside the card */
-  position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
 }
 
 .reverse {
    flex-direction: row-reverse; /* Image on the left */
- }
+}
 
- .reverse .imageWrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 12px 0 0 12px;
-   //margin-left: -50px; /* Moves the image outside the card */
-   position: relative;
-   margin-right: auto;
- } 
+.reverse .imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 0 0 12px;
+  position: relative;
+  margin-right: auto;
+} 
 
 .partnerImage {
    width: 100%;
@@ -132,7 +127,7 @@
 
 .button {
   margin-top: 36px;
-  background-color: #01887a;
+  background-color: var(--teal);
   display: flex;
   padding: 10px 30px;
   justify-content: center;
@@ -140,7 +135,7 @@
   gap: 10px;
   border: none;
   border-radius: 20px;
-  color: #f8f8f8;
+  color: var(--offwhite);
   font-family: Inter;
   font-size: 1.05 rem;
   line-height: 150%;
@@ -149,4 +144,5 @@
 .icon {
   vertical-align: middle;
   margin-right: 14px;
+  fill: var(--emerald)
 }

@@ -44,7 +44,7 @@ export default function CommunityPartners() {
     <main style={{ backgroundColor: '#f8f8f8' }}>
       <div>Community Partners</div>
       <h1 className={styles.titleText}> Community Partners</h1>
-      <p className={styles.subtitleText}>Our trusted allies supporting our mission beyond the our clinics.</p>
+      <h2 className={styles.subtitleText}>Our trusted allies supporting our mission beyond the our clinics.</h2>
       <div className={styles.partnersGrid}>
         {partners.map((partner, index) => {
           // Set class based on index and reverse if it is the first or third image
