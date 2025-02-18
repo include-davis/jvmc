@@ -8,7 +8,7 @@
     gap:320px;
 }
 .titleWithButton{
-    border: 8px solid red;
+    // border: 8px solid red;
 
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 .titleWithButton button{
-    border: 8px solid blue;
+    // border: 8px solid blue;
     width: 10%;
     height: 9%;
     font-size: 16px;
@@ -30,7 +30,7 @@
 
 
 .titleAndSubtitle{
-    border: 8px solid yellow;
+    // border: 8px solid yellow;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@
 .titleAndSubtitle h1{
     color: var(--emerald);
     font-size: 56px;
-    font-weight: 540;
+    font-weight: 520;
 
 }
 .titleAndSubtitle h4{
@@ -54,7 +54,7 @@
 }
 
 
-.mainCardSection{
+.mainCardsSection{
     border: 8px solid orange;
     display:flex;
     justify-content: center;
@@ -63,17 +63,82 @@
     gap: 80px;
 }
 
+
 .mainCardSectionTitle{
     border: 8px solid purple;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    color: var(--emerald);
+    width: 20%;
 }
+
+
 
 
 .cards_Section{
     border: 8px solid brown;
+    width: 70%;
 }
 
 .card_1{
     border: 8px solid cyan;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card_1_ImageBox{
+    border: 8px solid black;
+    width: 40%;
+    // align-items: center;
+    // padding-left: 80px;
+}
+
+.card_1_TextBox{
+    border: 8px solid palegreen;
+    width: 50%;
+    
+}
+
+.card_1_TitleAndLogo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon{
+    font-size: 32px;
+    justify-content: center;
+}
+
+.card_1_TitleAndLogo h3{
+    font-size: 32px;
+    
+}
+
+.card_1_TextBox ul {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    width: 80%;
+    
+    
+    
+
+
+}
+
+.card_1_TextBox ul{
+    gap: 24px;
+    
 }
 
 .card_2{

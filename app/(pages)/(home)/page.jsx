@@ -20,9 +20,15 @@ export default function Home() {
                   <button className ="btn"> {HomeData.buttonMsg} </button>
             </div>
 
-            <div className = {styles.mainCardSection}>
+            <div className = {styles.mainCardsSection}>
               <div className={styles.mainCardSectionTitle}>
                 <h3>{HomeData.mainCardSection_Title}</h3>
+                <Image
+                  src={HomeData.mainCardSection_TitleImage}
+                  alt="Main Card Section Title Image"
+                  width={500}
+                  height={200}
+                />
               </div>
               <div className = {styles.cards_Section}>
                   <div className = {styles.card_1}>
@@ -31,8 +37,8 @@ export default function Home() {
                     <Image
                       src={HomeData.image1_Link}
                       alt="Image Text" 
-                      width={300}  // Width of the image
-                      height={400} // Height of the image
+                      width={350}  // Width of the image
+                      height={500} // Height of the image
                     />
                       
                     </div>
