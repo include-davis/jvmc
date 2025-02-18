@@ -34,6 +34,7 @@ export default function CommunityPartners() {
                 src={text.iconImages["location"]} width={39} height={39} alt="location">
                 </Image>
               </p>
+              <p className={styles.partnersDescription}>{partners.description}</p>
               <p className={styles.locationText}>{partners.location}</p>
               <p className={styles.dateText}>{partners.date}</p>
               <p className={styles.appointmentText}>{partners.appointment}</p>
