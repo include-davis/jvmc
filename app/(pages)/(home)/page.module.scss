@@ -1,11 +1,16 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 
-.body{
+.body{ // check to see if you can use "body" instead of this
+    background-color: var(--offwhite);
+    font-family: var(--font1);
+    color: var(--dar-grey);
+
     border: 8px solid black;
     display:flex;
     flex-direction: column;
     gap:320px;
+
 }
 .titleWithButton{
     // border: 8px solid red;
@@ -76,32 +81,43 @@
     width: 20%;
 }
 
+.headerBackGroundImage
+{
+    box-shadow: var(--drop-shadow-small);
+}
+
 
 
 
 .cards_Section{
-    border: 8px solid brown;
+    //border: 8px solid brown;
+    gap: var(--vertical-card-gap);
+    
     width: 70%;
-
     display:flex;
     justify-content: center;
-    
     flex-direction: column;
-    gap: 96px;
-
     padding-bottom: 96px;
 }
 
 .card_1{
-    border: 8px solid cyan;
+    // border: var(--mint-border); // imporant to the look of the card
+    border: 2px solid var(--mint);
+    box-shadow: var(--drop-shadow-mint);
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background);
+    padding: var(--card-padding);
+
+
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    
 }
 
 .card_1_ImageBox{
-    border: 8px solid black;
+    //border: 8px solid black;
     width: 40%;
     display:flex;
     align-items: center;
@@ -109,8 +125,16 @@
     // padding-left: 80px;
 }
 
+.image1{
+    //border:2px solid red; // not needed but can help to see the image's border
+    border-radius:5%;
+    transform: rotate(-1.9deg);
+    box-shadow: var(--drop-shadow-small);
+    
+}
+
 .card_1_TextBox{
-    border: 8px solid palegreen;
+   // border: 8px solid palegreen;
     width: 50%;
     
 }
@@ -126,12 +150,14 @@
 
 .icon{
     font-size: 32px;
+    color: var(--emerald);
     // justify-content: center;
 }
 
 .card_1_TitleAndLogo h3{
     font-size: 32px;
     padding-left: 16px;
+    color: var(--emerald);
     
 }
 
@@ -145,39 +171,69 @@
     padding-left: 24px; 
     gap: 24px;
 
+    font-family: var(--font2);
+    font-weight: 350;
+
 }
 
 
 .card_2{
-    border: 8px solid pink;
+    border: 2px solid var(--mint);
+    box-shadow: var(--drop-shadow-mint);
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background);
+    padding: var(--card-padding);
+
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    
+    
+    
 }
 
 .card_2_TextBox{
-    border: 8px solid green;
+   // border: 8px solid green;
     width: 50%;
     
 }
 
-.card_2_TitleAndLogo h3{
+.card_2_TitleAndLogo{
     display:flex;
     justify-content: left;
     align-items: center;
     padding-left: 16px;
     padding-bottom: 16px;
+
+}
+
+.icon2{
+    font-size: 40px;
+    color: var(--emerald);
+}
+
+.card_2_TitleAndLogo h3{
+    // display:flex;
+    // justify-content: left;
+    // align-items: center;
+    padding-left: 16px;
     font-size: 32px;
+    color: var(--emerald);
 }
 
 
+
 .card_2_TextBox p{
-    width: 85%;
+    width: 90%;
     display:flex;
     align-items: center;
     padding-left: 16px;
     padding-bottom: 16px;
+
+    font-family: var(--font2);
+
+    font-weight: 350;
 }
 
 .card_2_TextBox ul {
@@ -189,6 +245,10 @@
     width: 90%;
     padding-left: 16px; 
     list-style-position: inside;
+    font-family: var(--font2);
+    gap: 8px;
+
+    font-weight: 350;
     
 }
 
@@ -198,10 +258,17 @@
 
 
 .card_2_ImageBox{
-    border: 8px solid black;
+    //border: 8px solid black;
     width: 40%;
     display:flex;
     align-items: center;
     justify-content: center;
     // padding-left: 80px;
+}
+
+.image2{
+    //border:2px solid red; // not needed but can help to see the image's border
+    border-radius:5%;
+    transform: rotate(1.9deg);
+    box-shadow: var(--drop-shadow-small);
 }

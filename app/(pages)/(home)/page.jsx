@@ -3,7 +3,7 @@ import HomeData from '@/app/(pages)/_data/home.json';
 import Image from 'next/image';
 
 import { CiMedicalCross } from "react-icons/ci";
-import { IoPeopleOutline } from "react-icons/io5";
+import { BsPeople } from "react-icons/bs";
 
 export default function Home() {
   const {Sentence_1, Sentence_2, Sentence_3} = HomeData.text_Block1
@@ -28,8 +28,8 @@ export default function Home() {
                 <Image
                   src={HomeData.mainCardSection_TitleImage}
                   alt="Main Card Section Title Image"
-                  width={500}
-                  height={200}
+                  width={780}
+                  height={250}
                 />
               </div>
               <div className = {styles.cards_Section}>
@@ -39,8 +39,9 @@ export default function Home() {
                     <Image
                       src={HomeData.image1_Link}
                       alt="Image Text" 
-                      width={350}  // Width of the image
-                      height={500} // Height of the image
+                      width={325}  // Width of the image
+                      height={420} // Height of the image
+                      className={styles.image1}
                     />
                       
                     </div>
@@ -65,7 +66,7 @@ export default function Home() {
                     {/* left side has text and right side has image */}
                     <div className = {styles.card_2_TextBox}>
                     <div className = {styles.card_2_TitleAndLogo}>
-                    <IoPeopleOutline className = {styles.icon}/>
+                    <BsPeople className = {styles.icon2}/>
                     <h3>{HomeData.card2_Title}</h3>
                     </div>
 
@@ -84,8 +85,9 @@ export default function Home() {
                     <Image
                       src={HomeData.image2_Link}
                       alt="Image Text" 
-                      width={350}  // Width of the image
-                      height={500} // Height of the image
+                      width={325}  // Width of the image
+                      height={420} // Height of the image
+                      className={styles.image2}
                     />
                       
                     </div>
