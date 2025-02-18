@@ -30,6 +30,8 @@ export default function Home() {
                   alt="Main Card Section Title Image"
                   width={780}
                   height={250}
+                  className={styles.headerBackGroundImage}
+                  
                 />
               </div>
               <div className = {styles.cards_Section}>
