@@ -13,8 +13,8 @@ export default function Home() {
     <main>
         <div className = {styles.body}>
 
-            <div className = {styles.titleWithButton}>
-              <div className = {styles.titleAndSubtitle}>
+            <div className = {styles.titleWithButtonSection}>
+              <div className = {styles.titleAndSubtitleBox}>
                 <h1> {HomeData.homePageTitle} </h1>
                 <h4> {HomeData.homePageSubtitle} </h4>
               </div>
@@ -23,39 +23,39 @@ export default function Home() {
             </div>
 
 
-            <div className = {styles.mainCardsSection}>
-              <div className={styles.mainCardSectionTitle}>
-                <h3>{HomeData.mainCardSection_Title}</h3>
+            <div className = {styles.cardSectionBox}>
+              <div className={styles.cardSectionHeader}>
+                <h3>{HomeData.cardSectionHeaderTitle}</h3>
                 <Image
-                  src={HomeData.mainCardSection_TitleImage}
+                  src={HomeData.cardSectionHeaderImage}
                   alt="Main Card Section Title Image"
                   width={780}
                   height={280}
-                  className={styles.headerBackGroundImage}
+                  // className={styles.headerBackGroundImage}
                   
                 />
               </div>
-              <div className = {styles.cards_Section}>
-                  <div className = {styles.card_1}>
+              <div className = {styles.infoCardsSection}>
+                  <div className = {styles.card}>
                     {/* left side has image and right side has text */}
-                    <div className = {styles.card_1_ImageBox}>
+                    <div className = {styles.card_ImageBox}>
                     <Image
-                      src={HomeData.image1_Link}
+                      src={HomeData.card2_Image_Link}
                       alt="Image Text" 
                       width={325}  
                       height={420} 
-                      className={styles.image1}
+                      className={styles.image_1}
                     />
                       
                     </div>
-                    <div className = {styles.card_1_TextBox}>
+                    <div className = {styles.card_TextBox}>
 
-                    <div className = {styles.card_1_TitleAndLogo}>
+                    <div className = {styles.card_TitleAndLogo}>
                     <CiMedicalCross className = {styles.icon}/>
                     <h3>{HomeData.card1_Title}</h3>
                     </div>
 
-                    <ul>
+                    <ul className= {styles.description_1}>
                         <li>{Sentence_1}</li>
                         <li>{Sentence_2}</li>
                         <li>{Sentence_3}</li>
@@ -65,17 +65,18 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className = {styles.card_2}>
+                  <div className = {styles.card}>
                     {/* left side has text and right side has image */}
-                    <div className = {styles.card_2_TextBox}>
-                    <div className = {styles.card_2_TitleAndLogo}>
-                    <BsPeople className = {styles.icon2}/>
+                    <div className = {styles.card_TextBox}>
+                    <div className = {styles.card_TitleAndLogo}>
+                    <BsPeople className = {styles.icon}/>
                     <h3>{HomeData.card2_Title}</h3>
                     </div>
 
                     <p>{HomeData.card2_Subtitle}</p>
                   
-                    <ul>{HomeData.text_Block2Subtext}
+                    <ul className= {styles.description_2}>
+                    {HomeData.text_Block2_Subtext}
                         <li>{bulletpoint_1}</li>
                         <li>{bulletpoint_2}</li>
                         <li>{bulletpoint_3}</li>
@@ -84,13 +85,13 @@ export default function Home() {
                     </ul>
                     </div>
 
-                    <div className = {styles.card_2_ImageBox}>
+                    <div className = {styles.card_ImageBox}>
                     <Image
-                      src={HomeData.image2_Link}
+                      src={HomeData.card2_Image_Link}
                       alt="Image Text" 
                       width={325}  
                       height={420}
-                      className={styles.image2}
+                      className={styles.image_2}
                     />
                       
                     </div>

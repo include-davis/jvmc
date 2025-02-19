@@ -1,7 +1,6 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-
-.body{ // check to see if you can use "body" instead of this
+.body{
     background-color: var(--offwhite);
     font-family: var(--font1);
     color: var(--dar-grey);
@@ -11,22 +10,19 @@
     flex-direction: column;
     gap:320px;
 
-    // position: relative;
 }
-.titleWithButton{
-    // border: 8px solid red;
 
+.titleWithButtonSection{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     gap:36px;
-    padding-top: 160px; // spacing for the top of the home page
-    
+    padding-top: 160px; 
 }
 
-.titleWithButton button{
+.titleWithButtonSection button{
     width: 10%;
     height: 9%;
     font-size: 16px;
@@ -34,34 +30,31 @@
 }
 
 
-
-.titleAndSubtitle{
-    // border: 8px solid yellow;
+.titleAndSubtitleBox{
+    //border: 8px solid yellow;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // gap:8px;
-    // width: 80%;
+   
 }
 
-.titleAndSubtitle h1{
+.titleAndSubtitleBox h1{
     color: var(--emerald);
     font-size: 56px;
     font-weight: 520;
 
 }
-.titleAndSubtitle h4{
+.titleAndSubtitleBox h4{
     color: var(--dark-grey);
-    text-align: center;
+    // text-align: center;
     font-size: 16px;
     width: 45%;
     font-weight: 350;
 }
 
 
-.mainCardsSection{
-    //border: 8px solid orange;
+.cardSectionBox{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -69,9 +62,7 @@
     gap: 80px;
 }
 
-
-.mainCardSectionTitle{
-    
+.cardSectionHeader{
     position: 'relative';
     display:flex;
     justify-content: center;
@@ -84,26 +75,17 @@
     width: 20%;
 }
 
-.mainCardSection_Title Image{
+.cardSectionHeader Image{
     box-shadow: var(--drop-shadow-small);
     background-color: transparent;
-
 }
 
-.mainCardSectionTitle h3{
-   // border: 8px solid purple;
-    position: absolute;
-    // top: 95%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // z-index: 1;
-    width: 20%;
-}
+.cardSectionHeader h3{
+     position: absolute;
+     width: 20%;
+ }
 
-
-
-.cards_Section{
-    //border: 8px solid brown;
+ .infoCardsSection{
     gap: var(--vertical-card-gap);
     
     width: 70%;
@@ -111,10 +93,9 @@
     justify-content: center;
     flex-direction: column;
     padding-bottom: 96px;
-}
+ }
 
-.card_1{
-    // border: var(--mint-border); // imporant to the look of the card
+ .card{
     border: 2px solid var(--mint);
     box-shadow: var(--drop-shadow-mint);
     border-radius: var(--card-border-radius);
@@ -126,55 +107,69 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    
+
+    gap: 24px;
 }
 
-.card_1_ImageBox{
-    //border: 8px solid black;
+
+.card_ImageBox{
     width: 40%;
     display:flex;
     align-items: center;
     justify-content: center;
-    // padding-left: 80px;
+    
 }
 
-.image1{
-    //border:2px solid red; // not needed but can help to see the image's border
-    border-radius:5%;
+.image_1{
     transform: rotate(-2.174deg);
+    border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow-small);
     
 }
 
-.card_1_TextBox{
-   // border: 8px solid palegreen;
-    width: 50%;
-    
+.image_2{
+    transform: rotate(1.717deg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow-small);
 }
 
-.card_1_TitleAndLogo{
+
+.card_TextBox{
+    width: 50%;
+}
+
+.card_TextBox p{
+    width: 90%;
+    display:flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
+
+    font-family: var(--font2);
+
+    font-weight: 350;
+}
+
+.card_TitleAndLogo{
     display:flex;
     justify-content: left;
     align-items: center;
     padding-left: 16px;
     padding-bottom: 16px;
+}
 
+.card_TitleAndLogo h3{
+    font-size: 32px;
+    padding-left: 16px;
+    color: var(--emerald);
 }
 
 .icon{
     font-size: 32px;
     color: var(--emerald);
-    // justify-content: center;
 }
 
-.card_1_TitleAndLogo h3{
-    font-size: 32px;
-    padding-left: 16px;
-    color: var(--emerald);
-    
-}
-
-.card_1_TextBox ul {
+.description_1{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -186,102 +181,22 @@
 
     font-family: var(--font2);
     font-weight: 350;
-
 }
 
-
-.card_2{
-    border: 2px solid var(--mint);
-    box-shadow: var(--drop-shadow-mint);
-    border-radius: var(--card-border-radius);
-    background-color: var(--card-background);
-    padding: var(--card-padding);
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    
-    
-    
-}
-
-.card_2_TextBox{
-   // border: 8px solid green;
-    width: 50%;
-    
-}
-
-.card_2_TitleAndLogo{
-    display:flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 16px;
-    padding-bottom: 16px;
-
-}
-
-.icon2{
-    font-size: 40px;
-    color: var(--emerald);
-}
-
-.card_2_TitleAndLogo h3{
-    // display:flex;
-    // justify-content: left;
-    // align-items: center;
-    padding-left: 16px;
-    font-size: 32px;
-    color: var(--emerald);
-}
-
-
-
-.card_2_TextBox p{
-    width: 90%;
-    display:flex;
-    align-items: center;
-    padding-left: 16px;
-    padding-bottom: 16px;
-
-    font-family: var(--font2);
-
-    font-weight: 350;
-}
-
-.card_2_TextBox ul {
+.description_2{
     display:flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
-    // list-style-type: none;
     width: 90%;
     padding-left: 16px; 
     list-style-position: inside;
-    font-family: var(--font2);
     gap: 8px;
 
+    font-family: var(--font2);
     font-weight: 350;
-    
-}
 
-.card_2_TextBox li {
-  padding-left: 16px; 
-}
-
-
-.card_2_ImageBox{
-    //border: 8px solid black;
-    width: 40%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    // padding-left: 80px;
-}
-
-.image2{
-    //border:2px solid red; // not needed but can help to see the image's border
-    border-radius:5%;
-    transform: rotate(1.717deg);
-    box-shadow: var(--drop-shadow-small);
+    li{
+        padding-left: 16px; 
+    }
 }

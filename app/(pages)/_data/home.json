@@ -7,12 +7,12 @@
     "dots_2": "/bg dots 2.png",
   
 
-    "mainCardSection_Title": "Serving the Oak Park Community",
-    "mainCardSection_TitleImage": "/subtitleheader.png",
+    "cardSectionHeaderTitle": "Serving the Oak Park Community",
+    "cardSectionHeaderImage": "/subtitleheader.png",
 
     "card1_Title": "Unbiased Healthcare",
     "card1_Logo": "CiMedicalCross",
-    "image1_Link": "/image1.png",
+    "card1_Image_Link": "/image1.png",
   
     "text_Block1": {
       "Sentence_1": "We provide basic medical care and health education in a non-judgmental, accessible way.",
@@ -22,11 +22,11 @@
   
     "card2_Title": "The People We Serve",
     "card2_Logo": "IoPeopleOutline",
-    "image2_Link": "/image2.jpg",
+    "card2_Image_Link": "/image2.jpg",
   
     "card2_Subtitle": "At JVMC, we welcome everyone, regardless of their life history. No matter who you are, you are welcome.",
   
-    "text_Block2Subtext": "We are known in the community for caring about forgotten populations, in particular: ",
+    "text_Block2_Subtext": "We are known in the community for caring about forgotten populations, in particular: ",
     "text_Block2": {
       "bulletpoint_1": "Individuals who use intravenous drugs",
       "bulletpoint_2": "Sex workers",
