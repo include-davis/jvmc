@@ -26,7 +26,7 @@
   .cardTop{
     display: flex;
     align-items: center; 
-    gap: 16px;  // for the top section with the image and header 
+    gap: 16px;  // for the top section with the image and header instead of the padding 
     padding-bottom: 16px; 
   }
 
@@ -34,6 +34,7 @@
     position: absolute;
     width: 211px;
     height: 211px;
+  
   }
 
   .leftCard {
