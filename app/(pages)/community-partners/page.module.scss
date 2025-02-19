@@ -9,7 +9,7 @@
 }   
 
 .subtitleText {
-   font-family: Inter;
+   font-family: var(--font2);
    font-size: 1.5rem;
    color: var(--green);
    text-align: center;
@@ -38,23 +38,18 @@
    box-shadow: var(--drop-shadow);
    display: flex;
    flex-direction: column;
-   flex: 1;
-}
-
-.cardContent {
-   flex: 1;
 }
 
 .cardContainer {
    display: flex;
    align-items: center;
- }
+}
 
 .imageWrapper {
    width: 434px;
    height: 453.5px;
-   margin-left: -25px;
-   margin-right: -25px;
+   margin-left: -20px;
+   margin-right: -20px;
    border-radius: 0 12px 12px 0;
    display: flex;
    justify-content: center;
@@ -83,7 +78,7 @@
 
 .partnersName {
    color: var(--green);
-   font-family: "Inter", serif;
+   font-family: var(--font2);
    font-size: 1.5rem;
    font-style: normal;
    line-height: 100%; 
@@ -92,7 +87,7 @@
 
 .partnersDescription {
    color: var(--dark-grey);
-   font-family: "Inter", serif;
+   font-family: var(--font2);
    font-size: 1.05rem;
    font-style: normal;
    line-height: 150%; 
@@ -100,8 +95,8 @@
 }
 
 .locationText {
-   color: var(--emerald);
-   font-family: "Inter", serif;
+   color: var(--dark-grey);
+   font-family: var(--font2);
    font-size: 1.05rem;
    font-style: normal;
    line-height: 150%; 
@@ -109,8 +104,8 @@
 }
 
 .dateText {
-   color: var(--emerald);
-   font-family: "Inter", serif;
+   color: var(--dark-grey);
+   font-family: var(--font2);
    font-size: 1.05rem;
    font-style: normal;
    line-height: 150%; 
@@ -118,8 +113,8 @@
 }
 
 .appointmentText {
-   color: var(--emerald);
-   font-family: "Inter", serif;
+   color: var(--dark-grey);
+   font-family: var(--font2);
    font-size: 1.05rem;
    font-style: normal;
    line-height: 150%; 
@@ -127,22 +122,24 @@
 
 .button {
   margin-top: 36px;
+  padding: 10px 30px;
+  height: 47px;
+  width: 219px;
   background-color: var(--teal);
   display: flex;
-  padding: 10px 30px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border: none;
   border-radius: 20px;
   color: var(--offwhite);
-  font-family: Inter;
-  font-size: 1.05 rem;
+  font-family: var(--font2);
+  font-size: 1.05rem;
   line-height: 150%;
+  cursor: pointer;
 }
 
 .icon {
   vertical-align: middle;
-  margin-right: 14px;
+  margin-right: 13px;
   fill: var(--emerald)
 }

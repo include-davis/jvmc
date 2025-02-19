@@ -84,7 +84,7 @@ export default function CommunityPartners() {
                   <p className={styles.appointmentText}>
                     {index === 1 && (
                       <Image 
-                        src={text.iconImages["appointmentIcon"]} width={17} height={19} alt="appointmentIcon" className={styles.icon}
+                        src={text.iconImages["appointmentIcon"]} width={18} height={18} alt="appointmentIcon" className={styles.icon}
                       />
                     )}
                     {partner.appointment}
