@@ -3,8 +3,7 @@
 
 .cardComponent {
     display: flex;
-    width: 1040px;
-    position: relative;
+    width: 72%;
     min-height: 350px;
 }
 
@@ -19,16 +18,14 @@
 
 .card {
     display: flex;
-    width: 952px;
+    position: relative;
+    width: 91.5%;
     min-height: 350px;
     background-color: var(--card-background);
     box-shadow: var(--drop-shadow);
-    padding-right: 60px;
+    padding: var(--card-padding);
 }
 
-.card.right {
-    padding: 0px var(--card-padding);
-}
 .card.left {
     padding-left: 322px;
 }
@@ -40,8 +37,6 @@
     row-gap: 32px;
     min-height: 350px;
     max-width: 617px;
-    margin-top: var(--card-padding);
-    margin-bottom: var(--card-padding);
     color: var(--dark-grey);
 }
 
@@ -111,9 +106,9 @@
 }
 
 .cardComponent.left .cardImage {
-    left: 0;
+    left: -88px;
 }
 
 .cardComponent.right .cardImage {
-    right: 0;
+    right: -88px;
 }

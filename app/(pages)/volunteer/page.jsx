@@ -75,8 +75,7 @@ export default function Volunteer() {
         {
           cards.map((cards, idx) => {
             return (
-              <div key={idx}>
-                <VolunteerCard 
+                <VolunteerCard key={idx}
                   title={cards.title}
                   direction={cards.direction}
                   image={cards.image}
@@ -84,7 +83,6 @@ export default function Volunteer() {
                   icon={cards.icon}
                   mainText={cards.mainText}
                   link={cards.link}></VolunteerCard>
-              </div>
             )
           })
         }

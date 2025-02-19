@@ -19,9 +19,9 @@ export default function VolunteerCard({ title, direction, image, altText, icon, 
               <p><b>{link}</b></p>
             </div>
           </div>
-        </div>
-        <div className={styles.cardImage}>
-          <Image src={image} alt={altText} layout="fill" objectFit="cover"/>
+          <div className={styles.cardImage}>
+            <Image src={image} alt={altText} layout="fill" objectFit="cover"/>
+          </div>
         </div>
       </div>
     );
