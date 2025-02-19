@@ -22,6 +22,7 @@
     width: 91.5%;
     min-height: 350px;
     background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow);
     padding: var(--card-padding);
 }
