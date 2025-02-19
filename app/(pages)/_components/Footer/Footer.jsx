@@ -20,12 +20,12 @@ export default function Footer() {
           </div>
           <ul className={styles.socialLinks}>
             <li>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/jvmclinic" target="_blank" rel="noopener noreferrer">
                 <LuFacebook />
               </a>
             </li>
