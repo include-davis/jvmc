@@ -1,1 +1,202 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.body{
+    background-color: var(--offwhite);
+    font-family: var(--font1);
+    color: var(--dar-grey);
+
+    border: 8px solid black;
+    display:flex;
+    flex-direction: column;
+    gap:320px;
+
+}
+
+.titleWithButtonSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap:36px;
+    padding-top: 160px; 
+}
+
+.titleWithButtonSection button{
+    width: 10%;
+    height: 9%;
+    font-size: 16px;
+    padding: 8px;
+}
+
+
+.titleAndSubtitleBox{
+    //border: 8px solid yellow;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.titleAndSubtitleBox h1{
+    color: var(--emerald);
+    font-size: 56px;
+    font-weight: 520;
+
+}
+.titleAndSubtitleBox h4{
+    color: var(--dark-grey);
+    // text-align: center;
+    font-size: 16px;
+    width: 45%;
+    font-weight: 350;
+}
+
+
+.cardSectionBox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.cardSectionHeader{
+    position: 'relative';
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+
+    color: var(--emerald);
+    width: 20%;
+}
+
+.cardSectionHeader Image{
+    box-shadow: var(--drop-shadow-small);
+    background-color: transparent;
+}
+
+.cardSectionHeader h3{
+     position: absolute;
+     width: 20%;
+ }
+
+ .infoCardsSection{
+    gap: var(--vertical-card-gap);
+    
+    width: 70%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 96px;
+ }
+
+ .card{
+    border: 2px solid var(--mint);
+    box-shadow: var(--drop-shadow-mint);
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background);
+    padding: var(--card-padding);
+
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 24px;
+}
+
+
+.card_ImageBox{
+    width: 40%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.image_1{
+    transform: rotate(-2.174deg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow-small);
+    
+}
+
+.image_2{
+    transform: rotate(1.717deg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow-small);
+}
+
+
+.card_TextBox{
+    width: 50%;
+}
+
+.card_TextBox p{
+    width: 90%;
+    display:flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
+
+    font-family: var(--font2);
+
+    font-weight: 350;
+}
+
+.card_TitleAndLogo{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+.card_TitleAndLogo h3{
+    font-size: 32px;
+    padding-left: 16px;
+    color: var(--emerald);
+}
+
+.icon{
+    font-size: 32px;
+    color: var(--emerald);
+}
+
+.description_1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    width: 80%;
+    padding-left: 24px; 
+    gap: 24px;
+
+    font-family: var(--font2);
+    font-weight: 350;
+}
+
+.description_2{
+    display:flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 90%;
+    padding-left: 16px; 
+    list-style-position: inside;
+    gap: 8px;
+
+    font-family: var(--font2);
+    font-weight: 350;
+
+    li{
+        padding-left: 16px; 
+    }
+}
