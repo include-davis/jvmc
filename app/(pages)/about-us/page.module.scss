@@ -1,5 +1,20 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-white) ;//#F8F8F8;
+  gap: var(--vertical-card-gap);
+}
+
+/*
 .page {
     display: flex;
     flex-direction: column;
@@ -7,8 +22,6 @@
     //gap: 24px;
     position: relative;
     background-color: var(--color-white) ;//#F8F8F8;
-    //height: 200vh;
-    //width: 100%;
     padding-top: 3%;
 
     h4{
@@ -105,3 +118,4 @@
        
     }
 }
+*/
