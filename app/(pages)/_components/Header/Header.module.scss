@@ -1,42 +1,37 @@
-    @use "@/app/(pages)/_globals/mixins.scss";
+@use "@/app/(pages)/_globals/mixins.scss";
 
-    .header {
-        position:relative;
-        z-index: 100;
-        display: flex;
-        justify-content: space-between; 
-        align-items: center;
-        padding: 26px 30px;
-        background-color: var(--white);
-        box-shadow: var(--drop-shadow-header);
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 26px 104px;
+    background-color: var(--white);
+    box-shadow: var(--drop-shadow-header);
+    gap: 50px;
+
+    @include mixins.sm-desktop {
+        padding: 24px 80px;
+        gap: 42px;  
     }
+}
 
-    .headerImage {
-        margin-left: 30px;
-        background-color: var(--white);
-    }
 
-    .headerLinks {
-        display: flex;
-        padding: 26px 40px;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--white);
-        width: 75%;
-    }
+.headerLinks {
+    display: flex;
+    padding: 26px 40px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    width: 75%;
+}
 
-    .headerItems {
-        text-decoration: none;
-        color: var(--dark-grey); 
-        background-color: var(--white);
-    }
+.headerItems {
+    text-decoration: none;
+    color: var(--dark-grey); 
+    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+    transition: font-weight 0.2s ease;
+}
 
-    // .headerContact {
-    //     border-radius: 100px;
-    //     padding: 10px 30px;
-    //     background: #01887A;    
-    //     text-decoration: none;
-    //     color: white;
-    //     font-size: 18px;
-    //     font-family: var(--font2);
-    // }
+.headerItems:hover {
+    font-weight: var(--bold);
+}
