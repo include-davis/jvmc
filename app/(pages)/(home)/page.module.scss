@@ -9,7 +9,6 @@
     display:flex;
     flex-direction: column;
     gap:320px;
-
 }
 
 .titleWithButtonSection{
@@ -63,7 +62,7 @@
 }
 
 .cardSectionHeader{
-    position: 'relative';
+    position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +71,7 @@
 
 
     color: var(--emerald);
-    width: 20%;
+    width: 25%;
 }
 
 .cardSectionHeader Image{
@@ -82,8 +81,10 @@
 
 .cardSectionHeader h3{
      position: absolute;
-     width: 20%;
+     width: 80%;
  }
+
+
 
  .infoCardsSection{
     gap: var(--vertical-card-gap);
