@@ -18,7 +18,14 @@
   --light-green: #cae2ad;
 
   // Gradients ( syntax is background: var(--rainbow-gradient); )
-  --rainbow-gradient: conic-gradient( 
+  --rainbow-conic-gradient: conic-gradient( 
+    var(--light-pink), 
+    var(--light-purple), 
+    var(--light-blue), 
+    var(--light-green)
+  );
+  --rainbow-linear-gradient: linear-gradient(
+    to right, 
     var(--light-pink), 
     var(--light-purple), 
     var(--light-blue), 
@@ -92,7 +99,7 @@ p {
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
 }
 
-// Button styles
+// Button styles (We may need to rework this)
 .btn {
   display: flex;
   align-items: center;
@@ -106,4 +113,9 @@ p {
   font-weight: var(--bold);
   cursor: pointer;
   text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--rainbow-linear-gradient);
+  color: var(--dark-grey);
 }
