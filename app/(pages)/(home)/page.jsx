@@ -18,8 +18,18 @@ export default function Home() {
               <h1> {HomeData.homePageTitle} </h1>
               <h4> {HomeData.homePageSubtitle} </h4>
             </div>
-                
-                <button className ="btn"> {HomeData.buttonMsg} </button>
+
+             <div className={styles.dots1}>
+             <Image
+               src={HomeData.dots_1}
+               alt="dots"
+               width={400}          // Add width and height based on your needs
+               height={800}
+             />
+           </div> 
+            <button className={"btn" }>
+              {HomeData.buttonMsg}
+            </button>
           </div>
 
 
@@ -39,7 +49,7 @@ export default function Home() {
                   {/* left side has image and right side has text */}
                   <div className = {styles.card_ImageBox}>
                   <Image
-                    src={HomeData.card2_Image_Link}
+                    src={HomeData.card1_Image_Link}
                     alt="Image Text" 
                     width={325}  
                     height={420} 
