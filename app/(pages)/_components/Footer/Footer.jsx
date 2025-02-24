@@ -1,11 +1,18 @@
+'use client'
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram} from "react-icons/fa";
 import { LuFacebook } from "react-icons/lu";
+// import footerData from '@/app/_data/footer.json';
+import { useRouter } from "next/navigation";
 
 
 export default function Footer() {
+  //const { socialLinks, navLinks, footerText } = footerData;
+  const router = useRouter();
+  const pathname = router.pathname;
+
   return (
     <footer className={styles.footer}>
       <div className={styles.topSection}>
@@ -32,12 +39,20 @@ export default function Footer() {
           </ul>
         </div>
         <ul className={styles.navLinks}>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/clinic-schedule">Clinic Schedules</Link></li>
-          <li><Link href="/community-partners">Community Partners</Link></li>
-          <li><Link href="/about-us">About Us</Link></li>
-          <li><Link href="/volunteer">Volunteer</Link></li>
-          <li><Link href="/contact-us">Contact Us</Link></li>
+        {[
+            { label: "Home", url: "/" },
+            { label: "Clinic Schedules", url: "/clinic-schedule" },
+            { label: "Community Partners", url: "/community-partners" },
+            { label: "About Us", url: "/about-us" },
+            { label: "Volunteer", url: "/volunteer" },
+            { label: "Contact Us", url: "/contact-us" },
+          ].map(({ label, url }) => (
+            <li key={url}>
+              <Link href={url} className={pathname === url ? styles.active : ""}>
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.bottomSection}>
