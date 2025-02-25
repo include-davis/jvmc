@@ -4,39 +4,40 @@ import Image from 'next/image'
 import text from '@/app/(pages)/_data/community-partners.json';
 
 export default function CommunityPartners() {
+    const images = [
+      text.carousel_images["img_1"],
+      text.carousel_images["img_2"],
+      text.carousel_images["img_3"],
+      text.carousel_images["img_4"],
+    ];
+
+    const imagesToDisplay = [...images, ...images, ...images];
+
     return (
       <main>
         <div>Community Partners</div>
-        <h2>{text.bottom_title}</h2>
-        <h4>{text.bottom_subtitle}</h4>
+        <h2 className={styles.community_partners_title}>{text.bottom_title}</h2>
+        <h4 className={styles.community_partners_subtitle}>{text.bottom_subtitle}</h4>
 
-        <div class={styles.carousel}>
+        <div className={styles.carousel}>
 
-          <div class={styles.row}>
-
-            <div class={styles.column}>
+          <div className={styles.row}>
+          {imagesToDisplay.map((image, index) => (
+            <div key={index} className={styles.column}>
               <Image
-                className={styles.img_1}
-                src={text.img_1}
-                width={521}
-                height={370}
-                alt={text.img_1_descript}
-                ></Image>
+                className={styles.img}
+                src={image}
+                alt={`Image ${index}`}
+                layout="fill"  // Adjust the image size
+                objectFit="cover"  // Adjust the image size
+                objectPosition="center"
+              />
             </div>
-            <div class={styles.column}>
-              <Image src="drive_pic.png"></Image>
-            </div>
-            <div class={styles.column}>
-              <Image src="drive_pic2.png"></Image>
-            </div>
-            <div class={styles.column}>
-              <Image src="drive_pic3.png"></Image>
-            </div>
-            <div class={styles.column}>
-              <Image src="drive_pic4.png"></Image>
-            </div>
-
+          ))}
           </div>
+
+
+
 
         </div>
       </main>

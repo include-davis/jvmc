@@ -1,15 +1,57 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-.img_1{
-    /*width: 521px; /*50% of opening box width 
-    height: 370px;*/
+.community_partners_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.community_partners_subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    width: 400px;
+    height: 400px;
+    overflow: hidden; /* Hide any parts of the image that overflow the container */
+    position: relative;
+
+    margin-right: 50px; /*space between the images*/
     border-radius: 20px;
     border: var(--mint-border);
     border: 2px solid var(--mint);
-
     background: lightgray 50% / cover no-repeat;
-
     /* mint-drop-shadow, not same as globals var */
     box-shadow: 0px 0px 48px 0px rgba(171, 220, 207, 0.35);
+}
+
+.carousel{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.carousel .row{
+    display:flex;
+    row-gap: 50px;
+
+    padding: 30px;
+    animation: slide 20s linear infinite;
+}
+
+@keyframes slide{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.carousel .column{
+    perspective: 100px;
+    display:flex;
+    padding: 50px;
 }
