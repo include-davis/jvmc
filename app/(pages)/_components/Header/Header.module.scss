@@ -23,15 +23,30 @@
     justify-content: space-between;
     background-color: var(--white);
     width: 75%;
+
+    @include mixins.sm-desktop {
+        gap: 40px;  
+    }
 }
 
 .headerItems {
     text-decoration: none;
-    color: var(--dark-grey); 
+    color: var(--dark-grey);
     @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-    transition: font-weight 0.2s ease;
+    transition: font-weight 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        font-weight: var(--bold);
+    }
 }
 
-.headerItems:hover {
-    font-weight: var(--bold);
+.headerItemActive {
+    font-weight: var(--bold);  
+    color: var(--teal);
 }
+
+
+  
+
+
+
