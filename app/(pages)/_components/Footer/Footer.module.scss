@@ -59,13 +59,13 @@ $logo-width: calc(8px * 20);
     color: var(--dark-grey);
     transition: color 0.3s, font-weight 0.3s;
   }
-ß
-  :hover {
+
+  a:hover {
     color: var(--teal); 
     font-weight: bold;
   }
 
-  &.active {
+  li a.active {
     color: var(--teal);
     font-weight: bold; 
   }

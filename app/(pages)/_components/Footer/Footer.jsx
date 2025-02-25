@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram} from "react-icons/fa";
 import { LuFacebook } from "react-icons/lu";
-// import footerData from '@/app/_data/footer.json';
+import footerData from '../../_data/footer.json';
 import { useRouter } from "next/navigation";
 
 
 export default function Footer() {
-  //const { socialLinks, navLinks, footerText } = footerData;
+  const { platform, url, icon } = footerData.socialLinks;
+  const { home, clinic, community, about, volunteer, contact } = footerData.navLinks;
   const router = useRouter();
   const pathname = router.pathname;
 
