@@ -1,1 +1,95 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.questionsCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 72.22%;
+    height: 247px;
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow);
+    padding: var(--card-padding);
+}
+
+.questionsCard h3 {
+    color: var(--emerald);
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    color: var(--emerald);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--light-blue);
+}
+
+.cardBody {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: var(--font2);
+}
+
+.cardBody ul {
+    padding-left: 30px; /* Indentation for bullet points */
+}
+
+.cardBody a {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+.cardBody b {
+    font-weight: var(--bold);
+}
+
+.cardLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    width: 181px;
+    height: 48px;
+    border-radius: 100px;
+    color: white;
+}
+
+.cardLink b {
+    font-weight: var(--bold);
+}
+
+.cardLink a {
+    text-decoration: none;
+    color: white;
+}
+
+.cardImage {
+    border: solid var(--mint);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+
+    @include mixins.sm-desktop {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+.cardComponent.left .cardImage {
+    left: -88px;
+}
+
+.cardComponent.right .cardImage {
+    right: -88px;
+}

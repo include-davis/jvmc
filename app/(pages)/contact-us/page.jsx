@@ -8,7 +8,8 @@ export default function ContactUs() {
         {/* SOCIAL MEDIA COMPONENT */}
         {/* QUESTIONS? COMPONENT */}
         <div className={styles.questionsCard}>
-          <h3>Questions?<br/>We would love to hear!</h3>
+          <h3>Questions?</h3>
+          <h3>We would love to hear!</h3>
           <p></p>
           <p></p>
         </div>
