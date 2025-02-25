@@ -20,7 +20,11 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className={`${isButton ? "btn" : styles.headerItems} ${isActive ? styles.headerItemActive : ""}`}
+              className={
+                isButton 
+                  ? "btn" 
+                  : `${styles.headerItems} ${isActive ? styles.headerItemActive : ""}`
+              }
             >
               {label}
             </Link>
