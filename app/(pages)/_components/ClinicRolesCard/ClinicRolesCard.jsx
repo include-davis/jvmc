@@ -5,9 +5,10 @@ export default function ClinicRolesCard({ icon, iconAlt, img, imgAlt, align, sub
     return (
       <div className={`${styles.card} ${align === "left" ? styles.leftCard : styles.rightCard}`}>
         <div className={styles.img}>
+          
           <Image
             src={img}
-            style={{ objectFit: "fill" }}
+            style={{ objectFit: "contain" }}
             fill={true}
             alt={imgAlt}
           />
