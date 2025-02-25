@@ -1,6 +1,7 @@
 import styles from './page.module.scss';
 import HomeData from '@/app/(pages)/_data/home.json';
 import Image from 'next/image';
+import Link from "next/link";
 
 import { CiMedicalCross } from "react-icons/ci";
 import { BsPeople } from "react-icons/bs";
@@ -12,24 +13,25 @@ export default function Home() {
   return (
     <main>  
         <div className = {styles.body}>
-
           <div className = {styles.titleWithButtonSection}>
             <div className = {styles.titleAndSubtitleBox}>
               <h1> {HomeData.homePageTitle} </h1>
-              <h4> {HomeData.homePageSubtitle} </h4>
+              <p> {HomeData.homePageSubtitle} </p>
             </div>
 
-             <div className={styles.dots1}>
-             <Image
-               src={HomeData.dots_1}
-               alt="dots"
-               width={400}          // Add width and height based on your needs
-               height={800}
-             />
-           </div> 
-            <button className={"btn" }>
+          <div className = {styles.contactButton}>
+            <Link className = "btn" href="/contact-us">
               {HomeData.buttonMsg}
-            </button>
+            </Link>
+            <div className = {styles.dots1}>
+              <Image 
+                src = {HomeData.dots_1}
+                width = {390}
+                height = {676}
+                alt = "Image of Dots"
+              />
+            </div>
+          </div>       
           </div>
 
 
@@ -38,7 +40,7 @@ export default function Home() {
               <h3>{HomeData.cardSectionHeaderTitle}</h3>
               <Image
                 src={HomeData.cardSectionHeaderImage}
-                alt="Main Card Section Title Image"
+                alt="Image of Background for Card Section Header Title"
                 width={780}
                 height={280}
                 
@@ -50,7 +52,7 @@ export default function Home() {
                   <div className = {styles.card_ImageBox}>
                   <Image
                     src={HomeData.card1_Image_Link}
-                    alt="Image Text" 
+                    alt="Image of JVMC Workers handling documents" 
                     width={325}  
                     height={420} 
                     className={styles.image_1}
@@ -97,17 +99,20 @@ export default function Home() {
                   <div className = {styles.card_ImageBox}>
                   <Image
                     src={HomeData.card2_Image_Link}
-                    alt="Image Text" 
+                    alt="Image of JVMC Workers grouped together for a photo" 
                     width={325}  
                     height={420}
                     className={styles.image_2}
-                  />
-                    
+                  /> 
                   </div>
-
-
-
-                  
+                  <div className={styles.dots2}>
+                    <Image
+                      src={HomeData.dots_2}
+                      alt={"dots"}
+                      width={259}
+                      height={533}
+                    />
+                  </div>
                 </div>
             </div>
 
