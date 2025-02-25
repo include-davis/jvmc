@@ -1,1 +1,15 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.img_1{
+    /*width: 521px; /*50% of opening box width 
+    height: 370px;*/
+
+    border-radius: 20px;
+    border: var(--mint-border);
+    border: 2px solid var(--mint);
+
+    background: lightgray 50% / cover no-repeat;
+
+    /* mint-drop-shadow, not same as globals var */
+    box-shadow: 0px 0px 48px 0px rgba(171, 220, 207, 0.35);
+}

@@ -15,19 +15,25 @@ export default function CommunityPartners() {
           <div class={styles.row}>
 
             <div class={styles.column}>
-              <Image></Image>
+              <Image
+                className={styles.img_1}
+                src={text.img_1}
+                width={521}
+                height={370}
+                alt={text.img_1_descript}
+                ></Image>
             </div>
             <div class={styles.column}>
-              <Image></Image>
+              <Image src="drive_pic.png"></Image>
             </div>
             <div class={styles.column}>
-              <Image></Image>
+              <Image src="drive_pic2.png"></Image>
             </div>
             <div class={styles.column}>
-              <Image></Image>
+              <Image src="drive_pic3.png"></Image>
             </div>
             <div class={styles.column}>
-              <Image></Image>
+              <Image src="drive_pic4.png"></Image>
             </div>
 
           </div>
