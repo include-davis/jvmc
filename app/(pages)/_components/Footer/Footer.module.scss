@@ -1,1 +1,83 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+$logo-height: calc(8px * 15);
+$logo-width: calc(8px * 20);
+
+.footer {
+  background-color: var(--white);
+  box-shadow: var(--drop-shadow-header);
+  text-align: center;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding: 40px 96px;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  position: relative;
+  overflow: hidden;
+  height: $logo-height;
+  width: $logo-width;
+}
+
+.socialLinks {
+  list-style: none;
+  display: flex;
+  padding: 16px;
+  gap: 24px;
+
+  li a {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    color: black;
+  }
+
+  li a:hover {
+    color: var(--mint);
+  }
+
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+
+  li a {
+    text-decoration: none;
+    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+    color: var(--dark-grey);
+    transition: color 0.3s, font-weight 0.3s;
+  }
+
+  a:hover {
+    color: var(--teal); 
+    font-weight: bold;
+  }
+
+  li a.active {
+    color: var(--teal);
+    font-weight: bold; 
+  }
+}
+
+.bottomSection {
+    padding: 16px 96px;
+    display: flex;
+    margin: 0;
+    font-size: 1.0rem;
+    background-color: var(--teal);
+    color: var(--offwhite);
+    font-family: var(--font2);
+    font-weight: var(--light);
+}

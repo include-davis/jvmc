@@ -1,0 +1,23 @@
+{
+    "socialLinks": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/jvmclinic",
+        "icon": "FaInstagram"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/jvmclinic",
+        "icon": "LuFacebook"
+      }
+    ],
+    "navLinks": [
+      { "home": "Home", "url": "/" },
+      { "clinic": "Clinic Schedules", "url": "/clinic-schedule" },
+      { "community": "Community Partners", "url": "/community-partners" },
+      { "about": "About Us", "url": "/about-us" },
+      { "volunteer": "Volunteer", "url": "/volunteer" },
+      { "contact": "Contact Us", "url": "/contact-us" }
+    ],
+    "footerText": "Made with 🤍 by #include at Davis © 2025"
+  }
