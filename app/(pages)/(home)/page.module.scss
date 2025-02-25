@@ -1,1 +1,247 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.body{
+    
+    // border: 8px solid black;
+    display:flex;
+    flex-direction: column;
+    gap:320px;
+
+}
+
+.titleWithButtonSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap:36px;
+    padding-top: 160px; 
+
+}
+
+.contactButton{
+    position: relative;
+    // z-index: 2;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.dots1{
+    //border: 8px solid red;
+  
+    position: absolute;
+    transform: translate(50%);
+    top: 90px; // 56
+    left: 24px;
+    z-index: -1;
+    
+}
+
+.dots2{
+    //border: 8px solid red;
+  
+    position: absolute;
+    z-index: -1;
+   
+}
+
+
+.titleAndSubtitleBox{
+    //border: 8px solid yellow;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    
+   
+}
+
+.titleAndSubtitleBox h1{
+    color: var(--emerald);
+    font-size: 56px;
+
+}
+
+
+.titleAndSubtitleBox p{
+    text-align: center;
+    width: calc(8px * 71);
+}
+
+
+.cardSectionBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--vertical-card-gap);
+    // width: 1040px;  This will mess up the full-view
+}
+
+.cardSectionHeader{
+    
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 1;
+    
+    
+
+
+    // color: var(--emerald);
+    // width: 25%;
+
+    height: calc(8px * 18);
+    width: calc(8px * 85);
+    margin-bottom: calc(8px * 3);
+}
+
+.cardSectionHeader Image{
+    box-shadow: var(--drop-shadow-small);
+    background-color: transparent;
+}
+
+.cardSectionHeader h3{
+     position: absolute;
+     width: 80%;
+ }
+
+
+
+ .infoCardsSection{
+
+    gap: var(--vertical-card-gap);
+    
+    width: 70%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 96px;
+
+    // position: "relative";
+    // z-index: 1;
+
+    
+ }
+
+ .card{
+    border: 2px solid var(--mint);
+    box-shadow: var(--drop-shadow-mint);
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background);
+    padding: var(--card-padding);
+
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 24px;
+
+}
+
+
+.card_ImageBox{
+    width: 40%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_1{
+    transform: rotate(-2.174deg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow-small);
+   
+    
+}
+
+.image_2{
+    transform: rotate(1.717deg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow-small);
+    
+}
+
+
+.card_TextBox{
+    width: 50%;
+    
+}
+
+.card_TextBox p{
+    width: 90%;
+    display:flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
+
+    font-family: var(--font2);
+
+    font-weight: 350;
+}
+
+.card_TitleAndLogo{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 16px;
+
+    
+}
+
+.card_TitleAndLogo h3{
+    font-size: 32px;
+    padding-left: 16px;
+    color: var(--emerald);
+}
+
+.icon{
+    font-size: 32px;
+    color: var(--emerald);
+}
+
+.description_1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    width: 90%;
+    padding-left: 24px; 
+    gap: 24px;
+
+    font-family: var(--font2);
+    font-weight: 350;
+    line-height: 2;
+}
+
+.description_2{
+    display:flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 90%;
+    padding-left: 16px; 
+    list-style-position: inside;
+    gap: 8px;
+
+    font-family: var(--font2);
+    font-weight: 350;
+
+    li{
+        padding-left: 16px; 
+        
+    }
+}
