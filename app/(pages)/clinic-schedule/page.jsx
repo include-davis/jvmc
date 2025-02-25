@@ -52,7 +52,7 @@ export default function ClinicSchedule() {
                 </div>
               </div>
               {clinic.appt === "button" ? (
-                <button className="btn">Visit GHC Website</button>
+                <a target="_blank" href="https://www.genderhealthcenter.org" className="btn">Visit GHC Website</a>
               ) : (
                 <p className={styles.appt}>{clinic.appt}</p>
               )}
