@@ -27,8 +27,20 @@
     padding: var(--card-padding);
 }
 
+.card.right {
+    padding-right: 322px;
+
+    @include mixins.sm-desktop {
+        padding-right: 242px;
+    }
+}
+
 .card.left {
     padding-left: 322px;
+
+    @include mixins.sm-desktop {
+        padding-left: 242px;
+    }
 }
 
 .cardText {
@@ -104,6 +116,11 @@
     width: 350px;
     height: 350px;
     overflow: hidden;
+
+    @include mixins.sm-desktop {
+        width: 270px;
+        height: 270px;
+    }
 }
 
 .cardComponent.left .cardImage {
