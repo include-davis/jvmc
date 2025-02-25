@@ -7,6 +7,11 @@ export default function ContactUs() {
         {/* MAP COMPONENT */}
         {/* SOCIAL MEDIA COMPONENT */}
         {/* QUESTIONS? COMPONENT */}
+        <div className={styles.questionsCard}>
+          <h3>Questions?<br/>We would love to hear!</h3>
+          <p></p>
+          <p></p>
+        </div>
         {/* CONTACT FORM COMPONENT */}
       </main>
     );
