@@ -94,8 +94,8 @@ export default function ContactUs() {
                 />
             </div>
             <div className={styles.buttonArea}>
-              <button type="submit" className="btn">
-                Send
+              <button type="submit" className={styles.sendButton}>
+                <b>Send</b>
               </button>
             </div>
           </form>

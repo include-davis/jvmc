@@ -99,3 +99,19 @@
     flex-direction: row-reverse;
     width: 100%;
 }
+
+.sendButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    width: 106px;
+    height: 48px;
+    border-radius: 100px;
+    color: white;
+}
+
+.sendButton b {
+    font-weight: var(--bold);
+    font-family: var(--font2);
+}
