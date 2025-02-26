@@ -93,6 +93,11 @@ export default function ContactUs() {
                   onChange={(e) => setMessage(e.target.value)}
                 />
             </div>
+            <div className={styles.buttonArea}>
+              <button type="submit" className="btn">
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </main>
