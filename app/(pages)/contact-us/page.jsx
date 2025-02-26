@@ -12,10 +12,49 @@ export default function ContactUs() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
+
+  // Error handling
+  const [firstNameError, setFirstNameError] = useState('');
+  const [lastNameError, setLastNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [subjectError, setSubjectError] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent automatic page reload
 
-    // Validation?
+    // Input Validation
+    let valid = true;
+
+    if (!firstName.trim()) {
+      setFirstNameError('First Name is required.');
+      valid = false;
+    } else {
+      setFirstNameError('');
+    }
+
+    if (!lastName.trim()) {
+      setLastNameError('Last Name is required.');
+      valid = false;
+    } else {
+      setLastNameError('');
+    }
+
+    if (!email.trim()) {
+      setEmailError('Email is required.');
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      setEmailError('Invalid email format.');
+      valid = false;
+    } else {
+      setEmailError('');
+    }
+
+    if (!subject.trim()) {
+      setSubjectError('Subject is required.');
+      valid = false;
+    } else {
+      setSubjectError('');
+    }
 
     const contactData = {
       firstName,
@@ -25,9 +64,11 @@ export default function ContactUs() {
       message,
     };
 
-    // Send to API
-    console.log(contactData);
-  }
+    if (valid) {
+      // Send to API
+      console.log(contactData);
+    }
+  };
     return (
       <main>
         <div className={styles.contactPage}>
@@ -45,6 +86,7 @@ export default function ContactUs() {
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.formField}>
               <div className={styles.formInput}>
+                {firstNameError && <p className={styles.errorText}>{firstNameError}</p>}
                 <label>First Name*</label>
                 <input
                   type="text"
@@ -54,17 +96,7 @@ export default function ContactUs() {
                 />
               </div>
               <div className={styles.formInput}>
-                <label>Email*</label>
-                <input
-                  type="text"
-                  className={styles.formInputText}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-            </div>
-            <div className={styles.formField}>
-              <div className={styles.formInput}>
+                {lastNameError && <p className={styles.errorText}>{lastNameError}</p>}
                 <label>Last Name*</label>
                 <input
                   type="text"
@@ -73,7 +105,20 @@ export default function ContactUs() {
                   onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
+            </div>
+            <div className={styles.formField}>
               <div className={styles.formInput}>
+                {emailError && <p className={styles.errorText}>{emailError}</p>}
+                <label>Email*</label>
+                <input
+                  type="text"
+                  className={styles.formInputText}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className={styles.formInput}>
+                {subjectError && <p className={styles.errorText}>{subjectError}</p>}
                 <label>Subject*</label>
                 <input
                   type="text"

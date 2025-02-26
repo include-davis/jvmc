@@ -115,3 +115,10 @@
     font-weight: var(--bold);
     font-family: var(--font2);
 }
+
+/* Error messages */
+.errorText {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
