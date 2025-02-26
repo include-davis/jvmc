@@ -2,7 +2,6 @@
 
 .contactCard {
     border-radius: var(--card-border-radius);
-    //padding: var(--card-padding);
     margin-bottom: var(--vertical-card-gap);
     background: var(--offwhite);
 
@@ -10,17 +9,14 @@
     align-items: center;
     flex-direction: row;
     width: 70%;
-    height: 400px;
-    margin: 0 auto;
 
+    margin: 0 auto;
 }
 
 .infoContainer {
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    justify-content: space-between;
-    // background-color: red;  
+    justify-content: space-between; 
     flex: 1;
 }
 
@@ -32,8 +28,6 @@
     gap: 24px;
     padding-left: 16px;
     padding: 16px;
-    // background-color: red;
-    // border: 2px solid black;
 }
 
 .infoText {
@@ -69,14 +63,14 @@
 
 .gradientCircle {
     position: absolute;
-    width: 80%; /* Adjust as needed */
+    width: 80%; 
     height: 100%;
     border-radius: 50%;
     background: var(--green-gradient-light);
     box-shadow: var(--drop-shadow);
 
-    right: -16px; /* Moves it slightly to the right */
-    z-index: 0; /* Keeps it behind the image */
+    right: -16px; 
+    z-index: 0; 
 }  
 
 
