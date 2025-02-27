@@ -11,7 +11,7 @@ export default function CommunityPartners() {
       text.carousel_images["img_4"],
     ];
 
-    const imagesToDisplay = [...images, ...images, ...images];
+    const imagesToDisplay = [...images];
 
     return (
       <main>
@@ -19,27 +19,23 @@ export default function CommunityPartners() {
         <h2 className={styles.community_partners_title}>{text.bottom_title}</h2>
         <h4 className={styles.community_partners_subtitle}>{text.bottom_subtitle}</h4>
 
-        <div className={styles.carousel}>
-
+        <div className={styles.carousel} style={{ '--num_images': 4}}>
           <div className={styles.row}>
-          {imagesToDisplay.map((image, index) => (
-            <div key={index} className={styles.column}>
-              <Image
-                className={styles.img}
-                src={image}
-                alt={`Image ${index}`}
-                layout="fill"  // Adjust the image size
-                objectFit="cover"  // Adjust the image size
-                objectPosition="center"
-              />
-            </div>
-          ))}
+            {imagesToDisplay.map((image, index) => (
+              <div key={index} className={styles.column}>
+                <Image
+                  className={styles.img}
+                  src={image}
+                  alt={`Image ${index}`}
+                  layout="fill"  // Adjust the image size
+                  objectFit="cover"  // Adjust the image size
+                  objectPosition="center"
+                />
+              </div>
+            ))}
           </div>
-
-
-
-
         </div>
+
       </main>
     );
   }

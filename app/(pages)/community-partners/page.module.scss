@@ -28,30 +28,29 @@
 }
 
 .carousel{
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
 
 .carousel .row{
-    display:flex;
-    row-gap: 50px;
+    display: flex;
+    border: solid 2px black;
+    animation: slide 10s linear infinite; /*take 10s to perform this animation once*/
+}
 
-    padding: 30px;
-    animation: slide 20s linear infinite;
+.carousel .row .column{
+    perspective: 100px; /*how far away a 3D object is from user*/
+    display: flex;
 }
 
 @keyframes slide{
     0% {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
-    100% {
-        transform: translateX(-50%);
+    100%{
+        transform: translateX(-100%);
     }
 }
 
-.carousel .column{
-    perspective: 100px;
-    display:flex;
-    padding: 50px;
-}
+
