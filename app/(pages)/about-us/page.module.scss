@@ -1,42 +1,49 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-.aboutUs {
-    font-family: Merriweather, serif;
-    font-size: 50px;
-    font-weight: 550;
-    color: #353935;
-    text-align: center;
-}
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--vertical-card-gap);
+  }
 
-.phrase {
-    color: #094935;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: Arial;
-    text-align: center;
-}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.historyContainer {
-    color: 353935;
-    font-family: Inter;
-    font-size: 18px;
-    text-align: left;
-    max-width: 600px;
-    max-height: 800px;
-    padding: 20px;
+.servicesWrapper,
+.missionWrapper,
+.historyWrapper {
+    display: flex;
+    justify-content: space-between;
+    align: center;
+
+    width: calc(8px * 130);
     background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    word-wrap: break-word;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow);
+
+    h3 {
+      color: var(--emerald);
+    }
+}
+
+.servicesContainer,
+.missionContainer,
+.historyContainer {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+    padding: var(--card-padding);
+    width: 100%;
 }
 
 .img1 {
-    width: 575px;
-    border-radius: 10px;
-}
-
-.historyWrapper {
-    align-items: center;
-    display: flex;
-    padding: 160px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
 }
