@@ -1,15 +1,12 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .body{
-    background-color: var(--offwhite);
-    font-family: var(--font1);
-    color: var(--dar-grey);
 
-    border: 8px solid black;
+    // border: 8px solid black;
     display:flex;
     flex-direction: column;
     gap:320px;
-    z-index: 1;
+
 }
 
 .titleWithButtonSection{
@@ -24,27 +21,25 @@
     position: relative;
 }
 
-.titleWithButtonSection button{
-    width: 10%;
-    height: 9%;
-    font-size: 16px;
-    padding: 8px;
+
+.contactButton{
+    // position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-
-// .contactButton{
-//     position: relative;
-
-// }
-
 .dots1{
-    border: 8px solid red;
+    // border: 8px solid red;
     position: absolute;
-    right: 300px;
-    top: 390px;
-    z-index: 2;
-   
-    
+    transform: translate(50%);
+    top: 90px; // 56
+    left: 24px;
+    z-index: -1;
+}
+
+.dots2{
+    position: absolute;
+    z-index: -1;
 }
 
 
@@ -54,43 +49,45 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-   
+    gap: 12px;
 }
 
 .titleAndSubtitleBox h1{
     color: var(--emerald);
     font-size: 56px;
-    font-weight: 520;
-
 }
-.titleAndSubtitleBox h4{
-    color: var(--dark-grey);
-    // text-align: center;
-    font-size: 16px;
-    width: 45%;
-    font-weight: 350;
+
+.titleAndSubtitleBox p{
+    text-align: center;
+    width: calc(8px * 71);
 }
 
 
 .cardSectionBox{
+    border: 8px solid red;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 80px;
+
+    gap: var(--vertical-card-gap);
+    // width: 1040px;  This will mess up the full-view
+
 }
 
 .cardSectionHeader{
     position: relative;
+    z-index: 1;
+    
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
+    // flex-direction: column;
 
-
-    color: var(--emerald);
-    width: 25%;
+    height: calc(8px * 18);
+    width: calc(8px * 85);
+    margin-bottom: calc(8px * 3);
 }
 
 .cardSectionHeader Image{
@@ -105,18 +102,16 @@
 
 
 
- .infoCardsSection{
-    gap: var(--vertical-card-gap);
+//  .infoCardsSection{
+//     gap: var(--vertical-card-gap);
     
-    width: 70%;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 96px;
-    position: relative;
-    z-index: 3;
+//     width: 70%;
+//     display:flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     padding-bottom: 96px;
 
- }
+//  }
 
  .card{
     border: 2px solid var(--mint);
@@ -124,16 +119,18 @@
     border-radius: var(--card-border-radius);
     background-color: var(--card-background);
     padding: var(--card-padding);
+    gap: var(--vertical-card-gap);
 
 
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    width: 70%; // Makes sure all cards are same width
 
-    gap: 24px;
-    position: relative;
-    z-index: 3;
+    // gap: 24px;
+ 
+
 
 }
 
@@ -163,6 +160,7 @@
 
 
 .card_TextBox{
+    border: 8px solid blue;
     width: 50%;
     
 }
@@ -175,11 +173,11 @@
     padding-bottom: 16px;
 
     font-family: var(--font2);
-
     font-weight: 350;
 }
 
 .card_TitleAndLogo{
+    
     display:flex;
     justify-content: left;
     align-items: center;
@@ -196,7 +194,7 @@
 .icon{
     font-size: 32px;
     color: var(--emerald);
-    z-index: 3;
+ 
 }
 
 .description_1{
@@ -205,13 +203,14 @@
     align-items: center;
     flex-direction: column;
     list-style-type: none;
-    width: 80%;
-    padding-left: 24px; 
+    width: 90%;
+    padding-left: 24px;
     gap: 24px;
 
     font-family: var(--font2);
     font-weight: 350;
-    z-index: 3;
+    line-height: 2;
+ 
 }
 
 .description_2{
@@ -226,7 +225,7 @@
 
     font-family: var(--font2);
     font-weight: 350;
-    z-index: 3;
+
 
     li{
         padding-left: 16px; 
