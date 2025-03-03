@@ -69,7 +69,6 @@
 }
 
 .socialMediaIcons {
-    border: solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,15 +76,9 @@
     margin-top: 20px;
 }
 
-.icons1 {
-    font-size: 32px;
-    padding: 8px;
-    text-align: center;
-    display: flex;
-}
-.icons2{
-    font-size: 32px;
-    padding: 8px;
-    text-align: center;
-    display: flex;
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    font-weight: var(--bold);
 }
