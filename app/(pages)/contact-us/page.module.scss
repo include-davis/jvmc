@@ -1,1 +1,91 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--white);
+    position: relative;
+
+}
+.title {
+    font-family: var(--font1);
+    font-size: 56px;
+    font-weight: var(--bold);
+    color: var(--dark-grey);
+    line-height: normal;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 85%;
+    max-width: 900px;
+    margin-bottom: 50px;
+    box-shadow: var(--drop-shadow);
+    border-radius: 5%;
+}
+.mapContainer {
+    flex: 1;
+    min-width: 50%;
+    max-width: 55%;
+}
+
+.boxCard {
+    // place holder for now
+}
+.infoCard {
+    flex: 1;
+    background-color: var(--white);
+    padding-bottom: 29px;
+    margin-right: 22px;
+    text-align: center;
+    font-size: 36px;
+    color: var(--emerald);
+}
+
+.textInfo {
+    color: var(--dark-grey); //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section 
+    font-family: var(--font2);
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Media {
+    // place holder for now
+}
+
+.socialMedia {
+    text-align: center;
+}
+
+.socialMediaIcons {
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.icons1 {
+    font-size: 32px;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+}
+.icons2{
+    font-size: 32px;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+}
