@@ -24,19 +24,21 @@ export default function Home() {
             <Link className = "btn" href="/contact-us">
             {HomeData.buttonMsg}
             </Link>
-            <div className = {styles.dots1}>
-              <Image 
-                src = {HomeData.dots_1}
-                width = {390}
-                height = {676}
-                alt = "Image of Dots"
-              />
-            </div>
           </div>
           </div>
 
 
           <div className = {styles.cardSectionBox}>
+
+          <div className = {styles.dots1}>
+                  <Image 
+                    src = {HomeData.dots_1}
+                    width = {390}
+                    height = {676}
+                    alt = "Image of Dots"
+                  />
+            </div>
+
               <div className={styles.cardSectionHeader}>
 
                 <h3>{HomeData.cardSectionHeaderTitle}</h3>
@@ -48,6 +50,7 @@ export default function Home() {
                 />
 
               </div>
+
 
                 <div className = {styles.card}>
                   {/* left side has image and right side has text */}
@@ -61,6 +64,7 @@ export default function Home() {
                   />
                     
                   </div>
+
                   <div className = {styles.card_TextBox}>
                   <div className = {styles.card_TitleAndLogo}>
                   <CiMedicalCross className = {styles.icon}/>
@@ -77,6 +81,15 @@ export default function Home() {
                   </div>
                 </div>
 
+
+                <div className={styles.dots2}>
+                    <Image
+                      src={HomeData.dots_2}
+                      alt={"dots"}
+                      width={259}
+                      height={533}
+                    />
+                </div>
                 <div className = {styles.card}>
                   {/* left side has text and right side has image */}
                   <div className = {styles.card_TextBox}>
@@ -106,15 +119,15 @@ export default function Home() {
                     className={styles.image_2}
                   />
                   </div>
+                </div>
 
-                  <div className={styles.dots2}>
+                <div className={styles.dots3}>
                     <Image
-                      src={HomeData.dots_2}
+                      src={HomeData.dots_3}
                       alt={"dots"}
-                      width={259}
-                      height={533}
+                      width={394}
+                      height={609}
                     />
-                  </div>
                 </div>
           
           </div>

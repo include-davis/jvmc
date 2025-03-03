@@ -7,6 +7,7 @@
     flex-direction: column;
     gap:320px;
 
+
 }
 
 .titleWithButtonSection{
@@ -18,28 +19,39 @@
     gap:36px;
     padding-top: 160px; 
 
-    position: relative;
 }
 
 
 .contactButton{
-    // position: relative;
     display: flex;
     justify-content: center;
 }
 
 .dots1{
-    // border: 8px solid red;
     position: absolute;
     transform: translate(50%);
-    top: 90px; // 56
-    left: 24px;
-    z-index: -1;
+    top: -320px;
+    right: 520px;
+    z-index: -2;
+    pointer-events: none; /* Prevents interaction issues */
 }
 
 .dots2{
     position: absolute;
-    z-index: -1;
+    transform: translate(50%);
+    bottom: 300px; // 56
+    left: -45px; //24
+    z-index: -2;
+    pointer-events: none; /* Prevents interaction issues */
+}
+
+.dots3{
+    position: absolute;
+    transform: translate(50%);
+    bottom: -350px;
+    right: 280px;
+    z-index: -2;
+    pointer-events: none; /* Prevents interaction issues */
 }
 
 
@@ -64,7 +76,6 @@
 
 
 .cardSectionBox{
-    border: 8px solid red;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -73,11 +84,14 @@
     gap: var(--vertical-card-gap);
     // width: 1040px;  This will mess up the full-view
 
+    position: relative;
+    z-index: 1;
+
 }
 
 .cardSectionHeader{
     position: relative;
-    z-index: 1;
+    z-index: -1;
     
     display:flex;
     justify-content: center;
@@ -97,6 +111,7 @@
 
 .cardSectionHeader h3{
      position: absolute;
+     z-index: 1;
      width: 80%;
  }
 
@@ -126,11 +141,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 70%; // Makes sure all cards are same width
+    width: 65%; // Makes sure all cards are same width
 
-    // gap: 24px;
- 
-
+    position: relative;
+    z-index: 2;
 
 }
 
@@ -140,6 +154,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
+
     
 }
 
@@ -155,13 +170,12 @@
     transform: rotate(1.717deg);
     border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow-small);
-    
+
 }
 
 
 .card_TextBox{
-    border: 8px solid blue;
-    width: 50%;
+    width: 70%;
     
 }
 
@@ -194,6 +208,7 @@
 .icon{
     font-size: 32px;
     color: var(--emerald);
+
  
 }
 
@@ -210,6 +225,7 @@
     font-family: var(--font2);
     font-weight: 350;
     line-height: 2;
+
  
 }
 
