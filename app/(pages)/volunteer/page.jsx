@@ -27,7 +27,7 @@ const cards = [
         If you have any questions or concerns the recruitment process please email us at <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b>. <b>Please Fill out our interest form if you would like to stay up to date on our recruitment cycle!</b>
       </>
     ),
-    link: <a href="https://forms.gle/5STumqF28u1dvUmTA" target="_blank">Volunteer Form</a>,
+    link: <a href="https://forms.gle/5STumqF28u1dvUmTA" target="_blank" className='btn'>Volunteer Form</a>,
   },
   {
     title: "Physicians", 
@@ -46,7 +46,7 @@ const cards = [
       </>
     ),
     link: (
-      <><a href="mailto:example@example.com">Email Us</a></>
+      <><a href="mailto:jvmcvolunteer@gmail.com" className='btn'>Email Us</a></>
     ),
   },
   {
@@ -62,7 +62,7 @@ const cards = [
         Please wear a scrub top and jeans or scrub bottoms instead of your white coats to be respectful to our patients. Additionally, please bring your student ID card and a stethoscope to the clinic.
       </>
     ),
-    link: <Link href="/contact-us">Contact Us</Link>,
+    link: <Link href="/contact-us" className='btn'>Contact Us</Link>,
   }, 
 ];
 
