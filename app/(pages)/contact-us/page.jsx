@@ -19,7 +19,7 @@ export default function ContactUs() {
   const [emailError, setEmailError] = useState('');
   const [subjectError, setSubjectError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent automatic page reload
 
     // Input Validation
@@ -66,7 +66,14 @@ export default function ContactUs() {
 
     if (valid) {
       // Send to API
-      console.log(contactData);
+      const res = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(contactData),
+      });
+      
+      const data = await res.json();
+      alert(data.message || 'Something went wrong');
     }
   };
     return (
