@@ -15,6 +15,14 @@ export default function Home() {
         <div className = {styles.body}>
 
           <div className = {styles.titleWithButtonSection}>
+            <div className={styles.headerGradient}>
+              <Image
+                src={HomeData.header_gradient}
+                alt={"header gradient"}
+                width={1839}
+                height={1349}
+              />
+            </div>
             <div className = {styles.titleAndSubtitleBox}>
               <h1> {HomeData.homePageTitle} </h1>
               <p> {HomeData.homePageSubtitle} </p>
