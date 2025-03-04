@@ -82,3 +82,25 @@
     margin-right: 10px;
     font-weight: var(--bold);
 }
+
+.dotsContainer {
+    position: relative;
+    display: flex;
+}
+
+.dotsLeft {
+    position: absolute;
+    left: -98%;
+    top: 100%;
+    width: 100%;
+
+}
+
+.dotsRight {
+    position: absolute;
+    right: -98%;
+    bottom: 100%;
+    width: 100%;
+
+}
+

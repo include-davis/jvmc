@@ -32,9 +32,13 @@ export default function ContactUs() {
             <section className={styles.Media}>
                 <section className={styles.socialMedia}>
                     <h4>Visit our social media pages!</h4>
+                    <div className={styles.dotsContainer}>
+                    <img src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" className={styles.dotsLeft}/>
+                    <img src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" className={styles.dotsRight}/>
+                    </div>
                     <div className={styles.socialMediaIcons}>
                         <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
-                          <FaInstagram className={styles.icon} />Instagram</a>
+                          <FaInstagram className={styles.icon} /> Instagram</a>
                         <a href="https://www.facebook.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">
                           <LuFacebook className={styles.icon} />Facebook</a>
                     </div>
