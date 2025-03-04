@@ -23,6 +23,12 @@ export default function Home() {
                 height={1349}
               />
             </div>
+            <Image
+                src={HomeData.teddy}
+                alt={"JVMC teddy"}
+                width={166}
+                height={123}
+              />
             <div className = {styles.titleAndSubtitleBox}>
               <h1> {HomeData.homePageTitle} </h1>
               <p> {HomeData.homePageSubtitle} </p>
