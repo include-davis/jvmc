@@ -1,23 +1,21 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-.title{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-
-    height: auto;
-    /*figma padding: 234px 241px 0px;*/
-    padding: 232px 16.7% 0px;
-
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.sub_title{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
 
-    height:auto;
-    /*figma padding: 0px 241px;*/
-    padding: 0px 16.7% 0px;
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  width: 1040px;
+}
+
+.header {
+  text-align: center;
 }
 
 .opening{
@@ -26,62 +24,52 @@
     align-items: center;
     column-gap: 40px;
 
-    
-    /*figma padding: 100px 200px 0px;*/
-    padding: 100px 14% 0px;
 }
-.landing_photo{
-    /*width: 521px; /*50% of opening box width 
-    height: 370px;*/
 
+.landing_photo{
     border-radius: 20px;
     border: var(--mint-border);
     border: 2px solid var(--mint);
 
-    background: lightgray 50% / cover no-repeat;
-
     /* mint-drop-shadow, not same as globals var */
-    box-shadow: 0px 0px 48px 0px rgba(171, 220, 207, 0.35);
+    box-shadow: var(--drop-shadow-mint);
 }
 .intro{
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 24px;
-
-    /*481px*/
-    width: auto;
 }
 
 .bottom{
-    padding: 168px 27.6% 160px;
+    display: flex;
+    justify-content: center;
 }
 
 .learn_more{
     background-color: var(--white);
-    border-radius: 24px; 
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow);
+    padding: var(--card-padding);
 
     display: flex;
-    box-shadow: var(--drop-shadow);
     flex-direction: column;
-    row-gap: 32px;
-    padding: 64px;
-    
     align-items: center; /*primarily used for buttn to fit About Us text*/
+    gap: 30px;
+
+    width: 644px;
 }
+
 .bottom_title{
     text-align: center;
 }
+
 .text{
     text-align: center;
     align-self: stretch;
 }
+
 .about_us{
-    color: var(--teal); /*#01887A;*/
-    align-self: stretch;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%; /* 27px */
+    font-weight: var(--bold);
+    color: var(--teal);
 }
