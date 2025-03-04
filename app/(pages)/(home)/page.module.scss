@@ -29,27 +29,16 @@
 
 .dots1{
     position: absolute;
-    transform: translate(50%);
-    top: -320px;
-    right: 520px;
+    bottom: 300px; // 56
+    left: -12px;
     z-index: -1;
     pointer-events: none; /* Prevents interaction issues */
 }
 
 .dots2{
     position: absolute;
-    transform: translate(50%);
-    bottom: 300px; // 56
-    left: -30px; //24 | -4
-    z-index: -1;
-    pointer-events: none; /* Prevents interaction issues */
-}
-
-.dots3{
-    position: absolute;
-    transform: translate(50%);
     bottom: -350px;
-    right: 280px;
+    right: -12px;
     z-index: -1;
     pointer-events: none; /* Prevents interaction issues */
 }

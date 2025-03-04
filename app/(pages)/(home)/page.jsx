@@ -30,15 +30,6 @@ export default function Home() {
 
           <div className = {styles.cardSectionBox}>
 
-          <div className = {styles.dots1}>
-                  <Image 
-                    src = {HomeData.dots_1}
-                    width = {390}
-                    height = {676}
-                    alt = "Image of Dots"
-                  />
-            </div>
-
               <div className={styles.cardSectionHeader}>
 
                 <h3>{HomeData.cardSectionHeaderTitle}</h3>
@@ -106,9 +97,9 @@ export default function Home() {
                 </div>
 
 
-                <div className={styles.dots2}>
+                <div className={styles.dots1}>
                     <Image
-                      src={HomeData.dots_2}
+                      src={HomeData.dots_1}
                       alt={"dots"}
                       width={259}
                       height={533}
@@ -168,9 +159,9 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={styles.dots3}>
+                <div className={styles.dots2}>
                     <Image
-                      src={HomeData.dots_3}
+                      src={HomeData.dots_2}
                       alt={"dots"}
                       width={394}
                       height={609}
