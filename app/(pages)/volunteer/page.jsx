@@ -68,24 +68,24 @@ const cards = [
 
 export default function Volunteer() {
     return (
-      <main>
+      <main className={styles.middle}>
         {/* VolunteerCard components */}
+        <h2 className={styles.header}>Ready to Volunteer with Us?</h2>
         <div className={styles.volunteerCards}>
-          <h2 className={styles.header}>Ready to Volunteer with Us?</h2>
-        {
-          cards.map((cards, idx) => {
-            return (
-                <VolunteerCard key={idx}
-                  title={cards.title}
-                  direction={cards.direction}
-                  image={cards.image}
-                  altText={cards.altText}
-                  icon={cards.icon}
-                  mainText={cards.mainText}
-                  link={cards.link}></VolunteerCard>
-            )
-          })
-        }
+          {
+            cards.map((cards, idx) => {
+              return (
+                  <VolunteerCard key={idx}
+                    title={cards.title}
+                    direction={cards.direction}
+                    image={cards.image}
+                    altText={cards.altText}
+                    icon={cards.icon}
+                    mainText={cards.mainText}
+                    link={cards.link}></VolunteerCard>
+              )
+            })
+          }
         </div>
       </main>
     );

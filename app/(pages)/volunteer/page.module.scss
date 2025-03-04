@@ -3,10 +3,17 @@
 .volunteerCards {
     display: flex;
     flex-direction: column;
-    row-gap: var(--vertical-card-gap);
+    gap: var(--vertical-card-gap);
     align-items: center;
 }
 
 .header {
     color: var(--dark-grey);
+    text-align: center;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
