@@ -10,8 +10,8 @@ const cards = [
   {
     title: "Undergraduate Students at UC Davis", 
     direction: "right", 
-    image: "/images/magpie.png",
-    altText: "A magpie",
+    image: "/images/UGrad.jpg",
+    altText: "Undergraduate Students",
     icon: <PiStudent />,
     mainText: (
       <>
@@ -32,8 +32,8 @@ const cards = [
   {
     title: "Physicians", 
     direction: "left", 
-    image: "/images/magpie.png",
-    altText: "A magpie",
+    image: "/images/Physicians.jpg",
+    altText: "Physicians",
     icon: <LuStethoscope />,
     mainText: (
       <>
@@ -52,8 +52,8 @@ const cards = [
   {
     title: "Medical Students: MD, PA, & NP Students", 
     direction: "right", 
-    image: "/images/magpie.png",
-    altText: "A magpie",
+    image: "/images/MD_Student.jpg",
+    altText: "MD Students",
     icon: <MdOutlineMedicalServices />,
     mainText: (
       <>
