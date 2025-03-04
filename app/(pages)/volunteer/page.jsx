@@ -24,7 +24,7 @@ const cards = [
           <li>Be able to attend our weekly meetings</li>
         </ul>
         <br />
-        If you have any questions or concerns the recruitment process please email us at <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b>. <b>Please Fill out our interest form if you would like to stay up to date on our recruitment cycle!</b>
+        Please email <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b> with questions about recruitment and/or volunteering. <b>Fill out our interest form if you would like to keep up to date on our recruitment cycle!</b>
       </>
     ),
     link: <a href="https://forms.gle/5STumqF28u1dvUmTA" target="_blank" className='btn'>Volunteer Form</a>,
