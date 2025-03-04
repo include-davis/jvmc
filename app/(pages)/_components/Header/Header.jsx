@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div className={styles.header}>
-      <Image src="/images/JVMC Logo 1.png" alt="JVMC Logo" width={120} height={88} />
+      <Image src="/logo.png" alt="JVMC Logo" width={120} height={88} />
       <div className={styles.headerLinks}>
         {navLinks.map(({ href, label, isButton }) => {
           const isActive = pathname === href; 
