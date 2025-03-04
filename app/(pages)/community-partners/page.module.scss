@@ -1,17 +1,10 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .titleText {
-   //@extend h1;
-   font-family: var(--font1);
-   font-size: 3.5rem;
-   color: var(--dark-grey);
    text-align: center;
-}   
+}    
 
 .subtitleText {
-   font-family: var(--font2);
-   font-size: 1.5rem;
-   color: var(--green);
    text-align: center;
 }
 
@@ -30,14 +23,15 @@
 
 .partnersCard {
    background-color: var(--white);
-   border-radius: 20px;
+   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
    width: 606px;
    height: 452px;
-   padding: 60px;
+   padding: var(--card-padding);
    text-align: left;
    box-shadow: var(--drop-shadow);
    display: flex;
    flex-direction: column;
+   gap: 36px
 }
 
 .cardContainer {
@@ -46,79 +40,41 @@
 }
 
 .imageWrapper {
-   width: 434px;
-   height: 453.5px;
-   margin-left: -20px;
-   margin-right: -20px;
-   border-radius: 0 12px 12px 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
    position: relative;
-}
+   overflow: hidden;
+   width: 434px;
+   height: 452px;
+   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+ }
 
 .reverse {
    flex-direction: row-reverse; /* Image on the left */
 }
 
 .reverse .imageWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px 0 0 12px;
-  position: relative;
-  margin-right: auto;
-} 
+   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+ } 
+ 
+ .reverse .partnersCard {
+   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+ } 
 
-.partnerImage {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
 
-.partnersName {
-   color: var(--green);
-   font-family: var(--font2);
-   font-size: 1.5rem;
-   font-style: normal;
-   line-height: 100%; 
-   margin-bottom: 6px;
-}
 
-.partnersDescription {
-   color: var(--dark-grey);
-   font-family: var(--font2);
-   font-size: 1.05rem;
-   font-style: normal;
-   line-height: 150%; 
-   margin-bottom: 36px;
-}
-
-.locationText {
-   color: var(--dark-grey);
-   font-family: var(--font2);
-   font-size: 1.05rem;
-   font-style: normal;
-   line-height: 150%; 
-   margin-bottom: 12px;
-}
-
-.dateText {
-   color: var(--dark-grey);
-   font-family: var(--font2);
-   font-size: 1.05rem;
-   font-style: normal;
-   line-height: 150%; 
-   margin-bottom: 12px;
-}
-
-.appointmentText {
-   color: var(--dark-grey);
-   font-family: var(--font2);
-   font-size: 1.05rem;
-   font-style: normal;
-   line-height: 150%; 
-}
+ .locationText {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .dateText {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .appointmentText {
+   display: flex;
+   align-items: center;
+ }
 
 .button {
   margin-top: 36px;
@@ -139,7 +95,14 @@
 }
 
 .icon {
-  vertical-align: middle;
-  margin-right: 13px;
-  fill: var(--emerald)
-}
+   width: 20px;
+   height: 20px;
+   margin-right: 13px;
+   color: var(--emerald)
+ }
+ 
+ .contactInfo {
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+ }

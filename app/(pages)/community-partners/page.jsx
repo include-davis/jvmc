@@ -3,6 +3,10 @@ import styles from './page.module.scss';
 import text from '@/app/(pages)/_data/community-partners.json'
 import Image from 'next/image'
 
+import { ImLocation } from "react-icons/im";
+import { IoMdCalendar } from "react-icons/io";
+import { FaCircleExclamation } from "react-icons/fa6";
+
 export default function CommunityPartners() {
   const partners = [
     {
@@ -44,7 +48,7 @@ export default function CommunityPartners() {
     <main style={{ backgroundColor: '#f8f8f8' }}>
       <div>Community Partners</div>
       <h1 className={styles.titleText}> Community Partners</h1>
-      <h2 className={styles.subtitleText}>Our trusted allies supporting our mission beyond the our clinics.</h2>
+      <h4 className={styles.subtitleText}>Our trusted allies supporting our mission beyond the our clinics.</h4>
       <div className={styles.partnersGrid}>
         {partners.map((partner, index) => {
           // Set class based on index and reverse if it is the first or third image
@@ -56,47 +60,44 @@ export default function CommunityPartners() {
           return (
             <div key={index} className={containerClass}>
               <div className={styles.imageWrapper}>
+              <div className={styles.imageWrapper}>
                 <Image 
                   src={partnerImages[index]} 
-                  width={434} 
-                  height={453.5} 
+                  style={{objectFit: 'cover'}}
+                  fill={true}
                   alt={`partner-image-${index}`} 
-                  className={styles.partnerImage}
                 />
+              </div>
               </div>
 
               <div className={styles.partnersCard}>
-                <div className={styles.cardContent}>
-                  <h2 className={styles.partnersName}>{partner.name}</h2>
-                  <p className={styles.partnersDescription}>{partner.description}</p>
-                  <p className={styles.locationText}>
-                    <Image 
-                      src={text.iconImages["location"]} width={18} height={21} alt="location" className={styles.icon}
-                    />
-                    {partner.location}
-                  </p>
-                  <p className={styles.dateText}>
-                    <Image 
-                      src={text.iconImages["calendarIcon"]} width={17} height={19} alt="calendarIcon" className={styles.icon}
-                    />
-                    {partner.date}
-                  </p>
-                  <p className={styles.appointmentText}>
-                    {index === 1 && (
-                      <Image 
-                        src={text.iconImages["appointmentIcon"]} width={18} height={18} alt="appointmentIcon" className={styles.icon}
-                      />
-                    )}
-                    {partner.appointment}
-                  </p>
-                  <button
-                    className={styles.button}
-                    onClick={() => window.location.href = partner.website}
+                  <div> 
+                    <h4 className={styles.partnersName}>{partner.name}</h4>
+                    <p className={styles.partnersDescription}>{partner.description}</p>
+                  </div>
+                  <div className={styles.contactInfo}>
+                    <p className={styles.locationText}>
+                      <ImLocation className={styles.icon}/>
+                      {partner.location}
+                    </p>
+                    <p className={styles.dateText}>
+                      <IoMdCalendar className={styles.icon}/>
+                      {partner.date}
+                    </p>
+                    <p className={styles.appointmentText}>
+                      {index === 1 && (
+                        <FaCircleExclamation className={styles.icon}/>
+                      )}
+                      {partner.appointment}
+                    </p>
+                  </div>
+                  <a
+                    className="btn"
+                    href={partner.website}
                   >
                     {partner.buttonText}
-                  </button>
+                  </a>
                 </div>
-              </div>
             </div>
           );
         })}
