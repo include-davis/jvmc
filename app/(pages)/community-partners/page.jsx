@@ -39,9 +39,9 @@ export default function CommunityPartners() {
   ];
 
   const partnerImages = [
-    "/HRS.svg",
-    "/GHC.svg",
-    "/SHRC.svg"
+    "/HRS.png",
+    "/GHC.png",
+    "/SHRC.png"
   ];
 
   return (
