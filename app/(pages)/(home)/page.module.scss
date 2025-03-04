@@ -122,7 +122,8 @@
     box-shadow: var(--drop-shadow-mint);
     border-radius: var(--card-border-radius);
     background-color: var(--card-background);
-    padding: var(--card-padding);
+    // padding: var(--card-padding);
+    padding: 80px;
     gap: var(--vertical-card-gap);
 
 
@@ -141,13 +142,10 @@
 
 
 .card_ImageBox{
-    border: 8px solid blue;
     width: 40%;
     display:flex;
     align-items: center;
     justify-content: center;
-    
-
     
 }
 
@@ -159,6 +157,25 @@
     
 }
 
+.polygon16_1{
+    position: absolute;
+    //box-shadow: var(--drop-shadow-small); // drop shadow causes image to have a different color to the card background color.
+    transform: rotate(0.8deg); // 0.8
+    bottom: 382px; // 382
+    left: 10px; // 10
+}
+
+.polygon16_2{
+    position: absolute;
+    // box-shadow: var(--drop-shadow-small);
+    transform: rotate(1deg); // 1 degree
+    top: 386px;
+    right: 580px;
+
+
+}
+
+
 .image_2{
     transform: rotate(1.717deg);
     border-radius: var(--card-border-radius);
@@ -166,6 +183,20 @@
 
 }
 
+.polygon17{
+    position: absolute;
+    transform: rotate(-1deg);
+    bottom: 339px; // 382
+    right: 5px; // 10
+    
+}
+.polygon18{
+    position: absolute;
+    transform: rotate(-1.5deg);
+    top: 340px;
+    right: 270px;
+
+}
 
 .card_TextBox{
     padding-top: 16px;
@@ -187,7 +218,7 @@
 .card_TitleAndLogo{
     
     display:flex;
-    justify-content: left;
+    justify-content: left; 
     align-items: center;
     padding-left: 16px;
     padding-bottom: 32px;
@@ -199,20 +230,13 @@
     color: var(--emerald);
 }
 
-.icon{
-    font-size: 32px;
-    color: var(--emerald);
-
- 
-}
-
 .description_1{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     list-style-type: none;
-    width: 90%;
+    width: 95%;
     padding-left: 24px;
     gap: 24px;
 

@@ -55,6 +55,15 @@ export default function Home() {
                 <div className = {styles.card}>
                   {/* left side has image and right side has text */}
                   <div className = {styles.card_ImageBox}>
+                  
+                  <Image
+                    src={HomeData.polygon16_1}
+                    alt="Corner Image 1 for First Image" 
+                    width={190}  //150
+                    height={180} //130
+                    className={styles.polygon16_1}
+                  />
+
                   <Image
                     src={HomeData.card1_Image_Link}
                     alt="Image of JVMC Workers handling documents" 
@@ -62,12 +71,27 @@ export default function Home() {
                     height={423.933803597944} 
                     className={styles.image_1}
                   />
+
+                  <Image
+                    src={HomeData.polygon16_2}
+                    alt="Corner Image 2 for First Image" 
+                    width={190}  
+                    height={180} 
+                    className={styles.polygon16_2}
+                  />
                     
                   </div>
 
                   <div className = {styles.card_TextBox}>
                   <div className = {styles.card_TitleAndLogo}>
-                  <CiMedicalCross className = {styles.icon}/>
+                  {/* <CiMedicalCross className = {styles.icon}/> */}
+                  <Image
+                    src={HomeData.health_icon}
+                    alt="Health Icon Image" 
+                    width={40}  
+                    height={40} 
+                    className={styles.icon}
+                  />
                   <h3>{HomeData.card1_Title}</h3>
                   </div>
 
@@ -94,7 +118,14 @@ export default function Home() {
                   {/* left side has text and right side has image */}
                   <div className = {styles.card_TextBox}>
                   <div className = {styles.card_TitleAndLogo}>
-                  <BsPeople className = {styles.icon}/>
+                  {/* <BsPeople className = {styles.icon}/> */}
+                  <Image
+                    src={HomeData.biPeople_icon}
+                    alt="Health Icon Image" 
+                    width={40}  
+                    height={40} 
+                    // className={styles.icon}
+                  />
                   <h3>{HomeData.card2_Title}</h3>
                   </div>
 
@@ -112,12 +143,28 @@ export default function Home() {
 
                   <div className = {styles.card_ImageBox}>
                   <Image
+                    src={HomeData.polygon17}
+                    alt="Corner Image 1 for Second Image" 
+                    width={190}  
+                    height={180} 
+                    className={styles.polygon17}
+                  />
+
+                  <Image
                     src={HomeData.card2_Image_Link}
                     alt="Image of JVMC Workers grouped together for a photo"
                     width={304.82775798108776}  
                     height={383.39496473915455}
                     className={styles.image_2}
                   />
+
+                  <Image
+                    src={HomeData.polygon18}
+                    alt="Corner Image 2 for Second Image" 
+                    width={190}  
+                    height={180} 
+                    className={styles.polygon18}
+                  />  
                   </div>
                 </div>
 
