@@ -45,8 +45,8 @@ export default function Home() {
                 <Image
                   src={HomeData.cardSectionHeaderImage}
                 alt="Image of Background for Card Section Header Title"
-                  width={780}
-                  height={280}
+                  width={780} // 780
+                  height={280} // 280
                 />
 
               </div>
@@ -58,8 +58,8 @@ export default function Home() {
                   <Image
                     src={HomeData.card1_Image_Link}
                     alt="Image of JVMC Workers handling documents" 
-                    width={325}  
-                    height={420} 
+                    width={319.67}  
+                    height={423.933803597944} 
                     className={styles.image_1}
                   />
                     
@@ -114,8 +114,8 @@ export default function Home() {
                   <Image
                     src={HomeData.card2_Image_Link}
                     alt="Image of JVMC Workers grouped together for a photo"
-                    width={325}  
-                    height={420}
+                    width={304.82775798108776}  
+                    height={383.39496473915455}
                     className={styles.image_2}
                   />
                   </div>

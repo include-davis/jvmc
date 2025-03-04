@@ -32,7 +32,7 @@
     transform: translate(50%);
     top: -320px;
     right: 520px;
-    z-index: -2;
+    z-index: -1;
     pointer-events: none; /* Prevents interaction issues */
 }
 
@@ -40,8 +40,8 @@
     position: absolute;
     transform: translate(50%);
     bottom: 300px; // 56
-    left: -45px; //24
-    z-index: -2;
+    left: -30px; //24 | -4
+    z-index: -1;
     pointer-events: none; /* Prevents interaction issues */
 }
 
@@ -50,7 +50,7 @@
     transform: translate(50%);
     bottom: -350px;
     right: 280px;
-    z-index: -2;
+    z-index: -1;
     pointer-events: none; /* Prevents interaction issues */
 }
 
@@ -85,7 +85,7 @@
     // width: 1040px;  This will mess up the full-view
 
     position: relative;
-    z-index: 1;
+    z-index: 0;
 
 }
 
@@ -117,17 +117,6 @@
 
 
 
-//  .infoCardsSection{
-//     gap: var(--vertical-card-gap);
-    
-//     width: 70%;
-//     display:flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     padding-bottom: 96px;
-
-//  }
-
  .card{
     border: 2px solid var(--mint);
     box-shadow: var(--drop-shadow-mint);
@@ -141,19 +130,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 65%; // Makes sure all cards are same width
+    width: 62%; // Makes sure all cards are same width
 
     position: relative;
     z-index: 2;
 
+    gap: 32px;
+    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
 }
 
 
 .card_ImageBox{
+    border: 8px solid blue;
     width: 40%;
     display:flex;
     align-items: center;
     justify-content: center;
+    
 
     
 }
@@ -175,19 +168,20 @@
 
 
 .card_TextBox{
-    width: 70%;
+    padding-top: 16px;
     
 }
 
-.card_TextBox p{
+.card_TextBox p{ // part of the second card
     width: 90%;
     display:flex;
     align-items: center;
     padding-left: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 32px;
 
     font-family: var(--font2);
     font-weight: 350;
+
 }
 
 .card_TitleAndLogo{
@@ -196,7 +190,7 @@
     justify-content: left;
     align-items: center;
     padding-left: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 24px;
 }
 
 .card_TitleAndLogo h3{
@@ -224,9 +218,11 @@
 
     font-family: var(--font2);
     font-weight: 350;
-    line-height: 2;
+    line-height: 1.5;
 
- 
+    li{
+        width: 100%;
+    }
 }
 
 .description_2{
@@ -245,6 +241,5 @@
 
     li{
         padding-left: 16px; 
-        
     }
 }
