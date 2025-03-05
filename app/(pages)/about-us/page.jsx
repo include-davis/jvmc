@@ -1,5 +1,6 @@
 import styles from './page.module.scss';
 import data from "@/app/(pages)/_data/about-us.json";
+import Image from 'next/image';
 import ClinicRolesCard from '../_components/ClinicRolesCard/ClinicRolesCard';
 import AboutUsCard from "../_components/AboutUsCard/AboutUs";
 
@@ -46,6 +47,25 @@ export default function About() {
               description={card.description}
             />
           )}
+        </div>
+
+        <div className={styles.fairCard}>
+          <div className={styles.fairImg}>
+            <Image
+              src={data.fair.img}
+              style={{ objectFit: "cover" }}
+              fill={true}
+              alt={data.fair.imgAlt}
+            />
+          </div>
+          <div className={styles.fairText}>
+            <h4>{data.fair.title}</h4>
+            {data.fair.content.map((text, idx) => <p key={idx}>{text}</p>)}
+            <a className="btn" href={data.fair.instagramUrl} target="_blank">
+              {data.fair.button}
+            </a>
+          </div>
+
         </div>
       </div>
   );
