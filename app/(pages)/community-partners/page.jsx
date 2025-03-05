@@ -11,9 +11,12 @@ import { FaCircleExclamation } from "react-icons/fa6";
 export default function CommunityPartners() {
 
   return (
-    <main>
-      <h1 className={styles.titleText}> {data.title}</h1>
-      <h4 className={styles.subtitleText}>{data.subtitle}</h4>
+    <main className={styles.page}>
+      <div className={styles.header}>
+        <h1>{data.title}</h1>
+        <h4>{data.subtitle}</h4>
+      </div>
+
       <div className={styles.partnersGrid}>
         {data.partners.map((partner, index) => {
           // Set class based on index and reverse if it is the first or third image
