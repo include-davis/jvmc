@@ -1,0 +1,44 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
+.cardWrapper {
+  display: flex;
+
+  width: calc(8px * 130);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--drop-shadow);
+
+  h3 {
+    color: var(--emerald);
+  }
+}
+
+.cardWrapper.left {
+  flex-direction: row-reverse;
+}
+
+.cardWrapper.right {
+  flex-direction: row;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 20px;
+  padding: var(--card-padding);
+  width: 100%;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.img.left {
+  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+}
+
+.img.right {
+  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+}
