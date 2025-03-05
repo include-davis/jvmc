@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--vertical-card-gap);
+    padding: 160px 0;
   }
 
 .header {
@@ -12,38 +13,3 @@
     flex-direction: column;
     align-items: center;
   }
-
-.servicesWrapper,
-.missionWrapper,
-.historyWrapper {
-    display: flex;
-    justify-content: space-between;
-    align: center;
-
-    width: calc(8px * 130);
-    background: white;
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--drop-shadow);
-
-    h3 {
-      color: var(--emerald);
-    }
-}
-
-.servicesContainer,
-.missionContainer,
-.historyContainer {
-    display: flex;
-    flex-direction: column;
-    
-    gap: 20px;
-    padding: var(--card-padding);
-    width: 100%;
-}
-
-.img1 {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
-}
