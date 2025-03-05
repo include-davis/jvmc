@@ -4,11 +4,6 @@
         "platform": "Instagram",
         "url": "https://www.instagram.com/jvmclinic",
         "icon": "FaInstagram"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/jvmclinic",
-        "icon": "LuFacebook"
       }
     ],
     "navLinks": [
