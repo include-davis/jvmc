@@ -1,18 +1,16 @@
 {
-    "socialLinks": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/jvmclinic",
-        "icon": "FaInstagram"
-      }
-    ],
+    "img": "/logo.png",
+    "imgAlt": "JVM Clinic Logo",
+    "socialUrl": "https://www.instagram.com/jvmclinic",
     "navLinks": [
-      { "label": "Home", "href": "/" },
-      { "label": "Clinic Schedules", "href": "/clinic-schedule" },
-      { "label": "Community Partners", "href": "/community-partners" },
-      { "label": "About Us", "href": "/about-us" },
-      { "label": "Volunteer", "href": "/volunteer" },
-      { "label": "Contact Us", "href": "/contact-us", "isButtton": true }
+      { "label": "Home", "href": "/", "isButton": false },
+      { "label": "Clinic Schedules", "href": "/clinic-schedule", "isButton": false },
+      { "label": "Community Partners", "href": "/community-partners", "isButton": false },
+      { "label": "About Us", "href": "/about-us", "isButton": false },
+      { "label": "Volunteer", "href": "/volunteer", "isButton": false },
+      { "label": "Contact Us", "href": "/contact-us", "isButton": true }
     ],
+    "mainInstagram": "@jvmclinic",
+    "studentInstagram": "@jvmcstudents",
     "footerText": "Made with 🤍 by #include at Davis © 2025"
   }

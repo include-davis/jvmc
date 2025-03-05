@@ -75,23 +75,23 @@ $logo-width: calc(8px * 20);
 
   @include mixins.sm-desktop {
     gap: 40px;  
+  }
 }
 
-  li a {
-    text-decoration: none;
-    color: var(--dark-grey);
-    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-    transition: font-weight 0.2s ease, color 0.2s ease;
-  }
+.navLink {
+  text-decoration: none;
+  color: var(--dark-grey);
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+  transition: font-weight 0.2s ease, color 0.2s ease;
 
-  a:hover {
-    font-weight: bold;
+  &:hover {
+      font-weight: var(--bold);
   }
+}
 
-  li a.active {
-    color: var(--teal);
-    font-weight: var(--bold); 
-  }
+.navLink.active {
+  font-weight: var(--bold);  
+  color: var(--teal);
 }
 
 .bottomSection {
@@ -103,4 +103,9 @@ $logo-width: calc(8px * 20);
     color: var(--offwhite);
     font-family: var(--font2);
     font-weight: var(--light);
+}
+
+.btnActive {
+  background: var(--rainbow-linear-gradient);
+  color: var(--dark-grey);
 }
