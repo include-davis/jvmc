@@ -4,13 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import footerData from "../../_data/footer.json";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname(); 
+
   const { platform, url, icon } = footerData.socialLinks;
   const { home, clinic, community, about, volunteer, contact } = footerData.navLinks;
-  const router = useRouter();
-  const pathname = router.pathname;
 
   return (
     <footer className={styles.footer}>
@@ -25,7 +25,7 @@ export default function Footer() {
             />
           </div>
           <ul className={styles.socialLinks}>
-            <li className={styles.boxIcon}>
+          <li className={styles.boxIcon}>
               <a 
                 href="https://www.instagram.com/jvmclinic"
                 target="_blank"
@@ -35,7 +35,7 @@ export default function Footer() {
               </a>
             </li>
             <li className={styles.boxText}>
-              <div className={styles.at1}>@jvmcclinic</div>
+              <div className={styles.at1}>@jvmclinic</div>
               <div className={styles.at2}>@jvmcstudents</div>
             </li>
           </ul>
@@ -48,13 +48,16 @@ export default function Footer() {
             { label: "About Us", url: "/about-us" },
             { label: "Volunteer", url: "/volunteer" },
             { label: "Contact Us", url: "/contact-us" },
-          ].map(({ label, url }) => (
-            <li key={url}>
-              <Link href={url} className={pathname === url ? styles.active : ""}>
-                {label}
-              </Link>
-            </li>
-          ))}
+          ].map(({ label, url }) => {
+            const isActive = pathname === url;
+            return (
+              <li key={url}>
+                <Link href={url} className={isActive ? styles.active : ""}>
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className={styles.bottomSection}>

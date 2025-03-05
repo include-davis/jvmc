@@ -67,23 +67,30 @@ $logo-width: calc(8px * 20);
 .navLinks {
   list-style: none;
   display: flex;
-  gap: 48px;
+  padding: 26px 40px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  width: 75%;
+
+  @include mixins.sm-desktop {
+    gap: 40px;  
+}
 
   li a {
     text-decoration: none;
-    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
     color: var(--dark-grey);
-    transition: color 0.3s, font-weight 0.3s;
+    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+    transition: font-weight 0.2s ease, color 0.2s ease;
   }
 
   a:hover {
-    color: var(--teal); 
     font-weight: bold;
   }
 
   li a.active {
     color: var(--teal);
-    font-weight: bold; 
+    font-weight: var(--bold); 
   }
 }
 
