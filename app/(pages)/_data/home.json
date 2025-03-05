@@ -2,29 +2,29 @@
     "homePageTitle": "Welcome to Joan Viteri Memorial Clinic",
     "homePageSubtitle": "Serving health care needs of uninsured drug users, sex workers, trans folks, and their families.", 
     "buttonMsg": "Contact Us",
+    
     "header_gradient": "/images/homeGradient.png",
+    "header_gradient_alt": "Header Gradient",
 
     "teddy": "/images/jvmc-teddy.png",
+    "teddyAlt": "JVMC Teddy Bear",
 
     "dots_1": "/images/dots1.png",
     "dots_2": "/images/dots2.png",
 
-    "polygon16_1": "/Polygon16_1.png",
-    "polygon16_2": "/Polygon16_2.png",
-
-    "polygon17": "/Polygon 17.png",
-    "polygon18": "/Polygon 18.png",
-
     "health_icon": "/akar-icons_health.png",
+    "health_icon_alt": "Health Icon Icon",
     "biPeople_icon":"/bi_people.png",
-  
+    "biPeople_icon_alt": "Health Icon Icon",
 
     "cardSectionHeaderTitle": "Serving the Oak Park Community",
     "cardSectionHeaderImage": "/subtitleheader.png",
+    "cardSectionHeaderImageAlt": "Image of Background for Card Section Header Title",
 
     "card1_Title": "Unbiased Healthcare",
     "card1_Logo": "CiMedicalCross",
     "card1_Image_Link": "/image1.png",
+    "card1_Image_Alt": "Image of JVMC Workers handling documents",
   
     "text_Block1": {
       "Sentence_1": "We provide basic medical care and health education in a non-judgmental, accessible way.",
@@ -35,6 +35,7 @@
     "card2_Title": "The People We Serve",
     "card2_Logo": "IoPeopleOutline",
     "card2_Image_Link": "/image2.jpg",
+    "card2_Image_Alt": "Image of JVMC Workers grouped together for a photo",
   
     "card2_Subtitle": "At JVMC, we welcome everyone, regardless of their life history. No matter who you are, you are welcome.",
   

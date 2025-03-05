@@ -1,13 +1,9 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .body{
-
-    // border: 8px solid black;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    gap:320px;
-
-
+    gap: 320px;
 }
 
 .headerGradient {
@@ -22,9 +18,8 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    gap:36px;
+    gap: 36px;
     padding-top: 160px; 
-
 }
 
 
@@ -71,7 +66,7 @@
 
 
 .cardSectionBox{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -88,11 +83,10 @@
     position: relative;
     z-index: -1;
     
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    // flex-direction: column;
 
     height: calc(8px * 18);
     width: calc(8px * 85);
@@ -110,23 +104,20 @@
      width: 80%;
  }
 
-
-
  .card{
     border: 2px solid var(--mint);
     box-shadow: var(--drop-shadow-mint);
     border-radius: var(--card-border-radius);
     background-color: var(--white);
-    // padding: var(--card-padding);
-    padding: 80px;
+    padding: var(--card-padding);
     gap: var(--vertical-card-gap);
 
 
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 62%; // Makes sure all cards are same width
+    width: 1040px; // Makes sure all cards are same width
 
     position: relative;
     z-index: 2;
@@ -145,74 +136,31 @@
 }
 
 .image_1{
-    transform: rotate(-2.174deg);
     border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow-small);
-   
-    
 }
-
-.polygon16_1{
-    position: absolute;
-    //box-shadow: var(--drop-shadow-small); // drop shadow causes image to have a different color to the card background color.
-    transform: rotate(0.8deg); // 0.8
-    bottom: 382px; // 382
-    left: 10px; // 10
-}
-
-.polygon16_2{
-    position: absolute;
-    // box-shadow: var(--drop-shadow-small);
-    transform: rotate(1deg); // 1 degree
-    top: 386px;
-    right: 580px;
-
-
-}
-
 
 .image_2{
-    transform: rotate(1.717deg);
     border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow-small);
-
-}
-
-.polygon17{
-    position: absolute;
-    transform: rotate(-1deg);
-    bottom: 339px; // 382
-    right: 5px; // 10
-    
-}
-.polygon18{
-    position: absolute;
-    transform: rotate(-1.5deg);
-    top: 340px;
-    right: 270px;
-
 }
 
 .card_TextBox{
     padding-top: 16px;
-    
 }
 
 .card_TextBox p{ // part of the second card
-    width: 90%;
-    display:flex;
+    display: flex;
     align-items: center;
     padding-left: 16px;
     padding-bottom: 32px;
 
     font-family: var(--font2);
     font-weight: 350;
-
 }
 
 .card_TitleAndLogo{
-    
-    display:flex;
+    display: flex;
     justify-content: left; 
     align-items: center;
     padding-left: 16px;
@@ -226,38 +174,23 @@
 }
 
 .description_1{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     list-style-type: none;
-    width: 95%;
     padding-left: 24px;
     gap: 24px;
-
-    font-family: var(--font2);
-    font-weight: 350;
-    line-height: 1.5;
-
-    li{
-        width: 100%;
-    }
 }
 
 .description_2{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
-    width: 90%;
     padding-left: 16px; 
     list-style-position: inside;
-    gap: 8px;
-
-    font-family: var(--font2);
-    font-weight: 350;
-
-
+    
     li{
         padding-left: 16px; 
     }
