@@ -119,8 +119,8 @@ export default function Volunteer() {
         {/* Bottom Section */}
         <div className={styles.bottom}>
           <div className={styles.learn_more}>
-            <h4 className={styles.bottom_title}>{text.bottom_title}</h4>
-            <p className={styles.text}>
+            <h4>{text.bottom_title}</h4>
+            <p>
               {text.bottom_text["chunk_1"]} 
               <span className={styles.about_us}>{text.bottom_text["chunk_2"]}</span>
               {text.bottom_text["chunk_3"]}
