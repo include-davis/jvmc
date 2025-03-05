@@ -43,6 +43,9 @@ export default function Home() {
       subIndex();
     }
   };
+
+  // keep track of left and right indecies as well and have specific styling for that 
+  // do the same way as before, dont need to use swiper i believe 
   return (
     <main>
       <div className={styles.page}>
@@ -50,43 +53,41 @@ export default function Home() {
           <h2>Explore Our Clinics!</h2>
           <h4>Discover everything JVMC has to offer.</h4>
         </div>
-
-        <div className={styles.carousel}>
-          <Swiper effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView="auto"
-            loop={true}
-            coverflowEffect={{
-              rotate: 50, // Controls the rotation of slides
-              stretch: 0, // Controls spacing between slides
-              depth: 100, // Controls perspective depth
-              modifier: 1, // Controls intensity
-              slideShadows: true, // Adds shadow to slides
-            }}
-            pagination={{ clickable: true }}
-            navigation={true}
-            modules={[Navigation, Pagination, EffectCoverflow]}
-            className="swiper-container">
-          {slides.map((data, index) => (
-          <SwiperSlide key={index} className={styles.slide}>
-            <div className={styles.content}>
-              <Image src={data.src} alt='' width={'480'} height={'280'} className={styles.image}/>
-              <div className={styles.info}>
-                <h3>{data.title}</h3>
-                <div>
-                  <MdInsertInvitation size={18} color='var(--emerald)'/>
-                  <p>{data.time}</p>
+        <div className={styles.viewport}>
+          <div className={styles.carousel} 
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}>
+            {slides.map((slideinfo, index) => (
+            <div key={index} className={`${styles.slide} ${activeIndex === index ? styles.active:null}`}>
+              <div className={styles.content}>
+                <Image src={slideinfo.src} alt='image' width={'480'} height={'280'} className={styles.image}/>
+                <div className={styles.info}>
+                  <h3>{slideinfo.title}</h3>
+                  <div>
+                    <MdInsertInvitation size={18} color='var(--emerald)'/>
+                    <p>{slideinfo.time}</p>
+                  </div>
+                  <div>
+                    <IoMdInformationCircle size={18} color='var(--emerald)'/>
+                    <p>{slideinfo.info}</p>
+                  </div>
+                  <a href="/clinic-schedule" className="btn">Schedule Now</a>
                 </div>
-                <div>
-                  <IoMdInformationCircle size={18} color='var(--emerald)'/>
-                  <p>{data.info}</p>
-                </div>
-                <a href="/clinic-schedule" className="btn">Schedule Now</a>
               </div>
-            </div>
-          </SwiperSlide>))}
-          </Swiper>
+            </div>))}
+          </div>
+        </div>
+        <div className={styles.nav}>
+        <button className={styles.navbttn} onClick={subIndex}><FaCircleChevronLeft size={38} color='var(--teal)'/></button>
+          <div className={styles.dots}>
+            {slides.map((_, index) => {
+              return (<div
+                key={index}
+                className={`${styles.dot} ${activeIndex === index ? styles.active : null}`}
+                onClick={() => setActiveIndex(index)}></div>);})}
+          </div>
+          <button className={styles.navbttn} onClick={addIndex}><FaCircleChevronRight size={38} color='var(--teal)'/></button>
         </div>
       </div>
     </main>
