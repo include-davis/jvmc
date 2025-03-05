@@ -1,5 +1,22 @@
 {
-    
+    "contactCard": {
+        "visit": {
+            "text": "Come Visit Us!",
+            "address": "3647 40th St, Sacramento, CA 95817"
+        },
+        "hours": {
+            "text": "Opening Hours",
+            "hours": "Every Saturday: 1:00pm - 4:00pm"
+        },
+        "contact": "Contact Us",
+        "button": {
+            "text": "Ask Us Questions",
+            "link": "/contact-us"
+        },
+        "img": {
+            "src": "/home-group.jpg",
+            "alt": "Group of medical students"
+        }
+    }
+
 }
-
-

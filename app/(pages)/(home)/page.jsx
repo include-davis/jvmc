@@ -2,35 +2,45 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 import { FaHome, FaClock, FaEnvelope} from 'react-icons/fa';
 import Link from "next/link";
+import data from '@/app/(pages)/_data/home.json'
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.contact}>
         <div className={styles.contactCard}>
           <div className={styles.infoContainer}>
             <div className={styles.info}>
               <FaHome color="var(--emerald)" size={32}/>
               <div className={styles.infoText}>
-                <h3 style={{ color: "var(--emerald)" }}>Come Visit Us!</h3>
-                <p style={{ color: "var(--dark-grey)" }}>3647 40th St, Sacramento, CA 95817</p>
+                <h3>{data.contactCard.visit.text}</h3>
+                <p>{data.contactCard.visit.address}</p>
               </div>
             </div>
             <div className={styles.info}>
               <FaClock color="var(--emerald)" size={32}/>
               <div className={styles.infoText}>
-                <h3 style={{ color: "var(--emerald)" }}>Opening Hours</h3>
-                <p style={{ color: "var(--dark-grey)" }}>Every Saturday: 1:00pm - 4:00pm</p>
+                <h3>{data.contactCard.hours.text}</h3>
+                <p>{data.contactCard.hours.hours}</p>
               </div>
             </div>
             <div className={styles.info}>
               <FaEnvelope color="var(--emerald)" size={32}/>
-              <h3 style={{ color: "var(--emerald)" }}>Contact</h3>
+              <h3>{data.contactCard.contact}</h3>
             </div>
-            <Link href="/contact-us" className={"btn"}>Ask Us Questions</Link>
+            <Link href={data.contactCard.button.link} className={"btn"}>
+              {data.contactCard.button.text}
+            </Link>
           </div>
           <div className={styles.imageContainer}>
             <div className={styles.gradientCircle}></div> 
-            <Image src="/images/IMG_8158 2.png" alt="Contact Photo" width={360} height={280} className={styles.image} />
+            <div className={styles.image}>
+              <Image 
+                src={data.contactCard.img.src} 
+                alt={data.contactCard.img.alt} 
+                style={{objectFit: "cover"}}
+                fill={true}
+              />
+            </div>
           </div>
         </div>
     </main>
