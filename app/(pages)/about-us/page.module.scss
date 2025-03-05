@@ -1,1 +1,15 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--vertical-card-gap);
+    padding: 160px 0;
+  }
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
