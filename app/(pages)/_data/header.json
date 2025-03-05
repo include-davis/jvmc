@@ -1,0 +1,8 @@
+[
+    { "href": "/", "label": "Home" },
+    { "href": "/clinic-schedule", "label": "Clinic Schedule" },
+    { "href": "/community-partners", "label": "Community Partners" },
+    { "href": "/about-us", "label": "About Us" },
+    { "href": "/volunteer", "label": "Volunteer" },
+    { "href": "/contact-us", "label": "Contact Us", "isButton": true }
+]
