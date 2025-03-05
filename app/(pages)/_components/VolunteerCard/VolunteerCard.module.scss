@@ -116,6 +116,7 @@
     width: 350px;
     height: 350px;
     overflow: hidden;
+    box-shadow: var(--drop-shadow-mint);
 
     @include mixins.sm-desktop {
         width: 270px;
