@@ -1,15 +1,45 @@
 {
-    "iconImages": {
-        "location": "/location.svg",
-        "calendarIcon": "/calendarIcon.svg",
-        "appointmentIcon": "/appointmentIcon.svg"
-    },
+    "title": "Community Partners",
+    "subtitle": "Our trusted allies supporting our mission beyond the our clinics.",
+    "partners": [
+        {
+          "name": "Harm Reduction Services", 
+          "description": "HRS offers free, confidential harm reduction services to improve the health and well-being of drug users, in addition to empowering local communities.",
+          "location": "2800 Stockton Blvd. Sacramento, CA 95817", 
+          "date": "Monday - Friday, 12:00 PM - 6:00 PM", 
+          "appointment": "",
+          "website": "https://hrssac.org/", 
+          "buttonText": "Visit HRS Website" 
+        },
+        {
+          "name": "Gender Health Center", 
+          "description": "GHC offers free or low-cost health, legal, and support services for trans and gender-expansive communities.",
+          "location": "3823 V Street Sacramento, CA 95817", 
+          "date": "1st & 3rd Friday of each month, 6:00 PM - 9:00 PM", 
+          "appointment": "By appointment only",
+          "website": "https://www.genderhealthcenter.org/", 
+          "buttonText": "Visit GHC Website"
+        },
+        {
+          "name": "Stockton Harm Reduction Program", 
+          "description": "SHRP offers harm reduction tools, wound care supplies, referrals to health and legal services, and advocates for social justice in Stockton.",
+          "location": "446 S Harrison St, Stockton, CA 95203", 
+          "date": "Saturdays, 9:00 AM - 1 :00 PM", 
+          "appointment": "",
+          "website": "https://theshrp.org/", 
+          "buttonText": "Visit SHRP Website"
+        }
+    ],
 
-    "images": {
-        "HRS": "/HRS.png",
-        "GHC": "/GHC.png",
-        "SHRC": "/SHRC.png"
-    }
+    "images": [
+        "/HRS.png",
+        "/GHC.png",
+        "/SHRC.png"
+    ],
 
-    
+    "imagesAlt": [
+        "Volunteers at an event table for Harm Reduction Services",
+        "Three volunteers holding service items",
+        "Stockton Harm Reduction Program volunteers at a community event"
+    ]
 }
