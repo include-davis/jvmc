@@ -3,12 +3,12 @@ import styles from './ClinicRolesCard.module.scss';
 
 export default function ClinicRolesCard({ icon, iconAlt, img, imgAlt, align, subheader, description }) {
     return (
-      <div className={`${styles.card} ${align === "left" ? styles.leftCard : styles.rightCard}`}>
+      <div className={`${styles.card} ${styles[align]}`}>
         <div className={styles.img}>
           
           <Image
             src={img}
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "cover" }}
             fill={true}
             alt={imgAlt}
           />

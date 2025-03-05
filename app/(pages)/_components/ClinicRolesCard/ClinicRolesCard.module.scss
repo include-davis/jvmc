@@ -35,33 +35,29 @@
     width: 211px;
     height: 211px;
     border: 2px solid var(--mint);
+    border-radius: 50%;
+    overflow: hidden;
   
   }
 
-  .leftCard {
-    margin-right: 10%;
+.card.left {
+  margin-right: 10%;
   
-    .img {
-        border-radius: 50%;
-        overflow: hidden;
-        object-fit: cover;
-      top: 16px;
-      right: -32px;
-      transform: translate(50%, -50%); // moves 0, 0 point to center of image
-    }
+  .img {
+    top: 16px;
+    right: -32px;
+    transform: translate(50%, -50%); // moves 0, 0 point to center of image
   }
+}
   
-  .rightCard {
-    margin-left: 10%;
+.card.right {
+  margin-left: 10%;
     
-    .img {
-      border-radius: 50%;
-        overflow: hidden;
-        object-fit: cover;
-      top: 24px;
-      left: -60px;
-      transform: translate(-50%, -50%); // moves 0, 0 point to center of image
-    }
+  .img {
+    top: 24px;
+    left: -60px;
+    transform: translate(-50%, -50%); // moves 0, 0 point to center of image
   }
+}
 
 
