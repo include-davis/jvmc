@@ -40,7 +40,12 @@
     }
 }
 
-.headerItemActive {
+.headerItems.active {
     font-weight: var(--bold);  
     color: var(--teal);
+}
+
+.btnActive {
+  background: var(--rainbow-linear-gradient);
+  color: var(--dark-grey);
 }

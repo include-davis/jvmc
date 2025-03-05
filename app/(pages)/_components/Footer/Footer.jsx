@@ -45,7 +45,11 @@ export default function Footer() {
                 <Link 
                   href={href}
                   key={idx}
-                  className={isButton ? `${"btn"} ${isActive && styles.btnActive}` : `${styles.navLink} ${isActive && styles.active}`}>
+                  className={
+                    isButton ? 
+                    `${"btn"} ${isActive && styles.btnActive}` : 
+                    `${styles.navLink} ${isActive && styles.active}`}
+                >
                   {label}
                 </Link>
               </li>
