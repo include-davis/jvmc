@@ -1,6 +1,5 @@
 "use client";
 import styles from './page.module.scss';
-import text from '@/app/(pages)/_data/community-partners.json'
 import Image from 'next/image'
 import data from '@/app/(pages)/_data/community-partners.json'
 

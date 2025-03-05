@@ -43,6 +43,8 @@
   height: 256px;
   width: 646px;
   border-radius: var(--card-border-radius);
+  border: 2px solid var(--mint);
+  box-shadow: var(--drop-shadow-mint);
 }
 
 .fairText {
