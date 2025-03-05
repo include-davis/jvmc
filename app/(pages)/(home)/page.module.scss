@@ -1,5 +1,6 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+// Upper Home Page section
 .body{
     display: flex;
     flex-direction: column;
@@ -195,3 +196,63 @@
         padding-left: 16px; 
     }
 }
+
+// Contact Card Section with Circle Gradient
+.contactCard {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.contactInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+
+  h3 {
+    color: var(--emerald);
+  }
+}
+
+.contactInfoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactImageContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 512px;
+  height: 454px;
+}
+
+.contactImage {
+  height: 100%;
+  width: 90%;
+  border-radius: 50%;
+  position: absolute;
+  right: 24px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.gradientCircle {
+  position: absolute;
+  width: 90%; 
+  height: 100%;
+  border-radius: 50%;
+  background: var(--green-gradient-light);
+
+  right: 0px; 
+  z-index: 0; 
+}
+
