@@ -1,4 +1,89 @@
 {
-  
+    "aboutUsHeader": {
+        "title": "About Us",
+        "subtitle": "Serving the community one patient at a time."
+    },
+    "aboutUsCards": [
+        {
+            "title": "Our History",
+            "content": [
+                "Joan Viteri Memorial Clinic was founded in memory of Joan Viteri, a resident of the Oak Park neighborhood in Sacramento who died as a result of a treatable abscess. Fearing judgment from the medical community because of the stigma tied to intravenous drug use, she was unable to obtain the medical care she needed.",
+                "Together with Harm Reduction Services and the Gender Health Center, JVMC strives to prevent such tragic and unnecessary deaths among stigmatized populations in the Oak Park community. Equipped with specific resources to treat individuals who use intravenous drugs, individuals who work in the sex trade, and members of the LGBTQ community, we treat all patients with dignity and respect."
+            ],
+            "image": "/about-history.jpg",
+            "alt": "Two members in front of poster"
+        },
+        {
+            "title": "Our Mission",
+            "content": [
+                "JVMC's mission is to offer unbiased health care to individuals who use intravenous drugs, work in the sex trade, or identify as transgender, as well as to their families. No matter your life history, everyone is welcome at JVMC.",
+                "We provide free primary health care services to the uninsured population in the Oak Park area of Sacramento, CA.  Many patients arrive for hypertension and diabetes management, as well as wound care and abscess drainage.",
+                "The JVMC mission is fulfilled through the service of UC Davis undergraduates, medical, PA, NP students and the generosity of physicians."
+            ],
+            "image": "/about-mission.jpg",
+            "alt": "Two volunteers smiling"
+        },
+        {
+            "title": "Our Services",
+            "content": [
+                "At JVMC, patients can come in for primary care services, abscess drainages, prescriptions, reproductive care services and gender health care. Once a month, we have our Reproductive Health Clinic offer IUD and STI screenings, along with menstrual products, and health education resources. ",
+                "Additional services offered by the Gender Health Center (GHC) includes a free hormone clinic, mental health counseling, support groups and cultural programs, harm reduction, legal assistance, education and training, etc."
+            ],
+            "image": "/about-services.jpg",
+            "alt": "Group of JVMC volunteers"
+        }
+    ],
+    
+    "clinicRolesHeader" : {
+        "title" : "Clinic Roles",
+        "subtitle" : "The incredible team that makes JVMC happen"
+    },
+    "clinicRolesCards" : [
+        {
+            "subheader": "Undergrad",
+            "description": "JVMC would cease to function without the dedication of UC Davis undergraduate students who serve the greater vision of the clinic.  This opportunity allows students to get experience in patient intake, lab work, community health, nutrition, and social work.",
+            "iconImage": "/student.svg",
+            "iconAlt": "Student Icon",
+            "photo": "/about-undergrad.jpg",
+            "photoAlt": "Undergradates"
+        },
+        {
+            "subheader": "Graduate",
+            "description": "Medical, PA, and NP students are an integral part of JVMC.  Student volunteers have the opportunity to work with patients one-on-one with physician supervision who provide guidance.  This is one of the best learning opportunities for any future provider.",
+            "iconImage": "/suitcase.svg",
+            "iconAlt": "Suitcase Icon",
+            "photo": "/about-graduate.jpg",
+            "photoAlt": "Graduates"
+        },
+        {
+            "subheader": "Social Work",
+            "description": "In association with Harm Reduction Services, JVMC's social work team allows for patient's to seek out holistic needs and pursue a greater life quality.  We offer various resources for patient care and life support.  There is an opportunity for social work students to gain experience.",
+            "iconImage": "/heart.svg",
+            "iconAlt": "Heart Icon",
+            "photo": "/about-social-work.jpg",
+            "photoAlt": "Social Workers"
+        },
+        {
+            "subheader": "Preceptor",
+            "description": "Where would we be without the dedication of experienced clinicians who are willing to offer their valuable time to mentor students? Their oversights serve the community by allowing for consistent medical care to the patients who enter our clinic.",
+            "iconImage": "/doctor.svg",
+            "iconAlt": "Doctor Icon",
+            "photo": "/about-preceptor.jpg",
+            "photoAlt": "Preceptors"
+        }
+    ],
 
+    "fair": {
+        "title": "Annual Health Fair",
+        "content": [
+            "JVMC will be hosting our Annual Health Fair this year on May 3rd, 2025. This event seeks to provide diverse health and wellness booths to provide free resources and supplies to the community members of Oak Park.",
+            "Please refer to our Instagram for updates on time and location!"
+        ],
+        
+        "instagramUrl": "https://www.instagram.com/jvmclinic/",
+        "button": "Get Involved",
+        
+        "img": "/about-annual-health-fair.jpg",
+        "imgAlt": "Health Fair"
+    }
 }
