@@ -4,24 +4,24 @@ import data from '../_data/clinic-schedule.json';
 import { MdInsertInvitation } from "react-icons/md";
 import { IoMdInformationCircle } from "react-icons/io";
 
-
 export default function ClinicSchedule() {
 
   return (
     <main>
       <div className={styles.page}>
         <div className={styles.header}>
-          <h2>Calendar & Clinic Schedules</h2>
-          <h4>Need an appointment? Check availability and schedule one with our clincs now.</h4>
+          <h2>{data.title}</h2>
+          <h4>{data.subtitle}</h4>
         </div>
 
         <div className={styles.gcal}>
           <div className={styles.calendar}>
           <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showTitle=0"
+            src="https://calendar.google.com/calendar/embed?src=a6298014dd9ccad37eb2b34842045e9e6991da9348b88ce3139b4688cb07bf58%40group.calendar.google.com&ctz=America%2FLos_Angeles"
             style={{ border: "solid 1px #777" }}
             width="1040"
-            height="696"></iframe>
+            height="696">
+          </iframe>
       </div>
           <div className={styles.key}>
             <h4>Calendar Key</h4>
