@@ -1,5 +1,11 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+.top{
+    border: solid;
+}
+.rainbowTop{
+    border: solid;
+}
 .contactUs {
     display: flex;
     flex-direction: column;
@@ -68,39 +74,42 @@
     text-align: center;
 }
 
+.dotsContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.dotsLeft {
+    border: solid;
+    position: absolute;
+    left: -90%; /* Adjust as needed */
+    top: 100%; /* Adjust as needed */
+    width: 90%; /* Adjust as needed */
+    z-index: 1; /* Ensure dots are behind the icons */
+}
+
+.dotsRight {
+    position: absolute;
+    right: -90%; /* Adjust as needed */
+    bottom: 100%; /* Adjust as needed */
+    width: 90%; /* Adjust as needed */
+    z-index: 1; /* Ensure dots are behind the icons */
+}
+
 .socialMediaIcons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px; 
     margin-top: 20px;
+    z-index: 2;
 }
-
 
 .icon {
     font-size: 1.5rem;
     margin-right: 10px;
     font-weight: var(--bold);
 }
-
-.dotsContainer {
-    position: relative;
-    display: flex;
-}
-
-.dotsLeft {
-    position: absolute;
-    left: -98%;
-    top: 100%;
-    width: 100%;
-
-}
-
-.dotsRight {
-    position: absolute;
-    right: -98%;
-    bottom: 100%;
-    width: 100%;
-
-}
-

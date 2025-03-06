@@ -1,10 +1,12 @@
 import styles from './page.module.scss';
 import { FaInstagram } from "react-icons/fa";
-import { LuFacebook } from "react-icons/lu";
 
 export default function ContactUs() {
     return (
         <main className={styles.contactUs}>
+            <div className={styles.top}>
+                <img src="Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop}/>
+            </div>
             <h1 className={styles.title}>Contact Us</h1>
             <section className={styles.container}>
                 <div className={styles.mapContainer}>
@@ -30,20 +32,22 @@ export default function ContactUs() {
                 </div>
             </section>
             <section className={styles.Media}>
-                <section className={styles.socialMedia}>
-                    <h4>Visit our social media pages!</h4>
-                    <div className={styles.dotsContainer}>
-                    <img src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" className={styles.dotsLeft}/>
-                    <img src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" className={styles.dotsRight}/>
-                    </div>
-                    <div className={styles.socialMediaIcons}>
-                        <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
-                          <FaInstagram className={styles.icon} /> Instagram</a>
-                        <a href="https://www.facebook.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">
-                          <LuFacebook className={styles.icon} />Facebook</a>
-                    </div>
-                </section>
-            </section>
+    <section className={styles.socialMedia}>
+        <h4>Visit our social media pages!</h4>
+        <div className={styles.dotsContainer}>
+            <img src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" className={styles.dotsLeft}/>
+            <img src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" className={styles.dotsRight}/>
+        </div>
+        <div className={styles.socialMediaIcons}>
+            <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
+                <FaInstagram className={styles.icon} />@jvmcclinic
+            </a>
+            <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">
+                <FaInstagram className={styles.icon} />@jvmcstudents
+            </a>
+        </div>
+    </section>
+</section>
         </main>
     );
 }
