@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 160px 0;
+  padding: var(--nav-to-element-spacing) 0;
 }
 
 .top {
@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding-top: 200px;
+  padding-top: var(--element-spacing);
   padding-bottom: 160px;
 }
 

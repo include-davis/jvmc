@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     gap: 320px;
-    padding: 160px 0;
+    padding: var(--nav-to-element-spacing) 0;
 }
 
 .headerGradient {
@@ -47,8 +47,7 @@
 
 
 .titleAndSubtitleBox{
-    //border: 8px solid yellow;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -201,7 +200,7 @@
 .contactCard {
   display: flex;
   justify-content: center;
-  gap: 200px;
+  gap: var(--element-spacing);
 }
 
 .contactInfoContainer {

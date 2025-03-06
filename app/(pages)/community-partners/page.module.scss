@@ -5,7 +5,7 @@
   flex-direction: column; 
   align-items: center;
   gap: 100px;
-  padding: 160px 0;
+  padding: var(--nav-to-element-spacing) 0;
 }
 
 .header {

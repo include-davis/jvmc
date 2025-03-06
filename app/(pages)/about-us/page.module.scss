@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 200px;
-  padding: 160px 0;
+  gap: var(--element-spacing);
+  padding: var(--nav-to-element-spacing) 0;
 }
 
 .header {
