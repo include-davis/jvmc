@@ -1,10 +1,14 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-.top{
-    border: solid;
-}
-.rainbowTop{
-    border: solid;
+.rainbowTop {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    width: 1482px;
+    height: 1350px;
+    rotate: 0deg;
+    right: -450px;
+    bottom: 300px;
 }
 .contactUs {
     display: flex;
@@ -13,9 +17,8 @@
     justify-content: center;
     text-align: center;
     padding: 50px 20px;
-    background: var(--white);
+    background-color: var(--white);
     position: relative;
-
 }
 .title {
     font-family: var(--font1);
@@ -83,20 +86,19 @@
 }
 
 .dotsLeft {
-    border: solid;
     position: absolute;
-    left: -90%; /* Adjust as needed */
-    top: 100%; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
-    z-index: 1; /* Ensure dots are behind the icons */
+    bottom: -540px; 
+    left: -650px;
+    width: 600px;
+    height: 500px;
 }
 
 .dotsRight {
     position: absolute;
-    right: -90%; /* Adjust as needed */
-    bottom: 100%; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
-    z-index: 1; /* Ensure dots are behind the icons */
+    top: -450px; 
+    right: -650px;
+    width: 600px;
+    height: 500px;
 }
 
 .socialMediaIcons {

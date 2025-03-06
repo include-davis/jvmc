@@ -1,12 +1,11 @@
 import styles from './page.module.scss';
 import { FaInstagram } from "react-icons/fa";
+import Image from 'next/image';
 
 export default function ContactUs() {
     return (
         <main className={styles.contactUs}>
-            <div className={styles.top}>
-                <img src="Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop}/>
-            </div>
+            <Image src="/Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop} width={1482} height={1350}/>
             <h1 className={styles.title}>Contact Us</h1>
             <section className={styles.container}>
                 <div className={styles.mapContainer}>
