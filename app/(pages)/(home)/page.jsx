@@ -28,24 +28,7 @@ export default function Home() {
   const addIndex = () => {
     setActiveIndex((activeIndex + 1) % n);
   };
-  const handleTouchStart = (e) => {
-    startXRef.current = e.touches[0].clientX;
-  };
-  const handleTouchMove = (e) => {
-    endXRef.current = e.touches[0].clientX;
-  };
 
-  const handleTouchEnd = () => {
-    const threshold = 50; 
-    if (startXRef.current - endXRef.current > threshold) {
-      addIndex();
-    } else if (endXRef.current - startXRef.current > threshold) {
-      subIndex();
-    }
-  };
-
-  // keep track of left and right indecies as well and have specific styling for that 
-  // do the same way as before, dont need to use swiper i believe 
   return (
     <main>
       <div className={styles.page}>
@@ -54,26 +37,22 @@ export default function Home() {
           <h4>Discover everything JVMC has to offer.</h4>
         </div>
         <div className={styles.viewport}>
-          <div className={styles.carousel} 
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}>
+          {/* figure out the correct percentage to move each slide */}
+          <div className={styles.carousel} style={{ transform: `translateX(-${(activeIndex) * 60}%)` }}>
             {slides.map((slideinfo, index) => (
             <div key={index} className={`${styles.slide} ${activeIndex === index ? styles.active:null}`}>
-              <div className={styles.content}>
-                <Image src={slideinfo.src} alt='image' width={'480'} height={'280'} className={styles.image}/>
-                <div className={styles.info}>
-                  <h3>{slideinfo.title}</h3>
-                  <div>
-                    <MdInsertInvitation size={18} color='var(--emerald)'/>
-                    <p>{slideinfo.time}</p>
-                  </div>
-                  <div>
-                    <IoMdInformationCircle size={18} color='var(--emerald)'/>
-                    <p>{slideinfo.info}</p>
-                  </div>
-                  <a href="/clinic-schedule" className="btn">Schedule Now</a>
+              <Image src={slideinfo.src} alt='image' width={'480'} height={'280'} className={styles.image}/>
+              <div className={styles.info}>
+                <h3>{slideinfo.title}</h3>
+                <div>
+                  <MdInsertInvitation className={styles.icon} size={20} color='var(--emerald)'/>
+                  <p>{slideinfo.time}</p>
                 </div>
+                <div>
+                  <IoMdInformationCircle className={styles.icon} size={20} color='var(--emerald)'/>
+                  <p>{slideinfo.info}</p>
+                </div>
+                <a href="/clinic-schedule" className="btn">Schedule Now</a>
               </div>
             </div>))}
           </div>
