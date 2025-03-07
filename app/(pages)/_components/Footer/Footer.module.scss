@@ -3,9 +3,17 @@ $logo-height: calc(8px * 15);
 $logo-width: calc(8px * 20);
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-color: var(--white);
   box-shadow: var(--drop-shadow-header);
   text-align: center;
+
+  @mixin sm-desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .topSection {
