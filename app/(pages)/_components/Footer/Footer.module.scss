@@ -6,6 +6,12 @@ $logo-width: calc(8px * 20);
   background-color: var(--white);
   box-shadow: var(--drop-shadow-header);
   text-align: center;
+  
+  @mixin phone {
+    @media screen and (max-width: 720px) {
+      @content;
+    }
+  }
 }
 
 .topSection {
