@@ -122,3 +122,118 @@
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
+.rainbowTop {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    width: 1482px;
+    height: 1350px;
+    rotate: 0deg;
+    right: -450px;
+    bottom: 300px;
+}
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--white);
+    position: relative;
+}
+.title {
+    font-family: var(--font1);
+    font-size: 56px;
+    font-weight: var(--bold);
+    color: var(--dark-grey);
+    line-height: normal;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 85%;
+    max-width: 900px;
+    margin-bottom: 50px;
+    box-shadow: var(--drop-shadow);
+    border-radius: 5%;
+}
+.mapContainer {
+    flex: 1;
+    min-width: 50%;
+    max-width: 55%;
+}
+
+// .boxCard {
+//     // place holder for now
+// }
+.infoCard {
+    flex: 1;
+    background-color: var(--white);
+    padding-bottom: 29px;
+    margin-right: 22px;
+    text-align: center;
+    font-size: 36px;
+    color: var(--emerald);
+}
+
+.textInfo {
+    color: var(--dark-grey); //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section 
+    font-family: var(--font2);
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+// .Media {
+//     // place holder for now
+// }
+
+.socialMedia {
+    text-align: center;
+}
+
+.dotsContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.dotsLeft {
+    position: absolute;
+    bottom: -540px; 
+    left: -650px;
+    width: 600px;
+    height: 500px;
+}
+
+.dotsRight {
+    position: absolute;
+    top: -450px; 
+    right: -650px;
+    width: 600px;
+    height: 500px;
+}
+
+.socialMediaIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    font-weight: var(--bold);
+}
