@@ -5,6 +5,7 @@ import Image from 'next/image';
 export default function ContactUs() {
     return (
         <main className={styles.contactUs}>
+            {/* MAP COMPONENT */}
             <Image src="/Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop} width={1482} height={1350}/>
             <h1 className={styles.title}>Contact Us</h1>
             <section className={styles.container}>
@@ -31,25 +32,25 @@ export default function ContactUs() {
                 </div>
             </section>
             <section className={styles.Media}>
-    <section className={styles.socialMedia}>
-        <h4>Visit our social media pages!</h4>
-        <div className={styles.dotsContainer}>
-            <img src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" className={styles.dotsLeft}/>
-            <img src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" className={styles.dotsRight}/>
-        </div>
-        <div className={styles.socialMediaIcons}>
-            <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
-                <FaInstagram className={styles.icon} />@jvmcclinic
-            </a>
-            <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">
-                <FaInstagram className={styles.icon} />@jvmcstudents
-            </a>
-        </div>
-    </section>
-</section>
+                {/* SOCIAL MEDIA COMPONENT */}
+                <section className={styles.socialMedia}>
+                    <h4>Visit our social media pages!</h4>
+                    <div className={styles.dotsContainer}>
+                        <img src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" className={styles.dotsLeft}/>
+                        <img src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" className={styles.dotsRight}/>
+                    </div>
+                    <div className={styles.socialMediaIcons}>
+                        <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
+                            <FaInstagram className={styles.icon} />@jvmcclinic
+                        </a>
+                        <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">
+                            <FaInstagram className={styles.icon} />@jvmcstudents
+                        </a>
+                    </div>
+                </section>
+            </section>
+            {/* QUESTIONS? COMPONENT */}
+            {/* CONTACT FORM COMPONENT */}
         </main>
     );
 }
-
-
-  
