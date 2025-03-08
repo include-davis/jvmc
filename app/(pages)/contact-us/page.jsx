@@ -43,7 +43,7 @@ export default function ContactUs() {
                         <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
                             <FaInstagram className={styles.icon} />@jvmcclinic
                         </a>
-                        <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">
+                        <a href="https://www.instagram.com/jvmcstudents/" target="_blank" rel="noopener noreferrer" className="btn">
                             <FaInstagram className={styles.icon} />@jvmcstudents
                         </a>
                     </div>
