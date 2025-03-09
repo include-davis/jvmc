@@ -27,7 +27,7 @@ jobs:
 
       - name: Lint and build code, then publish to Vercel
         run: >
-          vercel
+          npx vercel
           --token ${{ secrets.VERCEL_TOKEN }}
           -n ${{ vars.VERCEL_PROJECT }}
           --yes
