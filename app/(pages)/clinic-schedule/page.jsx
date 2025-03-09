@@ -4,7 +4,6 @@ import Image from 'next/image';
 import ClinicCardFallbackData from '../_data/clinic-schedule.json';
 import ClinicCalendarCard from '../_components/ClinicCalendarCard/ClinicCalendarCard';
 
-// revalidateTag("cms")
 async function getCalendarCards(){
   try{
     const res = await fetch(
@@ -15,9 +14,11 @@ async function getCalendarCards(){
     if(!data.ok || !data.body || data.body.length === 0){
       throw new Error(data.error);
     }
-    console.log(data);
-    const parsedData = data.body.map((card) => {
-      const [button_text, button_link] = card.button_text_and_link?.split(",");
+    return data.body.map((card) => {
+      let button_text, button_link;
+      if (card.action_button_text_and_link) {
+        [button_text, button_link] = card.action_button_text_and_link.split(",");
+      }
       return {
         color: card.hex_code,
         title: card.title,
@@ -25,12 +26,10 @@ async function getCalendarCards(){
         time: card.hours,
         message: card.appointment_instruction,
         action: card.action_text ? card.action_text : null,
-        button_text: button_text ? button_text : null,
-        button_link: button_link ? button_link : null
+        button_text: card.action_button_text_and_link ? button_text : null,
+        button_link: card.action_button_text_and_link ? button_link : null
       }
     })
-    console.log(parsedData);
-    return parsedData;
   } catch (e) {
     console.error(`Failed to fetch calendar-cards: ${e.message}`);
     return ClinicCardFallbackData
