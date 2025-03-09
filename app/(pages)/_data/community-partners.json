@@ -41,5 +41,8 @@
         "Volunteers at an event table for Harm Reduction Services",
         "Three volunteers holding service items",
         "Stockton Harm Reduction Program volunteers at a community event"
-    ]
+    ],
+    
+    "bottom_gradient": "/images/communityPartnersGradient.png",
+    "bottom_gradient_alt": "Bottom Gradient"
 }

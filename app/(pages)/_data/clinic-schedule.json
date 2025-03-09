@@ -1,6 +1,10 @@
 {
     "title": "Calendar & Clinic Schedules",
     "subtitle": "Need an appointment? Check availability and schedule one with our clincs now.",
+    
+    "gradient": "/images/clinicScheduleGradient.png",
+    "gradient_alt": "Background Gradient",
+
     "info": {
         "jvmc": {
             "title": "JVMC Clinic",
