@@ -1,4 +1,5 @@
 {
+
     "title": "Community Partners",
     "subtitle": "Our trusted allies supporting our mission beyond the our clinics.",
     "partners": [
@@ -42,6 +43,45 @@
         "Three volunteers holding service items",
         "Stockton Harm Reduction Program volunteers at a community event"
     ],
+
+    "carousel" : {
+        "bottom_title": "Where We’ve Gone",
+        "bottom_subtitle": "See our community in action!",
+        "carousel_images": [
+            {
+                "src": "/cm_carousel1.png",
+                "alt": "picture of the jvmc"
+            },
+            {
+                "src": "/cm_carousel2.png",
+                "alt": "jvmc volunteers"
+            },
+            {
+                "src": "/cm_carousel3.png",
+                "alt": "jvmc volunteers"
+            },
+            {
+                "src": "/cm_carousel4.png",
+                "alt": "jvmc volunteers"
+            },
+            {
+                "src": "/cm_carousel1.png",
+                "alt": "picture of the jvmc"
+            },
+            {
+                "src": "/cm_carousel2.png",
+                "alt": "jvmc volunteers"
+            },
+            {
+                "src": "/cm_carousel3.png",
+                "alt": "jvmc volunteers"
+            },
+            {
+                "src": "/cm_carousel4.png",
+                "alt": "jvmc volunteers"
+            }
+        ]
+    },
     
     "bottom_gradient": "/images/communityPartnersGradient.png",
     "bottom_gradient_alt": "Bottom Gradient"
