@@ -81,7 +81,9 @@ export default function ContactUs() {
     return (
         <main className={styles.contactUs}>
             {/* MAP COMPONENT */}
-            <Image src="/Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop} width={1482} height={1350}/>
+            <div className={styles.rainbowBox}>
+                <Image src="/Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop} width={1482} height={1350}/>
+            </div>
             <h1 className={styles.title}>Contact Us</h1>
             <section className={styles.container}>
                 <div className={styles.mapContainer}>
@@ -124,7 +126,6 @@ export default function ContactUs() {
                     </div>
                 </section>
             </section>
-            <div className={styles.contactPage}>
                 {/* QUESTIONS? COMPONENT */}
                 <div className={styles.questionsCard}>
                     <h3>{heading1}</h3>
@@ -194,7 +195,6 @@ export default function ContactUs() {
                         </button>
                     </div>
                 </form>
-            </div>
       </main>
     );
 }

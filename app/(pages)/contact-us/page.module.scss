@@ -1,11 +1,11 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-.contactPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: var(--vertical-card-gap);
-}
+// .contactPage {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     row-gap: var(--vertical-card-gap);
+// }
 
 .questionsCard {
     display: flex;
@@ -121,16 +121,21 @@
     color: red;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
-  }
+}
+
+
+
+
 .rainbowTop {
     position: absolute;
     z-index: 1;
     pointer-events: none;
-    width: 1482px;
-    height: 1350px;
-    rotate: 0deg;
-    right: -450px;
-    bottom: 300px;
+    rotate: 15deg;
+    top: -600px;
+    left: 500px
+    // width: 1482px;
+    // height: 1350px;
+    
 }
 .contactUs {
     display: flex;
@@ -141,6 +146,8 @@
     padding: 50px 20px;
     background-color: var(--white);
     position: relative;
+    row-gap: var(--vertical-card-gap);
+    overflow: hidden;
 }
 .title {
     font-family: var(--font1);
@@ -150,6 +157,7 @@
     line-height: normal;
     padding: 0 20px;
     margin-bottom: 100px;
+    z-index: 2;
 }
 
 .container {
