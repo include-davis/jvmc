@@ -1,19 +1,12 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-// .contactPage {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     row-gap: var(--vertical-card-gap);
-// }
-
 .questionsCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
-    width: 72.22%;
-    height: 247px;
+    gap: 10px;
+    width: 1040px;
+    // height: 247px;
     background-color: var(--card-background);
     border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow);
@@ -80,42 +73,52 @@
 
 .formMessage {
     width: 100%;
+    border-radius: var(--card-border-radius);
 }
+
+
 .formMessage label {
-    display: block;
-    font-size: 1rem;
-    font-family: var(--font2);
-    font-weight: 400;
-    line-height: 150%;
+    display: none;
 }
 
 .message {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+    border-radius: var(--card-border-radius);
+    border: solid 1px var(--dark-grey);
     resize: none;
     min-height: 112px;
     width: 100%;
+    padding-top: 12px;
+    padding-left: 32px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message:focus {
+    border-color: var(--light-blue);
+    box-shadow: var(--drop-shadow-small);
+    outline: none;
 }
 
 .buttonArea {
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
+    padding-top: 50px;
 }
 
 .sendButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--teal);
-    width: 106px;
-    height: 48px;
-    border-radius: 100px;
-    color: white;
+  outline: none !important;
+  border: none !important;
+  font-weight: var(--bold);
+  font-family: var(--font2);
+  width: 6rem;
+  font-size: 1rem;
 }
 
-.sendButton b {
-    font-weight: var(--bold);
-    font-family: var(--font2);
-}
+// .sendButton b {
+//     font-weight: var(--bold);
+//     font-family: var(--font2);
+// }
 
 /* Error messages */
 .errorText {
@@ -124,41 +127,43 @@
     margin-bottom: 0.5rem;
 }
 
-
-
-
 .rainbowTop {
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     pointer-events: none;
-    rotate: 15deg;
-    top: -600px;
-    left: 500px
+    top: -340px;
+    left: 176px;
+    // rotate: 15deg;
+    // top: -600px;
+    // left: 500px
     // width: 1482px;
-    // height: 1350px;
-    
+    // height: 1350px; 
 }
+
+.rainbowBottom {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  bottom: -280px;
+  left: -176px;
+}
+
+/* Contact Us Page */
 .contactUs {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 50px 20px;
+    padding: var(--nav-to-element-spacing) 0;
     background-color: var(--white);
     position: relative;
-    row-gap: var(--vertical-card-gap);
+    gap: var(--vertical-card-gap);
     overflow: hidden;
-}
-.title {
-    font-family: var(--font1);
-    font-size: 56px;
-    font-weight: var(--bold);
-    color: var(--dark-grey);
-    line-height: normal;
-    padding: 0 20px;
-    margin-bottom: 100px;
-    z-index: 2;
+
+    h1 {
+      z-index: 1;
+    }
 }
 
 .container {
@@ -168,10 +173,10 @@
     align-items: center;
     gap: 25px;
     width: 85%;
-    max-width: 900px;
-    margin-bottom: 50px;
+    max-width: 1040px;
+    // margin-bottom: 50px;
     box-shadow: var(--drop-shadow);
-    border-radius: 5%;
+    border-radius: var(--card-border-radius);
 }
 .mapContainer {
     flex: 1;
@@ -179,9 +184,6 @@
     max-width: 55%;
 }
 
-// .boxCard {
-//     // place holder for now
-// }
 .infoCard {
     flex: 1;
     background-color: var(--white);
@@ -194,18 +196,10 @@
 
 .textInfo {
     color: var(--dark-grey); //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section 
-    font-family: var(--font2);
+    // font-family: var(--font2);
     gap: 8px;
     display: flex;
     flex-direction: column;
-}
-
-// .Media {
-//     // place holder for now
-// }
-
-.socialMedia {
-    text-align: center;
 }
 
 .dotsContainer {
@@ -213,23 +207,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    // margin-top: 16px;
 }
 
 .dotsLeft {
     position: absolute;
-    bottom: -540px; 
-    left: -650px;
-    width: 600px;
-    height: 500px;
+    bottom: -460px; 
+    left: -464px;
 }
 
 .dotsRight {
     position: absolute;
-    top: -450px; 
-    right: -650px;
-    width: 600px;
-    height: 500px;
+    top: -350px; 
+    right: -472px;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+
 }
 
 .socialMediaIcons {
@@ -237,12 +235,18 @@
     justify-content: center;
     align-items: center;
     gap: 50px; 
-    margin-top: 20px;
-    z-index: 2;
+
+    a {
+      width: 260px;
+    }
+    // width: 260px;
+    // padding: 0 36px;
+    // margin-top: 20px;
+    // z-index: 2;
 }
 
 .icon {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-right: 10px;
     font-weight: var(--bold);
 }

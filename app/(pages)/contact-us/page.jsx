@@ -81,10 +81,13 @@ export default function ContactUs() {
     return (
         <main className={styles.contactUs}>
             {/* MAP COMPONENT */}
-            <div className={styles.rainbowBox}>
+            <div className={styles.rainbowTop}>
                 <Image src="/Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop} width={1482} height={1350}/>
             </div>
-            <h1 className={styles.title}>Contact Us</h1>
+            <div className={styles.rainbowBottom}>
+                <Image src="/Contact_Rainbow_Bottom.png" alt="Decorative Rainbow Bottom" className={styles.rainbowBottom} width={1362} height={1068}/>
+            </div>
+            <h1>Contact Us</h1>
             <section className={styles.container}>
                 <div className={styles.mapContainer}>
                     <iframe
@@ -108,93 +111,97 @@ export default function ContactUs() {
                     </div>
                 </div>
             </section>
-            <section className={styles.Media}>
-                {/* SOCIAL MEDIA COMPONENT */}
-                <section className={styles.socialMedia}>
-                    <h4>Visit our social media pages!</h4>
-                    <div className={styles.dotsContainer}>
-                        <img src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" className={styles.dotsLeft}/>
-                        <img src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" className={styles.dotsRight}/>
+            {/* SOCIAL MEDIA COMPONENT */}
+            <section className={styles.socialMedia}>
+                <h4>Visit our social media pages!</h4>
+                <div className={styles.dotsContainer}>
+                    <div className={styles.dotsLeft}>
+                      <Image src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" width={420} height={412}/>
                     </div>
-                    <div className={styles.socialMediaIcons}>
-                        <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
-                            <FaInstagram className={styles.icon} />@jvmcclinic
-                        </a>
-                        <a href="https://www.instagram.com/jvmcstudents/" target="_blank" rel="noopener noreferrer" className="btn">
-                            <FaInstagram className={styles.icon} />@jvmcstudents
-                        </a>
+                    <div className={styles.dotsRight}>
+                      <Image src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" width={432} height={397} />
                     </div>
-                </section>
-            </section>
-                {/* QUESTIONS? COMPONENT */}
-                <div className={styles.questionsCard}>
-                    <h3>{heading1}</h3>
-                    <h3>{heading2}</h3>
-                    <p>Please <b>do not use this page for inquiries</b></p>
-                    <p>For questions about volunteering please email <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b></p>
                 </div>
-                {/* CONTACT FORM COMPONENT */}
-                <form className={styles.form} onSubmit={handleSubmit}>
-                    <div className={styles.formField}>
-                        <div className={styles.formInput}>
-                            {firstNameError && <p className={styles.errorText}>{firstNameError}</p>}
-                            <label>First Name*</label>
-                            <input
-                            type="text"
-                            className={styles.formInputText}
-                            value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)}
-                            />
-                        </div>
-                        <div className={styles.formInput}>
-                            {lastNameError && <p className={styles.errorText}>{lastNameError}</p>}
-                            <label>Last Name*</label>
-                            <input
-                            type="text"
-                            className={styles.formInputText}
-                            value={lastName}
-                            onChange={(e) => setLastName(e.target.value)}
-                            />
-                        </div>
-                        </div>
-                        <div className={styles.formField}>
-                        <div className={styles.formInput}>
-                            {emailError && <p className={styles.errorText}>{emailError}</p>}
-                            <label>Email*</label>
-                            <input
-                            type="text"
-                            className={styles.formInputText}
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </div>
-                        <div className={styles.formInput}>
-                            {subjectError && <p className={styles.errorText}>{subjectError}</p>}
-                            <label>Subject*</label>
-                            <input
-                            type="text"
-                            className={styles.formInputText}
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                            />
-                        </div>
-                    </div>
-                    <div className={styles.formMessage}>
-                        <label>Message</label>
-                        <textarea
+                <div className={styles.socialMediaIcons}>
+                    <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
+                        <FaInstagram className={styles.icon} />@jvmcclinic
+                    </a>
+                    <a href="https://www.instagram.com/jvmcstudents/" target="_blank" rel="noopener noreferrer" className="btn">
+                        <FaInstagram className={styles.icon} />@jvmcstudents
+                    </a>
+                </div>
+            </section>
+            {/* QUESTIONS? COMPONENT */}
+            <div className={styles.questionsCard}>
+                <div>
+                  <h3>{heading1}</h3>
+                  <h3>{heading2}</h3>
+                </div>
+                <p>Please <b>do not use this page for inquiries</b></p>
+                <p>For questions about volunteering please email <b><a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a></b></p>
+            </div>
+            {/* CONTACT FORM COMPONENT */}
+            <form className={styles.form} onSubmit={handleSubmit}>
+                <div className={styles.formField}>
+                    <div className={styles.formInput}>
+                        {firstNameError && <p className={styles.errorText}>{firstNameError}</p>}
+                        <label>First Name*</label>
+                        <input
                         type="text"
-                        className={styles.message}
-                        placeholder='Type Message Here...'
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        className={styles.formInputText}
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                         />
                     </div>
-                    <div className={styles.buttonArea}>
-                        <button type="submit" className={styles.sendButton}>
-                            <b>Send</b>
-                        </button>
+                    <div className={styles.formInput}>
+                        {lastNameError && <p className={styles.errorText}>{lastNameError}</p>}
+                        <label>Last Name*</label>
+                        <input
+                        type="text"
+                        className={styles.formInputText}
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        />
                     </div>
-                </form>
+                    </div>
+                    <div className={styles.formField}>
+                    <div className={styles.formInput}>
+                        {emailError && <p className={styles.errorText}>{emailError}</p>}
+                        <label>Email*</label>
+                        <input
+                        type="text"
+                        className={styles.formInputText}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div className={styles.formInput}>
+                        {subjectError && <p className={styles.errorText}>{subjectError}</p>}
+                        <label>Subject*</label>
+                        <input
+                        type="text"
+                        className={styles.formInputText}
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
+                        />
+                    </div>
+                </div>
+                <div className={styles.formMessage}>
+                    <label>Message</label>
+                    <textarea
+                    type="text"
+                    className={styles.message}
+                    placeholder='Type Message Here...'
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    />
+                </div>
+                <div className={styles.buttonArea}>
+                    <button type="submit" className={`btn ${styles.sendButton}`}>
+                      Send
+                    </button>
+                </div>
+            </form>
       </main>
     );
 }
