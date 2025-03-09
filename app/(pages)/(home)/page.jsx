@@ -185,6 +185,16 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className={styles.bottomGradientContainer}>
+            <div className={styles.bottomGradient}>
+              <Image
+                  src={data.bottom_gradient}
+                  alt={data.bottom_gradient_alt}
+                  fill={true}
+                />
+            </div>
+          </div>
         </div>
 
     </main>
