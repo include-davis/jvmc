@@ -8,13 +8,27 @@
     padding: var(--nav-to-element-spacing) 0;
 }
 
-.headerGradient {
+.headerGradientContainer {
     position: absolute;
+    height: 1348px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.headerGradient {
+    position: relative;
     z-index: -1;
     pointer-events: none; /* Prevents interaction issues */
+    width: 200%;
+    height: 100%;
+    margin: 0px -15%;
 }
 
 .titleWithButtonSection{
+    position: relative;
+    // height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

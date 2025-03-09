@@ -13,13 +13,14 @@ export default function Home() {
       <div className = {styles.body}>
 
         <div className = {styles.titleWithButtonSection}>
-          <div className={styles.headerGradient}>
-            <Image
-              src={data.header_gradient}
-              alt={data.header_gradient_alt}
-              width={1839}
-              height={1349}
-            />
+          <div className={styles.headerGradientContainer}>
+            <div className={styles.headerGradient}>
+              <Image
+                src={data.header_gradient}
+                alt={data.header_gradient_alt}
+                fill={true}
+              />
+            </div>
           </div>
           <Image
               src={data.teddy}
