@@ -17,11 +17,29 @@
 
 .aboutUs,
 .clinicRoles {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--color-white) ;//#F8F8F8;
   gap: var(--vertical-card-gap);
+}
+
+.clinicRolesGradientContainer {
+  position: absolute;
+  top: -364px;
+  height: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.clinicRolesGradient {
+  position: relative;
+  z-index: -1;
+  pointer-events: none; /* Prevents interaction issues */
+  width: 110%;
+  height: 100%;
+  margin: 0 -5%;
 }
 
 .fairCard {
