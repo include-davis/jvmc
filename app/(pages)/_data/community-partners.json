@@ -1,14 +1,38 @@
 {
     "bottom_title": "Where We've Gone",
     "bottom_subtitle": "See our community in action!",
-    "carousel_images": {
-        "img_1": "/drive_pic.png",
-        "img_1_descript": "picture of the jvmc",
-        "img_2": "/drive_pic2.png",
-        "img_2_descript": "jvmc volunteers",
-        "img_3": "/drive_pic3.png",
-        "img_3_descript": "jvmc volunteers",
-        "img_4": "/drive_pic4.png",
-        "img_4_descript": "jvmc volunteers"
-    }
+    "carousel_images": [
+        {
+            "src": "/cm_carousel1.png",
+            "alt": "picture of the jvmc"
+        },
+        {
+            "src": "/cm_carousel2.png",
+            "alt": "jvmc volunteers"
+        },
+        {
+            "src": "/cm_carousel3.png",
+            "alt": "jvmc volunteers"
+        },
+        {
+            "src": "/cm_carousel4.png",
+            "alt": "jvmc volunteers"
+        },
+        {
+            "src": "/cm_carousel1.png",
+            "alt": "picture of the jvmc"
+        },
+        {
+            "src": "/cm_carousel2.png",
+            "alt": "jvmc volunteers"
+        },
+        {
+            "src": "/cm_carousel3.png",
+            "alt": "jvmc volunteers"
+        },
+        {
+            "src": "/cm_carousel4.png",
+            "alt": "jvmc volunteers"
+        }
+    ]
 }
