@@ -2,11 +2,16 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
-  // Method validation
-  if (req.method !== "POST") {
-    return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
-  }
   try {
+    // Method validation
+    const { method } = req;
+    if (method !== "POST") {
+      return NextResponse.json(
+        { error: "Method not allowed" },
+        { status: 405 }
+      );
+    }
+
     // Server-side validation
     const { firstName, lastName, email, subject, message } = await req.json();
 
@@ -19,7 +24,7 @@ export async function POST(req) {
 
     // Create transporter
     const transporter = nodemailer.createTransport({
-      host: "zoho",
+      host: "Zoho",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -43,7 +48,7 @@ export async function POST(req) {
   } catch (error) {
     console.error(error);
     return NextResponse.json(
-      { error: "Failed to send email." },
+      { error: error.message || "Failed to send email." },
       { status: 500 }
     );
   }
