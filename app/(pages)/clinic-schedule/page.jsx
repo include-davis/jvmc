@@ -1,5 +1,6 @@
 "use client"; 
 import styles from './page.module.scss';
+import Image from 'next/image';
 import data from '../_data/clinic-schedule.json';
 import { MdInsertInvitation } from "react-icons/md";
 import { IoMdInformationCircle } from "react-icons/io";
@@ -12,6 +13,16 @@ export default function ClinicSchedule() {
         <div className={styles.header}>
           <h2>{data.title}</h2>
           <h4>{data.subtitle}</h4>
+        </div>
+
+        <div className={styles.gradientContainer}>
+          <div className={styles.gradient}>
+            <Image
+              src={data.gradient}
+              alt={data.gradient_alt}
+              fill={true}
+            />
+          </div>
         </div>
 
         <div className={styles.gcal}>
