@@ -6,12 +6,17 @@
     "entrance_pic" : "/volunteer-entrance.png",
     "entrance_pic_descript" : "JVMC volunteers posing at a drive in Sacramento",
 
+    "gradient1": "/images/volunteerGradient1.png",
+    "gradient1_alt": "Gradient 1",
+
     "bottom_title" : "Interested in learning more about each role?",
     "bottom_button" : "About Us",
     "bottom_text" : {
         "chunk_1" : "For more information on each volunteering role, please navigate to the",
         "chunk_2" : " About Us ",
         "chunk_3" : "page. There you will find out more about what each role in the clinic entails."
-    }
+    },
 
+    "gradient2": "/images/volunteerGradient2.png",
+    "gradient2_alt": "Gradient 2"
 }

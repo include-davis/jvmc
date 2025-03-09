@@ -2,6 +2,7 @@
 
 // Top Section
 .page {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,11 +46,13 @@
 
 // Middle Cards
 .middle {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 60px;
   padding-top: var(--element-spacing);
   padding-bottom: 160px;
+  width: 100%;
 }
 
 .volunteerCards {
@@ -62,6 +65,23 @@
 .header {
   color: var(--dark-grey);
   text-align: center;
+}
+
+.gradient1Container {
+  z-index: -1;
+  position: absolute;
+  top: -48px;
+  height: 510px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gradient1 {
+  position: relative;
+  pointer-events: none; /* Prevents interaction issues */
+  width: 110%;
+  height: 100%;
+  margin: 0 -5%;
 }
 
 // Bottom Section
@@ -90,3 +110,20 @@
     color: var(--teal);
 }
 
+.gradient2Container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1360px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gradient2 {
+  pointer-events: none; /* Prevents interaction issues */
+  position: relative;
+  bottom: -332px;
+  width: 115%;
+  height: 100%;
+  margin: 0 -5%;
+}
