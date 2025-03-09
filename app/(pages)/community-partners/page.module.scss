@@ -11,6 +11,13 @@
   overflow: hidden;
 }
 
+.partnersSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--vertical-card-gap);
+}
+
 .header {
   text-align: center;
 }
