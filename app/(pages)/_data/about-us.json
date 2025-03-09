@@ -85,5 +85,8 @@
         
         "img": "/about-annual-health-fair.jpg",
         "imgAlt": "Health Fair"
-    }
+    },
+
+    "bottom_gradient": "/images/aboutBottomGradient.png",
+    "bottom_gradient_alt": "Bottom Gradient"
 }
