@@ -1,1 +1,288 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
+// Upper Home Page section
+.body{
+    display: flex;
+    flex-direction: column;
+    gap: 320px;
+    padding: var(--nav-to-element-spacing) 0;
+    position: relative;
+}
+
+.headerGradientContainer {
+    position: absolute;
+    height: 1348px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.headerGradient {
+    position: relative;
+    z-index: -1;
+    pointer-events: none; /* Prevents interaction issues */
+    width: 200%;
+    height: 100%;
+    margin: 0px -15%;
+}
+
+.titleWithButtonSection{
+    position: relative;
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 36px;
+}
+
+
+.contactButton{
+    display: flex;
+    justify-content: center;
+}
+
+.dots1{
+    position: absolute;
+    bottom: 300px; // 56
+    left: -12px;
+    z-index: -1;
+    pointer-events: none; /* Prevents interaction issues */
+}
+
+.dots2{
+    position: absolute;
+    bottom: -350px;
+    right: -12px;
+    z-index: -1;
+    pointer-events: none; /* Prevents interaction issues */
+}
+
+
+.titleAndSubtitleBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.titleAndSubtitleBox h1{
+    color: var(--emerald);
+    font-size: 56px;
+}
+
+.titleAndSubtitleBox p{
+    text-align: center;
+    width: calc(8px * 71);
+}
+
+
+.cardSectionBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: var(--vertical-card-gap);
+    // width: 1040px;  This will mess up the full-view
+
+    position: relative;
+    z-index: 0;
+
+}
+
+.cardSectionHeader{
+    position: relative;
+    z-index: -1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: calc(8px * 18);
+    width: calc(8px * 85);
+    margin-bottom: calc(8px * 3);
+}
+
+.cardSectionHeader Image{
+    box-shadow: var(--drop-shadow-small);
+    background-color: transparent;
+}
+
+.cardSectionHeader h3{
+     position: absolute;
+     z-index: 1;
+     width: 80%;
+ }
+
+ .card{
+    border: 2px solid var(--mint);
+    box-shadow: var(--drop-shadow-mint);
+    border-radius: var(--card-border-radius);
+    background-color: var(--white);
+    padding: var(--card-padding);
+    gap: var(--vertical-card-gap);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 1040px; // Makes sure all cards are same width
+
+    position: relative;
+    z-index: 2;
+
+    gap: 32px;
+    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+}
+
+
+.card_ImageBox{
+    width: 40%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.image_1{
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow-small);
+}
+
+.image_2{
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow-small);
+}
+
+.card_TextBox{
+    padding-top: 16px;
+}
+
+.card_TextBox p{ // part of the second card
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 32px;
+
+    font-family: var(--font2);
+    font-weight: 350;
+}
+
+.card_TitleAndLogo{
+    display: flex;
+    justify-content: left; 
+    align-items: center;
+    padding-left: 16px;
+    padding-bottom: 32px;
+}
+
+.card_TitleAndLogo h3{
+    font-size: 32px;
+    padding-left: 16px;
+    color: var(--emerald);
+}
+
+.description_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 24px;
+    gap: 24px;
+}
+
+.description_2{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding-left: 16px; 
+    list-style-position: inside;
+    
+    li{
+        padding-left: 16px; 
+    }
+}
+
+// Contact Card Section with Circle Gradient
+.contactCard {
+  display: flex;
+  justify-content: center;
+  gap: var(--element-spacing);
+}
+
+.contactInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+
+  h3 {
+    color: var(--emerald);
+  }
+}
+
+.contactInfoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactImageContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 512px;
+  height: 454px;
+}
+
+.contactImage {
+  height: 100%;
+  width: 90%;
+  border-radius: 50%;
+  position: absolute;
+  right: 24px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.gradientCircle {
+  position: absolute;
+  width: 90%; 
+  height: 100%;
+  border-radius: 50%;
+  background: var(--green-gradient-light);
+
+  right: 0px; 
+  z-index: 0; 
+}
+
+.bottomGradientContainer {
+    position: absolute;
+    bottom: -320px;
+    width: 100%;
+    height: 864px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bottomGradient {
+    pointer-events: none; /* Prevents interaction issues */
+    position: relative;
+    width: 150%;
+    height: 1260px;
+    margin: 0 -35% 0 -24%;
+}
