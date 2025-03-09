@@ -1,5 +1,8 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+$image-dim: 400px;
+$image-gap: 50px;
+
 .community_partners_title{
     display: flex;
     justify-content: center;
@@ -12,13 +15,12 @@
     align-items: center;
 }
 
-.column{
+.column{  /*one image and its box*/
     width: 400px;
     height: 400px;
     overflow: hidden; /* Hide any parts of the image that overflow the container */
     position: relative;
 
-    margin-right: 50px; /*space between the images*/
     border-radius: 20px;
     border: var(--mint-border);
     border: 2px solid var(--mint);
@@ -29,14 +31,22 @@
 
 .carousel{
     display: flex;
-    justify-content: center;
+    position: relative; 
+    height: $image-dim;
+    overflow: hidden;
     align-items: center;
 }
 
 .carousel .row{
     display: flex;
     border: solid 2px black;
-    animation: slide 10s linear infinite; /*take 10s to perform this animation once*/
+    position: absolute; 
+    width: fit-content;
+    animation: slide 20s linear infinite; /*take 10s to perform this animation once*/
+    gap: $image-gap;
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 .carousel .row .column{
@@ -46,10 +56,11 @@
 
 @keyframes slide{
     0% {
-        transform: translateX(100%);
-    }
+        left: 0;
+    }    
     100%{
-        transform: translateX(-100%);
+        /*start from left of screen as soon as 1 set of images scroll through, matches where 2nd set is at end of animation*/
+        left: calc(-1 * var(--num-images) * ($image-dim + $image-gap));
     }
 }
 
