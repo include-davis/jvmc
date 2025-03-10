@@ -10,9 +10,16 @@ $logo-width: calc(8px * 20);
   box-shadow: var(--drop-shadow-header);
   text-align: center;
 
-  @mixin sm-desktop {
-    flex-direction: row;
-    justify-content: space-between;
+  @mixin phone {
+    @media screen and (max-width: 720px) {
+      @content;
+    }
+  }
+
+  @mixin sm-phone {
+    @media screen and (max-width: 540px) {
+      @content;
+    }
   }
 }
 
@@ -22,6 +29,17 @@ $logo-width: calc(8px * 20);
   align-items: center;
   gap: 48px;
   padding: 40px 96px;
+
+  @mixin tablet {
+    @media screen and (max-width: 1048px) {
+      @content;
+    }
+  }
+  @mixin phone {
+    @media screen and (max-width: 720px) {
+      @content;
+    }
+  }
 }
 
 .logoSection {
@@ -81,9 +99,6 @@ $logo-width: calc(8px * 20);
   background-color: var(--white);
   width: 75%;
 
-  @include mixins.sm-desktop {
-    gap: 40px;  
-}
 
   li a {
     text-decoration: none;
@@ -100,6 +115,16 @@ $logo-width: calc(8px * 20);
     color: var(--teal);
     font-weight: var(--bold); 
   }
+  @mixin tablet {
+    @media screen and (max-width: 1048px) {
+      @content;
+    }
+  }
+  @mixin phone {
+    @media screen and (max-width: 720px) {
+      @content;
+    }
+  }
 }
 
 .bottomSection {
@@ -111,4 +136,11 @@ $logo-width: calc(8px * 20);
     color: var(--offwhite);
     font-family: var(--font2);
     font-weight: var(--light);
+
+    @mixin phone {
+      @media screen and (max-width: 720px) {
+        @content;
+      }
+    }
+
 }
