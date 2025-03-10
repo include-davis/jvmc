@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaHome, FaClock, FaEnvelope} from 'react-icons/fa';
 import Link from "next/link";
 import data from '@/app/(pages)/_data/home.json'
+import HomepageCarousel from '../_components/HomepageCarousel/HomepageCarousel';
 
 export default function Home() {
   const {Sentence_1, Sentence_2, Sentence_3} = data.text_Block1
@@ -56,31 +57,31 @@ export default function Home() {
             </div>
 
 
-              <div className = {styles.card}>
-                {/* left side has image and right side has text */}
-                <div className = {styles.card_ImageBox}>
+            <div className = {styles.card}>
+              {/* left side has image and right side has text */}
+              <div className = {styles.card_ImageBox}>
 
-                <Image
-                  src={data.card1_Image_Link}
-                  alt={data.card1_Image_Alt}
-                  width={320}  
-                  height={424} 
-                  className={styles.image_1}
-                />
-                    
-                </div>
+              <Image
+                src={data.card1_Image_Link}
+                alt={data.card1_Image_Alt}
+                width={320}  
+                height={424} 
+                className={styles.image_1}
+              />
+                  
+              </div>
 
-                <div className = {styles.card_TextBox}>
+              <div className = {styles.card_TextBox}>
                 <div className = {styles.card_TitleAndLogo}>
                 {/* <CiMedicalCross className = {styles.icon}/> */}
-                <Image
-                  src={data.health_icon}
-                  alt={data.health_icon_alt} 
-                  width={40}  
-                  height={40} 
-                  className={styles.icon}
-                />
-                <h3>{data.card1_Title}</h3>
+                  <Image
+                    src={data.health_icon}
+                    alt={data.health_icon_alt} 
+                    width={40}  
+                    height={40} 
+                    className={styles.icon}
+                  />
+                  <h3>{data.card1_Title}</h3>
                 </div>
 
                 <ul className= {styles.description_1}>
@@ -88,57 +89,55 @@ export default function Home() {
                     <li>{Sentence_2}</li>
                     <li>{Sentence_3}</li>
                 </ul>
-
-
-                </div>
               </div>
+            </div>
 
 
-              <div className={styles.dots1}>
+            <div className={styles.dots1}>
+                <Image
+                  src={data.dots_1}
+                  alt={"dots"}
+                  width={259}
+                  height={533}
+                />
+            </div>
+            <div className = {styles.card}>
+              {/* left side has text and right side has image */}
+              <div className = {styles.card_TextBox}>
+                <div className = {styles.card_TitleAndLogo}>
+                {/* <BsPeople className = {styles.icon}/> */}
                   <Image
-                    src={data.dots_1}
-                    alt={"dots"}
-                    width={259}
-                    height={533}
+                    src={data.biPeople_icon}
+                    alt={data.biPeople_icon_alt} 
+                    width={40}  
+                    height={40} 
+                    // className={styles.icon}
                   />
-              </div>
-              <div className = {styles.card}>
-                {/* left side has text and right side has image */}
-                <div className = {styles.card_TextBox}>
-                  <div className = {styles.card_TitleAndLogo}>
-                  {/* <BsPeople className = {styles.icon}/> */}
-                    <Image
-                      src={data.biPeople_icon}
-                      alt={data.biPeople_icon_alt} 
-                      width={40}  
-                      height={40} 
-                      // className={styles.icon}
-                    />
-                    <h3>{data.card2_Title}</h3>
-                  </div>
-
-                  <p>{data.card2_Subtitle}</p>
-                
-                  <ul className= {styles.description_2}>
-                  {data.text_Block2_Subtext}
-                      <li>{bulletpoint_1}</li>
-                      <li>{bulletpoint_2}</li>
-                      <li>{bulletpoint_3}</li>
-                      <li>{bulletpoint_4}</li>
-
-                  </ul>
+                  <h3>{data.card2_Title}</h3>
                 </div>
 
-                <div className = {styles.card_ImageBox}>
-                  <Image
-                    src={data.card2_Image_Link}
-                    alt={data.card2_Image_Alt}
-                    width={305}  
-                    height={383}
-                    className={styles.image_2}
-                  />
-                </div>
+                <p>{data.card2_Subtitle}</p>
+              
+                <ul className= {styles.description_2}>
+                {data.text_Block2_Subtext}
+                    <li>{bulletpoint_1}</li>
+                    <li>{bulletpoint_2}</li>
+                    <li>{bulletpoint_3}</li>
+                    <li>{bulletpoint_4}</li>
+
+                </ul>
               </div>
+
+              <div className = {styles.card_ImageBox}>
+                <Image
+                  src={data.card2_Image_Link}
+                  alt={data.card2_Image_Alt}
+                  width={305}  
+                  height={383}
+                  className={styles.image_2}
+                />
+              </div>
+            </div>
 
               <div className={styles.dots2}>
                   <Image
@@ -149,6 +148,9 @@ export default function Home() {
                   />
               </div>
           </div>
+
+          <HomepageCarousel data={data.carousel}/>
+
           <div className={styles.contactCard}>
             <div className={styles.contactInfoContainer}>
               <div className={styles.contactInfo}>
