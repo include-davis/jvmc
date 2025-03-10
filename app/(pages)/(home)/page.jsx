@@ -2,8 +2,8 @@
 import styles from './page.module.scss';
 import { useState, useRef } from "react";
 import data from '../_data/home.json';
-import { FaCircleChevronLeft } from "react-icons/fa6";
-import { FaCircleChevronRight } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa6";
 import { MdInsertInvitation } from "react-icons/md";
 import { IoMdInformationCircle } from "react-icons/io";
 import Image from "next/image";
@@ -77,7 +77,9 @@ export default function Home() {
         ))}
         </Swiper>
         <div className={styles.nav}>
-        <button className={styles.navbttn} onClick={subIndex}><FaCircleChevronLeft size={38} color='var(--teal)'/></button>
+        <button className={styles.navbttn} onClick={subIndex}>
+          <FaChevronLeft size={24} color='var(--white)'/>
+        </button>
         <div className={styles.dots}>
           {slides.map((_, index) => (
             <div
@@ -89,7 +91,9 @@ export default function Home() {
                 }
               }}></div>
         ))}</div>
-        <button className={styles.navbttn} onClick={addIndex}><FaCircleChevronRight size={38} color='var(--teal)'/></button>
+        <button className={styles.navbttn} onClick={addIndex}>
+          <FaChevronRight size={24} color='var(--white)'/>
+        </button>
         </div>
       </div>
     </main>
