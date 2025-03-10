@@ -38,6 +38,15 @@
   --bold: 700; // font-weight: var(--bold);
   --font1: "Merriweather", serif;
   --font2: "Inter", serif;
+  
+  // Shadows ( box-shadow: var(--drop-shadow); is syntax for shadows )
+  --drop-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25); // For bigger shapes
+  --drop-shadow-small: 0px 0px 50px 0px rgba(173, 173, 173, 0.15); // For small shapes
+  --drop-shadow-header: 0px 5px 50px 0px rgba(1, 136, 122, 0.2);
+  --drop-shadow-footer: 0px -5px 50px 0px rgba(1, 136, 122, 0.2);
+
+  --drop-shadow-mint: 0px 0px 50px 0px rgba(1, 136, 122, 0.35);
+  --mint-border: 2px solid var(--color-mint); // border: var(--mint-border); is syntax for borders
 
   // Cards
   --vertical-card-gap: 100px;
@@ -53,15 +62,6 @@
     --element-spacing: 100px;
     --nav-to-element-spacing: 80px;
   }
-
-  // Shadows ( box-shadow: var(--drop-shadow); is syntax for shadows )
-  --drop-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25); // For bigger shapes
-  --drop-shadow-small: 0px 0px 50px 0px rgba(173, 173, 173, 0.15); // For small shapes
-  --drop-shadow-header: 0px 5px 50px 0px rgba(1, 136, 122, 0.2);
-  --drop-shadow-footer: 0px -5px 50px 0px rgba(1, 136, 122, 0.2);
-
-  --drop-shadow-mint: 0px 0px 50px 0px rgba(1, 136, 122, 0.35);
-  --mint-border: 2px solid var(--color-mint); // border: var(--mint-border); is syntax for borders
 
   /* font sizes: ALWAYS IN REM */
 }
