@@ -65,6 +65,9 @@
             "src": "/home-group.jpg",
             "alt": "Group of medical students"
         }
-    }
+    },
+
+    "bottom_gradient": "/images/homeBottomGradient.png",
+    "bottom_gradient_alt": "Bottom Gradient"
   }
   

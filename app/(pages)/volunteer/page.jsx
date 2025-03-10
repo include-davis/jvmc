@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import data from "@/app/(pages)/_data/volunteer.json";
 import styles from './page.module.scss';
 import Image from 'next/image'
 import text from '@/app/(pages)/_data/volunteer.json';
@@ -114,6 +115,16 @@ export default function Volunteer() {
               })
             }
           </div>
+
+          <div className={styles.gradient1Container}>
+            <div className={styles.gradient1}>
+              <Image
+                src={data.gradient1}
+                alt={data.gradient1_alt}
+                fill={true}
+              />
+            </div>
+          </div>
         </div>
         
         {/* Bottom Section */}
@@ -128,6 +139,16 @@ export default function Volunteer() {
             <Link href="/about-us" className="btn">{text.bottom_button}</Link>
           </div>
         </div>  
+
+        <div className={styles.gradient2Container}>
+          <div className={styles.gradient2}>
+            <Image
+                src={data.gradient2}
+                alt={data.gradient2_alt}
+                fill={true}
+              />
+          </div>
+        </div>
 
       </main>
     );
