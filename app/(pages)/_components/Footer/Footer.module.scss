@@ -4,7 +4,9 @@ $logo-width: calc(8px * 20);
 
 .footer {
   background-color: var(--white);
-  box-shadow: var(--drop-shadow-header);
+  box-shadow: var(--drop-shadow-footer);
+  position: relative;
+  z-index: 100;
   text-align: center;
 }
 
