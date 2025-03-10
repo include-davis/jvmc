@@ -73,10 +73,11 @@
     display: none;
 }
 
-.image{
-    width: 480px;
+.imageContainer {
+    position: relative;
+    object-fit: cover;
     height: 280px;
-    border-radius: 10px;
+    width: 480px;
 }
 
 .info {

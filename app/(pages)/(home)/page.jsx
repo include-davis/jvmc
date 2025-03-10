@@ -57,7 +57,9 @@ export default function Home() {
                 ${index === activeIndex ? styles.active : styles.inactive}
                 ${index === activeIndex || (activeIndex + numSlides + 1) % numSlides === index || (activeIndex + numSlides - 1) % numSlides === index? styles.shown : styles.unshown }
               `}>
-              <Image src={slideinfo.src} alt="image" width={480} height={280} className={styles.image} />
+              <div className={styles.imageContainer}>
+                <Image src={slideinfo.src} alt="image" fill style={{objectFit: 'cover'}}/>
+              </div>
               <div className={styles.info}>
                 <h3>{slideinfo.title}</h3>
                 <div>
