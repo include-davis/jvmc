@@ -1,76 +1,57 @@
-"use client";
 import styles from './page.module.scss';
 import Image from 'next/image'
+import CommunityPartnersFallbackData from '@/app/(pages)/_data/community-partners-fallback.json'
 import data from '@/app/(pages)/_data/community-partners.json'
-
-import { ImLocation } from "react-icons/im";
-import { IoMdCalendar } from "react-icons/io";
-import { FaCircleExclamation } from "react-icons/fa6";
+import CommunityPartnersCard from '../_components/CommunityPartnersCard/CommunityPartnersCard';
 import CommunityPartnersCarousel from '../_components/CommunityPartnersCarousel/CommunityPartnersCarousel';
 
-export default function CommunityPartners() {
+// revalidateTag("cms")
+async function getCards(){
+  try{
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/community-cards?_published=true`, 
+      { next: { tag: "cms" }}
+    )
+    const data = await res.json();
+    if(!data.ok || !data.body || data.body.length === 0){
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData = data.body.map((card) => {
+      const [button_text, button_link] = card.button_text_and_link?.split(",");
+      return {
+        name: card.title,
+        description: card.description,
+        location: card.location,
+        date: card.hours,
+        appointment: card.appointment_instruction ? card.appointment_instruction : null,
+        website: button_link,
+        buttonText: button_text,
+        image_src: card.image[0].src,
+      }
+    })
+    console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch community-partners-cards: ${e.message}`);
+    return CommunityPartnersFallbackData
+  }
+}
+
+export default async function CommunityPartners() {
+  const partners = await getCards();
 
   return (
     <main className={styles.page}>
-      <div className={styles.partnersSection}>
-        <div className={styles.header}>
-          <h1>{data.title}</h1>
-          <h4>{data.subtitle}</h4>
-        </div>
+      <div className={styles.header}>
+        <h1>Community Partners</h1>
+        <h4>Our trusted allies supporting our mission beyond the our clinics.</h4>
+      </div>
 
-        <div className={styles.partnersGrid}>
-          {data.partners.map((partner, index) => {
-            // Set class based on index and reverse if it is the first or third image
-            let containerClass = styles.cardContainer;
-            if (index === 0 || index === 2) {
-              containerClass += ' ' + styles.reverse;
-            }
-
-            return (
-              <div key={index} className={containerClass}>
-                <div className={styles.imageWrapper}>
-                <div className={styles.imageWrapper}>
-                  <Image 
-                    src={data.images[index]} 
-                    style={{objectFit: 'cover'}}
-                    fill={true}
-                    alt={data.imagesAlt[index]} 
-                  />
-                </div>
-                </div>
-
-                <div className={styles.partnersCard}>
-                    <div> 
-                      <h4 className={styles.partnersName}>{partner.name}</h4>
-                      <p className={styles.partnersDescription}>{partner.description}</p>
-                    </div>
-                    <div className={styles.contactInfo}>
-                      <p className={styles.locationText}>
-                        <ImLocation className={styles.icon}/>
-                        {partner.location}
-                      </p>
-                      <p className={styles.dateText}>
-                        <IoMdCalendar className={styles.icon}/>
-                        {partner.date}
-                      </p>
-                      <p className={styles.appointmentText}>
-                        {index === 1 && (
-                          <FaCircleExclamation className={styles.icon}/>
-                        )}
-                        {partner.appointment}
-                      </p>
-                    </div>
-                    <a
-                      className="btn"
-                      href={partner.website}
-                    >
-                      {partner.buttonText}
-                    </a>
-                  </div>
-              </div>
-            );
-          })}
-        </div>
+      <div className={styles.partnersGrid}>
+        {partners.map((partner, index) => {
+          return <CommunityPartnersCard index={index} partner={partner}/>;
+        })}
       </div>
 
       
@@ -86,8 +67,8 @@ export default function CommunityPartners() {
       <div className={styles.bottomGradientContainer}>
         <div className={styles.bottomGradient}>
           <Image
-              src={data.bottom_gradient}
-              alt={data.bottom_gradient_alt}
+              src={"/images/communityPartnersGradient.png"}
+              alt={"Bottom gradient"}
               fill={true}
             />
         </div>
