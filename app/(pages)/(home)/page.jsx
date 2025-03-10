@@ -128,23 +128,27 @@ export default function Home() {
             <Image src={data.dots_2} alt={"dots"} width={394} height={609} />
           </div>
         </div>
+
         <div className={styles.contactCard}>
+          <div className={styles.dots3}>
+              <Image src={data.dots_3} alt={"dots"} width={461} height={545} />
+          </div>
           <div className={styles.contactInfoContainer}>
-            <div className={styles.contactInfo}>
-              <FaHome color="var(--emerald)" size={32} />
+            <div className={styles.contactInfo} style={{gap: "20px"}}>
+              <FaHome color="var(--emerald)" size={40} />
               <div className={styles.contactInfoText}>
                 <h3>{data.contactCard.visit.text}</h3>
                 <p>{data.contactCard.visit.address}</p>
               </div>
             </div>
-            <div className={styles.contactInfo}>
+            <div className={styles.contactInfo} style={{paddingLeft: "4px"}}>
               <FaClock color="var(--emerald)" size={32} />
               <div className={styles.contactInfoText}>
                 <h3>{data.contactCard.hours.text}</h3>
                 <p>{data.contactCard.hours.hours}</p>
               </div>
             </div>
-            <div className={styles.contactInfo}>
+            <div className={styles.contactInfo} style={{paddingLeft: "4px"}}>
               <FaEnvelope color="var(--emerald)" size={32} />
               <h3>{data.contactCard.contact}</h3>
             </div>

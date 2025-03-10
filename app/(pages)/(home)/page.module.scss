@@ -53,8 +53,16 @@
 
 .dots2 {
   position: absolute;
-  bottom: -350px;
-  right: -12px;
+  bottom: -454px;
+  right: 8px;
+  z-index: -1;
+  pointer-events: none; /* Prevents interaction issues */
+}
+
+.dots3 {
+  position: absolute;
+  left: 16px;
+  bottom: 600px;
   z-index: -1;
   pointer-events: none; /* Prevents interaction issues */
 }
