@@ -40,10 +40,9 @@ export default function Home() {
           <h2>Explore Our Clinics!</h2>
           <h4>Discover everything JVMC has to offer.</h4>
         </div>
-        <div className={styles.wrapper}>
         <Swiper
-          slidesPerView={2}
-          spaceBetween={-250}
+          slidesPerView={2.30}
+          spaceBetween={-165}
           centeredSlides={true}
           autoplay={false}
           loop={true}
@@ -70,7 +69,6 @@ export default function Home() {
           </SwiperSlide>
         ))}
         </Swiper>
-        </div>
         <div className={styles.nav}>
         <button className={styles.navbttn} onClick={subIndex}><FaCircleChevronLeft size={38} color='var(--teal)'/></button>
         <div className={styles.dots}>

@@ -24,27 +24,26 @@
     color: var(--dark-grey);
 }
 
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: auto;
-}
-
 .swiper{
     width: 100%;
-    // overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+}
+
+.swiperwrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .swiperslide{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    margin: auto;
 }
 
 .slide{
