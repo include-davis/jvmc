@@ -1,0 +1,15 @@
+{
+    "fair": {
+        "title": "Annual Health Fair",
+        "content": [
+            "JVMC will be hosting our Annual Health Fair this year on May 3rd, 2025. This event seeks to provide diverse health and wellness booths to provide free resources and supplies to the community members of Oak Park.",
+            "Please refer to our Instagram for updates on time and location!"  
+        ],
+        
+        "instagramUrl": "https://www.instagram.com/jvmclinic/",
+        "button": "Get Involved",
+        
+        "img": "/about-annual-health-fair.jpg",
+        "imgAlt": "Health Fair"
+    }
+}

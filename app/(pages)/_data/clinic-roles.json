@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Undergrad",
+        "description": "JVMC would cease to function without the dedication of UC Davis undergraduate students who serve the greater vision of the clinic.  This opportunity allows students to get experience in patient intake, lab work, community health, nutrition, and social work.",
+        "icon": ["/student.svg"],
+        "icon_alt_text": "Student Icon",
+        "image": ["/about-undergrad.jpg"],
+        "image_alt_text": "Undergradates"
+    },
+    {
+        "title": "Graduate",
+        "description": "Medical, PA, and NP students are an integral part of JVMC.  Student volunteers have the opportunity to work with patients one-on-one with physician supervision who provide guidance.  This is one of the best learning opportunities for any future provider.",
+        "icon": ["/suitcase.svg"],
+        "icon_alt_text": "Suitcase Icon",
+        "image": ["/about-graduate.jpg"],
+        "image_alt_text": "Graduates"
+    },
+    {
+        "title": "Social Work",
+        "description": "In association with Harm Reduction Services, JVMC's social work team allows for patient's to seek out holistic needs and pursue a greater life quality.  We offer various resources for patient care and life support.  There is an opportunity for social work students to gain experience.",
+        "icon": ["/heart.svg"],
+        "icon_alt_text": "Heart Icon",
+        "image": ["/about-social-work.jpg"],
+        "image_alt_text": "Social Workers"
+    },
+    {
+        "title": "Preceptor",
+        "description": "Where would we be without the dedication of experienced clinicians who are willing to offer their valuable time to mentor students? Their oversights serve the community by allowing for consistent medical care to the patients who enter our clinic.",
+        "icon": ["/doctor.svg"],
+        "icon_alt_text": "Doctor Icon",
+        "image": ["/about-preceptor.jpg"],
+        "image_alt_text": "Preceptors"
+    }
+]
