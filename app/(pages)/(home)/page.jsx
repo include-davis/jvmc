@@ -16,6 +16,7 @@ export default function Home() {
   const slides = Object.values(data.carousel);
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
+  const numSlides = 4;
 
   const handleSwiperInit = (swiper) => {
     swiperRef.current = swiper;
@@ -51,7 +52,11 @@ export default function Home() {
           className={styles.swiper}>
           {slides.map((slideinfo, index) => (
           <SwiperSlide key={index} className={styles.swiperslide} style={{ zIndex: index === activeIndex ? 10 : 1 }}>
-            <div className={`${styles.slide} ${index === activeIndex ? styles.active : styles.inactive}`}>
+            <div className={`
+                ${styles.slide} 
+                ${index === activeIndex ? styles.active : styles.inactive}
+                ${index === activeIndex || (activeIndex + numSlides + 1) % numSlides === index || (activeIndex + numSlides - 1) % numSlides === index? styles.shown : styles.unshown }
+              `}>
               <Image src={slideinfo.src} alt="image" width={480} height={280} className={styles.image} />
               <div className={styles.info}>
                 <h3>{slideinfo.title}</h3>
