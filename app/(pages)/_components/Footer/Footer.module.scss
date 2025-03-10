@@ -99,17 +99,21 @@ $logo-width: calc(8px * 20);
   background-color: var(--white);
   width: 75%;
 
-
-  li a {
-    text-decoration: none;
-    color: var(--dark-grey);
-    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-    transition: font-weight 0.2s ease, color 0.2s ease;
+  @include mixins.sm-desktop {
+    gap: 40px;  
   }
+}
 
-  a:hover {
-    font-weight: bold;
+.navLink {
+  text-decoration: none;
+  color: var(--dark-grey);
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+  transition: font-weight 0.2s ease, color 0.2s ease;
+
+  &:hover {
+      font-weight: var(--bold);
   }
+}
 
   li a.active {
     color: var(--teal);
@@ -125,6 +129,9 @@ $logo-width: calc(8px * 20);
       @content;
     }
   }
+.navLink.active {
+  font-weight: var(--bold);  
+  color: var(--teal);
 }
 
 .bottomSection {
@@ -143,4 +150,9 @@ $logo-width: calc(8px * 20);
       }
     }
 
+}
+
+.btnActive {
+  background: var(--rainbow-linear-gradient);
+  color: var(--dark-grey);
 }
