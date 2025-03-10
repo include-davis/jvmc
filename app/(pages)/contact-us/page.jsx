@@ -4,8 +4,35 @@ import styles from './page.module.scss';
 import contactData from '../_data/contact-us.json';
 import { FaInstagram } from "react-icons/fa";
 import Image from 'next/image';
+import ContactUsGeneralInfoFallbackData from '@/app/(pages)/_data/general-info.json';
 
-export default function ContactUs() {
+export async function getContactUsGeneralInfo() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/general-info?_published=true`, 
+      { next: { tag: "cms" }}
+    )
+    const data = await res.json();
+    if(!data.ok || !data.body || data.body.length === 0){
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData =  {
+      apptInstructions: data.body.appointment_instructions,
+    }
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch general-info for contact us page: ${e.message}`);
+    return {
+      apptInstructions: ContactUsGeneralInfoFallbackData.appointment_instructions,
+    }
+  }
+}
+
+export default async function ContactUs() {
+  const generalData = await getContactUsGeneralInfo();
+  
   const { heading1, heading2 } = contactData.questionsCard
 
   const [firstName, setFirstName] = useState('');
@@ -13,7 +40,6 @@ export default function ContactUs() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-
 
   // Error handling
   const [firstNameError, setFirstNameError] = useState('');
@@ -106,8 +132,7 @@ export default function ContactUs() {
                         <h3>Sacramento, CA 95817</h3>
                     </div>
                     <div className={styles.textInfo}>
-                        <h4>No Appointments Needed!</h4>
-                        <h4>Open every Saturday 1-4pm</h4>
+                        <h4>{generalData.apptInstructions}</h4>
                     </div>
                 </div>
             </section>

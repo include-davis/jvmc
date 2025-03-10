@@ -7,14 +7,14 @@ export default function ClinicRolesCard({ icon, iconAlt, img, imgAlt, align, tit
         <div className={styles.img}>
           
           <Image
-            src={img[0]}
+            src={img}
             style={{ objectFit: "cover" }}
             fill={true}
             alt={imgAlt}
           />
         </div>
         <div className={styles.cardTop}>
-          <Image src={icon[0]} width={40} height={40} alt={iconAlt} />
+          <Image src={icon} width={40} height={40} alt={iconAlt} />
           <h3>{title}</h3>
         </div>
         {/* Below is LONG TEXT */}
