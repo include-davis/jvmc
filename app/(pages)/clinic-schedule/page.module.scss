@@ -23,7 +23,6 @@
 
 .gradientContainer {
     position: absolute;
-    z-index: -1;
     top: -12%;
     height: 2200px;
     width: 100%;
@@ -32,6 +31,7 @@
 
 .gradient {
     position: relative;
+    z-index: -1;
     pointer-events: none; /* Prevents interaction issues */
     width: 150%;
     height: 100%;
