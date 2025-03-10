@@ -1,4 +1,5 @@
 .page{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +19,23 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 80px;
+}
+
+.gradientContainer {
+    position: absolute;
+    top: -12%;
+    height: 2200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gradient {
+    position: relative;
+    z-index: -1;
+    pointer-events: none; /* Prevents interaction issues */
+    width: 150%;
+    height: 100%;
+    margin: 0 -25%;
 }
 
 .calendar {

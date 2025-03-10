@@ -47,6 +47,15 @@ export default function About() {
               description={card.description}
             />
           )}
+          <div className={styles.clinicRolesGradientContainer}>
+            <div className={styles.clinicRolesGradient}>
+              <Image
+                src={data.clinic_roles_gradient}
+                alt={data.clinic_roles_gradient_alt}
+                fill={true}
+              />
+            </div>
+          </div>
         </div>
 
         <div className={styles.fairCard}>
@@ -66,6 +75,16 @@ export default function About() {
             </a>
           </div>
 
+        </div>
+
+        <div className={styles.bottomGradientContainer}>
+          <div className={styles.bottomGradient}>
+            <Image
+                src={data.bottom_gradient}
+                alt={data.bottom_gradient_alt}
+                fill={true}
+              />
+          </div>
         </div>
       </div>
   );
