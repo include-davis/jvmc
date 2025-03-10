@@ -42,8 +42,8 @@ export default function Home() {
         </div>
         <div className={styles.wrapper}>
         <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={10}
+          slidesPerView={2}
+          spaceBetween={-250}
           centeredSlides={true}
           autoplay={false}
           loop={true}
@@ -51,7 +51,7 @@ export default function Home() {
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className={styles.swiper}>
           {slides.map((slideinfo, index) => (
-          <SwiperSlide key={index} className={styles.swiperslide}>
+          <SwiperSlide key={index} className={styles.swiperslide} style={{ zIndex: index === activeIndex ? 10 : 1 }}>
             <div className={`${styles.slide} ${index === activeIndex ? styles.active : styles.inactive}`}>
               <Image src={slideinfo.src} alt="image" width={480} height={280} className={styles.image} />
               <div className={styles.info}>
