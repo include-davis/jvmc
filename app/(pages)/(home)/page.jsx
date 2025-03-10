@@ -42,7 +42,7 @@ export default function Home() {
         </div>
         <Swiper
           slidesPerView={2.30}
-          spaceBetween={-165}
+          spaceBetween={-160}
           centeredSlides={true}
           autoplay={false}
           loop={true}
