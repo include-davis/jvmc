@@ -10,7 +10,7 @@ export default function ClinicSchedule() {
     <main>
       <div className={styles.page}>
         <div className={styles.header}>
-          <h2>{data.title}</h2>
+          <h1>{data.title}</h1>
           <h4>{data.subtitle}</h4>
         </div>
 

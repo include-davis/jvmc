@@ -41,10 +41,12 @@
 .calendar {
   margin-bottom: 32px;
   box-shadow: var(--drop-shadow);
+  border-radius: var(--card-border-radius);
   
   iframe {
     display: block;
     border: none;
+    border-radius: var(--card-border-radius);
   }
 
 }
