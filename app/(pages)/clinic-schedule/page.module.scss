@@ -39,7 +39,14 @@
 }
 
 .calendar {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
+  box-shadow: var(--drop-shadow);
+  
+  iframe {
+    display: block;
+    border: none;
+  }
+
 }
 
 .key {

@@ -24,7 +24,6 @@ export default function ClinicSchedule() {
           <div className={styles.calendar}>
             <iframe
               src="https://calendar.google.com/calendar/embed?src=a6298014dd9ccad37eb2b34842045e9e6991da9348b88ce3139b4688cb07bf58%40group.calendar.google.com&ctz=America%2FLos_Angeles"
-              style={{ border: "solid 1px #777" }}
               width="1040"
               height="696"
             ></iframe>

@@ -172,37 +172,54 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  // justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 24px;
   width: 85%;
   max-width: 1040px;
+  // max-height: 500px;
   // margin-bottom: 50px;
   box-shadow: var(--drop-shadow);
   border-radius: var(--card-border-radius);
 }
 .mapContainer {
-  flex: 1;
+  // flex: 1;
+  // position: relative;
+  // overflow: hidden;
   min-width: 50%;
   max-width: 55%;
+
+  iframe {
+    display: block;
+    border: 0;
+    border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+  }
+  
+}
+
+.boxCard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 44px 51px;
 }
 
 .infoCard {
-  flex: 1;
+  // flex: 1;
   background-color: var(--white);
-  padding-bottom: 29px;
-  margin-right: 22px;
+  // padding-bottom: 29px;
+  // margin-right: 22px;
   text-align: center;
-  font-size: 36px;
+  // font-size: 36px;
   color: var(--emerald);
 }
 
 .textInfo {
-  color: var(
-    --dark-grey
-  ); //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section
+  h4 { 
+    color: var(--dark-grey);
+  }; //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section
   // font-family: var(--font2);
-  gap: 8px;
+  // gap: 8px;
   display: flex;
   flex-direction: column;
 }
