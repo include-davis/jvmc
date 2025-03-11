@@ -35,6 +35,7 @@
     align-items: center;
     width: 72.22%;
     color: var(--dark-grey);
+    z-index: 1;
 
     @include mixins.phone {
         width: 361px;
@@ -144,24 +145,40 @@
 }
 
 .rainbowTop {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  top: -340px;
-  left: 176px;
-  // rotate: 15deg;
-  // top: -600px;
-  // left: 500px
-  // width: 1482px;
-  // height: 1350px;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    top: -810.41px;
+    // left: 364.59px;
+    left: 30%;
+    rotate: 12deg;
+    width: 1482px;
+    height: 1350px;
+
+    @include mixins.phone {
+        top: -100px;
+        left: -30%;
+        rotate: 0deg;
+        width: 1000px;
+        height: 560px;
+    }
 }
 
 .rainbowBottom {
   position: absolute;
   z-index: 0;
   pointer-events: none;
-  bottom: -280px;
-  left: -176px;
+  bottom: -550px;
+  left: -300px;
+  width: 1362px;
+  height: 1068px;
+
+  @include mixins.phone {
+    width: 1154.48px;
+    height: 1029.14px;
+    left: -200px;
+    bottom: -400px;
+  }
 }
 
 /* Contact Us Page */
@@ -192,6 +209,8 @@
     max-width: 1040px;
     box-shadow: var(--drop-shadow);
     border-radius: var(--card-border-radius);
+    background-color: var(--white);
+    z-index: 1;
 
     @include mixins.phone {
         flex-direction: column-reverse;
@@ -205,6 +224,10 @@
     @include mixins.phone {
         width: 100%;
     }
+}
+
+.boxCard {
+    z-index: 2;
 }
 
 .infoCard {

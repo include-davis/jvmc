@@ -81,10 +81,7 @@ export default function ContactUs() {
         <main className={styles.contactUs}>
             {/* MAP COMPONENT */}
             <div className={styles.rainbowTop}>
-                <Image src="/Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" className={styles.rainbowTop} width={1482} height={1350}/>
-            </div>
-            <div className={styles.rainbowBottom}>
-                <Image src="/Contact_Rainbow_Bottom.png" alt="Decorative Rainbow Bottom" className={styles.rainbowBottom} width={1362} height={1068}/>
+                <Image src="/Contact_Rainbow_Top.png" alt="Decorative Rainbow Top" fill="true" style={{objectFit: "contain"}}/>
             </div>
             <h1>Contact Us</h1>
             <section className={styles.container}>
@@ -114,7 +111,7 @@ export default function ContactUs() {
             <section className={styles.socialMedia}>
                 <div className={styles.dotsContainer}>
                   <div className={styles.dotsLeft}>
-                    <Image src="/images/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" fill="true" style={{objectFit: "cover"}}/>
+                    <Image src="/images/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" fill="true" style={{objectFit: "contain"}}/>
                   </div>
                 </div>
                 <h4>Visit our social media pages!</h4>
@@ -128,7 +125,7 @@ export default function ContactUs() {
                 </div>
                 <div className={styles.dotsContainer}>
                   <div className={styles.dotsRight}>
-                    <Image src="/images/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" fill='true' style={{objectFit: "cover"}} />
+                    <Image src="/images/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" fill='true' style={{objectFit: "contain"}} />
                   </div>
                 </div>
             </section>
@@ -203,6 +200,9 @@ export default function ContactUs() {
                     </button>
                 </div>
             </form>
-      </main>
+            <div className={styles.rainbowBottom}>
+                <Image src="/Contact_Rainbow_Bottom.png" alt="Decorative Rainbow Bottom" fill="true" style={{objectFit: "contain"}}/>
+            </div>
+        </main>
     );
 }
