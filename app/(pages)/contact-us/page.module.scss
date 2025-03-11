@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 1040px;
+    width: 72.22%;
     background-color: var(--card-background);
     border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow);
@@ -264,7 +264,6 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    text-align: center;
 }
 
 .socialMediaIcons {
@@ -278,8 +277,9 @@
     }
 
     @include mixins.phone {
+        gap: 20px;
         a {
-            width: 125px;
+            width: 200px;
             // @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
             // font-weight: var(--bold);
         }
