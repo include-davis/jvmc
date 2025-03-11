@@ -1,49 +1,46 @@
 {
-    "title": "Calendar & Clinic Schedules",
-    "subtitle": "Need an appointment? Check availability and schedule one with our clincs now.",
-    
-    "gradient": "/images/clinicScheduleGradient.png",
-    "gradient_alt": "Background Gradient",
+  "title": "Calendar & Clinic Schedules",
+  "subtitle": "Need an appointment? Check availability and schedule one with our clincs now.",
 
-    "info": {
-        "jvmc": {
-            "title": "JVMC Clinic",
-            "paragraph": "JVMC Clinic provides free primary health care services to individuals using intravenous drugs, work in the sex trade, or identify as transgender.", 
-            "time": "Saturdays, 1:00 pm - 4:00 pm.",
-            "message": "No appointments, walk-ins only.", 
-            "appt": "Walk-Ins only."
+  "gradient": "/images/clinicScheduleGradient.png",
+  "gradient_alt": "Background Gradient",
 
-        },
-        "rhc": {
-            "title": "Reproductive Health Clinic",
-            "paragraph": "The Reproductive Health Clinic provides sexual and reproductive clinical care such as IUDs, STI testing/treatment, and menstrual products.", 
-            "time": "Last Saturday of every month, 1:00 pm - 4:00 pm.",
-            "message": "Call or text to schedule an appointment.", 
-            "appt": "Call (916)-538-9538"
-        },
-        "ghc": {
-            "title": "Gender Health Center",
-            "paragraph": "GHC offers free or low-cost health, legal, and support services for trans and gender-expansive communities.", 
-            "time": "1st and 3rd Friday of each month, 6:00pm - 9:00pm.",
-            "message": "Appointments are made on the GHC website.", 
-            "appt": "button"
-        }
+  "info": {
+    "jvmc": {
+      "title": "JVMC Clinic",
+      "paragraph": "JVMC Clinic provides free primary health care services to individuals using intravenous drugs, work in the sex trade, or identify as transgender.",
+      "time": "Saturdays, 1:00 pm - 4:00 pm.",
+      "message": "No appointments, walk-ins only.",
+      "appt": "Walk-Ins only."
     },
-
-    "key":{
-        "rhc": {
-            "title": "Reproductive Health Clinic",
-            "color": "--emerald"
-        },
-        "jvmc": {
-            "title": "JVMC Clinic",
-            "color": "--mint"
-
-        },
-        "ghc": {
-            "title": "Gender Health Center",
-            "color": "--teal"
-        }
+    "rhc": {
+      "title": "Reproductive Health Clinic",
+      "paragraph": "The Reproductive Health Clinic provides sexual and reproductive clinical care such as IUDs, STI testing/treatment, and menstrual products.",
+      "time": "Last Saturday of every month, 1:00 pm - 4:00 pm.",
+      "message": "Call or text to schedule an appointment.",
+      "appt": "Call (916)-538-9538"
+    },
+    "ghc": {
+      "title": "Gender Health Center",
+      "paragraph": "GHC offers free or low-cost health, legal, and support services for trans and gender-expansive communities.",
+      "time": "1st and 3rd Friday of each month, 6:00pm - 9:00pm.",
+      "message": "Appointments are made on the GHC website.",
+      "appt": "button"
     }
-    
+  },
+
+  "key": {
+    "rhc": {
+      "title": "Reproductive Health Clinic",
+      "color": "--emerald"
+    },
+    "jvmc": {
+      "title": "JVMC Clinic",
+      "color": "--mint"
+    },
+    "ghc": {
+      "title": "Gender Health Center",
+      "color": "--teal"
+    }
+  }
 }
