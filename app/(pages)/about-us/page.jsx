@@ -40,7 +40,7 @@ export default function About() {
             iconAlt={card.iconAlt}
             img={card.photo}
             imgAlt={card.photoAlt}
-            align={idx % 2 === 0 ? "right" : "left"}
+            align={idx % 2 === 0 ? "left" : "right"}
             subheader={card.subheader}
             description={card.description}
           />
