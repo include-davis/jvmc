@@ -21,27 +21,26 @@
   text-align: center;
 }
 
-.opening{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 40px;
-
+.opening {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 40px;
 }
 
-.landing_photo{
-    border-radius: 20px;
-    border: var(--mint-border);
-    border: 2px solid var(--mint);
+.landing_photo {
+  border-radius: 20px;
+  border: var(--mint-border);
+  border: 2px solid var(--mint);
 
-    /* mint-drop-shadow, not same as globals var */
-    box-shadow: var(--drop-shadow-mint);
+  /* mint-drop-shadow, not same as globals var */
+  box-shadow: var(--drop-shadow-mint);
 }
-.intro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 24px;
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
 }
 
 // Middle Cards
@@ -85,29 +84,29 @@
 }
 
 // Bottom Section
-.bottom{
-    display: flex;
-    justify-content: center;
+.bottom {
+  display: flex;
+  justify-content: center;
 }
 
-.learn_more{
-    background-color: var(--white);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--drop-shadow);
-    padding: var(--card-padding);
+.learn_more {
+  background-color: var(--white);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: var(--card-padding);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center; /*primarily used for buttn to fit About Us text*/
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*primarily used for buttn to fit About Us text*/
+  gap: 30px;
 
-    width: 640px;
-    text-align: center;
+  width: 640px;
+  text-align: center;
 }
 
-.about_us{
-    font-weight: var(--bold);
-    color: var(--teal);
+.about_us {
+  font-weight: var(--bold);
+  color: var(--teal);
 }
 
 .gradient2Container {

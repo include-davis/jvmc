@@ -1,51 +1,64 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 26px 104px;
-    background-color: var(--white);
-    box-shadow: var(--drop-shadow-header);
-    gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 104px;
+  background-color: var(--white);
+  box-shadow: var(--drop-shadow-header);
+  position: relative;
+  text-align: center;
+  z-index: 100;
+  gap: 48px;
 
-    @include mixins.sm-desktop {
-        padding: 24px 80px;
-        gap: 42px;  
-    }
+  @include mixins.sm-desktop {
+    padding: 24px 80px;
+    gap: 42px;
+  }
 }
 
-
 .headerLinks {
-    display: flex;
-    padding: 26px 40px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--white);
-    width: 75%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  width: 75%;
+  gap: 24px;
 
-    @include mixins.sm-desktop {
-        gap: 40px;  
-    }
+  @include mixins.sm-desktop {
+    gap: 32px;
+  }
 }
 
 .headerItems {
-    text-decoration: none;
-    color: var(--dark-grey);
-    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-    transition: font-weight 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  color: var(--dark-grey);
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+  transition:
+    font-weight 0.2s ease,
+    color 0.2s ease;
 
-    &:hover {
-        font-weight: var(--bold);
-    }
+  &:hover {
+    font-weight: var(--bold);
+  }
+
+  @include mixins.sm-desktop {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
 }
 
 .headerItems.active {
-    font-weight: var(--bold);  
-    color: var(--teal);
+  font-weight: var(--bold);
+  color: var(--teal);
+}
+
+.btnSize {
+  width: 10rem !important;
 }
 
 .btnActive {
   background: var(--rainbow-linear-gradient);
-  color: var(--dark-grey);
+  color: var(--dark-grey) !important;
 }
