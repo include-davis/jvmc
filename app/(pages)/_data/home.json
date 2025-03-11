@@ -48,24 +48,53 @@
     "bulletpoint_4": "Families"
   },
 
-  "contactCard": {
-    "visit": {
-      "text": "Come Visit Us!",
-      "address": "3647 40th St, Sacramento, CA 95817"
+
+
+    "carousel": {
+        "jvmc": {
+            "src": "/jvmc.jpg",
+            "title": "JVMC Clinic",
+            "time": "Saturdays, 1:00 pm - 4:00 pm.",
+            "info": "No appointments, walk-ins only."
+        },
+        "volunteer": {
+            "src": "/volunteer.jpg",
+            "title": "Volunteer",
+            "time": "Arrive at 12:30pm. Volunteer from 1:00pm - 5:00pm.",
+            "info": "Email with questions about recruitment or fill out our interest form."
+        },
+        "rhc": {
+            "src": "/rhc.jpg",
+            "title": "Reproductive Health Clinic",
+            "time": "Last Saturday of every month, 1:00 pm - 4:00 pm.",
+            "info": "Call or text to schedule an appointment."
+        },
+        "ghc": {
+            "src": "/ghc_cropped.png",
+            "title": "Gender Health Clinic",
+            "time": "1st and 3rd Friday of each month, 6:00pm - 9:00pm.",
+            "info": "Appointments are made on the GHC website."
+        }
     },
-    "hours": {
-      "text": "Opening Hours",
-      "hours": "Every Saturday: 1:00pm - 4:00pm"
-    },
-    "contact": "Contact Us",
-    "button": {
-      "text": "Ask Us Questions",
-      "link": "/contact-us"
-    },
-    "img": {
-      "src": "/home-group.jpg",
-      "alt": "Group of medical students"
-    }
+
+    "contactCard": {
+        "visit": {
+            "text": "Come Visit Us!",
+            "address": "3647 40th St, Sacramento, CA 95817"
+        },
+        "hours": {
+            "text": "Opening Hours",
+            "hours": "Every Saturday: 1:00pm - 4:00pm"
+        },
+        "contact": "Contact Us",
+        "button": {
+            "text": "Ask Us Questions",
+            "link": "/contact-us"
+        },
+        "img": {
+            "src": "/home-group.jpg",
+            "alt": "Group of medical students"
+        }
   },
 
   "bottom_gradient": "/images/homeBottomGradient.png",

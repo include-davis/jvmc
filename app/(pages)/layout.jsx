@@ -1,6 +1,10 @@
 import Header from "./_components/Header/Header";
 import Footer from "./_components/Footer/Footer";
-import "./_globals/globals.scss";
+import './_globals/globals.scss';
+import { Inter, Merriweather } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font2' });
+const merriweather = Merriweather({ subsets: ['latin'], weight: ['400', '700', '900'], variable: '--font1'});
 
 export const metadata = {
   title: "JVMC",
@@ -12,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
       <body>
         <Header />
         {children}

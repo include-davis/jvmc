@@ -2,7 +2,8 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import { FaHome, FaClock, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
-import data from "@/app/(pages)/_data/home.json";
+import data from '@/app/(pages)/_data/home.json'
+import HomepageCarousel from '../_components/HomepageCarousel/HomepageCarousel';
 
 export default function Home() {
   const { Sentence_1, Sentence_2, Sentence_3 } = data.text_Block1;
@@ -75,13 +76,13 @@ export default function Home() {
                 />
                 <h3>{data.card1_Title}</h3>
               </div>
+            </div>
 
               <ul className={styles.description_1}>
                 <li>{Sentence_1}</li>
                 <li>{Sentence_2}</li>
                 <li>{Sentence_3}</li>
               </ul>
-            </div>
           </div>
 
           <div className={styles.dots1}>
@@ -128,6 +129,8 @@ export default function Home() {
             <Image src={data.dots_2} alt={"dots"} width={394} height={609} />
           </div>
         </div>
+
+        <HomepageCarousel data={data.carousel}/>
 
         <div className={styles.contactCard}>
           <div className={styles.dots3}>
