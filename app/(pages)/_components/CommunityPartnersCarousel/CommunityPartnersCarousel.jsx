@@ -1,13 +1,17 @@
-import styles from './CommunityPartnersCarousel.module.scss';
-import Image from 'next/image';
+import styles from "./CommunityPartnersCarousel.module.scss";
+import Image from "next/image";
 
 export default function CommunityPartnersCarousel({ images }) {
   const imagesLength = images.length;
+  const doubleImages = [...images, ...images];
 
   return (
-    <div className={styles.carousel} style={{ '--num-images': imagesLength / 2 }}>
+    <div
+      className={styles.carousel}
+      style={{ "--num-images": imagesLength }}
+    >
       <div className={styles.row}>
-        {images.map((image, index) => (
+        {doubleImages.map((image, index) => (
           <div key={index} className={styles.column}>
             {console.log(image.src)}
             <Image
@@ -15,7 +19,7 @@ export default function CommunityPartnersCarousel({ images }) {
               src={image.src}
               alt={image.alt}
               fill={true}
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
             />
           </div>
         ))}

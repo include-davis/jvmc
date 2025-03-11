@@ -4,8 +4,11 @@ $logo-width: calc(8px * 20);
 
 .footer {
   background-color: var(--white);
-  box-shadow: var(--drop-shadow-header);
+  box-shadow: var(--drop-shadow-footer);
+  position: relative;
+  z-index: 100;
   text-align: center;
+
 }
 
 .topSection {
@@ -14,6 +17,11 @@ $logo-width: calc(8px * 20);
   align-items: center;
   gap: 48px;
   padding: 40px 96px;
+
+  @include mixins.sm-desktop {
+    padding: 24px 80px;
+    gap: 42px;
+  }
 }
 
 .logoSection {
@@ -32,6 +40,7 @@ $logo-width: calc(8px * 20);
 
 .socialLinks {
   list-style: none;
+  text-align: left;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -50,7 +59,7 @@ $logo-width: calc(8px * 20);
 }
 
 .boxText {
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
 
@@ -63,18 +72,17 @@ $logo-width: calc(8px * 20);
   display: flex;
 }
 
-
 .navLinks {
   list-style: none;
   display: flex;
-  padding: 26px 40px;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   background-color: var(--white);
   width: 75%;
 
   @include mixins.sm-desktop {
-    gap: 40px;  
+    gap: 32px;
   }
 }
 
@@ -82,30 +90,38 @@ $logo-width: calc(8px * 20);
   text-decoration: none;
   color: var(--dark-grey);
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-  transition: font-weight 0.2s ease, color 0.2s ease;
+  transition:
+    font-weight 0.2s ease,
+    color 0.2s ease;
 
   &:hover {
-      font-weight: var(--bold);
+    font-weight: var(--bold);
+  }
+  
+  @include mixins.sm-desktop{
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
   }
 }
 
 .navLink.active {
-  font-weight: var(--bold);  
+  font-weight: var(--bold);
   color: var(--teal);
 }
 
 .bottomSection {
-    padding: 16px 96px;
-    display: flex;
-    margin: 0;
-    font-size: 1.0rem;
-    background-color: var(--teal);
-    color: var(--offwhite);
-    font-family: var(--font2);
-    font-weight: var(--light);
+  padding: 16px 96px;
+  display: flex;
+  background-color: var(--teal);
+  color: var(--offwhite);
+  font-family: var(--font2);
+  font-weight: var(--light);
+}
+
+.btnSize {
+  width: 10rem !important;
 }
 
 .btnActive {
   background: var(--rainbow-linear-gradient);
-  color: var(--dark-grey);
+  color: var(--dark-grey) !important;
 }

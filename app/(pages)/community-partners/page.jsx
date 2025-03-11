@@ -1,9 +1,9 @@
 import styles from './page.module.scss';
 import Image from 'next/image'
-import CommunityPartnersFallbackData from '@/app/(pages)/_data/community-partners-fallback.json'
-import data from '@/app/(pages)/_data/community-partners.json'
+import CommunityPartnersFallbackData from '@/app/(pages)/_data/community-partners.json'
 import CommunityPartnersCard from '../_components/CommunityPartnersCard/CommunityPartnersCard';
 import CommunityPartnersCarousel from '../_components/CommunityPartnersCarousel/CommunityPartnersCarousel';
+import CarouselFallbackData from '@/app/(pages)/_data/community-partners-carousel.json';
 
 // revalidateTag("cms")
 async function getCards(){
@@ -27,7 +27,8 @@ async function getCards(){
         appointment: card.appointment_instruction ? card.appointment_instruction : null,
         website: button_link,
         buttonText: button_text,
-        image_src: card.image[0].src,
+        imageSrc: card.image[0],
+        imageAlt: card.image_alt_text,
       }
     })
     console.log(parsedData);
@@ -50,19 +51,21 @@ export default async function CommunityPartners() {
 
       <div className={styles.partnersGrid}>
         {partners.map((partner, index) => {
-          return <CommunityPartnersCard index={index} partner={partner}/>;
+          return <CommunityPartnersCard key={index} index={index} partner={partner}/>;
         })}
       </div>
 
-      
-        <div className={styles.carouselSection}>
-          <div>
-            <h2 className={styles.community_partners_title}>{data.carousel.bottom_title}</h2>
-            <h4 className={styles.community_partners_subtitle}>{data.carousel.bottom_subtitle}</h4>
-          </div>
-          <CommunityPartnersCarousel images={data.carousel.carousel_images} />
+      <div className={styles.carouselSection}>
+        <div>
+          <h2 className={styles.community_partners_title}>
+            Where We’ve Gone
+          </h2>
+          <h4 className={styles.community_partners_subtitle}>
+            See our community in action!
+          </h4>
         </div>
-
+        <CommunityPartnersCarousel images={CarouselFallbackData} />
+      </div>
 
       <div className={styles.bottomGradientContainer}>
         <div className={styles.bottomGradient}>
