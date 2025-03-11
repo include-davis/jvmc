@@ -4,7 +4,6 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import text from "@/app/(pages)/_data/volunteer.json";
 import VolunteerCard from "../_components/VolunteerCard/VolunteerCard";
-
 import { PiStudent } from "react-icons/pi";
 import { LuStethoscope } from "react-icons/lu";
 import { MdOutlineMedicalServices } from "react-icons/md";
@@ -15,7 +14,7 @@ const cards = [
     direction: "right",
     image: "/images/UGrad.jpg",
     altText: "Undergraduate Students",
-    icon: <PiStudent />,
+    icon: <Image src={"/undergrad-icon.svg"} alt={"undergrad icon"} objectFit="cover" fill="true"/>,
     mainText: (
       <>
         New cohorts are recruited during Winter Quarter annually. More
@@ -61,7 +60,7 @@ const cards = [
     direction: "left",
     image: "/images/Physicians.jpg",
     altText: "Physicians",
-    icon: <LuStethoscope />,
+    icon: <Image src={"/preceptor-icon.svg"} alt={"preceptor icon"} objectFit="cover" fill="true"/>,
     mainText: (
       <>
         To qualify as a physician volunteer with JVMC you must be covered by UC
@@ -90,7 +89,7 @@ const cards = [
     direction: "right",
     image: "/images/MD_Student.jpg",
     altText: "MD Students",
-    icon: <MdOutlineMedicalServices />,
+    icon: <Image src={"/medicine-chest-icon.svg"} alt={"medicine chest icon"} objectFit="cover" fill="true" />,
     mainText: (
       <>
         If you are looking to volunteer with JVMC as a Medical Students, please
