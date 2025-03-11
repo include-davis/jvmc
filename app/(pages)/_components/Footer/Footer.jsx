@@ -7,28 +7,28 @@ import data from "../../_data/footer.json";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   return (
     <footer className={styles.footer}>
       <div className={styles.topSection}>
         <div className={styles.logoSection}>
           <div className={styles.logo}>
-            <Image 
-              src={data.img} 
-              alt={data.imgAlt} 
-              style={{ objectFit: "fill" }} 
-              fill={true} 
+            <Image
+              src={data.img}
+              alt={data.imgAlt}
+              style={{ objectFit: "fill" }}
+              fill={true}
             />
           </div>
           <ul className={styles.socialLinks}>
             <li className={styles.boxIcon}>
-              <a 
+              <a
                 href={data.socialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                >
-              <FaInstagram className={styles.icon} />
+              >
+                <FaInstagram className={styles.icon} />
               </a>
             </li>
             <li className={styles.boxText}>
@@ -42,13 +42,14 @@ export default function Footer() {
             const isActive = pathname === href;
             return (
               <li key={idx}>
-                <Link 
+                <Link
                   href={href}
                   key={idx}
                   className={
-                    isButton ? 
-                    `${"btn"} ${isActive && styles.btnActive}` : 
-                    `${styles.navLink} ${isActive && styles.active}`}
+                    isButton
+                      ? `${"btn"} ${styles.btn} ${isActive && styles.btnActive}`
+                      : `${styles.navLink} ${isActive && styles.active}`
+                  }
                 >
                   {label}
                 </Link>

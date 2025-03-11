@@ -1,5 +1,5 @@
 @use "./mixins.scss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
   // Primary colors
@@ -8,7 +8,7 @@
   --green: #1b5e49;
   --emerald: #094935;
   --dark-grey: #353935;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --offwhite: #f8f8f8;
 
   // Secondary colors
@@ -18,30 +18,41 @@
   --light-green: #cae2ad;
 
   // Gradients ( syntax is background: var(--rainbow-gradient); )
-  --rainbow-conic-gradient: conic-gradient( 
-    var(--light-pink), 
-    var(--light-purple), 
-    var(--light-blue), 
+  --rainbow-conic-gradient: conic-gradient(
+    var(--light-pink),
+    var(--light-purple),
+    var(--light-blue),
     var(--light-green)
   );
   --rainbow-linear-gradient: linear-gradient(
-    to right, 
-    var(--light-pink), 
-    var(--light-purple), 
-    var(--light-blue), 
+    to right,
+    var(--light-pink),
+    var(--light-purple),
+    var(--light-blue),
     var(--light-green)
   );
-  --green-gradient-light: linear-gradient(var(--mint), var(--teal));
+  --green-gradient-light: linear-gradient(var(--teal), var(--mint));
   --green-gradient-dark: linear-gradient(var(--green), var(--teal));
 
   // Text
   --bold: 700; // font-weight: var(--bold);
+  --font1: "Merriweather", sans-serif;
+  --font2: "Inter", sans-serif;
+  
+  // Shadows ( box-shadow: var(--drop-shadow); is syntax for shadows )
+  --drop-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25); // For bigger shapes
+  --drop-shadow-small: 0px 0px 50px 0px rgba(173, 173, 173, 0.15); // For small shapes
+  --drop-shadow-header: 0px 5px 50px 0px rgba(1, 136, 122, 0.2);
+  --drop-shadow-footer: 0px -5px 50px 0px rgba(1, 136, 122, 0.2);
+
+  --drop-shadow-mint: 0px 0px 50px 0px rgba(171, 220, 207, 0.35);
+  --mint-border: 2px solid var(--color-mint); // border: var(--mint-border); is syntax for borders
 
   // Cards
   --vertical-card-gap: 100px;
   --card-border-radius: 20px;
   --card-padding: 60px;
-  --card-background: var(--color-white);
+  --card-background: var(--white);
   --element-spacing: 200px;
   --nav-to-element-spacing: 160px;
 
@@ -51,15 +62,6 @@
     --element-spacing: 100px;
     --nav-to-element-spacing: 80px;
   }
-
-  // Shadows ( box-shadow: var(--drop-shadow); is syntax for shadows )
-  --drop-shadow: 0px 0px 50px 0px rgba(173, 173, 173, 0.25); // For bigger shapes
-  --drop-shadow-small: 0px 0px 50px 0px rgba(173, 173, 173, 0.15); // For small shapes
-  --drop-shadow-header: 0px 5px 50px 0px rgba(1, 136, 122, 0.20); 
-  --drop-shadow-footer: 0px -5px 50px 0px rgba(1, 136, 122, 0.20);
-  
-  --drop-shadow-mint: 0px 0px 50px 0px rgba(1, 136, 122, 0.35);
-  --mint-border: 2px solid var(--color-mint); // border: var(--mint-border); is syntax for borders
 
   /* font sizes: ALWAYS IN REM */
 }
@@ -79,7 +81,7 @@ body {
 // Title
 h1 {
   @include mixins.fontStyle(3.5rem, 700, auto, var(--font1));
-  
+
   @include mixins.tablet {
     @include mixins.fontStyle(2.25rem, 700, auto, var(--font1));
   }
@@ -114,9 +116,9 @@ h4 {
 }
 
 // Body
-p { 
+p {
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-  
+
   @include mixins.tablet {
     @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
   }
@@ -130,7 +132,7 @@ p {
   width: 12rem;
   height: 3rem;
   border-radius: 100px;
-  
+
   color: var(--offwhite);
   background-color: var(--teal);
   font-weight: var(--bold);

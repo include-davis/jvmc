@@ -65,10 +65,6 @@
     filter: blur(4px);
 }
 
-.shown {
-
-}
-
 .unshown {
     display: none;
 }
@@ -123,6 +119,7 @@
     height: 70px;
     border-radius: 50%;
     background-color: var(--teal);
+    cursor: pointer;
 }
 
 .dots{
