@@ -2,6 +2,7 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 import { FaHome, FaClock, FaEnvelope} from 'react-icons/fa';
 import Link from "next/link";
+import data from '@/app/(pages)/_data/home.json';
 
 import HomeGeneralInfoFallbackData from '@/app/(pages)/_data/home.json'
 
