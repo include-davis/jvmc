@@ -44,15 +44,17 @@ export default async function CommunityPartners() {
 
   return (
     <main className={styles.page}>
-      <div className={styles.header}>
-        <h1>Community Partners</h1>
-        <h4>Our trusted allies supporting our mission beyond the our clinics.</h4>
-      </div>
+      <div className={styles.partnersSection}>
+        <div className={styles.header}>
+          <h1>Community Partners</h1>
+          <h4>Our trusted allies supporting our mission beyond the our clinics.</h4>
+        </div>
 
-      <div className={styles.partnersGrid}>
-        {partners.map((partner, index) => {
-          return <CommunityPartnersCard key={index} index={index} partner={partner}/>;
-        })}
+        <div className={styles.partnersGrid}>
+          {partners.map((partner, index) => {
+            return <CommunityPartnersCard key={index} index={index} partner={partner}/>;
+          })}
+        </div>
       </div>
 
       <div className={styles.carouselSection}>
