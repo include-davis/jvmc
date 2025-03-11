@@ -171,7 +171,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+        {/* Hello */}
         <div className={styles.bottomGradientContainer}>
           <div className={styles.bottomGradient}>
             <Image
