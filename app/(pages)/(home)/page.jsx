@@ -76,13 +76,13 @@ export default function Home() {
                 />
                 <h3>{data.card1_Title}</h3>
               </div>
-            </div>
 
               <ul className={styles.description_1}>
                 <li>{Sentence_1}</li>
                 <li>{Sentence_2}</li>
                 <li>{Sentence_3}</li>
               </ul>
+            </div>
           </div>
 
           <div className={styles.dots1}>
