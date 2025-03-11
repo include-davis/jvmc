@@ -1,16 +1,19 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .questionsCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 1040px;
-  // height: 247px;
-  background-color: var(--card-background);
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--drop-shadow);
-  padding: 42px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 72.22%;
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow);
+    padding: 42px 40px;
+
+    @include mixins.phone {
+        width: 361px;
+    }
 }
 
 .questionsCard h3 {
@@ -27,23 +30,38 @@
 
 // Contact form
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 72.22%;
-  color: var(--dark-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 72.22%;
+    color: var(--dark-grey);
+    z-index: 1;
+
+    @include mixins.phone {
+        width: 361px;
+    }
 }
 
 .formField {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include mixins.phone {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .formInput {
-  width: 44.92%;
-  margin-bottom: 20px;
-  text-align: left;
+    width: 44.92%;
+    margin-bottom: 20px;
+    text-align: left;
+
+    @include mixins.phone {
+        width: 100%;
+    }
 }
 
 .formInput label {
@@ -118,10 +136,6 @@
   font-size: 1rem;
 }
 
-// .sendButton b {
-//     font-weight: var(--bold);
-//     font-family: var(--font2);
-// }
 
 /* Error messages */
 .errorText {
@@ -131,24 +145,40 @@
 }
 
 .rainbowTop {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  top: -340px;
-  left: 176px;
-  // rotate: 15deg;
-  // top: -600px;
-  // left: 500px
-  // width: 1482px;
-  // height: 1350px;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    top: -810.41px;
+    // left: 364.59px;
+    left: 30%;
+    rotate: 12deg;
+    width: 1482px;
+    height: 1350px;
+
+    @include mixins.phone {
+        top: -100px;
+        left: -30%;
+        rotate: 0deg;
+        width: 1000px;
+        height: 560px;
+    }
 }
 
 .rainbowBottom {
   position: absolute;
   z-index: 0;
   pointer-events: none;
-  bottom: -280px;
-  left: -176px;
+  bottom: -550px;
+  left: -300px;
+  width: 1362px;
+  height: 1068px;
+
+  @include mixins.phone {
+    width: 1154.48px;
+    height: 1029.14px;
+    left: -200px;
+    bottom: -400px;
+  }
 }
 
 /* Contact Us Page */
@@ -170,48 +200,43 @@
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  // justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  width: 85%;
-  max-width: 1040px;
-  // max-height: 500px;
-  // margin-bottom: 50px;
-  box-shadow: var(--drop-shadow);
-  border-radius: var(--card-border-radius);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 85%;
+    max-width: 1040px;
+    box-shadow: var(--drop-shadow);
+    border-radius: var(--card-border-radius);
+    background-color: var(--white);
+    z-index: 1;
+
+    @include mixins.phone {
+        flex-direction: column-reverse;
+        width: 361px;
+    }
 }
 .mapContainer {
-  // flex: 1;
-  // position: relative;
-  // overflow: hidden;
-  min-width: 50%;
-  max-width: 55%;
+    flex: 1;
+    min-width: 50%;
 
-  iframe {
-    display: block;
-    border: 0;
-    border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-  }
-  
+    @include mixins.phone {
+        width: 100%;
+    }
 }
 
 .boxCard {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 44px 51px;
+    z-index: 2;
 }
 
 .infoCard {
-  // flex: 1;
-  background-color: var(--white);
-  // padding-bottom: 29px;
-  // margin-right: 22px;
-  text-align: center;
-  // font-size: 36px;
-  color: var(--emerald);
+    flex: 1;
+    background-color: var(--white);
+    padding: 30px;
+    text-align: center;
+    font-size: 36px;
+    color: var(--emerald);
 }
 
 .textInfo {
@@ -225,30 +250,48 @@
 }
 
 .dotsContainer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // margin-top: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dotsLeft {
-  position: absolute;
-  bottom: -460px;
-  left: -464px;
+    position: absolute;
+    bottom: -460px; 
+    left: -464px;
+    width: 420px;
+    height: 412px;
+
+    @include mixins.phone {
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+        width: 130.05px;
+        height: 127.58px;
+    }
 }
 
 .dotsRight {
-  position: absolute;
-  top: -350px;
-  right: -472px;
+    position: absolute;
+    top: -350px; 
+    right: -472px;
+    width: 432px;
+    height: 397px;
+
+    @include mixins.phone {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 133.77px;
+        height: 122.93px;
+    }
 }
 
 .socialMedia {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .socialMediaIcons {
@@ -257,13 +300,18 @@
   align-items: center;
   gap: 50px;
 
-  a {
-    width: 260px;
-  }
-  // width: 260px;
-  // padding: 0 36px;
-  // margin-top: 20px;
-  // z-index: 2;
+    a {
+      width: 260px;
+    }
+
+    @include mixins.phone {
+        gap: 20px;
+        a {
+            width: 200px;
+            // @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+            // font-weight: var(--bold);
+        }
+    }
 }
 
 .icon {
