@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
+    "i": "^0.3.7",
     "next": "^15.2.1",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",
