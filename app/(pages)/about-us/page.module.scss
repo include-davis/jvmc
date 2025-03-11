@@ -23,6 +23,7 @@
   align-items: center;
   background-color: var(--color-white); //#F8F8F8;
   gap: var(--vertical-card-gap);
+  
 }
 
 .clinicRolesGradientContainer {
@@ -92,4 +93,23 @@
   bottom: -400px;
   width: 100%;
   height: 100%;
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1048px){
+    
+    @content; 
+  }
+}
+
+@mixin phone{
+  @media screen and (max-width: 720px){
+    @content; 
+  }
+}
+
+@mixin sm-phone{
+  @media screen and (max-width: 540px){
+    @content; 
+  }
 }

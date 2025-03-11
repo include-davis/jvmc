@@ -27,12 +27,25 @@
   gap: 20px;
   padding: var(--card-padding);
   width: 100%;
+  @mixin phone{
+    @media screen and (max-width: 720px){
+      gap: 20px;
+      padding: var(--card-padding);
+      width: 100%;
+    }
+  }
 }
 
 .img {
   position: relative;
   overflow: hidden;
   width: 100%;
+
+  @mixin phone{
+    @media screen and (max-width: 720px){
+      width: 100%;
+    }
+  }
 }
 
 .img.left {
@@ -41,4 +54,23 @@
 
 .img.right {
   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1048px){
+    
+    @content; 
+  }
+}
+
+@mixin phone{
+  @media screen and (max-width: 720px){
+    @content; 
+  }
+}
+
+@mixin sm-phone{
+  @media screen and (max-width: 540px){
+    @content; 
+  }
 }
