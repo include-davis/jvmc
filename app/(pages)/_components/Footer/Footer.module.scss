@@ -8,6 +8,7 @@ $logo-width: calc(8px * 20);
   position: relative;
   z-index: 100;
   text-align: center;
+
 }
 
 .topSection {
@@ -16,6 +17,11 @@ $logo-width: calc(8px * 20);
   align-items: center;
   gap: 48px;
   padding: 40px 96px;
+
+  @include mixins.sm-desktop {
+    padding: 24px 80px;
+    gap: 42px;
+  }
 }
 
 .logoSection {
@@ -34,6 +40,7 @@ $logo-width: calc(8px * 20);
 
 .socialLinks {
   list-style: none;
+  text-align: left;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -68,14 +75,14 @@ $logo-width: calc(8px * 20);
 .navLinks {
   list-style: none;
   display: flex;
-  padding: 26px 40px;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   background-color: var(--white);
   width: 75%;
 
   @include mixins.sm-desktop {
-    gap: 40px;
+    gap: 32px;
   }
 }
 
@@ -90,6 +97,10 @@ $logo-width: calc(8px * 20);
   &:hover {
     font-weight: var(--bold);
   }
+  
+  @include mixins.sm-desktop{
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
 }
 
 .navLink.active {
@@ -100,12 +111,14 @@ $logo-width: calc(8px * 20);
 .bottomSection {
   padding: 16px 96px;
   display: flex;
-  margin: 0;
-  font-size: 1rem;
   background-color: var(--teal);
   color: var(--offwhite);
   font-family: var(--font2);
   font-weight: var(--light);
+}
+
+.btn {
+  width: 10rem;
 }
 
 .btnActive {

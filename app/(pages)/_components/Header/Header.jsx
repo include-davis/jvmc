@@ -12,25 +12,26 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <Image src="/logo.png" alt="JVMC Logo" width={120} height={88} />
-      <div className={styles.headerLinks}>
-        {navLinks.map(({ href, label, isButton }) => {
+      <ul className={styles.headerLinks}>
+        {navLinks.map(({ href, label, isButton }, idx) => {
           const isActive = pathname === href;
 
           return (
-            <Link
-              key={href}
-              href={href}
-              className={
-                isButton
-                  ? `${"btn"} ${isActive && styles.btnActive}`
-                  : `${styles.headerItems} ${isActive && styles.active}`
-              }
-            >
-              {label}
-            </Link>
+            <li key={idx}>
+              <Link
+                href={href}
+                className={
+                  isButton
+                    ? `${"btn"} ${styles.btn} ${isActive && styles.btnActive}`
+                    : `${styles.headerItems} ${isActive && styles.active}`
+                }
+              >
+                {label}
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 }

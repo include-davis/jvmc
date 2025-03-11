@@ -8,8 +8,9 @@
   background-color: var(--white);
   box-shadow: var(--drop-shadow-header);
   position: relative;
+  text-align: center;
   z-index: 100;
-  gap: 50px;
+  gap: 48px;
 
   @include mixins.sm-desktop {
     padding: 24px 80px;
@@ -18,15 +19,16 @@
 }
 
 .headerLinks {
+  list-style: none;
   display: flex;
-  padding: 26px 40px;
   align-items: center;
   justify-content: space-between;
   background-color: var(--white);
   width: 75%;
+  gap: 24px;
 
   @include mixins.sm-desktop {
-    gap: 40px;
+    gap: 32px;
   }
 }
 
@@ -41,11 +43,19 @@
   &:hover {
     font-weight: var(--bold);
   }
+
+  @include mixins.sm-desktop {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
 }
 
 .headerItems.active {
   font-weight: var(--bold);
   color: var(--teal);
+}
+
+.btn {
+  width: 10rem;
 }
 
 .btnActive {

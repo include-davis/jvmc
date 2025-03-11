@@ -47,7 +47,7 @@ export default function Footer() {
                   key={idx}
                   className={
                     isButton
-                      ? `${"btn"} ${isActive && styles.btnActive}`
+                      ? `${"btn"} ${styles.btn} ${isActive && styles.btnActive}`
                       : `${styles.navLink} ${isActive && styles.active}`
                   }
                 >
