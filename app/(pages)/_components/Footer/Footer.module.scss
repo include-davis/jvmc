@@ -6,12 +6,6 @@ $logo-width: calc(8px * 20);
   background-color: var(--white);
   box-shadow: var(--drop-shadow-header);
   text-align: center;
-  
-  @mixin phone {
-    @media screen and (max-width: 720px) {
-      @content;
-    }
-  }
 }
 
 .topSection {
@@ -20,6 +14,12 @@ $logo-width: calc(8px * 20);
   align-items: center;
   gap: 48px;
   padding: 40px 96px;
+
+  @include mixins.phone {
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+  }
 }
 
 .logoSection {
@@ -27,6 +27,9 @@ $logo-width: calc(8px * 20);
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  @include mixins.phone {
+    gap: 20px;
+  }
 }
 
 .logo {
@@ -34,6 +37,11 @@ $logo-width: calc(8px * 20);
   overflow: hidden;
   height: $logo-height;
   width: $logo-width;
+
+  @include mixins.phone {
+    height: calc(8px * 15);
+    width: calc(8px * 20);
+  }
 }
 
 .socialLinks {
@@ -41,6 +49,12 @@ $logo-width: calc(8px * 20);
   display: flex;
   align-items: center;
   gap: 24px;
+
+
+  @include mixins.phone {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 .boxIcon {
@@ -79,10 +93,13 @@ $logo-width: calc(8px * 20);
   background-color: var(--white);
   width: 75%;
 
-  @include mixins.sm-desktop {
-    gap: 40px;  
+  @include mixins.phone {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      width: 100%;
+    }
   }
-}
 
 .navLink {
   text-decoration: none;
@@ -93,7 +110,11 @@ $logo-width: calc(8px * 20);
   &:hover {
       font-weight: var(--bold);
   }
-}
+
+  @include mixins.phone {
+      font-size: 0.9rem;
+    }
+  }
 
 .navLink.active {
   font-weight: var(--bold);  
@@ -109,9 +130,15 @@ $logo-width: calc(8px * 20);
     color: var(--offwhite);
     font-family: var(--font2);
     font-weight: var(--light);
-}
 
-.btnActive {
-  background: var(--rainbow-linear-gradient);
-  color: var(--dark-grey);
-}
+    @include mixins.phone {
+        font-size: 0.9rem;
+        display: flex;
+        padding: 20px 27px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        
+      }
+    }

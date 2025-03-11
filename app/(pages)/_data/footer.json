@@ -8,7 +8,7 @@
       { "label": "Community Partners", "href": "/community-partners", "isButton": false },
       { "label": "About Us", "href": "/about-us", "isButton": false },
       { "label": "Volunteer", "href": "/volunteer", "isButton": false },
-      { "label": "Contact Us", "href": "/contact-us", "isButton": true }
+      { "label": "Contact Us", "href": "/contact-us", "isButton": false }
     ],
     "mainInstagram": "@jvmclinic",
     "studentInstagram": "@jvmcstudents",

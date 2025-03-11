@@ -38,7 +38,7 @@ export default function Footer() {
           </ul>
         </div>
         <ul className={styles.navLinks}>
-          {data.navLinks.map(({ label, href, isButton }, idx) => {
+          {data.navLinks.map(({ label, href, isButton}, idx) => {
             const isActive = pathname === href;
             return (
               <li key={idx}>
@@ -47,7 +47,7 @@ export default function Footer() {
                   key={idx}
                   className={
                     isButton ? 
-                    `${"btn"} ${isActive && styles.btnActive}` : 
+                    `${"btn"} ${isActive && styles.btnActive}` :
                     `${styles.navLink} ${isActive && styles.active}`}
                 >
                   {label}
