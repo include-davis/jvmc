@@ -50,7 +50,7 @@ $logo-width: calc(8px * 20);
 }
 
 .boxText {
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
 
@@ -63,7 +63,6 @@ $logo-width: calc(8px * 20);
   display: flex;
 }
 
-
 .navLinks {
   list-style: none;
   display: flex;
@@ -74,7 +73,7 @@ $logo-width: calc(8px * 20);
   width: 75%;
 
   @include mixins.sm-desktop {
-    gap: 40px;  
+    gap: 40px;
   }
 }
 
@@ -82,27 +81,29 @@ $logo-width: calc(8px * 20);
   text-decoration: none;
   color: var(--dark-grey);
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-  transition: font-weight 0.2s ease, color 0.2s ease;
+  transition:
+    font-weight 0.2s ease,
+    color 0.2s ease;
 
   &:hover {
-      font-weight: var(--bold);
+    font-weight: var(--bold);
   }
 }
 
 .navLink.active {
-  font-weight: var(--bold);  
+  font-weight: var(--bold);
   color: var(--teal);
 }
 
 .bottomSection {
-    padding: 16px 96px;
-    display: flex;
-    margin: 0;
-    font-size: 1.0rem;
-    background-color: var(--teal);
-    color: var(--offwhite);
-    font-family: var(--font2);
-    font-weight: var(--light);
+  padding: 16px 96px;
+  display: flex;
+  margin: 0;
+  font-size: 1rem;
+  background-color: var(--teal);
+  color: var(--offwhite);
+  font-family: var(--font2);
+  font-weight: var(--light);
 }
 
 .btnActive {

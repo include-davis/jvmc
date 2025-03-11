@@ -1,73 +1,72 @@
 {
-    "homePageTitle": "Welcome to Joan Viteri Memorial Clinic",
-    "homePageSubtitle": "Serving health care needs of uninsured drug users, sex workers, trans folks, and their families.", 
-    "buttonMsg": "Contact Us",
-    
-    "header_gradient": "/images/homeGradient.png",
-    "header_gradient_alt": "Header Gradient",
+  "homePageTitle": "Welcome to Joan Viteri Memorial Clinic",
+  "homePageSubtitle": "Serving health care needs of uninsured drug users, sex workers, trans folks, and their families.",
+  "buttonMsg": "Contact Us",
 
-    "teddy": "/images/jvmc-teddy.png",
-    "teddyAlt": "JVMC Teddy Bear",
+  "header_gradient": "/images/homeGradient.png",
+  "header_gradient_alt": "Header Gradient",
 
-    "dots_1": "/images/dots1.png",
-    "dots_2": "/images/dots2.png",
+  "teddy": "/images/jvmc-teddy.png",
+  "teddyAlt": "JVMC Teddy Bear",
 
-    "health_icon": "/akar-icons_health.png",
-    "health_icon_alt": "Health Icon Icon",
-    "biPeople_icon":"/bi_people.png",
-    "biPeople_icon_alt": "Health Icon Icon",
+  "dots_1": "/images/dots1.png",
+  "dots_2": "/images/dots2.png",
 
-    "cardSectionHeaderTitle": "Serving the Oak Park Community",
-    "cardSectionHeaderImage": "/subtitleheader.png",
-    "cardSectionHeaderImageAlt": "Image of Background for Card Section Header Title",
+  "health_icon": "/akar-icons_health.png",
+  "health_icon_alt": "Health Icon Icon",
+  "biPeople_icon": "/bi_people.png",
+  "biPeople_icon_alt": "Health Icon Icon",
 
-    "card1_Title": "Unbiased Healthcare",
-    "card1_Logo": "CiMedicalCross",
-    "card1_Image_Link": "/image1.png",
-    "card1_Image_Alt": "Image of JVMC Workers handling documents",
-  
-    "text_Block1": {
-      "Sentence_1": "We provide basic medical care and health education in a non-judgmental, accessible way.",
-      "Sentence_2": "Offering free primary health care services to the uninsured population in the Oak Park area of Sacramento, CA.",
-      "Sentence_3": "Our mission is fulfilled through the service of UC Davis undergraduates, medical, PA, NP students and the generosity of physicians."
+  "cardSectionHeaderTitle": "Serving the Oak Park Community",
+  "cardSectionHeaderImage": "/subtitleheader.png",
+  "cardSectionHeaderImageAlt": "Image of Background for Card Section Header Title",
+
+  "card1_Title": "Unbiased Healthcare",
+  "card1_Logo": "CiMedicalCross",
+  "card1_Image_Link": "/image1.png",
+  "card1_Image_Alt": "Image of JVMC Workers handling documents",
+
+  "text_Block1": {
+    "Sentence_1": "We provide basic medical care and health education in a non-judgmental, accessible way.",
+    "Sentence_2": "Offering free primary health care services to the uninsured population in the Oak Park area of Sacramento, CA.",
+    "Sentence_3": "Our mission is fulfilled through the service of UC Davis undergraduates, medical, PA, NP students and the generosity of physicians."
+  },
+
+  "card2_Title": "The People We Serve",
+  "card2_Logo": "IoPeopleOutline",
+  "card2_Image_Link": "/image2.jpg",
+  "card2_Image_Alt": "Image of JVMC Workers grouped together for a photo",
+
+  "card2_Subtitle": "At JVMC, we welcome everyone, regardless of their life history. No matter who you are, you are welcome.",
+
+  "text_Block2_Subtext": "We are known in the community for caring about forgotten populations, in particular: ",
+  "text_Block2": {
+    "bulletpoint_1": "Individuals who use intravenous drugs",
+    "bulletpoint_2": "Sex workers",
+    "bulletpoint_3": "People who identify as transgender",
+    "bulletpoint_4": "Families"
+  },
+
+  "contactCard": {
+    "visit": {
+      "text": "Come Visit Us!",
+      "address": "3647 40th St, Sacramento, CA 95817"
     },
-  
-    "card2_Title": "The People We Serve",
-    "card2_Logo": "IoPeopleOutline",
-    "card2_Image_Link": "/image2.jpg",
-    "card2_Image_Alt": "Image of JVMC Workers grouped together for a photo",
-  
-    "card2_Subtitle": "At JVMC, we welcome everyone, regardless of their life history. No matter who you are, you are welcome.",
-  
-    "text_Block2_Subtext": "We are known in the community for caring about forgotten populations, in particular: ",
-    "text_Block2": {
-      "bulletpoint_1": "Individuals who use intravenous drugs",
-      "bulletpoint_2": "Sex workers",
-      "bulletpoint_3": "People who identify as transgender",
-      "bulletpoint_4": "Families"
+    "hours": {
+      "text": "Opening Hours",
+      "hours": "Every Saturday: 1:00pm - 4:00pm"
     },
-
-    "contactCard": {
-        "visit": {
-            "text": "Come Visit Us!",
-            "address": "3647 40th St, Sacramento, CA 95817"
-        },
-        "hours": {
-            "text": "Opening Hours",
-            "hours": "Every Saturday: 1:00pm - 4:00pm"
-        },
-        "contact": "Contact Us",
-        "button": {
-            "text": "Ask Us Questions",
-            "link": "/contact-us"
-        },
-        "img": {
-            "src": "/home-group.jpg",
-            "alt": "Group of medical students"
-        }
+    "contact": "Contact Us",
+    "button": {
+      "text": "Ask Us Questions",
+      "link": "/contact-us"
     },
+    "img": {
+      "src": "/home-group.jpg",
+      "alt": "Group of medical students"
+    }
+  },
 
-    "bottom_gradient": "/images/homeBottomGradient.png",
-    "bottom_gradient_alt": "Bottom Gradient"
-  }
-  
+  "bottom_gradient": "/images/homeBottomGradient.png",
+  "bottom_gradient_alt": "Bottom Gradient"
+}
