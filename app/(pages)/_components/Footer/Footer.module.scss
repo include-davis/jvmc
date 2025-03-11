@@ -117,11 +117,11 @@ $logo-width: calc(8px * 20);
   font-weight: var(--light);
 }
 
-.btn {
-  width: 10rem;
+.btnSize {
+  width: 10rem !important;
 }
 
 .btnActive {
   background: var(--rainbow-linear-gradient);
-  color: var(--dark-grey);
+  color: var(--dark-grey) !important;
 }

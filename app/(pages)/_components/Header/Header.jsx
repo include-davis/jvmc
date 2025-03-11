@@ -22,7 +22,7 @@ export default function Header() {
                 href={href}
                 className={
                   isButton
-                    ? `${"btn"} ${styles.btn} ${isActive && styles.btnActive}`
+                    ? `${"btn"} ${styles.btnSize} ${isActive && styles.btnActive}`
                     : `${styles.headerItems} ${isActive && styles.active}`
                 }
               >
