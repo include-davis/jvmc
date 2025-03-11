@@ -113,15 +113,12 @@ export default function ContactUs() {
             </section>
             {/* SOCIAL MEDIA COMPONENT */}
             <section className={styles.socialMedia}>
-                <h4>Visit our social media pages!</h4>
                 <div className={styles.dotsContainer}>
-                    <div className={styles.dotsLeft}>
-                      <Image src="/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" width={420} height={412}/>
-                    </div>
-                    <div className={styles.dotsRight}>
-                      <Image src="/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" width={432} height={397} />
-                    </div>
+                  <div className={styles.dotsLeft}>
+                    <Image src="/images/NEW_Contact_Middle_Left_Dots.png" alt="Decorative Dots Left" fill="true" style={{objectFit: "cover"}}/>
+                  </div>
                 </div>
+                <h4>Visit our social media pages!</h4>
                 <div className={styles.socialMediaIcons}>
                     <a href="https://www.instagram.com/jvmclinic" target="_blank" rel="noopener noreferrer" className="btn">  
                         <FaInstagram className={styles.icon} />@jvmcclinic
@@ -129,6 +126,11 @@ export default function ContactUs() {
                     <a href="https://www.instagram.com/jvmcstudents/" target="_blank" rel="noopener noreferrer" className="btn">
                         <FaInstagram className={styles.icon} />@jvmcstudents
                     </a>
+                </div>
+                <div className={styles.dotsContainer}>
+                  <div className={styles.dotsRight}>
+                    <Image src="/images/NEW_Contact_Middle_Left_Right.png" alt="Decorative Dots Right" fill='true' style={{objectFit: "cover"}} />
+                  </div>
                 </div>
             </section>
             {/* QUESTIONS? COMPONENT */}
