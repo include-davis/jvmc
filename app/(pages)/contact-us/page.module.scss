@@ -1,7 +1,6 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .questionsCard {
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,18 +14,6 @@
     @include mixins.phone {
         width: 361px;
     }
-=======
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 1040px;
-  // height: 247px;
-  background-color: var(--card-background);
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--drop-shadow);
-  padding: 42px 40px;
->>>>>>> main
 }
 
 .questionsCard h3 {
@@ -43,7 +30,6 @@
 
 // Contact form
 .form {
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,25 +61,6 @@
     @include mixins.phone {
         width: 100%;
     }
-=======
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 72.22%;
-  color: var(--dark-grey);
-}
-
-.formField {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.formInput {
-  width: 44.92%;
-  margin-bottom: 20px;
-  text-align: left;
->>>>>>> main
 }
 
 .formInput label {
@@ -216,7 +183,6 @@
 }
 
 .container {
-<<<<<<< HEAD
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -248,50 +214,6 @@
     text-align: center;
     font-size: 36px;
     color: var(--emerald);
-=======
-  display: flex;
-  flex-direction: row;
-  // justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  width: 85%;
-  max-width: 1040px;
-  // max-height: 500px;
-  // margin-bottom: 50px;
-  box-shadow: var(--drop-shadow);
-  border-radius: var(--card-border-radius);
-}
-.mapContainer {
-  // flex: 1;
-  // position: relative;
-  // overflow: hidden;
-  min-width: 50%;
-  max-width: 55%;
-
-  iframe {
-    display: block;
-    border: 0;
-    border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-  }
-  
-}
-
-.boxCard {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 44px 51px;
-}
-
-.infoCard {
-  // flex: 1;
-  background-color: var(--white);
-  // padding-bottom: 29px;
-  // margin-right: 22px;
-  text-align: center;
-  // font-size: 36px;
-  color: var(--emerald);
->>>>>>> main
 }
 
 .textInfo {
@@ -305,7 +227,6 @@
 }
 
 .dotsContainer {
-<<<<<<< HEAD
     position: relative;
     display: flex;
     justify-content: center;
@@ -348,32 +269,6 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-=======
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // margin-top: 16px;
-}
-
-.dotsLeft {
-  position: absolute;
-  bottom: -460px;
-  left: -464px;
-}
-
-.dotsRight {
-  position: absolute;
-  top: -350px;
-  right: -472px;
-}
-
-.socialMedia {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  text-align: center;
->>>>>>> main
 }
 
 .socialMediaIcons {
@@ -382,7 +277,6 @@
   align-items: center;
   gap: 50px;
 
-<<<<<<< HEAD
     a {
       width: 260px;
     }
@@ -395,15 +289,6 @@
             // font-weight: var(--bold);
         }
     }
-=======
-  a {
-    width: 260px;
-  }
-  // width: 260px;
-  // padding: 0 36px;
-  // margin-top: 20px;
-  // z-index: 2;
->>>>>>> main
 }
 
 .icon {
