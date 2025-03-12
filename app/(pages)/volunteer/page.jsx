@@ -4,9 +4,39 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import text from "@/app/(pages)/_data/volunteer.json";
 import VolunteerCard from "../_components/VolunteerCard/VolunteerCard";
-import { PiStudent } from "react-icons/pi";
-import { LuStethoscope } from "react-icons/lu";
-import { MdOutlineMedicalServices } from "react-icons/md";
+import VolunteerGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
+
+export async function getVolunteerGeneralInfo() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/general-info?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData = {
+      landingDescription: data.body.volunteer_page_description,
+      landingImage: data.body.volunteer_page_image[0],
+      landingImageAlt: data.body.volunteer_page_image_alt_text,
+    };
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(
+      `Failed to fetch general-info for volunteer page: ${e.message}`
+    );
+    return {
+      landingDescription:
+        VolunteerGeneralInfoFallbackData.volunteer_page_description,
+      landingImage: VolunteerGeneralInfoFallbackData.volunteer_page_image,
+      landingImageAlt:
+        VolunteerGeneralInfoFallbackData.volunteer_page_image_alt_text,
+    };
+  }
+}
 
 const cards = [
   {
@@ -14,7 +44,14 @@ const cards = [
     direction: "right",
     image: "/images/UGrad.jpg",
     altText: "Undergraduate Students",
-    icon: <Image src={"/undergrad-icon.svg"} alt={"undergrad icon"} objectFit="cover" fill="true"/>,
+    icon: (
+      <Image
+        src={"/undergrad-icon.svg"}
+        alt={"undergrad icon"}
+        objectFit="cover"
+        fill="true"
+      />
+    ),
     mainText: (
       <>
         New cohorts are recruited during Winter Quarter annually. More
@@ -60,7 +97,14 @@ const cards = [
     direction: "left",
     image: "/images/Physicians.jpg",
     altText: "Physicians",
-    icon: <Image src={"/preceptor-icon.svg"} alt={"preceptor icon"} objectFit="cover" fill="true"/>,
+    icon: (
+      <Image
+        src={"/preceptor-icon.svg"}
+        alt={"preceptor icon"}
+        objectFit="cover"
+        fill="true"
+      />
+    ),
     mainText: (
       <>
         To qualify as a physician volunteer with JVMC you must be covered by UC
@@ -89,7 +133,14 @@ const cards = [
     direction: "right",
     image: "/images/MD_Student.jpg",
     altText: "MD Students",
-    icon: <Image src={"/medicine-chest-icon.svg"} alt={"medicine chest icon"} objectFit="cover" fill="true" />,
+    icon: (
+      <Image
+        src={"/medicine-chest-icon.svg"}
+        alt={"medicine chest icon"}
+        objectFit="cover"
+        fill="true"
+      />
+    ),
     mainText: (
       <>
         If you are looking to volunteer with JVMC as a Medical Students, please
@@ -110,7 +161,9 @@ const cards = [
   },
 ];
 
-export default function Volunteer() {
+export default async function Volunteer() {
+  const generalData = await getVolunteerGeneralInfo();
+
   return (
     <main className={styles.page}>
       {/* Top Section */}
@@ -122,14 +175,18 @@ export default function Volunteer() {
         <div className={styles.opening}>
           <Image
             className={styles.landing_photo}
-            src={text.entrance_pic}
+            src={generalData.landingImage}
             width={521}
             height={370}
-            alt={text.entrance_pic_descript}
+            alt={generalData.landingImageAlt}
           />
           <div className={styles.intro}>
-            <p>{text.intro_1}</p>
-            <p>{text.intro_2}</p>
+            {/* Below is LONG_TEXT */}
+            <p
+              dangerouslySetInnerHTML={{
+                __html: generalData.landingDescription,
+              }}
+            />
           </div>
         </div>
       </div>

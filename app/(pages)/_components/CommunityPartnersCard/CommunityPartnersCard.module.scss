@@ -1,70 +1,71 @@
 .cardContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
 }
 
 .imageWrapper {
-    position: relative;
-    overflow: hidden;
-    width: 434px;
-    height: 452px;
-    border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+  position: relative;
+  overflow: hidden;
+  width: 434px;
+  height: 452px;
+  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
 }
 
 .partnersCard {
-    background-color: var(--white);
-    border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
-    width: 606px;
-    height: 452px;
-    padding: var(--card-padding);
-    text-align: left;
-    box-shadow: var(--drop-shadow);
-    display: flex;
-    flex-direction: column;
-    gap: 36px
+  background-color: var(--white);
+  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+  width: 606px;
+  height: 452px;
+  padding: var(--card-padding);
+  text-align: left;
+  box-shadow: var(--drop-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 
 .reverse {
-    flex-direction: row-reverse; /* Image on the left */
+  flex-direction: row-reverse; /* Image on the left */
 }
 
 .reverse .imageWrapper {
-    border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
-} 
+  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+}
 
 .reverse .partnersCard {
-    border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
 }
 
 .partnerContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .contactInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .locationText {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 13px;
-    color: var(--emerald)
+  width: 20px;
+  height: 20px;
+  margin-right: 13px;
+  color: var(--emerald);
 }
 
 .dateText {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .appointmentText {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }

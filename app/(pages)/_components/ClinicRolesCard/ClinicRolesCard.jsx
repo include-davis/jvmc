@@ -7,7 +7,7 @@ export default function ClinicRolesCard({
   img,
   imgAlt,
   align,
-  subheader,
+  title,
   description,
 }) {
   return (
@@ -21,10 +21,11 @@ export default function ClinicRolesCard({
         />
       </div>
       <div className={styles.cardTop}>
-        <Image src={icon} width={39} height={39} alt={iconAlt} />
-        <h3>{subheader}</h3>
+        <Image src={icon} width={40} height={40} alt={iconAlt} />
+        <h3>{title}</h3>
       </div>
-      <p> {description} </p>
+      {/* Below is LONG TEXT */}
+      <p dangerouslySetInnerHTML={{ __html: description }} />
     </div>
   );
 }

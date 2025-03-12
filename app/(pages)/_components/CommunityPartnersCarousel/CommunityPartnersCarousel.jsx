@@ -6,10 +6,7 @@ export default function CommunityPartnersCarousel({ images }) {
   const doubleImages = [...images, ...images];
 
   return (
-    <div
-      className={styles.carousel}
-      style={{ "--num-images": imagesLength }}
-    >
+    <div className={styles.carousel} style={{ "--num-images": imagesLength }}>
       <div className={styles.row}>
         {doubleImages.map((image, index) => (
           <div key={index} className={styles.column}>

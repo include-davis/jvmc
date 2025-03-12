@@ -1,10 +1,14 @@
 import Header from "./_components/Header/Header";
 import Footer from "./_components/Footer/Footer";
-import './_globals/globals.scss';
-import { Inter, Merriweather } from 'next/font/google'
+import "./_globals/globals.scss";
+import { Inter, Merriweather } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font2' });
-const merriweather = Merriweather({ subsets: ['latin'], weight: ['400', '700', '900'], variable: '--font1'});
+const inter = Inter({ subsets: ["latin"], variable: "--font2" });
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font1",
+});
 
 export const metadata = {
   title: "JVMC",

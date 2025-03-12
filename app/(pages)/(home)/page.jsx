@@ -2,13 +2,45 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import { FaHome, FaClock, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
-import data from '@/app/(pages)/_data/home.json'
-import HomepageCarousel from '../_components/HomepageCarousel/HomepageCarousel';
+import data from "@/app/(pages)/_data/home.json";
+import HomepageCarousel from "../_components/HomepageCarousel/HomepageCarousel";
 
-export default function Home() {
+import HomeGeneralInfoFallbackData from "@/app/(pages)/_data/home.json";
+
+export async function getHomeGeneralInfo() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/general-info?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData = {
+      tagline: data.body.tagline,
+      address: data.body.address,
+      hours: data.body.hours,
+    };
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch general-info for home page: ${e.message}`);
+    return {
+      tagline: HomeGeneralInfoFallbackData.tagline,
+      address: HomeGeneralInfoFallbackData.address,
+      hours: HomeGeneralInfoFallbackData.hours,
+    };
+  }
+}
+
+export default async function Home() {
   const { Sentence_1, Sentence_2, Sentence_3 } = data.text_Block1;
   const { bulletpoint_1, bulletpoint_2, bulletpoint_3, bulletpoint_4 } =
     data.text_Block2;
+
+  const generalData = await getHomeGeneralInfo();
 
   return (
     <main>
@@ -31,7 +63,7 @@ export default function Home() {
           />
           <div className={styles.titleAndSubtitleBox}>
             <h1> {data.homePageTitle} </h1>
-            <p> {data.homePageSubtitle} </p>
+            <p> {generalData.tagline} </p>
           </div>
 
           <div className={styles.contactButton}>
@@ -76,13 +108,15 @@ export default function Home() {
                 />
                 <h3>{data.card1_Title}</h3>
               </div>
-
+              
               <ul className={styles.description_1}>
                 <li>{Sentence_1}</li>
                 <li>{Sentence_2}</li>
                 <li>{Sentence_3}</li>
               </ul>
+
             </div>
+
           </div>
 
           <div className={styles.dots1}>
@@ -130,28 +164,28 @@ export default function Home() {
           </div>
         </div>
 
-        <HomepageCarousel data={data.carousel}/>
+        <HomepageCarousel data={data.carousel} />
 
         <div className={styles.contactCard}>
           <div className={styles.dots3}>
-              <Image src={data.dots_3} alt={"dots"} width={461} height={545} />
+            <Image src={data.dots_3} alt={"dots"} width={461} height={545} />
           </div>
           <div className={styles.contactInfoContainer}>
-            <div className={styles.contactInfo} style={{gap: "20px"}}>
+            <div className={styles.contactInfo} style={{ gap: "20px" }}>
               <FaHome color="var(--emerald)" size={40} />
               <div className={styles.contactInfoText}>
                 <h3>{data.contactCard.visit.text}</h3>
                 <p>{data.contactCard.visit.address}</p>
               </div>
             </div>
-            <div className={styles.contactInfo} style={{paddingLeft: "4px"}}>
+            <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
               <FaClock color="var(--emerald)" size={32} />
               <div className={styles.contactInfoText}>
                 <h3>{data.contactCard.hours.text}</h3>
                 <p>{data.contactCard.hours.hours}</p>
               </div>
             </div>
-            <div className={styles.contactInfo} style={{paddingLeft: "4px"}}>
+            <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
               <FaEnvelope color="var(--emerald)" size={32} />
               <h3>{data.contactCard.contact}</h3>
             </div>
