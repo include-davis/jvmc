@@ -44,7 +44,6 @@ $logo-width: calc(8px * 20);
   @include mixins.phone {
     height: calc(8px * 15);
     width: calc(8px * 20);
-    // test 
   }
 }
 
@@ -54,6 +53,12 @@ $logo-width: calc(8px * 20);
   display: flex;
   align-items: center;
   gap: 24px;
+
+  @include mixins.phone {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 
 
   @include mixins.phone {
@@ -77,6 +82,7 @@ $logo-width: calc(8px * 20);
 .boxText {
   display: flex;
   flex-direction: column;
+
 }
 
 .at1 {

@@ -35,6 +35,7 @@ export default function Footer() {
               <p>{data.mainInstagram}</p>
               <p>{data.studentInstagram}</p>
             </li>
+    
           </ul>
         </div>
         <ul className={styles.navLinks}>
@@ -53,7 +54,7 @@ export default function Footer() {
                   {label}
                 </Link>
               </li>
-            );
+            )
           })}
         </ul>
       </div>
