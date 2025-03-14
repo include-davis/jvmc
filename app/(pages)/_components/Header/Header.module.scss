@@ -1,46 +1,103 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 26px 104px;
-    background-color: var(--white);
-    box-shadow: var(--drop-shadow-header);
-    gap: 50px;
-
-    @include mixins.sm-desktop {
-        padding: 24px 80px;
-        gap: 42px;  
-    }
+  position: relative;  // Make header the positioning context for mobileMenu
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 104px;
+  background-color: var(--white);
+  box-shadow: var(--drop-shadow-header);
+  gap: 50px;
+  
+  @include mixins.sm-desktop {
+    padding: 24px 80px;
+    gap: 42px;
+  }
 }
 
+// Mobile Menu Icon (hidden on desktop)
+.menuIcon {
+  display: none; /* Hide by default (desktop view) */
+  cursor: pointer;
+  font-size: 1.5rem;
+}
 
+// Mobile Menu Container (positioned below the header)
+.mobileMenu {
+  position: absolute;
+  top: 100%;      // Position below the header
+  left: 0;
+  width: 100%;
+  /* We let the inner container handle padding and background */
+}
+
+// Mobile Header Links (initially hidden)
+.mobileHeaderLinks {
+  display: none; /* Hidden by default */
+  text-decoration: none;
+  color: var(--dark-grey);
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--white);
+  width: 100%;
+  position: relative;
+  top: 0;
+}
+
+.showMenu {
+  border-top: 1px solid #ddd;
+}
+// Show the mobile menu when it's toggled
+.showMenu .mobileHeaderLinks {
+  display: flex;
+}
+
+// Desktop Header Links (hidden on mobile)
 .headerLinks {
-    display: flex;
-    padding: 26px 40px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--white);
-    width: 75%;
-
-    @include mixins.sm-desktop {
-        gap: 40px;  
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  width: 75%;
+  
+  @include mixins.phone {
+    display: none; /* Hide on mobile */
+  }
 }
 
+// Header items (links)
 .headerItems {
-    text-decoration: none;
-    color: var(--dark-grey);
-    @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-    transition: font-weight 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  color: var(--dark-grey);
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+  transition: font-weight 0.2s ease, color 0.2s ease;
 
-    &:hover {
-        font-weight: var(--bold);
-    }
+  &:hover {
+    font-weight: var(--bold);
+  }
 }
 
 .headerItemActive {
-    font-weight: var(--bold);  
-    color: var(--teal);
+  font-weight: var(--bold);
+  color: var(--teal);
+}
+
+// Mobile Styles: Show hamburger icon and hide desktop links
+@include mixins.phone {
+  .menuIcon {
+    display: block; /* Show the hamburger icon on mobile */
+    font-size: 1.5rem;
+    margin-left: auto; /* Align the icon to the right */
+  }
+
+  .headerLinks {
+    display: none; /* Hide the desktop header on mobile */
+  }
+
+  .header {
+    justify-content: space-between; /* Keep space between the logo and the mobile menu icon */
+  }
 }
