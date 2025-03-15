@@ -75,7 +75,7 @@ export async function getEventCardGeneralInfo() {
       throw new Error(data.error);
     }
     console.log(data);
-    const contents = data.body;
+    const contents = data.body[0];
     const parsedData = {
       eventTitle: contents.event_card_title,
       eventDescription: contents.event_card_description,
@@ -168,7 +168,11 @@ export default async function About() {
         </div>
         <div className={styles.fairText}>
           <h4>{eventCardData.eventTitle}</h4>
-          <p>{eventCardData.eventDescription}</p>
+          <p 
+            dangerouslySetInnerHTML={{
+              __html: eventCardData.eventDescription
+            }}
+          />
           <a
             className="btn"
             href={eventCardData.eventButtonLink}

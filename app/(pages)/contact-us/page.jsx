@@ -16,8 +16,9 @@ export async function getContactUsGeneralInfo() {
       throw new Error(data.error);
     }
     console.log(data);
+    const contents = data.body[0];
     const parsedData = {
-      apptInstructions: data.body.appointment_instructions,
+      apptInstructions: contents.appointment_instructions,
     };
     // console.log(parsedData);
     return parsedData;

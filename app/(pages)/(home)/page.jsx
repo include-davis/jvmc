@@ -5,7 +5,7 @@ import Link from "next/link";
 import data from "@/app/(pages)/_data/home.json";
 import HomepageCarousel from "../_components/HomepageCarousel/HomepageCarousel";
 
-import HomeGeneralInfoFallbackData from "@/app/(pages)/_data/home.json";
+import HomeGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
 
 export async function getHomeGeneralInfo() {
   try {
@@ -18,10 +18,11 @@ export async function getHomeGeneralInfo() {
       throw new Error(data.error);
     }
     console.log(data);
+    const contents = data.body[0];
     const parsedData = {
-      tagline: data.body.tagline,
-      address: data.body.address,
-      hours: data.body.hours,
+      tagline: contents.tagline,
+      address: contents.address,
+      hours: contents.hours,
     };
     // console.log(parsedData);
     return parsedData;
@@ -175,14 +176,14 @@ export default async function Home() {
               <FaHome color="var(--emerald)" size={40} />
               <div className={styles.contactInfoText}>
                 <h3>{data.contactCard.visit.text}</h3>
-                <p>{data.contactCard.visit.address}</p>
+                <p>{generalData.address}</p>
               </div>
             </div>
             <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
               <FaClock color="var(--emerald)" size={32} />
               <div className={styles.contactInfoText}>
                 <h3>{data.contactCard.hours.text}</h3>
-                <p>{data.contactCard.hours.hours}</p>
+                <p>{generalData.hours}</p>
               </div>
             </div>
             <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>

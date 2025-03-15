@@ -17,10 +17,11 @@ export async function getVolunteerGeneralInfo() {
       throw new Error(data.error);
     }
     console.log(data);
+    const contents = data.body[0];
     const parsedData = {
-      landingDescription: data.body.volunteer_page_description,
-      landingImage: data.body.volunteer_page_image[0],
-      landingImageAlt: data.body.volunteer_page_image_alt_text,
+      landingDescription: contents.volunteer_page_description,
+      landingImage: contents.volunteer_page_image[0],
+      landingImageAlt: contents.volunteer_page_image_alt_text,
     };
     // console.log(parsedData);
     return parsedData;
