@@ -15,7 +15,7 @@ $logo-width: calc(8px * 20);
   justify-content: space-between;
   align-items: center;
   gap: 48px;
-  padding: 40px 96px;
+  padding: 40px 96px;  
 
   @include mixins.phone {
     flex-direction: column;
@@ -25,12 +25,18 @@ $logo-width: calc(8px * 20);
 }
 
 .logoSection {
+  flex: 1 1 30%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
+
+
   @include mixins.phone {
     gap: 20px;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -40,7 +46,10 @@ $logo-width: calc(8px * 20);
   height: $logo-height;
   width: $logo-width;
 
+
   @include mixins.phone {
+    flex-direction: row;
+    flex-wrap: wrap;
     height: calc(8px * 15);
     width: calc(8px * 20);
   }
@@ -52,15 +61,15 @@ $logo-width: calc(8px * 20);
   display: flex;
   align-items: center;
   gap: 24px;
+  flex-direction: column;
 
   @include mixins.phone {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-
-  @include mixins.phone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-end: end;
+    flex-direction: row;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 24px;
   }
@@ -101,8 +110,12 @@ $logo-width: calc(8px * 20);
   gap: 24px;
   background-color: var(--white);
   width: 75%;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   @include mixins.phone {
+      flex-direction: row;
+      flex-wrap: wrap;
       flex-direction: column;
       align-items: center;
       gap: 50px;
