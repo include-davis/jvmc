@@ -1,0 +1,33 @@
+import styles from "./HomeCard.module.scss";
+import Image from "next/image";
+
+export default function HomeCard({ title, description, img, imgAlt, icon, iconAlt, align }) {
+  return (
+    <div className={`${styles.card} ${align === "left" ? styles.left : styles.right}`}>
+      {/* left side has image and right side has text or vice versa */}
+      <div className={styles.img}>
+        <Image
+          src={img}
+          alt={imgAlt}
+          fill={true}
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+
+      <div className={styles.text}>
+        <div className={styles.header}>
+          <Image
+            src={icon}
+            alt={iconAlt}
+            width={40}
+            height={40}
+            className={styles.icon}
+          />
+          <h3>{title}</h3>
+        </div>
+      
+        <p className={styles.description} dangerouslySetInnerHTML={{__html: description }} />
+      </div>
+    </div>
+  );
+}

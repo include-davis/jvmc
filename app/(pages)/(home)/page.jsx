@@ -4,8 +4,10 @@ import { FaHome, FaClock, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import data from "@/app/(pages)/_data/home.json";
 import HomepageCarousel from "../_components/HomepageCarousel/HomepageCarousel";
+import HomeCard from "../_components/HomeCard/HomeCard";
 
 import HomeGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
+import HomeCardsFallbackData from "@/app/(pages)/_data/home-cards.json";
 
 export async function getHomeGeneralInfo() {
   try {
@@ -36,12 +38,45 @@ export async function getHomeGeneralInfo() {
   }
 }
 
+
+async function getHomeCards() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/home-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData = data.body.map((card) => {
+      return {
+        title: card.title,
+        description: card.description,
+        image: card.image[0],
+        image_alt_text: card.image_alt_text,
+        icon: card.icon[0],
+        icon_alt_text: card.icon_alt_text,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(
+      `Failed to fetch home-cards: ${e.message}`
+    );
+    return HomeCardsFallbackData;
+  }
+}
+
 export default async function Home() {
   const { Sentence_1, Sentence_2, Sentence_3 } = data.text_Block1;
   const { bulletpoint_1, bulletpoint_2, bulletpoint_3, bulletpoint_4 } =
     data.text_Block2;
 
   const generalData = await getHomeGeneralInfo();
+  const homeData = await getHomeCards();
 
   return (
     <main>
@@ -85,79 +120,21 @@ export default async function Home() {
             />
           </div>
 
-          <div className={styles.card}>
-            {/* left side has image and right side has text */}
-            <div className={styles.card_ImageBox}>
-              <Image
-                src={data.card1_Image_Link}
-                alt={data.card1_Image_Alt}
-                width={320}
-                height={424}
-                className={styles.image_1}
-              />
-            </div>
-
-            <div className={styles.card_TextBox}>
-              <div className={styles.card_TitleAndLogo}>
-                {/* <CiMedicalCross className = {styles.icon}/> */}
-                <Image
-                  src={data.health_icon}
-                  alt={data.health_icon_alt}
-                  width={40}
-                  height={40}
-                  className={styles.icon}
-                />
-                <h3>{data.card1_Title}</h3>
-              </div>
-              
-              <ul className={styles.description_1}>
-                <li>{Sentence_1}</li>
-                <li>{Sentence_2}</li>
-                <li>{Sentence_3}</li>
-              </ul>
-
-            </div>
-
-          </div>
+          {homeData.map((card, idx) => 
+            <HomeCard 
+              key={idx}
+              title={card.title}
+              description={card.description}
+              img={card.image}
+              imgAlt={card.image_alt_text}
+              icon={card.icon}
+              iconAlt={card.icon_alt_text}
+              align={idx % 2 === 0 ? "left" : "right"}
+            />
+          )}
 
           <div className={styles.dots1}>
             <Image src={data.dots_1} alt={"dots"} width={259} height={533} />
-          </div>
-          <div className={styles.card}>
-            {/* left side has text and right side has image */}
-            <div className={styles.card_TextBox}>
-              <div className={styles.card_TitleAndLogo}>
-                {/* <BsPeople className = {styles.icon}/> */}
-                <Image
-                  src={data.biPeople_icon}
-                  alt={data.biPeople_icon_alt}
-                  width={40}
-                  height={40}
-                  // className={styles.icon}
-                />
-                <h3>{data.card2_Title}</h3>
-              </div>
-
-              <p>{data.card2_Subtitle}</p>
-
-              <ul className={styles.description_2}>
-                {data.text_Block2_Subtext}
-                <li>{bulletpoint_1}</li>
-                <li>{bulletpoint_2}</li>
-                <li>{bulletpoint_3}</li>
-                <li>{bulletpoint_4}</li>
-              </ul>
-            </div>
-
-            <div className={styles.card_ImageBox}>
-              <Image
-                src={data.card2_Image_Link}
-                alt={data.card2_Image_Alt}
-                width={305}
-                height={383}
-                className={styles.image_2}
-              />
-            </div>
           </div>
 
           <div className={styles.dots2}>
