@@ -305,11 +305,9 @@
     }
 
     @include mixins.phone {
-        gap: 20px;
+        gap: 12px;
         a {
-            width: 200px;
-            // @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
-            // font-weight: var(--bold);
+            width: 180px;
         }
     }
 }
