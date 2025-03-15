@@ -41,8 +41,34 @@ async function getCards() {
   }
 }
 
+async function getCarouselImages() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/community-carousel-images?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData = data.body.map((image) => {
+      return {
+        src: image.image[0],
+        alt: image.image_alt_text,
+      };
+    });
+    console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch community-partners-carousel: ${e.message}`);
+    return CarouselFallbackData;
+  }
+}
+
 export default async function CommunityPartners() {
   const partners = await getCards();
+  const carouselImages = await getCarouselImages();
 
   return (
     <main className={styles.page}>
@@ -74,7 +100,7 @@ export default async function CommunityPartners() {
             See our community in action!
           </h4>
         </div>
-        <CommunityPartnersCarousel images={CarouselFallbackData} />
+        <CommunityPartnersCarousel images={carouselImages} />
       </div>
 
       <div className={styles.bottomGradientContainer}>
