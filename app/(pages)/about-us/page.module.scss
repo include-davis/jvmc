@@ -110,21 +110,3 @@
   height: 100%;
 }
 
-@mixin tablet {
-  @media screen and (max-width: 1048px){
-    
-    @content; 
-  }
-}
-
-@mixin phone{
-  @media screen and (max-width: 720px){
-    @content; 
-  }
-}
-
-@mixin sm-phone{
-  @media screen and (max-width: 540px){
-    @content; 
-  }
-}
