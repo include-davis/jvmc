@@ -61,7 +61,7 @@ async function getCarouselImages() {
     console.log(parsedData);
     return parsedData;
   } catch (e) {
-    console.error(`Failed to fetch community-partners-carousel: ${e.message}`);
+    console.error(`Failed to fetch community-carousel-images: ${e.message}`);
     return CarouselFallbackData;
   }
 }
