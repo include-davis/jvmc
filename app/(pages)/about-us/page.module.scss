@@ -7,6 +7,7 @@
   align-items: center;
   gap: var(--element-spacing);
   padding: var(--nav-to-element-spacing) 0;
+
 }
 
 .header {
@@ -23,7 +24,11 @@
   align-items: center;
   background-color: var(--color-white); //#F8F8F8;
   gap: var(--vertical-card-gap);
-  
+  @include mixins.phone {
+    
+  }
+ 
+
 }
 
 .clinicRolesGradientContainer {
@@ -55,6 +60,10 @@
   background-color: var(--white);
   box-shadow: var(--drop-shadow);
   border-radius: var(--card-border-radius);
+  @include mixins.phone {
+    width: calc(4px * 91);
+    padding-top: 0;
+  }
 }
 
 .fairImg {
@@ -65,6 +74,12 @@
   border-radius: var(--card-border-radius);
   border: 2px solid var(--mint);
   box-shadow: var(--drop-shadow-mint);
+  @include mixins.phone {
+    height: 200px;
+    width: 363px;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
+    border: none;
+  }
 }
 
 .fairText {

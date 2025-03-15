@@ -10,14 +10,34 @@
   h3 {
     color: var(--emerald);
   }
+  @include mixins.phone {
+    width: 350px; 
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow);
+   // display: flex;
+    flex-direction: column;
+    justify-content: center; 
+   // align-items: center; 
+   h3 {
+    text-align: center;
+  }
+  }
 }
 
 .cardWrapper.left {
   flex-direction: row-reverse;
+  @mixin phone{
+    //align-items: center;
+  }
 }
 
 .cardWrapper.right {
   flex-direction: row;
+  @mixin phone{
+    
+   // align-items: center;
+  }
+
 }
 
 .cardContainer {
@@ -28,11 +48,8 @@
   padding: var(--card-padding);
   width: 100%;
   @mixin phone{
-    @media screen and (max-width: 720px){
-      gap: 20px;
-      padding: var(--card-padding);
-      width: 100%;
-    }
+    padding: 10px; 
+    align-items: center;
   }
 }
 
@@ -41,19 +58,34 @@
   overflow: hidden;
   width: 100%;
 
-  @mixin phone{
-    @media screen and (max-width: 720px){
-      width: 100%;
-    }
+  @include mixins.phone {
+    position: absolute;
+  //  z-index: 1;
+    width: 90%;
+    height: 210px;
+    align-items: center;
+    padding-bottom: 200px;
+
+    
+    //margin-bottom: 10px;
   }
 }
 
 .img.left {
+ 
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+  @include mixins.phone {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
+  }
+
+  
 }
 
 .img.right {
   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+  @include mixins.phone {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
+  }
 }
 
 @mixin tablet {
