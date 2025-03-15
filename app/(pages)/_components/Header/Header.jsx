@@ -6,7 +6,7 @@ import Link from "next/link";
 import navLinks from "../../_data/header.json";
 import styles from "./Header.module.scss";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger and close icons
+import {Menu, X} from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname();
@@ -18,7 +18,7 @@ export default function Header() {
       
       {/* Mobile Menu Icon */}
       <div className={styles.menuIcon} onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />} {/* Toggle between hamburger and close icons */}
+        {menuOpen ? <X /> : <Menu />}
       </div>
 
       {/* Mobile Header Links (with class showMenu applied to toggle visibility) */}
@@ -48,8 +48,8 @@ export default function Header() {
               href={href}
               className={
                 isButton 
-                  ? "btn"  // Apply the global btn class for button links
-                  : `${styles.headerItems} ${isActive ? styles.headerItemActive : ""}`  // Apply custom header items and active state
+                  ? "btn"  
+                  : `${styles.headerItems} ${isActive ? styles.headerItemActive : ""}`  
               }
             >
               {label}

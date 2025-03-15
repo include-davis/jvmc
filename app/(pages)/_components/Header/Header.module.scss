@@ -26,22 +26,27 @@
 // Mobile Menu Container (positioned below the header)
 .mobileMenu {
   position: absolute;
-  top: 100%;      // Position below the header
+  top: 100%;
   left: 0;
   width: 100%;
-  /* We let the inner container handle padding and background */
+  background-color: var(--white);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px); /* Start slightly off-screen */
+  visibility: hidden; /* Ensure it's not interactive */
+  pointer-events: none; /* Prevent clicks when hidden */
 }
 
 // Mobile Header Links (initially hidden)
 .mobileHeaderLinks {
-  display: none; /* Hidden by default */
+  display: none; 
   text-decoration: none;
   color: var(--dark-grey);
   align-items: center;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background-color: var(--white);
+  // background-color: var(blue);
   width: 100%;
   position: relative;
   top: 0;
@@ -49,7 +54,20 @@
 
 .showMenu {
   border-top: 1px solid #ddd;
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible; /* Make it interactive */
+  pointer-events: auto; /* Allow clicks when visible */
 }
+
+
+
+.showMenu .mobileMenu {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+}
+
 // Show the mobile menu when it's toggled
 .showMenu .mobileHeaderLinks {
   display: flex;
