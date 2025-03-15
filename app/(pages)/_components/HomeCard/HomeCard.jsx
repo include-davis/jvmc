@@ -26,13 +26,7 @@ export default function HomeCard({
 
       <div className={styles.text}>
         <div className={styles.header}>
-          <Image
-            src={icon}
-            alt={iconAlt}
-            width={40}
-            height={40}
-            className={styles.icon}
-          />
+          <Image src={icon} alt={iconAlt} width={40} height={40} />
           <h3>{title}</h3>
         </div>
 
