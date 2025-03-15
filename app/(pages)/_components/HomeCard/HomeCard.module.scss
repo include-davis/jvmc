@@ -61,12 +61,10 @@
   color: var(--emerald);
 }
 
-// .description {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   list-style-type: none;
-//   padding-left: 24px;
-//   gap: 24px;
-// }
+.description {
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
+}

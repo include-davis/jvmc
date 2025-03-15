@@ -1,9 +1,19 @@
 import styles from "./HomeCard.module.scss";
 import Image from "next/image";
 
-export default function HomeCard({ title, description, img, imgAlt, icon, iconAlt, align }) {
+export default function HomeCard({
+  title,
+  description,
+  img,
+  imgAlt,
+  icon,
+  iconAlt,
+  align,
+}) {
   return (
-    <div className={`${styles.card} ${align === "left" ? styles.left : styles.right}`}>
+    <div
+      className={`${styles.card} ${align === "left" ? styles.left : styles.right}`}
+    >
       {/* left side has image and right side has text or vice versa */}
       <div className={styles.img}>
         <Image
@@ -25,8 +35,12 @@ export default function HomeCard({ title, description, img, imgAlt, icon, iconAl
           />
           <h3>{title}</h3>
         </div>
-      
-        <p className={styles.description} dangerouslySetInnerHTML={{__html: description }} />
+
+        {/* THIS IS LONG TEXT */}
+        <div
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
     </div>
   );
