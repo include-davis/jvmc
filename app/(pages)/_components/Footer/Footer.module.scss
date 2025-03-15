@@ -8,7 +8,6 @@ $logo-width: calc(8px * 20);
   position: relative;
   z-index: 100;
   text-align: center;
-
 }
 
 .topSection {
@@ -16,19 +15,29 @@ $logo-width: calc(8px * 20);
   justify-content: space-between;
   align-items: center;
   gap: 48px;
-  padding: 40px 96px;
+  padding: 40px 96px;  
 
-  @include mixins.sm-desktop {
-    padding: 24px 80px;
-    gap: 42px;
+  @include mixins.phone {
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
   }
 }
 
 .logoSection {
+  flex: 1 1 30%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
+
+
+  @include mixins.phone {
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .logo {
@@ -36,6 +45,14 @@ $logo-width: calc(8px * 20);
   overflow: hidden;
   height: $logo-height;
   width: $logo-width;
+
+
+  @include mixins.phone {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: calc(8px * 15);
+    width: calc(8px * 20);
+  }
 }
 
 .socialLinks {
@@ -44,6 +61,18 @@ $logo-width: calc(8px * 20);
   display: flex;
   align-items: center;
   gap: 24px;
+  flex-direction: column;
+
+  @include mixins.phone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-end: end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 .boxIcon {
@@ -61,6 +90,7 @@ $logo-width: calc(8px * 20);
 .boxText {
   display: flex;
   flex-direction: column;
+
 }
 
 .at1 {
@@ -80,11 +110,18 @@ $logo-width: calc(8px * 20);
   gap: 24px;
   background-color: var(--white);
   width: 75%;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  @include mixins.sm-desktop {
-    gap: 32px;
+  @include mixins.phone {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      width: 100%;
+    }
   }
-}
 
 .navLink {
   text-decoration: none;
@@ -101,7 +138,11 @@ $logo-width: calc(8px * 20);
   @include mixins.sm-desktop{
     @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
   }
-}
+
+  @include mixins.phone {
+      font-size: 0.9rem;
+    }
+  }
 
 .navLink.active {
   font-weight: var(--bold);
@@ -109,19 +150,23 @@ $logo-width: calc(8px * 20);
 }
 
 .bottomSection {
-  padding: 16px 96px;
-  display: flex;
-  background-color: var(--teal);
-  color: var(--offwhite);
-  font-family: var(--font2);
-  font-weight: var(--light);
-}
+    padding: 16px 96px;
+    display: flex;
+    margin: 0;
+    font-size: 1.0rem;
+    background-color: var(--teal);
+    color: var(--offwhite);
+    font-family: var(--font2);
+    font-weight: var(--light);
 
-.btnSize {
-  width: 10rem !important;
-}
-
-.btnActive {
-  background: var(--rainbow-linear-gradient);
-  color: var(--dark-grey) !important;
-}
+    @include mixins.phone {
+        font-size: 0.9rem;
+        display: flex;
+        padding: 20px 27px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        
+      }
+    }

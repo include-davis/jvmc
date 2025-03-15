@@ -35,10 +35,11 @@ export default function Footer() {
               <p>{data.mainInstagram}</p>
               <p>{data.studentInstagram}</p>
             </li>
+    
           </ul>
         </div>
         <ul className={styles.navLinks}>
-          {data.navLinks.map(({ label, href, isButton }, idx) => {
+          {data.navLinks.map(({ label, href, isButton}, idx) => {
             const isActive = pathname === href;
             return (
               <li key={idx}>
@@ -46,15 +47,14 @@ export default function Footer() {
                   href={href}
                   key={idx}
                   className={
-                    isButton
-                      ? `${"btn"} ${styles.btnSize} ${isActive && styles.btnActive}`
-                      : `${styles.navLink} ${isActive && styles.active}`
-                  }
+                    isButton ? 
+                    `${"btn"} ${isActive && styles.btnActive}` :
+                    `${styles.navLink} ${isActive && styles.active}`}
                 >
                   {label}
                 </Link>
               </li>
-            );
+            )
           })}
         </ul>
       </div>
