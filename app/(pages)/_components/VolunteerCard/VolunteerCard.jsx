@@ -2,27 +2,39 @@ import Image from "next/image";
 import styles from "./VolunteerCard.module.scss";
 
 export default function VolunteerCard({
-  title,
   direction,
+  title,
+  description,
   image,
-  altText,
+  imageAlt,
   icon,
-  mainText,
-  link,
+  iconAlt,
+  buttonText,
+  buttonLink,
 }) {
   return (
     <div className={`${styles.cardComponent} ${styles[direction]}`}>
       <div className={`${styles.card} ${styles[direction]}`}>
         <div className={styles.cardText}>
           <div className={styles.cardTitle}>
-            <div className={styles.icon}>{icon}</div>
+            <div className={styles.icon}>
+              <Image src={icon} alt={iconAlt} objectFit="cover" fill="true" />
+            </div>
             <h4>{title}</h4>
           </div>
-          <div className={styles.cardBody}>{mainText}</div>
-          {link}
+          {/* Below is LONG_TEXT */}
+          <div
+            className={styles.cardBody}
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+          {buttonLink && buttonText && (
+            <a href={buttonLink} target="_blank" className="btn">
+              {buttonText}
+            </a>
+          )}
         </div>
         <div className={styles.cardImage}>
-          <Image src={image} alt={altText} layout="fill" objectFit="cover" />
+          <Image src={image} alt={imageAlt} layout="fill" objectFit="cover" />
         </div>
       </div>
     </div>

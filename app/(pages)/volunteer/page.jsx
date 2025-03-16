@@ -2,9 +2,10 @@ import Link from "next/link";
 import data from "@/app/(pages)/_data/volunteer.json";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import text from "@/app/(pages)/_data/volunteer.json";
+
 import VolunteerCard from "../_components/VolunteerCard/VolunteerCard";
 import VolunteerGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
+import VolunteerCardsFallbackData from "@/app/(pages)/_data/volunteer.json";
 
 export async function getVolunteerGeneralInfo() {
   try {
@@ -20,8 +21,8 @@ export async function getVolunteerGeneralInfo() {
     const contents = data.body[0];
     const parsedData = {
       landingDescription: contents.volunteer_page_description,
-      landingImage: contents.volunteer_page_image[0],
-      landingImageAlt: contents.volunteer_page_image_alt_text,
+      landingImage: contents.volunteer_image[0],
+      landingImageAlt: contents.volunteer_image_alt_text,
     };
     // console.log(parsedData);
     return parsedData;
@@ -32,146 +33,63 @@ export async function getVolunteerGeneralInfo() {
     return {
       landingDescription:
         VolunteerGeneralInfoFallbackData.volunteer_page_description,
-      landingImage: VolunteerGeneralInfoFallbackData.volunteer_page_image,
+      landingImage: VolunteerGeneralInfoFallbackData.volunteer_image,
       landingImageAlt:
-        VolunteerGeneralInfoFallbackData.volunteer_page_image_alt_text,
+        VolunteerGeneralInfoFallbackData.volunteer_image_alt_text,
     };
   }
 }
 
-const cards = [
-  {
-    title: "Undergraduate Students at UC Davis",
-    direction: "right",
-    image: "/images/UGrad.jpg",
-    altText: "Undergraduate Students",
-    icon: (
-      <Image
-        src={"/undergrad-icon.svg"}
-        alt={"undergrad icon"}
-        objectFit="cover"
-        fill="true"
-      />
-    ),
-    mainText: (
-      <>
-        New cohorts are recruited during Winter Quarter annually. More
-        information regarding the application process as an undergraduate
-        student at UC Davis can be found on our instagram page,{" "}
-        <b>
-          <a href="https://instagram.com/jvmcstudents" target="_blank">
-            @jvmcstudents
-          </a>
-        </b>
-        .<br />
-        <br />
-        To qualify as a volunteer, undergraduates must:
-        <ul>
-          <li>Be an active UC Davis student</li>
-          <li>Be able to commit to 3 quarters of volunteer work</li>
-          <li>Be able to attend our weekly meetings</li>
-        </ul>
-        <br />
-        Please email{" "}
-        <b>
-          <a href="mailto:jvmcvolunteer@gmail.com">jvmcvolunteer@gmail.com</a>
-        </b>{" "}
-        with questions about recruitment and/or volunteering.{" "}
-        <b>
-          Fill out our interest form if you would like to keep up to date on our
-          recruitment cycle!
-        </b>
-      </>
-    ),
-    link: (
-      <a
-        href="https://forms.gle/5STumqF28u1dvUmTA"
-        target="_blank"
-        className="btn"
-      >
-        Volunteer Form
-      </a>
-    ),
-  },
-  {
-    title: "Physicians",
-    direction: "left",
-    image: "/images/Physicians.jpg",
-    altText: "Physicians",
-    icon: (
-      <Image
-        src={"/preceptor-icon.svg"}
-        alt={"preceptor icon"}
-        objectFit="cover"
-        fill="true"
-      />
-    ),
-    mainText: (
-      <>
-        To qualify as a physician volunteer with JVMC you must be covered by UC
-        Davis School of Medicine's malpractice insurance.
-        <br />
-        <br />
-        As a UC Davis Physician you are automatically covered!
-        <br />
-        <br />
-        <b>
-          If you are not a part of the UC Davis Health System and would still
-          love to volunteer, please contact us via email!
-        </b>
-      </>
-    ),
-    link: (
-      <>
-        <a href="mailto:jvmcvolunteer@gmail.com" className="btn">
-          Email Us
-        </a>
-      </>
-    ),
-  },
-  {
-    title: "Medical Students: MD, PA, & NP Students",
-    direction: "right",
-    image: "/images/MD_Student.jpg",
-    altText: "MD Students",
-    icon: (
-      <Image
-        src={"/medicine-chest-icon.svg"}
-        alt={"medicine chest icon"}
-        objectFit="cover"
-        fill="true"
-      />
-    ),
-    mainText: (
-      <>
-        If you are looking to volunteer with JVMC as a Medical Students, please
-        arrive at the clinic location at 12:30 PM. Clinic hours are from 1:00
-        PM-5:00 PM.
-        <br />
-        <br />
-        Please wear a scrub top and jeans or scrub bottoms instead of your white
-        coats to be respectful to our patients. Additionally, please bring your
-        student ID card and a stethoscope to the clinic.
-      </>
-    ),
-    link: (
-      <Link href="/contact-us" className="btn">
-        Contact Us
-      </Link>
-    ),
-  },
-];
+export async function getVolunteerCards() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/volunteer-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData = data.body.map((card) => {
+      let button_text, button_link;
+      if (card.button_text_and_link) {
+        [button_text, button_link] = card.button_text_and_link.split(",");
+      }
+      return {
+        title: card.title,
+        description: card.description,
+        image: card.image[0],
+        image_alt_text: card.image_alt_text,
+        icon: card.icon[0],
+        icon_alt_text: card.icon_alt_text,
+        button_text: card.button_text_and_link ? button_text : null,
+        button_link: card.button_text_and_link ? button_link : null,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch volunteer-cards: ${e.message}`);
+    return VolunteerCardsFallbackData;
+  }
+}
 
 export default async function Volunteer() {
   const generalData = await getVolunteerGeneralInfo();
+  const volunteerData = await getVolunteerCards();
+  console.log(volunteerData);
 
   return (
     <main className={styles.page}>
       {/* Top Section */}
       <div className={styles.top}>
         <div className={styles.header}>
-          <h1 className={styles.title}>{text.title}</h1>
-          <h4 className={styles.sub_title}>{text.sub_title}</h4>
+          <h1 className={styles.title}>Volunteer at JVMC</h1>
+          <h4 className={styles.sub_title}>
+            JVMC runs smoothly with the help of our volunteers caring for our
+            patients.
+          </h4>
         </div>
         <div className={styles.opening}>
           <Image
@@ -181,14 +99,11 @@ export default async function Volunteer() {
             height={370}
             alt={generalData.landingImageAlt}
           />
-          <div className={styles.intro}>
-            {/* Below is LONG_TEXT */}
-            <p
-              dangerouslySetInnerHTML={{
-                __html: generalData.landingDescription,
-              }}
-            />
-          </div>
+          {/* Below is LONG_TEXT */}
+          <div
+            className={styles.intro}
+            dangerouslySetInnerHTML={{ __html: generalData.landingDescription }}
+          />
         </div>
       </div>
 
@@ -197,25 +112,29 @@ export default async function Volunteer() {
         {/* VolunteerCard components */}
         <h2 className={styles.header}>Ready to Volunteer with Us?</h2>
         <div className={styles.volunteerCards}>
-          {cards.map((cards, idx) => {
-            return (
-              <VolunteerCard
-                key={idx}
-                title={cards.title}
-                direction={cards.direction}
-                image={cards.image}
-                altText={cards.altText}
-                icon={cards.icon}
-                mainText={cards.mainText}
-                link={cards.link}
-              ></VolunteerCard>
-            );
-          })}
+          {volunteerData.map((card, idx) => (
+            <VolunteerCard
+              key={idx}
+              direction={idx % 2 === 0 ? "right" : "left"}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+              imageAlt={card.image_alt_text}
+              icon={card.icon}
+              iconAlt={card.icon_alt_text}
+              buttonText={card.button_text}
+              buttonLink={card.button_link}
+            />
+          ))}
         </div>
 
         <div className={styles.gradient1Container}>
           <div className={styles.gradient1}>
-            <Image src={data.gradient1} alt={data.gradient1_alt} fill={true} />
+            <Image
+              src={"/images/volunteerGradient1.png"}
+              alt={"Gradient 1"}
+              fill={true}
+            />
           </div>
         </div>
       </div>
@@ -223,23 +142,26 @@ export default async function Volunteer() {
       {/* Bottom Section */}
       <div className={styles.bottom}>
         <div className={styles.learn_more}>
-          <h4>{text.bottom_title}</h4>
+          <h4>Interested in learning more about each role?</h4>
           <p>
-            {text.bottom_text["chunk_1"]}
-            <span className={styles.about_us}>
-              {text.bottom_text["chunk_2"]}
-            </span>
-            {text.bottom_text["chunk_3"]}
+            For more information on each volunteering role, please navigate to
+            the&nbsp;
+            <span className={styles.about_us}>About Us</span>&nbsp;page. There
+            you will find out more about what each role in the clinic entails.
           </p>
           <Link href="/about-us" className="btn">
-            {text.bottom_button}
+            About Us
           </Link>
         </div>
       </div>
 
       <div className={styles.gradient2Container}>
         <div className={styles.gradient2}>
-          <Image src={data.gradient2} alt={data.gradient2_alt} fill={true} />
+          <Image
+            src={"/images/volunteerGradient2.png"}
+            alt={"Gradient 2"}
+            fill={true}
+          />
         </div>
       </div>
     </main>

@@ -37,10 +37,11 @@
   box-shadow: var(--drop-shadow-mint);
 }
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 24px;
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
 }
 
 // Middle Cards
