@@ -115,7 +115,7 @@ export default function Volunteer() {
     <main className={styles.page}>
       {/* Top Section */}
       <div className={styles.top}>
-        <div className={styles.header}>
+        <div className={styles.heading}>
           <h1 className={styles.title}>{text.title}</h1>
           <h4 className={styles.sub_title}>{text.sub_title}</h4>
         </div>

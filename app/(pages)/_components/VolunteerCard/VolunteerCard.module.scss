@@ -4,26 +4,44 @@
   display: flex;
   width: 1040px;
   min-height: 350px;
+  @include mixins.tablet {
+    width: auto; //width according to screen width
+    align-items: center; //centers cards on the vertical
+  }
 }
 
 // Place Image on left or right
 .cardComponent.left {
   flex-direction: row-reverse;
+  @include mixins.tablet {
+    flex-direction: column-reverse;
+  }
 }
 
 .cardComponent.right {
   flex-direction: row;
+  @include mixins.tablet {
+    flex-direction: column-reverse;
+  }
 }
 
 .card {
   display: flex;
   position: relative;
   width: 91.5%;
+  
   min-height: 350px;
   background-color: var(--card-background);
   border-radius: var(--card-border-radius);
   box-shadow: var(--drop-shadow);
   padding: var(--card-padding);
+
+  @include mixins.tablet {
+    position: static;
+    align-items: center; //picture and text centered
+    justify-content: space-evenly;
+    min-height: auto;
+  }
 }
 
 .card.right {
@@ -32,6 +50,13 @@
   @include mixins.sm-desktop {
     padding-right: 242px;
   }
+  @include mixins.tablet { //it should be the children - cardText & cardImage in columns
+    flex-direction: column-reverse;
+    row-gap: 20px;
+    padding-right: var(--card-padding);
+  }
+
+
 }
 
 .card.left {
@@ -40,6 +65,12 @@
   @include mixins.sm-desktop {
     padding-left: 242px;
   }
+  @include mixins.tablet { //it should be the children - cardText & cardImage in columns
+    flex-direction: column-reverse;
+    row-gap: 20px;
+    padding-left: var(--card-padding);
+  }
+
 }
 
 .cardText {
@@ -49,6 +80,13 @@
   row-gap: 32px;
   min-height: 350px;
   max-width: 617px;
+  
+  @include mixins.tablet {
+    max-width: auto;
+    align-items: center; //text title and button centered in cardText
+    min-height: auto;
+  }
+  
   color: var(--dark-grey);
 }
 
@@ -74,6 +112,7 @@
   font-weight: 400;
   line-height: 150%;
   font-family: var(--font2);
+
 }
 
 .cardBody ul {
@@ -112,8 +151,8 @@
 .cardImage {
   border: solid var(--mint);
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%;   //moves TOP of image 50% down its container
+  transform: translateY(-50%);  //moves 50% of its OWN height UP  (effectively centered in container)
   border-radius: 50%;
   width: 350px;
   height: 350px;
@@ -124,12 +163,27 @@
     width: 270px;
     height: 270px;
   }
+  
+  @include mixins.tablet {
+    position: relative;
+    top: auto; //0% from the top of the ancestor - card
+    min-height: auto;
+    transform: translateY(-50%);  //-50% translation
+    bottom: -50%;
+  }
+
 }
 
 .cardComponent.left .cardImage {
   left: -88px;
+  @include mixins.tablet {//offset of image from whole cardComponent
+    left:auto;
+  }
 }
 
 .cardComponent.right .cardImage {
   right: -88px;
+  @include mixins.tablet {//offset of image from whole cardComponent
+    right:auto;
+  }
 }

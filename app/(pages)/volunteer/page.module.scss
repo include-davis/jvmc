@@ -15,10 +15,18 @@
   align-items: center;
   gap: 100px;
   width: 1040px;
+  @include mixins.tablet { 
+    row-gap: 20px;
+    width: auto;
+  }
 }
 
-.header {
+.heading {
   text-align: center;
+  @include mixins.tablet{
+    width: 100%;
+    padding-bottom: 30px;
+  }
 }
 
 .opening {
@@ -26,6 +34,13 @@
   flex-direction: row;
   align-items: center;
   column-gap: 40px;
+
+  @include mixins.tablet {
+    flex-direction: column;
+    width: 100%;
+    row-gap: 20px;
+    border: 2px red solid;
+  }
 }
 
 .landing_photo {
@@ -35,12 +50,22 @@
 
   /* mint-drop-shadow, not same as globals var */
   box-shadow: var(--drop-shadow-mint);
+  @include mixins.tablet { 
+    width: 100%;
+    max-width: 520px;
+    flex: 1;
+  }
 }
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 24px;
+  @include mixins.tablet { 
+    width: 100%;
+    max-width: 520px;
+    flex: 1;
+  }
 }
 
 // Middle Cards
@@ -52,6 +77,13 @@
   padding-top: var(--element-spacing);
   padding-bottom: 160px;
   width: 100%;
+  @include mixins.tablet { 
+    justify-content: center;
+  }
+}
+
+.header {
+  text-align: center;
 }
 
 .volunteerCards {
@@ -59,11 +91,17 @@
   flex-direction: column;
   gap: var(--vertical-card-gap);
   align-items: center;
+  @include mixins.tablet { 
+    row-gap: 150px;
+  }
 }
 
 .header {
   color: var(--dark-grey);
   text-align: center;
+  @include mixins.tablet { 
+    padding-bottom: 100px;  //header won't overlap with card images
+  }
 }
 
 .gradient1Container {
@@ -105,7 +143,6 @@
 
   @include mixins.phone { 
       width: 360px;
-      border: 5px solid red;
   }
 }
 
