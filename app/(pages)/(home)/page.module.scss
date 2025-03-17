@@ -1,6 +1,4 @@
 @use "@/app/(pages)/_globals/mixins.scss";
-@import "app/(pages)/(home)/home_mixins.module.scss";
-
 // Upper Home Page section
 .body {
   display: flex;
@@ -42,6 +40,21 @@
 .contactButton {
   display: flex;
   justify-content: center;
+
+  @include mixins.tablet{
+    width: 8rem;
+    height: 1rem;
+  }
+
+  @include mixins.phone{
+    width: 8rem;
+    height: 1rem;
+  }
+
+  @include mixins.sm-phone{
+    width: 8rem;
+    height: 1rem;
+  }
 }
 
 .dots1 {
@@ -79,15 +92,50 @@
 .titleAndSubtitleBox h1 {
   color: var(--emerald);
   font-size: 56px;
+
+    @include mixins.tablet{
+      font-size: 32px; 
+      gap: 16px;
+      width: 75%; //50
+    }
+  
+    @include mixins.phone{
+      font-size: 32px; 
+      gap: 16px;
+      width: 75%; //50
+    }
+
+    @include mixins.sm-phone{
+      font-size: 32px; 
+      gap: 16px;
+      width: 75%; //50
+    }
+
+
 }
 
 .titleAndSubtitleBox p {
   text-align: center;
   width: calc(8px * 71);
+
+  @include mixins.tablet{
+    font-size: 16px; 
+    width: 70%;  // 70%
+  }
+
+  @include mixins.phone{
+    font-size: 16px; 
+    width: 70%;  // 70%
+  }
+
+  @include mixins.sm-phone{
+    font-size: 16px; 
+    width: 70%;  // 70%
+  }
+
 }
 
 .cardSectionBox {
-  border: 8px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,6 +165,7 @@
 .cardSectionHeader Image {
   box-shadow: var(--drop-shadow-small);
   background-color: transparent;
+
 }
 
 .cardSectionHeader h3 {
@@ -145,28 +194,86 @@
 
   gap: 32px;
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+
+  @include mixins.tablet{
+    flex-direction: column;
+    width: 80%;
+  }
+
+  @include mixins.phone{
+    flex-direction: column;
+    width: 75%;
+  }
+
+  @include mixins.sm-phone{
+    flex-direction: column;
+    width: 80%;
+  }
 }
 
 .card_ImageBox {
-  border: 8px solid orange;
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mixins.tablet{
+    width: 100%;
+  }
+
+  @include mixins.phone{
+    width: 100%; 
+  }
+
+  @include mixins.sm-phone{
+    width: 100%;
+  }
 }
 
 .image_1 {
   border-radius: var(--card-border-radius);
   box-shadow: var(--drop-shadow-small);
+
+  @include mixins.tablet{
+    width: 90%; // 700
+    height: 212px; // 424
+    object-fit: cover;
+  }
+
+  @include mixins.phone{
+    height: 320px;
+  }
+
+  @include mixins.sm-phone{
+    width: 95%; // 700
+    height: 800px; // 424
+    object-fit: cover;
+  }
 }
 
 .image_2 {
   border-radius: var(--card-border-radius);
   box-shadow: var(--drop-shadow-small);
+
+  @include mixins.tablet{
+    width: 90%; // 700
+    height: 212px; // 424
+    object-fit: cover;
+  }
+
+  @include mixins.phone{
+    height: 320px;
+  }
+
+  @include mixins.sm-phone{
+    width: 95%; // 700
+    height: 800px; // 424
+    object-fit: cover;
+  }
 }
 
 .card_TextBox {
-  border: 8px solid orange;
   padding-top: 16px;
 }
 
@@ -203,6 +310,20 @@
   list-style-type: none;
   padding-left: 24px;
   gap: 24px;
+
+  @include mixins.tablet{
+    width: 100%;
+  }
+
+  @include mixins.phone{
+    width: 100%; 
+    font-size: 22px; //22
+    line-height: 1.5; // 1.5
+  }
+
+  @include mixins.sm-phone{
+    width: 100%;
+  }
 }
 
 .description_2 {
