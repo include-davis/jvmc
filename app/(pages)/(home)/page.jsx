@@ -11,7 +11,8 @@ import HomeCardsFallbackData from "@/app/(pages)/_data/home-cards.json";
 
 export async function getHomeGeneralInfo() {
   return {
-    tagline: HomeGeneralInfoFallbackData.tagline,
+    tagline_mobile: HomeGeneralInfoFallbackData.tagline_mobile,
+    tagline_desktop: HomeGeneralInfoFallbackData.tagline_desktop,
     address: HomeGeneralInfoFallbackData.address,
     hours: HomeGeneralInfoFallbackData.hours,
   };
@@ -37,15 +38,19 @@ export default async function Home() {
             />
           </div>
         </div>
-        <Image
-          src={"/images/jvmc-teddy.png"}
-          alt={"JVMC Teddy Bear"}
-          width={166}
-          height={123}
-        />
+        <div className={styles.teddyImage}>
+          <Image
+            src={"/images/jvmc-teddy.png"}
+            alt={"JVMC Teddy Bear"}
+            style={{ objectFit: "cover" }}
+            fill={true}
+          />
+        </div>
+
         <div className={styles.titleAndSubtitleBox}>
           <h1> Welcome to Joan Viteri Memorial Clinic </h1>
-          <p> {generalData.tagline} </p>
+          <p className={styles.taglineDesktop}>{generalData.tagline_desktop}</p>
+          <p className={styles.taglineMobile}> {generalData.tagline_mobile} </p>
         </div>
 
         <div className={styles.contactButton}>
@@ -110,25 +115,30 @@ export default async function Home() {
           />
         </div>
         <div className={styles.contactInfoContainer}>
-          <div className={styles.contactInfo} style={{ gap: "20px" }}>
-            <FaHome color="var(--emerald)" size={40} />
-            <div className={styles.contactInfoText}>
-              <h3>Come Visit Us!</h3>
-              <p>{generalData.address}</p>
+          <div className={styles.contactInfoBox}>
+            <div className={styles.contactInfo} style={{ gap: "20px" }}>
+              <FaHome color="var(--emerald)" size={40} />
+              <div className={styles.contactInfoText}>
+                <h3>Come Visit Us!</h3>
+                <p>{generalData.address}</p>
+              </div>
+            </div>
+            <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
+              <FaClock color="var(--emerald)" size={32} />
+              <div className={styles.contactInfoText}>
+                <h3>Opening Hours</h3>
+                <p>{generalData.hours}</p>
+              </div>
+            </div>
+            <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
+              <FaEnvelope color="var(--emerald)" size={32} />
+              <h3>Contact Us</h3>
             </div>
           </div>
-          <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
-            <FaClock color="var(--emerald)" size={32} />
-            <div className={styles.contactInfoText}>
-              <h3>Opening Hours</h3>
-              <p>{generalData.hours}</p>
-            </div>
-          </div>
-          <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
-            <FaEnvelope color="var(--emerald)" size={32} />
-            <h3>Contact Us</h3>
-          </div>
-          <Link href={data.contactCard.button.link} className={"btn"}>
+          <Link
+            href={data.contactCard.button.link}
+            className={`btn ${styles.contactInfoButton}`}
+          >
             Ask Us Questions
           </Link>
         </div>
