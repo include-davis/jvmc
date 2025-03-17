@@ -24,19 +24,5 @@
       "time": "1st and 3rd Friday of each month, 6:00pm - 9:00pm.",
       "info": "Appointments are made on the GHC website."
     }
-  },
-
-  "contactCard": {
-    "visit": "Come Visit Us!",
-    "hours": "Opening Hours",
-    "contact": "Contact Us",
-    "button": {
-      "text": "Ask Us Questions",
-      "link": "/contact-us"
-    },
-    "img": {
-      "src": "/home-group.jpg",
-      "alt": "Group of medical students"
-    }
   }
 }

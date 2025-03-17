@@ -159,31 +159,31 @@ export default async function Home() {
           <div className={styles.contactInfo} style={{ gap: "20px" }}>
             <FaHome color="var(--emerald)" size={40} />
             <div className={styles.contactInfoText}>
-              <h3>{data.contactCard.visit}</h3>
+              <h3>Come Visit Us!</h3>
               <p>{generalData.address}</p>
             </div>
           </div>
           <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
             <FaClock color="var(--emerald)" size={32} />
             <div className={styles.contactInfoText}>
-              <h3>{data.contactCard.hours}</h3>
+              <h3>Opening Hours</h3>
               <p>{generalData.hours}</p>
             </div>
           </div>
           <div className={styles.contactInfo} style={{ paddingLeft: "4px" }}>
             <FaEnvelope color="var(--emerald)" size={32} />
-            <h3>{data.contactCard.contact}</h3>
+            <h3>Contact Us</h3>
           </div>
-          <Link href={data.contactCard.button.link} className={"btn"}>
-            {data.contactCard.button.text}
+          <Link href={"/contact-us"} className={"btn"}>
+            Ask Us Questions
           </Link>
         </div>
         <div className={styles.contactImageContainer}>
           <div className={styles.gradientCircle}></div>
           <div className={styles.contactImage}>
             <Image
-              src={data.contactCard.img.src}
-              alt={data.contactCard.img.alt}
+              src={"/home-group.jpg"}
+              alt={"Group of medical students"}
               style={{ objectFit: "cover" }}
               fill={true}
             />
