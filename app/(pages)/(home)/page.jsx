@@ -23,12 +23,14 @@ export default function Home() {
               />
             </div>
           </div>
+          <div className={styles.teddyImage}>
           <Image
             src={data.teddy}
             alt={data.teddyAlt}
             width={166}
             height={123}
           />
+          </div>
           <div className={styles.titleAndSubtitleBox}>
             <h1> {data.homePageTitle} </h1>
             <p> {data.homePageSubtitle} </p>

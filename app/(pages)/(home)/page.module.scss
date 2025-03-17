@@ -87,6 +87,16 @@
   align-items: center;
   flex-direction: column;
   gap: 12px;
+
+  @include mixins.tablet{
+
+  }
+  @include mixins.phone{
+    width: 60%; // 60
+  }
+  @include mixins.phone{
+    
+  }
 }
 
 .titleAndSubtitleBox h1 {
@@ -100,7 +110,7 @@
     }
   
     @include mixins.phone{
-      font-size: 32px; 
+      font-size: 48px; //32
       gap: 16px;
       width: 75%; //50
     }
@@ -219,7 +229,7 @@
   justify-content: center;
 
   @include mixins.tablet{
-    width: 100%;
+  
   }
 
   @include mixins.phone{
@@ -227,7 +237,7 @@
   }
 
   @include mixins.sm-phone{
-    width: 100%;
+   
   }
 }
 
@@ -236,9 +246,7 @@
   box-shadow: var(--drop-shadow-small);
 
   @include mixins.tablet{
-    width: 90%; // 700
-    height: 212px; // 424
-    object-fit: cover;
+   
   }
 
   @include mixins.phone{
@@ -246,9 +254,7 @@
   }
 
   @include mixins.sm-phone{
-    width: 95%; // 700
-    height: 800px; // 424
-    object-fit: cover;
+  
   }
 }
 
@@ -257,9 +263,7 @@
   box-shadow: var(--drop-shadow-small);
 
   @include mixins.tablet{
-    width: 90%; // 700
-    height: 212px; // 424
-    object-fit: cover;
+  
   }
 
   @include mixins.phone{
@@ -267,9 +271,7 @@
   }
 
   @include mixins.sm-phone{
-    width: 95%; // 700
-    height: 800px; // 424
-    object-fit: cover;
+
   }
 }
 
@@ -286,6 +288,18 @@
 
   font-family: var(--font2);
   font-weight: 350;
+
+  @include mixins.tablet{
+    
+  }
+
+  @include mixins.phone{
+    font-size: 20px;
+  }
+
+  @include mixins.sm-phone{
+   
+  }
 }
 
 .card_TitleAndLogo {
@@ -334,8 +348,33 @@
   padding-left: 16px;
   list-style-position: inside;
 
+  @include mixins.tablet{
+  
+  }
+
+  @include mixins.phone{
+    font-size: 20px;
+    gap: 16px;
+  }
+
+  @include mixins.sm-phone{
+   
+  }
+
   li {
     padding-left: 16px;
+
+    @include mixins.tablet{
+    
+    }
+  
+    @include mixins.phone{
+      font-size: 20px;
+    }
+  
+    @include mixins.sm-phone{
+     
+    }
   }
 }
 
