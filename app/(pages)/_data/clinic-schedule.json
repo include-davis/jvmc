@@ -1,6 +1,6 @@
 [
   {
-    "color": "",
+    "color": "#abdccf",
     "title": "JVMC Clinic",
     "paragraph": "JVMC Clinic provides free primary health care services to individuals using intravenous drugs, work in the sex trade, or identify as transgender.",
     "time": "Saturdays, 1:00 pm - 4:00 pm.",
@@ -8,7 +8,7 @@
     "action": "Walk-Ins only."
   },
   {
-    "color": "",
+    "color": "#094935",
     "title": "Reproductive Health Clinic",
     "paragraph": "The Reproductive Health Clinic provides sexual and reproductive clinical care such as IUDs, STI testing/treatment, and menstrual products.",
     "time": "Last Saturday of every month, 1:00 pm - 4:00 pm.",
@@ -16,7 +16,7 @@
     "action": "Call (916)-538-9538"
   },
   {
-    "color": "",
+    "color": "#01887a",
     "title": "Gender Health Center",
     "paragraph": "GHC offers free or low-cost health, legal, and support services for trans and gender-expansive communities.",
     "time": "1st and 3rd Friday of each month, 6:00pm - 9:00pm.",

@@ -3,7 +3,6 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import ClinicCardFallbackData from "../_data/clinic-schedule.json";
 import ClinicSchedulesCard from "../_components/ClinicSchedulesCard/ClinicSchedulesCard";
-import CalendarKeyColorFallbackData from "../_data/calendar-key-color.json";
 
 async function getClinicSchedulesCards() {
   try {
@@ -72,7 +71,7 @@ export default async function ClinicSchedule() {
           </div>
           <div className={styles.key}>
             <h4>Calendar Key</h4>
-            {CalendarKeyColorFallbackData.map((clinic, key) => (
+            {data.map((clinic, key) => (
               <div key={key} className={styles.keyElem}>
                 <div
                   className={styles.circ}
