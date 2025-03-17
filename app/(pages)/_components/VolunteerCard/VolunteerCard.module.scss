@@ -70,10 +70,11 @@
 }
 
 .cardBody {
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 150%;
-  font-family: var(--font2);
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
 }
 
 .cardBody ul {

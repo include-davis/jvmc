@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Unbiased Healthcare",
+        "description": "We provide basic medical care and health education in a non-judgmental, accessible way.\n\n Offering free primary health care services to the uninsured population in the Oak Park area of Sacramento, CA.\n\n Our mission is fulfilled through the service of UC Davis undergraduates, medical, PA, NP students and the generosity of physicians.",
+        "image": "/home-card-img1.png",
+        "image_alt_text": "Image of JVMC Workers handling documents",
+        "icon": "/akar-icons_health.png",
+        "icon_alt_text": "Health Icon"
+    },
+    {
+        "title": "The People We Serve",
+        "description": "At JVMC, we welcome everyone, regardless of their life history. No matter who you are, you are welcome.\n\n We are known in the community for caring about forgotten populations, in particular:\n Individuals who use intravenous drugs\n Sex workers\n People who identify as transgender\n Families",
+        "image": "/home-card-img2.jpg",
+        "image_alt_text": "Image of JVMC Workers grouped together smiling",
+        "icon": "/bi_people.png",
+        "icon_alt_text": "Health Workers Icon"
+    }
+]

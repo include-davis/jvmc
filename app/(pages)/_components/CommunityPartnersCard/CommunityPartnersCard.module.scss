@@ -1,6 +1,15 @@
-.partnerContainer {
+.cardContainer {
   display: flex;
   align-items: center;
+  background-color: var(--white);
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 434px;
+  height: 452px;
+  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
 }
 
 .partnersCard {
@@ -16,19 +25,6 @@
   gap: 36px;
 }
 
-.imageWrapper {
-  position: relative;
-  overflow: hidden;
-  width: 434px;
-  height: 452px;
-  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-}
-
-.cardContainer {
-  display: flex;
-  align-items: center;
-}
-
 .reverse {
   flex-direction: row-reverse; /* Image on the left */
 }
@@ -41,6 +37,11 @@
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
 }
 
+.partnerContainer {
+  display: flex;
+  align-items: center;
+}
+
 .contactInfo {
   display: flex;
   flex-direction: column;
@@ -50,6 +51,13 @@
 .locationText {
   display: flex;
   align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 13px;
+  color: var(--emerald);
 }
 
 .dateText {
