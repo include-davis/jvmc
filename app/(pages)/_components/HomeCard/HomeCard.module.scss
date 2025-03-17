@@ -1,0 +1,59 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
+.card {
+  border: 2px solid var(--mint);
+  box-shadow: var(--drop-shadow-mint);
+  border-radius: var(--card-border-radius);
+  background-color: var(--white);
+  padding: var(--card-padding);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 1040px; // Makes sure all cards are same width
+
+  position: relative;
+  z-index: 2;
+}
+
+.card.left {
+  flex-direction: row;
+}
+
+.card.right {
+  flex-direction: row-reverse;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+
+  min-width: 320px;
+  min-height: 424px;
+  border-radius: var(--card-border-radius);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header h3 {
+  color: var(--emerald);
+}
+
+.description {
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
+}

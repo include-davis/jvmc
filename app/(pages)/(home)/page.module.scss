@@ -1,4 +1,5 @@
 @use "@/app/(pages)/_globals/mixins.scss";
+
 // Upper Home Page section
 .body {
   display: flex;
@@ -40,21 +41,6 @@
 .contactButton {
   display: flex;
   justify-content: center;
-
-  @include mixins.tablet{
-    width: 8rem;
-    height: 1rem;
-  }
-
-  @include mixins.phone{
-    width: 8rem;
-    height: 1rem;
-  }
-
-  @include mixins.sm-phone{
-    width: 8rem;
-    height: 1rem;
-  }
 }
 
 .dots1 {
@@ -87,62 +73,16 @@
   align-items: center;
   flex-direction: column;
   gap: 12px;
-
-  @include mixins.tablet{
-
-  }
-  @include mixins.phone{
-    width: 60%; // 60
-  }
-  @include mixins.phone{
-    
-  }
 }
 
 .titleAndSubtitleBox h1 {
   color: var(--emerald);
   font-size: 56px;
-
-    @include mixins.tablet{
-      font-size: 32px; 
-      gap: 16px;
-      width: 75%; //50
-    }
-  
-    @include mixins.phone{
-      font-size: 48px; //32
-      gap: 16px;
-      width: 75%; //50
-    }
-
-    @include mixins.sm-phone{
-      font-size: 32px; 
-      gap: 16px;
-      width: 75%; //50
-    }
-
-
 }
 
 .titleAndSubtitleBox p {
   text-align: center;
-  width: calc(8px * 71);
-
-  @include mixins.tablet{
-    font-size: 16px; 
-    width: 70%;  // 70%
-  }
-
-  @include mixins.phone{
-    font-size: 16px; 
-    width: 70%;  // 70%
-  }
-
-  @include mixins.sm-phone{
-    font-size: 16px; 
-    width: 70%;  // 70%
-  }
-
+  width: calc(8px * 94);
 }
 
 .cardSectionBox {
@@ -175,7 +115,6 @@
 .cardSectionHeader Image {
   box-shadow: var(--drop-shadow-small);
   background-color: transparent;
-
 }
 
 .cardSectionHeader h3 {
@@ -183,199 +122,6 @@
   color: var(--emerald);
   z-index: 1;
   width: 50%;
-}
-
-.card {
-  border: 2px solid var(--mint);
-  box-shadow: var(--drop-shadow-mint);
-  border-radius: var(--card-border-radius);
-  background-color: var(--white);
-  padding: var(--card-padding);
-  gap: var(--vertical-card-gap);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 1040px; // Makes sure all cards are same width
-
-  position: relative;
-  z-index: 2;
-
-  gap: 32px;
-  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-
-
-  @include mixins.tablet{
-    flex-direction: column;
-    width: 80%;
-  }
-
-  @include mixins.phone{
-    flex-direction: column;
-    width: 75%;
-  }
-
-  @include mixins.sm-phone{
-    flex-direction: column;
-    width: 80%;
-  }
-}
-
-.card_ImageBox {
-  width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include mixins.tablet{
-  
-  }
-
-  @include mixins.phone{
-    width: 100%; 
-  }
-
-  @include mixins.sm-phone{
-   
-  }
-}
-
-.image_1 {
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--drop-shadow-small);
-
-  @include mixins.tablet{
-   
-  }
-
-  @include mixins.phone{
-    height: 320px;
-  }
-
-  @include mixins.sm-phone{
-  
-  }
-}
-
-.image_2 {
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--drop-shadow-small);
-
-  @include mixins.tablet{
-  
-  }
-
-  @include mixins.phone{
-    height: 320px;
-  }
-
-  @include mixins.sm-phone{
-
-  }
-}
-
-.card_TextBox {
-  padding-top: 16px;
-}
-
-.card_TextBox p {
-  // part of the second card
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-  padding-bottom: 32px;
-
-  font-family: var(--font2);
-  font-weight: 350;
-
-  @include mixins.tablet{
-    
-  }
-
-  @include mixins.phone{
-    font-size: 20px;
-  }
-
-  @include mixins.sm-phone{
-   
-  }
-}
-
-.card_TitleAndLogo {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding-left: 16px;
-  padding-bottom: 32px;
-}
-
-.card_TitleAndLogo h3 {
-  font-size: 32px;
-  padding-left: 16px;
-  color: var(--emerald);
-}
-
-.description_1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  list-style-type: none;
-  padding-left: 24px;
-  gap: 24px;
-
-  @include mixins.tablet{
-    width: 100%;
-  }
-
-  @include mixins.phone{
-    width: 100%; 
-    font-size: 22px; //22
-    line-height: 1.5; // 1.5
-  }
-
-  @include mixins.sm-phone{
-    width: 100%;
-  }
-}
-
-.description_2 {
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  flex-direction: column;
-  padding-left: 16px;
-  list-style-position: inside;
-
-  @include mixins.tablet{
-  
-  }
-
-  @include mixins.phone{
-    font-size: 20px;
-    gap: 16px;
-  }
-
-  @include mixins.sm-phone{
-   
-  }
-
-  li {
-    padding-left: 16px;
-
-    @include mixins.tablet{
-    
-    }
-  
-    @include mixins.phone{
-      font-size: 20px;
-    }
-  
-    @include mixins.sm-phone{
-     
-    }
-  }
 }
 
 // Contact Card Section with Circle Gradient
