@@ -30,6 +30,7 @@ export default function Header() {
                 key={href}
                 href={href}
                 className={styles.mobileHeaderLinks}
+                onClick={() => setMenuOpen(!menuOpen)}
               >
                 {label}
               </Link>
