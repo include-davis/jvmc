@@ -47,10 +47,10 @@ export default function Header() {
               key={href}
               href={href}
               className={
-                isButton 
-                  ? "btn"  
-                  : `${styles.headerItems} ${isActive ? styles.headerItemActive : ""}`  
-              }
+                  isButton
+                    ? `${"btn"} ${styles.btnSize} ${isActive && styles.btnActive}`
+                    : `${styles.headerItems} ${isActive && styles.active}`
+                }
             >
               {label}
             </Link>

@@ -11,6 +11,7 @@
   box-shadow: var(--drop-shadow-header);
   gap: 50px;
   height: 142px;
+  z-index: 100;
 
   @include mixins.sm-desktop {
     padding: 24px 80px;
@@ -127,4 +128,13 @@
   .header {
     justify-content: space-between; /* Keep space between the logo and the mobile menu icon */
   }
+}
+
+.btnSize {
+  width: 10rem !important;
+}
+
+.btnActive {
+  background: var(--rainbow-linear-gradient);
+  color: var(--dark-grey) !important;
 }

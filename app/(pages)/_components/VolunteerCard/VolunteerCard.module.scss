@@ -1,0 +1,135 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
+.cardComponent {
+  display: flex;
+  width: 1040px;
+  min-height: 350px;
+}
+
+// Place Image on left or right
+.cardComponent.left {
+  flex-direction: row-reverse;
+}
+
+.cardComponent.right {
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  width: 91.5%;
+  min-height: 350px;
+  background-color: var(--card-background);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: var(--card-padding);
+}
+
+.card.right {
+  padding-right: 322px;
+
+  @include mixins.sm-desktop {
+    padding-right: 242px;
+  }
+}
+
+.card.left {
+  padding-left: 322px;
+
+  @include mixins.sm-desktop {
+    padding-left: 242px;
+  }
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 32px;
+  min-height: 350px;
+  max-width: 617px;
+  color: var(--dark-grey);
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  color: var(--emerald);
+}
+
+.icon {
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: var(--light-blue);
+}
+
+.cardBody {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: var(--font2);
+}
+
+.cardBody ul {
+  padding-left: 30px; /* Indentation for bullet points */
+}
+
+.cardBody a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.cardBody b {
+  font-weight: var(--bold);
+}
+
+.cardLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--teal);
+  width: 181px;
+  height: 48px;
+  border-radius: 100px;
+  color: white;
+}
+
+.cardLink b {
+  font-weight: var(--bold);
+}
+
+.cardLink a {
+  text-decoration: none;
+  color: white;
+}
+
+.cardImage {
+  border: solid var(--mint);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  box-shadow: var(--drop-shadow-mint);
+
+  @include mixins.sm-desktop {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+.cardComponent.left .cardImage {
+  left: -88px;
+}
+
+.cardComponent.right .cardImage {
+  right: -88px;
+}
