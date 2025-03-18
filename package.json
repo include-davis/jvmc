@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "lucide-react": "^0.483.0",
     "i": "^0.3.7",
     "next": "^15.2.1",
     "nodemailer": "^6.10.0",
