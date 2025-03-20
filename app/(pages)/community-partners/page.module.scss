@@ -1,5 +1,13 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+// Define the phone mixin for responsive design
+@mixin phone {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+// Modified page styles with responsive adjustments
 .page {
   display: flex;
   flex-direction: column;
@@ -7,8 +15,12 @@
   gap: var(--element-spacing);
   padding: var(--nav-to-element-spacing) 0;
   position: relative;
-  // width: 1040px;
   overflow: hidden;
+  
+  @include phone {
+    padding: calc(var(--nav-to-element-spacing) / 2) 0;
+    gap: calc(var(--element-spacing) / 2);
+  }
 }
 
 .partnersSection {
@@ -16,10 +28,25 @@
   flex-direction: column;
   align-items: center;
   gap: var(--vertical-card-gap);
+  
+  @include phone {
+    gap: calc(var(--vertical-card-gap) / 2);
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .header {
   text-align: center;
+  
+  @include phone {
+    h1 {
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+  }
 }
 
 .partnersGrid {
@@ -27,11 +54,20 @@
   flex-direction: column;
   align-items: center;
   gap: var(--vertical-card-gap);
+  
+  @include phone {
+    gap: 25px;
+    width: 100%;
+  }
 }
 
 .partnerContainer {
   display: flex;
   align-items: center;
+  
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .partnersCard {
@@ -45,11 +81,24 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
+  
+  @include phone {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+    gap: 20px;
+  }
 }
 
 .cardContainer {
   display: flex;
   align-items: center;
+  
+  @include phone {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .imageWrapper {
@@ -58,33 +107,45 @@
   width: 434px;
   height: 452px;
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+  
+  @include phone {
+    width: 100%;
+    height: 250px;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  }
 }
 
 .reverse {
-  flex-direction: row-reverse; /* Image on the left */
+  flex-direction: row-reverse;
+  
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .reverse .imageWrapper {
   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+  
+  @include phone {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  }
 }
 
 .reverse .partnersCard {
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+  
+  @include phone {
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+  }
 }
 
-.locationText {
+.locationText, .dateText, .appointmentText {
   display: flex;
   align-items: center;
-}
-
-.dateText {
-  display: flex;
-  align-items: center;
-}
-
-.appointmentText {
-  display: flex;
-  align-items: center;
+  
+  @include phone {
+    font-size: 14px;
+  }
 }
 
 .icon {
@@ -92,23 +153,49 @@
   height: 20px;
   margin-right: 13px;
   color: var(--emerald);
+  
+  @include phone {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
 }
 
 .contactInfo {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  
+  @include phone {
+    gap: 8px;
+  }
 }
 
 .carouselSection {
   align-self: flex-start;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
   width: 100%;
+  
+  @include phone {
+    gap: 30px;
+    padding: 0 15px;
+  }
+}
+
+.community_partners_title {
+  @include phone {
+    font-size: 22px;
+  }
+}
+
+.community_partners_subtitle {
+  @include phone {
+    font-size: 16px;
+  }
 }
 
 .bottomGradientContainer {
@@ -118,12 +205,38 @@
   height: 1524px;
   z-index: -1;
   overflow: hidden;
+  
+  @include phone {
+    height: 760px;
+  }
 }
 
 .bottomGradient {
-  pointer-events: none; /* Prevents interaction issues */
+  pointer-events: none;
   position: relative;
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+.partnersName {
+  @include phone {
+    font-size: 18px;
+  }
+}
+
+.partnersDescription {
+  @include phone {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+a.btn {
+  @include phone {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
 }
