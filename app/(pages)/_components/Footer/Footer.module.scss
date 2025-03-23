@@ -11,32 +11,16 @@ $logo-width: calc(8px * 20);
 }
 
 .topSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 48px;
-  padding: 40px 96px;  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr minmax(54px, auto);
+  padding: 40px 96px;
+  row-gap: 24px;
 
-  @include mixins.phone {
-    flex-direction: column;
-    padding: 20px;
-    gap: 24px;
-  }
-}
-
-.logoSection {
-  flex: 1 1 30%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px;
-
-
-  @include mixins.phone {
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
+  @include mixins.tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr) auto;
+    row-gap: 20px;
   }
 }
 
@@ -46,12 +30,13 @@ $logo-width: calc(8px * 20);
   height: $logo-height;
   width: $logo-width;
 
+  grid-column: 1;
+  grid-row: 1;
 
   @include mixins.phone {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: calc(8px * 15);
-    width: calc(8px * 20);
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
   }
 }
 
@@ -61,17 +46,14 @@ $logo-width: calc(8px * 20);
   display: flex;
   align-items: center;
   gap: 24px;
-  flex-direction: column;
 
-  @include mixins.phone {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-row-end: end;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 24px;
+  grid-column: 1;
+  grid-row: 2;
+
+  @include mixins.tablet {
+    grid-column: 1;
+    grid-row: 6 / 7;
+    justify-self: center;
   }
 }
 
@@ -90,16 +72,6 @@ $logo-width: calc(8px * 20);
 .boxText {
   display: flex;
   flex-direction: column;
-
-}
-
-.at1 {
-  display: flex;
-  margin-bottom: 8px;
-}
-
-.at2 {
-  display: flex;
 }
 
 .navLinks {
@@ -107,21 +79,23 @@ $logo-width: calc(8px * 20);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  grid-column: 2 / 5;
+  grid-row: 1 / 3;
   gap: 24px;
-  background-color: var(--white);
-  width: 75%;
-  flex-direction: row;
-  flex-wrap: wrap;
 
-  @include mixins.phone {
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-      width: 100%;
-    }
+  @include mixins.sm-desktop {
+    gap: 32px;
   }
+
+  @include mixins.tablet {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 50px;
+
+    grid-column: 1;
+    grid-row: 2 / 6;
+  }
+}
 
 .navLink {
   text-decoration: none;
@@ -134,15 +108,11 @@ $logo-width: calc(8px * 20);
   &:hover {
     font-weight: var(--bold);
   }
-  
-  @include mixins.sm-desktop{
+
+  @include mixins.sm-desktop {
     @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
   }
-
-  @include mixins.phone {
-      font-size: 0.9rem;
-    }
-  }
+}
 
 .navLink.active {
   font-weight: var(--bold);
@@ -150,23 +120,19 @@ $logo-width: calc(8px * 20);
 }
 
 .bottomSection {
-    padding: 16px 96px;
-    display: flex;
-    margin: 0;
-    font-size: 1.0rem;
-    background-color: var(--teal);
-    color: var(--offwhite);
-    font-family: var(--font2);
-    font-weight: var(--light);
+  padding: 16px 96px;
+  display: flex;
+  background-color: var(--teal);
+  color: var(--offwhite);
+  font-family: var(--font2);
+  font-weight: var(--light);
+}
 
-    @include mixins.phone {
-        font-size: 0.9rem;
-        display: flex;
-        padding: 20px 27px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        align-self: stretch;
-        
-      }
-    }
+.btnSize {
+  width: 10rem !important;
+}
+
+.btnActive {
+  background: var(--rainbow-linear-gradient);
+  color: var(--dark-grey) !important;
+}

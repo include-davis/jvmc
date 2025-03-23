@@ -12,34 +12,29 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.topSection}>
-        <div className={styles.logoSection}>
-          <div className={styles.logo}>
-            <Image
-              src={data.img}
-              alt={data.imgAlt}
-              style={{ objectFit: "fill" }}
-              fill={true}
-            />
-          </div>
-          <ul className={styles.socialLinks}>
-            <li className={styles.boxIcon}>
-              <a
-                href={data.socialUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className={styles.icon} />
-              </a>
-            </li>
-            <li className={styles.boxText}>
-              <p>{data.mainInstagram}</p>
-              <p>{data.studentInstagram}</p>
-            </li>
-    
-          </ul>
+        {/* <div className={styles.logoSection}> */}
+        <div className={styles.logo}>
+          <Image
+            src={data.img}
+            alt={data.imgAlt}
+            style={{ objectFit: "fill" }}
+            fill={true}
+          />
         </div>
+        <ul className={styles.socialLinks}>
+          <li className={styles.boxIcon}>
+            <a href={data.socialUrl} target="_blank" rel="noopener noreferrer">
+              <FaInstagram className={styles.icon} />
+            </a>
+          </li>
+          <li className={styles.boxText}>
+            <p>{data.mainInstagram}</p>
+            <p>{data.studentInstagram}</p>
+          </li>
+        </ul>
+        {/* </div> */}
         <ul className={styles.navLinks}>
-          {data.navLinks.map(({ label, href, isButton}, idx) => {
+          {data.navLinks.map(({ label, href, isButton }, idx) => {
             const isActive = pathname === href;
             return (
               <li key={idx}>
@@ -47,14 +42,15 @@ export default function Footer() {
                   href={href}
                   key={idx}
                   className={
-                    isButton ? 
-                    `${"btn"} ${isActive && styles.btnActive}` :
-                    `${styles.navLink} ${isActive && styles.active}`}
+                    isButton
+                      ? `${"btn"} ${isActive && styles.btnActive}`
+                      : `${styles.navLink} ${isActive && styles.active}`
+                  }
                 >
                   {label}
                 </Link>
               </li>
-            )
+            );
           })}
         </ul>
       </div>
