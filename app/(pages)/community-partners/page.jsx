@@ -16,7 +16,7 @@ async function getCards() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const parsedData = data.body.map((card) => {
       const [button_text, button_link] = card.button_text_and_link?.split(",");
       return {
@@ -33,7 +33,7 @@ async function getCards() {
         imageAlt: card.image_alt_text,
       };
     });
-    console.log(parsedData);
+    // console.log(parsedData);
     return parsedData;
   } catch (e) {
     console.error(`Failed to fetch community-partners-cards: ${e.message}`);
@@ -51,14 +51,14 @@ async function getCarouselImages() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const parsedData = data.body.map((image) => {
       return {
         src: image.image[0],
         alt: image.image_alt_text,
       };
     });
-    console.log(parsedData);
+    // console.log(parsedData);
     return parsedData;
   } catch (e) {
     console.error(`Failed to fetch community-carousel-images: ${e.message}`);

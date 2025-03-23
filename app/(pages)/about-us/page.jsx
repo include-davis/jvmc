@@ -16,7 +16,7 @@ async function getAboutUsCards() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const parsedData = data.body.map((card) => {
       return {
         title: card.title,
@@ -43,7 +43,7 @@ async function getClinicRolesCards() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const parsedData = data.body.map((card) => {
       return {
         title: card.title,
@@ -74,7 +74,7 @@ export async function getEventCardGeneralInfo() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const contents = data.body[0];
     const parsedData = {
       eventTitle: contents.event_card_title,
@@ -168,9 +168,9 @@ export default async function About() {
         </div>
         <div className={styles.fairText}>
           <h4>{eventCardData.eventTitle}</h4>
-          <p 
+          <p
             dangerouslySetInnerHTML={{
-              __html: eventCardData.eventDescription
+              __html: eventCardData.eventDescription,
             }}
           />
           <a

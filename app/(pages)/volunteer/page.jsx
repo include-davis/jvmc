@@ -17,7 +17,7 @@ export async function getVolunteerGeneralInfo() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const contents = data.body[0];
     const parsedData = {
       landingDescription: contents.volunteer_page_description,
@@ -50,7 +50,7 @@ export async function getVolunteerCards() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const parsedData = data.body.map((card) => {
       let button_text, button_link;
       if (card.button_text_and_link) {
@@ -78,7 +78,6 @@ export async function getVolunteerCards() {
 export default async function Volunteer() {
   const generalData = await getVolunteerGeneralInfo();
   const volunteerData = await getVolunteerCards();
-  console.log(volunteerData);
 
   return (
     <main className={styles.page}>

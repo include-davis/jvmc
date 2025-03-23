@@ -19,7 +19,7 @@ export async function getHomeGeneralInfo() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const contents = data.body[0];
     const parsedData = {
       tagline: contents.tagline,
@@ -48,7 +48,7 @@ async function getHomeCards() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const parsedData = data.body.map((card) => {
       return {
         title: card.title,

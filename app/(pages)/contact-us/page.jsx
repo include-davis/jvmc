@@ -15,7 +15,7 @@ export async function getContactUsGeneralInfo() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const contents = data.body[0];
     const parsedData = {
       apptInstructions: contents.appointment_instructions,
