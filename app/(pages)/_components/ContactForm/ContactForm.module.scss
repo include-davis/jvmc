@@ -1,0 +1,124 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72.22%;
+  color: var(--dark-grey);
+  z-index: 1;
+
+  @include mixins.phone {
+    width: 361px;
+  }
+}
+
+.formField {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include mixins.phone {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.formInput {
+  width: 44.92%;
+  margin-bottom: 20px;
+  text-align: left;
+
+  @include mixins.phone {
+    width: 100%;
+  }
+}
+
+.formInput label {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--font2);
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.formInputText {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--dark-grey);
+  background-color: var(--white);
+  font-size: 1rem;
+  color: var(--dark-grey);
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.formInputText.error {
+  border-color: red;
+}
+
+.formInputText:focus {
+  border-color: var(--light-blue);
+  box-shadow: var(--drop-shadow-small);
+  outline: none;
+}
+
+.formMessage {
+  width: 100%;
+  border-radius: var(--card-border-radius);
+}
+
+.formMessage label {
+  display: none;
+}
+
+.message {
+  @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  border-radius: var(--card-border-radius);
+  border: solid 1px var(--dark-grey);
+  resize: none;
+  min-height: 112px;
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 32px;
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.message.error {
+  border-color: red;
+}
+
+.message:focus {
+  border-color: var(--light-blue);
+  box-shadow: var(--drop-shadow-small);
+  outline: none;
+}
+
+.buttonArea {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.sendButton {
+  outline: none !important;
+  border: none !important;
+  font-weight: var(--bold);
+  font-family: var(--font2);
+  width: 6rem;
+  font-size: 1rem;
+}
+
+/* Error messages */
+.errorText {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}

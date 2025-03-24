@@ -1,19 +1,19 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .questionsCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 72.22%;
-    background-color: var(--card-background);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--drop-shadow);
-    padding: 42px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 72.22%;
+  background-color: var(--card-background);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 42px 40px;
 
-    @include mixins.phone {
-        width: 361px;
-    }
+  @include mixins.phone {
+    width: 361px;
+  }
 }
 
 .questionsCard h3 {
@@ -30,38 +30,38 @@
 
 // Contact form
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 72.22%;
-    color: var(--dark-grey);
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72.22%;
+  color: var(--dark-grey);
+  z-index: 1;
 
-    @include mixins.phone {
-        width: 361px;
-    }
+  @include mixins.phone {
+    width: 361px;
+  }
 }
 
 .formField {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 
-    @include mixins.phone {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  @include mixins.phone {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .formInput {
-    width: 44.92%;
-    margin-bottom: 20px;
-    text-align: left;
+  width: 44.92%;
+  margin-bottom: 20px;
+  text-align: left;
 
-    @include mixins.phone {
-        width: 100%;
-    }
+  @include mixins.phone {
+    width: 100%;
+  }
 }
 
 .formInput label {
@@ -136,7 +136,6 @@
   font-size: 1rem;
 }
 
-
 /* Error messages */
 .errorText {
   color: red;
@@ -145,23 +144,23 @@
 }
 
 .rainbowTop {
-    position: absolute;
-    z-index: 0;
-    pointer-events: none;
-    top: -810.41px;
-    // left: 364.59px;
-    left: 30%;
-    rotate: 12deg;
-    width: 1482px;
-    height: 1350px;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: -810.41px;
+  // left: 364.59px;
+  left: 30%;
+  rotate: 12deg;
+  width: 1482px;
+  height: 1350px;
 
-    @include mixins.phone {
-        top: -100px;
-        left: -30%;
-        rotate: 0deg;
-        width: 1000px;
-        height: 560px;
-    }
+  @include mixins.phone {
+    top: -100px;
+    left: -30%;
+    rotate: 0deg;
+    width: 1000px;
+    height: 560px;
+  }
 }
 
 .rainbowBottom {
@@ -200,49 +199,49 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    width: 85%;
-    max-width: 1040px;
-    box-shadow: var(--drop-shadow);
-    border-radius: var(--card-border-radius);
-    background-color: var(--white);
-    z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 85%;
+  max-width: 1040px;
+  box-shadow: var(--drop-shadow);
+  border-radius: var(--card-border-radius);
+  background-color: var(--white);
+  z-index: 1;
 
-    @include mixins.phone {
-        flex-direction: column-reverse;
-        width: 361px;
-    }
+  @include mixins.phone {
+    flex-direction: column-reverse;
+    width: 361px;
+  }
 }
 .mapContainer {
-    flex: 1;
-    min-width: 50%;
+  flex: 1;
+  min-width: 50%;
 
-    @include mixins.phone {
-        width: 100%;
-    }
+  @include mixins.phone {
+    width: 100%;
+  }
 }
 
 .boxCard {
-    z-index: 2;
+  z-index: 2;
 }
 
 .infoCard {
-    flex: 1;
-    background-color: var(--white);
-    padding: 30px;
-    text-align: center;
-    font-size: 36px;
-    color: var(--emerald);
+  flex: 1;
+  background-color: var(--white);
+  padding: 30px;
+  text-align: center;
+  font-size: 36px;
+  color: var(--emerald);
 }
 
 .textInfo {
-  h4 { 
+  h4 {
     color: var(--dark-grey);
-  }; //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section
+  } //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section
   // font-family: var(--font2);
   // gap: 8px;
   display: flex;
@@ -250,48 +249,48 @@
 }
 
 .dotsContainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dotsLeft {
-    position: absolute;
-    bottom: -460px; 
-    left: -464px;
-    width: 420px;
-    height: 412px;
+  position: absolute;
+  bottom: -460px;
+  left: -464px;
+  width: 420px;
+  height: 412px;
 
-    @include mixins.phone {
-        position: relative;
-        bottom: 0px;
-        left: 0px;
-        width: 130.05px;
-        height: 127.58px;
-    }
+  @include mixins.phone {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 130.05px;
+    height: 127.58px;
+  }
 }
 
 .dotsRight {
-    position: absolute;
-    top: -350px; 
-    right: -472px;
-    width: 432px;
-    height: 397px;
+  position: absolute;
+  top: -350px;
+  right: -472px;
+  width: 432px;
+  height: 397px;
 
-    @include mixins.phone {
-        position: relative;
-        top: 0px;
-        right: 0px;
-        width: 133.77px;
-        height: 122.93px;
-    }
+  @include mixins.phone {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 133.77px;
+    height: 122.93px;
+  }
 }
 
 .socialMedia {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .socialMediaIcons {
@@ -300,16 +299,16 @@
   align-items: center;
   gap: 50px;
 
-    a {
-      width: 260px;
-    }
+  a {
+    width: 260px;
+  }
 
-    @include mixins.phone {
-        gap: 12px;
-        a {
-            width: 180px;
-        }
+  @include mixins.phone {
+    gap: 12px;
+    a {
+      width: 180px;
     }
+  }
 }
 
 .icon {
