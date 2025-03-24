@@ -5,20 +5,20 @@ import { FaCircleExclamation } from "react-icons/fa6";
 import styles from "./CommunityPartnersCard.module.scss";
 import Image from "next/image";
 
-export default function CommunityPartnersCard({
-  index,
-  partner,
-  containerClass,
-}) {
+export default function CommunityPartnersCard({ index, partner }) {
+  // Set class based on index and reverse if it is the first or third image
+
   return (
-    <div key={index} className={containerClass}>
+    <div
+      className={`${styles.cardContainer} ${index % 2 == 0 ? styles.reverse : ""}`}
+    >
       <div className={styles.imageWrapper}>
         <div className={styles.imageWrapper}>
           <Image
-            src={partner.image_src}
+            src={partner.imageSrc}
             style={{ objectFit: "cover" }}
             fill={true}
-            alt={partner.images_src}
+            alt={partner.imageAlt}
           />
         </div>
       </div>

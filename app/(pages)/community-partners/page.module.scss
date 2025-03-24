@@ -16,11 +16,6 @@
   padding: var(--nav-to-element-spacing) 0;
   position: relative;
   overflow: hidden;
-
-  @include mixins.phone {
-    padding: calc(var(--nav-to-element-spacing) / 2) 0;
-    gap: calc(var(--element-spacing) / 2);
-  }
 }
 
 .partnersSection {
@@ -30,9 +25,9 @@
   gap: var(--vertical-card-gap);
 
   @include mixins.phone {
-    gap: calc(var(--vertical-card-gap) / 2);
-    width: 100%;
-    padding: 0 15px;
+    // gap: calc(var(--vertical-card-gap) / 2);
+
+    border: 1px solid red;
   }
 }
 
@@ -40,11 +35,9 @@
   text-align: center;
 
   @include mixins.phone {
-    h1 {
-      font-size: 24px;
-    }
     h4 {
-      font-size: 16px;
+      line-height: 150%;
+      padding-top: 12px;
     }
   }
 }
@@ -54,11 +47,6 @@
   flex-direction: column;
   align-items: center;
   gap: var(--vertical-card-gap);
-
-  @include mixins.phone {
-    gap: 25px;
-    width: 100%;
-  }
 }
 
 .partnerContainer {

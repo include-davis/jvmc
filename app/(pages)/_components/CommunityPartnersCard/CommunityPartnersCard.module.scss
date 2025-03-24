@@ -1,6 +1,12 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
 .partnerContainer {
   display: flex;
   align-items: center;
+
+  @include mixins.phone {
+    flex-direction: column;
+  }
 }
 
 .partnersCard {
@@ -14,6 +20,14 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
+
+  @include mixins.phone {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+    gap: 20px;
+  }
 }
 
 .imageWrapper {
@@ -22,42 +36,65 @@
   width: 434px;
   height: 452px;
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+
+  @include mixins.phone {
+    width: 100%;
+    height: 250px;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  }
 }
 
 .cardContainer {
   display: flex;
   align-items: center;
+
+  @include mixins.phone {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .reverse {
   flex-direction: row-reverse; /* Image on the left */
+
+  @include mixins.phone {
+    flex-direction: column;
+  }
 }
 
 .reverse .imageWrapper {
   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+
+  @include mixins.phone {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  }
 }
 
 .reverse .partnersCard {
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+
+  @include mixins.phone {
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+  }
 }
 
 .contactInfo {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  @include mixins.phone {
+    gap: 8px;
+  }
 }
 
-.locationText {
-  display: flex;
-  align-items: center;
-}
-
-.dateText {
-  display: flex;
-  align-items: center;
-}
-
+.locationText,
+.dateText,
 .appointmentText {
   display: flex;
   align-items: center;
+
+  @include mixins.phone {
+    font-size: 14px;
+  }
 }
