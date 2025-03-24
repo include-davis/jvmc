@@ -50,7 +50,6 @@
 
   @include mixins.tablet {
     flex-direction: column;
-    // width: 90%;
     row-gap: 24px;
   }
 }

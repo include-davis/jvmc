@@ -39,68 +39,16 @@
   }
 }
 
-// .card {
-//   display: flex;
-//   position: relative;
-//   width: 91.5%;
-
-//   min-height: 350px;
-//   background-color: var(--card-background);
-//   border-radius: var(--card-border-radius);
-//   box-shadow: var(--drop-shadow);
-//   padding: var(--card-padding);
-
-//   @include mixins.tablet {
-//     position: static;
-//     align-items: center; //picture and text centered
-//     justify-content: space-evenly;
-//     min-height: auto;
-//   }
-// }
-
-// .card.right {
-//   padding-right: 322px;
-
-//   @include mixins.sm-desktop {
-//     padding-right: 242px;
-//   }
-//   @include mixins.tablet {
-//     //it should be the children - cardText & cardImage in columns
-//     flex-direction: column-reverse;
-//     row-gap: 20px;
-//     padding-right: var(--card-padding);
-//   }
-// }
-
-// .card.left {
-//   padding-left: 322px;
-
-//   @include mixins.sm-desktop {
-//     padding-left: 242px;
-//   }
-//   @include mixins.tablet {
-//     //it should be the children - cardText & cardImage in columns
-//     flex-direction: column-reverse;
-//     row-gap: 20px;
-//     padding-left: var(--card-padding);
-//   }
-// }
-
 .cardText {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   gap: 32px;
-  // min-height: 350px;
   max-width: 617px;
 
   @include mixins.tablet {
     align-items: center; //text title and button centered in cardText
     gap: 24px;
     max-width: 100%;
-
-    // min-height: auto;
-    // height: auto;
   }
 }
 
