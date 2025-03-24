@@ -14,7 +14,14 @@ const cards = [
     direction: "right",
     image: "/images/UGrad.jpg",
     altText: "Undergraduate Students",
-    icon: <Image src={"/undergrad-icon.svg"} alt={"undergrad icon"} objectFit="cover" fill="true"/>,
+    icon: (
+      <Image
+        src={"/undergrad-icon.svg"}
+        alt={"undergrad icon"}
+        objectFit="cover"
+        fill="true"
+      />
+    ),
     mainText: (
       <>
         New cohorts are recruited during Winter Quarter annually. More
@@ -60,7 +67,14 @@ const cards = [
     direction: "left",
     image: "/images/Physicians.jpg",
     altText: "Physicians",
-    icon: <Image src={"/preceptor-icon.svg"} alt={"preceptor icon"} objectFit="cover" fill="true"/>,
+    icon: (
+      <Image
+        src={"/preceptor-icon.svg"}
+        alt={"preceptor icon"}
+        objectFit="cover"
+        fill="true"
+      />
+    ),
     mainText: (
       <>
         To qualify as a physician volunteer with JVMC you must be covered by UC
@@ -89,7 +103,14 @@ const cards = [
     direction: "right",
     image: "/images/MD_Student.jpg",
     altText: "MD Students",
-    icon: <Image src={"/medicine-chest-icon.svg"} alt={"medicine chest icon"} objectFit="cover" fill="true" />,
+    icon: (
+      <Image
+        src={"/medicine-chest-icon.svg"}
+        alt={"medicine chest icon"}
+        objectFit="cover"
+        fill="true"
+      />
+    ),
     mainText: (
       <>
         If you are looking to volunteer with JVMC as a Medical Students, please

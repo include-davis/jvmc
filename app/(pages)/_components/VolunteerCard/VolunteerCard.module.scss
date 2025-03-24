@@ -2,92 +2,106 @@
 
 .cardComponent {
   display: flex;
-  width: 1040px;
-  min-height: 350px;
+  width: 1000px;
+  position: relative;
+
+  background-color: var(--card-background);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: var(--card-padding);
+
+  @include mixins.sm-desktop {
+    width: 80%;
+  }
+
   @include mixins.tablet {
-    width: auto; //width according to screen width
-    align-items: center; //centers cards on the vertical
+    align-items: center; //picture and text centered
+    padding-top: 140px;
   }
 }
 
 // Place Image on left or right
 .cardComponent.left {
   flex-direction: row-reverse;
+  margin-left: 64px;
   @include mixins.tablet {
+    margin-left: 0px;
     flex-direction: column-reverse;
   }
 }
 
 .cardComponent.right {
   flex-direction: row;
+  margin-right: 64px;
   @include mixins.tablet {
+    margin-right: 0px;
     flex-direction: column-reverse;
   }
 }
 
-.card {
-  display: flex;
-  position: relative;
-  width: 91.5%;
-  
-  min-height: 350px;
-  background-color: var(--card-background);
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--drop-shadow);
-  padding: var(--card-padding);
+// .card {
+//   display: flex;
+//   position: relative;
+//   width: 91.5%;
 
-  @include mixins.tablet {
-    position: static;
-    align-items: center; //picture and text centered
-    justify-content: space-evenly;
-    min-height: auto;
-  }
-}
+//   min-height: 350px;
+//   background-color: var(--card-background);
+//   border-radius: var(--card-border-radius);
+//   box-shadow: var(--drop-shadow);
+//   padding: var(--card-padding);
 
-.card.right {
-  padding-right: 322px;
+//   @include mixins.tablet {
+//     position: static;
+//     align-items: center; //picture and text centered
+//     justify-content: space-evenly;
+//     min-height: auto;
+//   }
+// }
 
-  @include mixins.sm-desktop {
-    padding-right: 242px;
-  }
-  @include mixins.tablet { //it should be the children - cardText & cardImage in columns
-    flex-direction: column-reverse;
-    row-gap: 20px;
-    padding-right: var(--card-padding);
-  }
+// .card.right {
+//   padding-right: 322px;
 
+//   @include mixins.sm-desktop {
+//     padding-right: 242px;
+//   }
+//   @include mixins.tablet {
+//     //it should be the children - cardText & cardImage in columns
+//     flex-direction: column-reverse;
+//     row-gap: 20px;
+//     padding-right: var(--card-padding);
+//   }
+// }
 
-}
+// .card.left {
+//   padding-left: 322px;
 
-.card.left {
-  padding-left: 322px;
-
-  @include mixins.sm-desktop {
-    padding-left: 242px;
-  }
-  @include mixins.tablet { //it should be the children - cardText & cardImage in columns
-    flex-direction: column-reverse;
-    row-gap: 20px;
-    padding-left: var(--card-padding);
-  }
-
-}
+//   @include mixins.sm-desktop {
+//     padding-left: 242px;
+//   }
+//   @include mixins.tablet {
+//     //it should be the children - cardText & cardImage in columns
+//     flex-direction: column-reverse;
+//     row-gap: 20px;
+//     padding-left: var(--card-padding);
+//   }
+// }
 
 .cardText {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  row-gap: 32px;
-  min-height: 350px;
+  // justify-content: space-between;
+  gap: 32px;
+  // min-height: 350px;
   max-width: 617px;
-  
+
   @include mixins.tablet {
-    max-width: auto;
     align-items: center; //text title and button centered in cardText
-    min-height: auto;
+    gap: 24px;
+    max-width: 100%;
+
+    // min-height: auto;
+    // height: auto;
   }
-  
-  color: var(--dark-grey);
 }
 
 .cardTitle {
@@ -95,24 +109,31 @@
   align-items: center;
   column-gap: 16px;
   color: var(--emerald);
+
+  @include mixins.tablet {
+    align-self: flex-start;
+  }
+
+  @include mixins.phone {
+    h4 {
+      line-height: 150%;
+    }
+  }
 }
 
 .icon {
   position: relative;
   overflow: hidden;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  color: var(--light-blue);
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .cardBody {
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 150%;
-  font-family: var(--font2);
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
 
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
 }
 
 .cardBody ul {
@@ -151,8 +172,10 @@
 .cardImage {
   border: solid var(--mint);
   position: absolute;
-  top: 50%;   //moves TOP of image 50% down its container
-  transform: translateY(-50%);  //moves 50% of its OWN height UP  (effectively centered in container)
+  top: 50%; //moves TOP of image 50% down its container
+  transform: translateY(
+    -50%
+  ); //moves 50% of its OWN height UP  (effectively centered in container)
   border-radius: 50%;
   width: 350px;
   height: 350px;
@@ -163,27 +186,36 @@
     width: 270px;
     height: 270px;
   }
-  
+
   @include mixins.tablet {
-    position: relative;
-    top: auto; //0% from the top of the ancestor - card
-    min-height: auto;
-    transform: translateY(-50%);  //-50% translation
-    bottom: -50%;
+    top: 0;
+    width: 250px;
+    height: 250px;
   }
-
 }
 
-.cardComponent.left .cardImage {
+.cardImage.left {
   left: -88px;
-  @include mixins.tablet {//offset of image from whole cardComponent
-    left:auto;
+
+  @include mixins.sm-desktop {
+    left: -112px;
+  }
+
+  @include mixins.tablet {
+    //offset of image from whole cardComponent
+    left: auto;
   }
 }
 
-.cardComponent.right .cardImage {
+.cardImage.right {
   right: -88px;
-  @include mixins.tablet {//offset of image from whole cardComponent
-    right:auto;
+
+  @include mixins.sm-desktop {
+    right: -112px;
+  }
+
+  @include mixins.tablet {
+    //offset of image from whole cardComponent
+    right: auto;
   }
 }
