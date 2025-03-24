@@ -16,8 +16,8 @@
   padding: var(--nav-to-element-spacing) 0;
   position: relative;
   overflow: hidden;
-  
-  @include phone {
+
+  @include mixins.phone {
     padding: calc(var(--nav-to-element-spacing) / 2) 0;
     gap: calc(var(--element-spacing) / 2);
   }
@@ -28,8 +28,8 @@
   flex-direction: column;
   align-items: center;
   gap: var(--vertical-card-gap);
-  
-  @include phone {
+
+  @include mixins.phone {
     gap: calc(var(--vertical-card-gap) / 2);
     width: 100%;
     padding: 0 15px;
@@ -38,8 +38,8 @@
 
 .header {
   text-align: center;
-  
-  @include phone {
+
+  @include mixins.phone {
     h1 {
       font-size: 24px;
     }
@@ -54,8 +54,8 @@
   flex-direction: column;
   align-items: center;
   gap: var(--vertical-card-gap);
-  
-  @include phone {
+
+  @include mixins.phone {
     gap: 25px;
     width: 100%;
   }
@@ -64,8 +64,8 @@
 .partnerContainer {
   display: flex;
   align-items: center;
-  
-  @include phone {
+
+  @include mixins.phone {
     flex-direction: column;
   }
 }
@@ -81,8 +81,8 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
-  
-  @include phone {
+
+  @include mixins.phone {
     width: 100%;
     height: auto;
     padding: 20px;
@@ -94,8 +94,8 @@
 .cardContainer {
   display: flex;
   align-items: center;
-  
-  @include phone {
+
+  @include mixins.phone {
     flex-direction: column;
     width: 100%;
   }
@@ -107,8 +107,8 @@
   width: 434px;
   height: 452px;
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-  
-  @include phone {
+
+  @include mixins.phone {
     width: 100%;
     height: 250px;
     border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
@@ -117,33 +117,35 @@
 
 .reverse {
   flex-direction: row-reverse;
-  
-  @include phone {
+
+  @include mixins.phone {
     flex-direction: column;
   }
 }
 
 .reverse .imageWrapper {
   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
-  
-  @include phone {
+
+  @include mixins.phone {
     border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
   }
 }
 
 .reverse .partnersCard {
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-  
-  @include phone {
+
+  @include mixins.phone {
     border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
   }
 }
 
-.locationText, .dateText, .appointmentText {
+.locationText,
+.dateText,
+.appointmentText {
   display: flex;
   align-items: center;
-  
-  @include phone {
+
+  @include mixins.phone {
     font-size: 14px;
   }
 }
@@ -153,8 +155,8 @@
   height: 20px;
   margin-right: 13px;
   color: var(--emerald);
-  
-  @include phone {
+
+  @include mixins.phone {
     width: 16px;
     height: 16px;
     margin-right: 8px;
@@ -165,8 +167,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  
-  @include phone {
+
+  @include mixins.phone {
     gap: 8px;
   }
 }
@@ -179,21 +181,20 @@
   align-items: center;
   gap: 60px;
   width: 100%;
-  
-  @include phone {
+
+  @include mixins.phone {
     gap: 30px;
-    padding: 0 15px;
   }
 }
 
 .community_partners_title {
-  @include phone {
+  @include mixins.phone {
     font-size: 22px;
   }
 }
 
 .community_partners_subtitle {
-  @include phone {
+  @include mixins.phone {
     font-size: 16px;
   }
 }
@@ -205,8 +206,8 @@
   height: 1524px;
   z-index: -1;
   overflow: hidden;
-  
-  @include phone {
+
+  @include mixins.phone {
     height: 760px;
   }
 }
@@ -220,20 +221,20 @@
 }
 
 .partnersName {
-  @include phone {
+  @include mixins.phone {
     font-size: 18px;
   }
 }
 
 .partnersDescription {
-  @include phone {
+  @include mixins.phone {
     font-size: 14px;
     line-height: 1.4;
   }
 }
 
 a.btn {
-  @include phone {
+  @include mixins.phone {
     width: 100%;
     padding: 10px;
     font-size: 14px;
