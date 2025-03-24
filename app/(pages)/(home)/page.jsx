@@ -146,8 +146,8 @@ export default async function Home() {
           <div className={styles.gradientCircle}></div>
           <div className={styles.contactImage}>
             <Image
-              src={data.contactCard.img.src}
-              alt={data.contactCard.img.alt}
+              src={"/home-group.jpg"}
+              alt={"Group of medical students"}
               style={{ objectFit: "cover" }}
               fill={true}
             />
