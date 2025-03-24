@@ -26,7 +26,6 @@ export default function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.666409336778!2d-121.46305095896587!3d38.541457271919676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ad06c484a2647%3A0x4b342e5bcbaa8fff!2sMorrissey%20Flynn%20Building%2C%203647%2040th%20St%2C%20Sacramento%2C%20CA%2095817!5e0!3m2!1sen!2sus!4v1740808728482!5m2!1sen!2sus"
             width="100%"
             height="450"
-            style={{ border: 0, borderRadius: "12px" }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

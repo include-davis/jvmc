@@ -28,121 +28,6 @@
   color: var(--teal);
 }
 
-// Contact form
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 72.22%;
-  color: var(--dark-grey);
-  z-index: 1;
-
-  @include mixins.phone {
-    width: 361px;
-  }
-}
-
-.formField {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  @include mixins.phone {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.formInput {
-  width: 44.92%;
-  margin-bottom: 20px;
-  text-align: left;
-
-  @include mixins.phone {
-    width: 100%;
-  }
-}
-
-.formInput label {
-  display: block;
-  font-size: 1rem;
-  font-family: var(--font2);
-  font-weight: 400;
-  line-height: 150%;
-}
-
-.formInputText {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid var(--dark-grey);
-  background-color: var(--white);
-  font-size: 1rem;
-  color: var(--dark-grey);
-  transition:
-    border 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.formInputText:focus {
-  border-color: var(--light-blue);
-  box-shadow: var(--drop-shadow-small);
-  outline: none;
-}
-
-.formMessage {
-  width: 100%;
-  border-radius: var(--card-border-radius);
-}
-
-.formMessage label {
-  display: none;
-}
-
-.message {
-  @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
-  border-radius: var(--card-border-radius);
-  border: solid 1px var(--dark-grey);
-  resize: none;
-  min-height: 112px;
-  width: 100%;
-  padding-top: 12px;
-  padding-left: 32px;
-  transition:
-    border 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.message:focus {
-  border-color: var(--light-blue);
-  box-shadow: var(--drop-shadow-small);
-  outline: none;
-}
-
-.buttonArea {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 100%;
-  padding-top: 50px;
-}
-
-.sendButton {
-  outline: none !important;
-  border: none !important;
-  font-weight: var(--bold);
-  font-family: var(--font2);
-  width: 6rem;
-  font-size: 1rem;
-}
-
-/* Error messages */
-.errorText {
-  color: red;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
 .rainbowTop {
   position: absolute;
   z-index: 0;
@@ -201,9 +86,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  gap: 25px;
   width: 85%;
   max-width: 1040px;
   box-shadow: var(--drop-shadow);
@@ -217,22 +100,39 @@
   }
 }
 .mapContainer {
-  flex: 1;
   min-width: 50%;
 
+  iframe {
+    display: block;
+    border: 0;
+    border-radius: 12px 0px 0px 12px;
+  }
+
   @include mixins.phone {
+    iframe {
+      border-radius: 0px 0px 12px 12px;
+      height: 350px;
+    }
     width: 100%;
   }
 }
 
 .boxCard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   z-index: 2;
+  padding: 40px;
+  width: 50%;
+
+  @include mixins.phone {
+    width: 100%;
+    padding: 30px;
+  }
 }
 
 .infoCard {
-  flex: 1;
   background-color: var(--white);
-  padding: 30px;
   text-align: center;
   font-size: 36px;
   color: var(--emerald);
@@ -242,8 +142,6 @@
   h4 {
     color: var(--dark-grey);
   } //since h4 is hardcoded to be emerald - we think we might to over write it or include another header section
-  // font-family: var(--font2);
-  // gap: 8px;
   display: flex;
   flex-direction: column;
 }
