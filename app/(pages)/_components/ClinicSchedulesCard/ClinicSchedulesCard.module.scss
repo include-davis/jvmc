@@ -1,0 +1,45 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: calc(8px * 104);
+  background-color: var(--white);
+  box-shadow: var(--drop-shadow);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  gap: 50px;
+
+  @include mixins.tablet {
+    gap: 16px;
+    width: 90%;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.tm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text p {
+  padding-left: 12px;
+}
+
+.appt {
+  color: var(--teal);
+  font-weight: var(--bold);
+}
