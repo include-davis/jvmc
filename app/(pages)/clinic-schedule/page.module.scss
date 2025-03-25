@@ -1,5 +1,6 @@
 .page {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,13 +43,12 @@
   margin-bottom: 32px;
   box-shadow: var(--drop-shadow);
   border-radius: var(--card-border-radius);
-  
+
   iframe {
     display: block;
     border: none;
     border-radius: var(--card-border-radius);
   }
-
 }
 
 .key {
