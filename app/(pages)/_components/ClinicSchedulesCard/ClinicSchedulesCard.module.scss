@@ -8,7 +8,6 @@
   box-shadow: var(--drop-shadow);
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
-  border: 1px solid var(--mint);
   gap: 50px;
 
   @include mixins.tablet {
