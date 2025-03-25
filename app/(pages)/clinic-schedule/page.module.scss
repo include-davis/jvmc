@@ -7,13 +7,13 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--nav-to-element-spacing) 0;
-  @include mixins.tablet{
+  @include mixins.tablet {
     margin: auto;
   }
-  @include mixins.phone{
+  @include mixins.phone {
     margin: auto;
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     margin: auto;
   }
 }
@@ -24,13 +24,13 @@
   align-items: center;
   text-align: center;
   padding-bottom: 94px;
-  @include mixins.tablet{
+  @include mixins.tablet {
     width: calc(8px * 120);
   }
-  @include mixins.phone{
+  @include mixins.phone {
     width: calc(8px * 83);
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     width: calc(8px * 62);
   }
 }
@@ -40,13 +40,13 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 80px;
-  @include mixins.tablet{
+  @include mixins.tablet {
     width: calc(8px * 120);
   }
-  @include mixins.phone{
+  @include mixins.phone {
     width: calc(8px * 83);
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     width: calc(8px * 62);
   }
 }
@@ -72,28 +72,28 @@
   margin-bottom: 32px;
   box-shadow: var(--drop-shadow);
   border-radius: var(--card-border-radius);
-  
+
   iframe {
     display: block;
     border: none;
     border-radius: var(--card-border-radius);
-    @include mixins.tablet{
-        width: calc(8px * 120);
-      }
-    @include mixins.phone{
-        width: calc(8px * 83);
+    @include mixins.tablet {
+      width: calc(8px * 120);
     }
-    @include mixins.sm-phone{
-        width: calc(8px * 62);
+    @include mixins.phone {
+      width: calc(8px * 83);
+    }
+    @include mixins.sm-phone {
+      width: calc(8px * 62);
     }
   }
-  @include mixins.tablet{
+  @include mixins.tablet {
     width: calc(8px * 120);
   }
-  @include mixins.phone{
+  @include mixins.phone {
     width: calc(8px * 83);
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     width: calc(8px * 62);
   }
 }
@@ -107,22 +107,21 @@
   width: 100%;
   height: 112px;
   align-items: center;
-  @include mixins.phone{
+  @include mixins.phone {
     padding-left: 16px;
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     flex-direction: column;
     height: 176px;
     width: calc(8px * 62);
     align-items: flex-start;
     padding-left: 32px;
-    
   }
 }
 
 .key h4 {
   color: var(--dark-grey);
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     transform: scale(1.2);
   }
 }
@@ -132,14 +131,14 @@
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  @include mixins.tablet{
+  @include mixins.tablet {
     transform: scale(1.1);
   }
-  @include mixins.phone{
-    gap: 4px
+  @include mixins.phone {
+    gap: 4px;
   }
-  
-  @include mixins.sm-phone{
+
+  @include mixins.sm-phone {
     transform: scale(1.2);
     margin-left: 40px;
     width: 100%;
@@ -157,13 +156,13 @@
   flex-direction: column;
   align-items: center;
   gap: 64px;
-  @include mixins.tablet{
+  @include mixins.tablet {
     width: calc(8px * 120);
   }
-  @include mixins.phone{
+  @include mixins.phone {
     width: calc(8px * 83);
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     width: calc(8px * 62);
   }
 }
@@ -176,28 +175,27 @@
   box-shadow: var(--drop-shadow);
   border-radius: 20px;
   padding: 60px;
-  @include mixins.tablet{
+  @include mixins.tablet {
     width: calc(8px * 120);
   }
-  @include mixins.phone{
+  @include mixins.phone {
     width: calc(8px * 83);
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     width: calc(8px * 62);
   }
 }
-
 
 .info {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 12px;
-  @include mixins.phone{
+  @include mixins.phone {
     transform: scale(1.15);
     padding: 30px;
   }
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     transform: scale(1.15);
     padding: 24px;
   }
