@@ -1,5 +1,13 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
+// Define the phone mixin for responsive design
+@mixin phone {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+// Modified page styles with responsive adjustments
 .page {
   display: flex;
   flex-direction: column;
@@ -7,7 +15,6 @@
   gap: var(--element-spacing);
   padding: var(--nav-to-element-spacing) 0;
   position: relative;
-  // width: 1040px;
   overflow: hidden;
 }
 
@@ -20,6 +27,16 @@
 
 .header {
   text-align: center;
+
+  @include mixins.phone {
+    width: 90%;
+
+    h4 {
+      line-height: 150%;
+      font-size: 16px;
+      padding-top: 12px;
+    }
+  }
 }
 
 .partnersGrid {
@@ -29,86 +46,18 @@
   gap: var(--vertical-card-gap);
 }
 
-.partnerContainer {
-  display: flex;
-  align-items: center;
-}
-
-.partnersCard {
-  background-color: var(--white);
-  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
-  width: 606px;
-  height: 452px;
-  padding: var(--card-padding);
-  text-align: left;
-  box-shadow: var(--drop-shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.cardContainer {
-  display: flex;
-  align-items: center;
-}
-
-.imageWrapper {
-  position: relative;
-  overflow: hidden;
-  width: 434px;
-  height: 452px;
-  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-}
-
-.reverse {
-  flex-direction: row-reverse; /* Image on the left */
-}
-
-.reverse .imageWrapper {
-  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
-}
-
-.reverse .partnersCard {
-  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-}
-
-.locationText {
-  display: flex;
-  align-items: center;
-}
-
-.dateText {
-  display: flex;
-  align-items: center;
-}
-
-.appointmentText {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 13px;
-  color: var(--emerald);
-}
-
-.contactInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
 .carouselSection {
   align-self: flex-start;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
   width: 100%;
+
+  @include mixins.phone {
+    gap: 30px;
+  }
 }
 
 .bottomGradientContainer {
@@ -118,10 +67,14 @@
   height: 1524px;
   z-index: -1;
   overflow: hidden;
+
+  @include mixins.phone {
+    height: 760px;
+  }
 }
 
 .bottomGradient {
-  pointer-events: none; /* Prevents interaction issues */
+  pointer-events: none;
   position: relative;
   width: 100%;
   height: 100%;

@@ -1,7 +1,4 @@
-{
-  "title": "Community Partners",
-  "subtitle": "Our trusted allies supporting our mission beyond the our clinics.",
-  "partners": [
+[
     {
       "name": "Harm Reduction Services",
       "description": "HRS offers free, confidential harm reduction services to improve the health and well-being of drug users, in addition to empowering local communities.",
@@ -9,7 +6,9 @@
       "date": "Monday - Friday, 12:00 PM - 6:00 PM",
       "appointment": "",
       "website": "https://hrssac.org/",
-      "buttonText": "Visit HRS Website"
+      "buttonText": "Visit HRS Website",
+      "imageSrc": "/HRS.png",
+      "imageAlt": "Volunteers at an event table for Harm Reduction Services"
     },
     {
       "name": "Gender Health Center",
@@ -18,7 +17,9 @@
       "date": "1st & 3rd Friday of each month, 6:00 PM - 9:00 PM",
       "appointment": "By appointment only",
       "website": "https://www.genderhealthcenter.org/",
-      "buttonText": "Visit GHC Website"
+      "buttonText": "Visit GHC Website",
+      "imageSrc": "/GHC.png",
+      "imageAlt": "Three volunteers holding service items"
     },
     {
       "name": "Stockton Harm Reduction Program",
@@ -27,57 +28,8 @@
       "date": "Saturdays, 9:00 AM - 1 :00 PM",
       "appointment": "",
       "website": "https://theshrp.org/",
-      "buttonText": "Visit SHRP Website"
+      "buttonText": "Visit SHRP Website",
+      "imageSrc": "/SHRC.jpg",
+      "imageAlt": "Stockton Harm Reduction Program volunteers at a community event"
     }
-  ],
-
-  "images": ["/HRS.png", "/GHC.png", "/SHRC.png"],
-
-  "imagesAlt": [
-    "Volunteers at an event table for Harm Reduction Services",
-    "Three volunteers holding service items",
-    "Stockton Harm Reduction Program volunteers at a community event"
-  ],
-
-  "carousel": {
-    "bottom_title": "Where We’ve Gone",
-    "bottom_subtitle": "See our community in action!",
-    "carousel_images": [
-      {
-        "src": "/cm_carousel1.png",
-        "alt": "picture of the jvmc"
-      },
-      {
-        "src": "/cm_carousel2.png",
-        "alt": "jvmc volunteers"
-      },
-      {
-        "src": "/cm_carousel3.png",
-        "alt": "jvmc volunteers"
-      },
-      {
-        "src": "/cm_carousel4.png",
-        "alt": "jvmc volunteers"
-      },
-      {
-        "src": "/cm_carousel1.png",
-        "alt": "picture of the jvmc"
-      },
-      {
-        "src": "/cm_carousel2.png",
-        "alt": "jvmc volunteers"
-      },
-      {
-        "src": "/cm_carousel3.png",
-        "alt": "jvmc volunteers"
-      },
-      {
-        "src": "/cm_carousel4.png",
-        "alt": "jvmc volunteers"
-      }
-    ]
-  },
-
-  "bottom_gradient": "/images/communityPartnersGradient.png",
-  "bottom_gradient_alt": "Bottom Gradient"
-}
+  ]
