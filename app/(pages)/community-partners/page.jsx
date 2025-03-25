@@ -43,10 +43,8 @@ export default async function CommunityPartners() {
 
       <div className={styles.carouselSection}>
         <div>
-          <h2 className={styles.community_partners_title}>Where We’ve Gone</h2>
-          <h4 className={styles.community_partners_subtitle}>
-            See our community in action!
-          </h4>
+          <h2>Where We’ve Gone</h2>
+          <h4>See our community in action!</h4>
         </div>
         <CommunityPartnersCarousel images={carouselImages} />
       </div>
