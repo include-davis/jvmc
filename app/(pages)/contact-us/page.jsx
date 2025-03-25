@@ -1,82 +1,13 @@
 "use client";
-import { useState } from "react";
 import styles from "./page.module.scss";
 import contactData from "../_data/contact-us.json";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
+import ContactForm from "../_components/ContactForm/ContactForm";
 
 export default function ContactUs() {
   const { heading1, heading2 } = contactData.questionsCard;
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
-  // Error handling
-  const [firstNameError, setFirstNameError] = useState("");
-  const [lastNameError, setLastNameError] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [subjectError, setSubjectError] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent automatic page reload
-
-    // Input Validation
-    let valid = true;
-
-    if (!firstName.trim()) {
-      setFirstNameError("First Name is required.");
-      valid = false;
-    } else {
-      setFirstNameError("");
-    }
-
-    if (!lastName.trim()) {
-      setLastNameError("Last Name is required.");
-      valid = false;
-    } else {
-      setLastNameError("");
-    }
-
-    if (!email.trim()) {
-      setEmailError("Email is required.");
-      valid = false;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      setEmailError("Invalid email format.");
-      valid = false;
-    } else {
-      setEmailError("");
-    }
-
-    if (!subject.trim()) {
-      setSubjectError("Subject is required.");
-      valid = false;
-    } else {
-      setSubjectError("");
-    }
-
-    const contactData = {
-      firstName,
-      lastName,
-      email,
-      subject,
-      message,
-    };
-
-    if (valid) {
-      // Send to API
-      const res = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(contactData),
-      });
-
-      const data = await res.json();
-      alert(data.message || "Something went wrong");
-    }
-  };
   return (
     <main className={styles.contactUs}>
       {/* MAP COMPONENT */}
@@ -84,18 +15,8 @@ export default function ContactUs() {
         <Image
           src="/Contact_Rainbow_Top.png"
           alt="Decorative Rainbow Top"
-          className={styles.rainbowTop}
-          width={1482}
-          height={1350}
-        />
-      </div>
-      <div className={styles.rainbowBottom}>
-        <Image
-          src="/Contact_Rainbow_Bottom.png"
-          alt="Decorative Rainbow Bottom"
-          className={styles.rainbowBottom}
-          width={1362}
-          height={1068}
+          fill="true"
+          style={{ objectFit: "contain" }}
         />
       </div>
       <h1>Contact Us</h1>
@@ -123,25 +44,17 @@ export default function ContactUs() {
       </section>
       {/* SOCIAL MEDIA COMPONENT */}
       <section className={styles.socialMedia}>
-        <h4>Visit our social media pages!</h4>
         <div className={styles.dotsContainer}>
           <div className={styles.dotsLeft}>
             <Image
-              src="/NEW_Contact_Middle_Left_Dots.png"
+              src="/images/NEW_Contact_Middle_Left_Dots.png"
               alt="Decorative Dots Left"
-              width={420}
-              height={412}
-            />
-          </div>
-          <div className={styles.dotsRight}>
-            <Image
-              src="/NEW_Contact_Middle_Left_Right.png"
-              alt="Decorative Dots Right"
-              width={432}
-              height={397}
+              fill="true"
+              style={{ objectFit: "contain" }}
             />
           </div>
         </div>
+        <h4>Visit our social media pages!</h4>
         <div className={styles.socialMediaIcons}>
           <a
             href="https://www.instagram.com/jvmclinic"
@@ -162,6 +75,16 @@ export default function ContactUs() {
             @jvmcstudents
           </a>
         </div>
+        <div className={styles.dotsContainer}>
+          <div className={styles.dotsRight}>
+            <Image
+              src="/images/NEW_Contact_Middle_Left_Right.png"
+              alt="Decorative Dots Right"
+              fill="true"
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+        </div>
       </section>
       {/* QUESTIONS? COMPONENT */}
       <div className={styles.questionsCard}>
@@ -179,72 +102,18 @@ export default function ContactUs() {
           </b>
         </p>
       </div>
+
       {/* CONTACT FORM COMPONENT */}
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.formField}>
-          <div className={styles.formInput}>
-            {firstNameError && (
-              <p className={styles.errorText}>{firstNameError}</p>
-            )}
-            <label>First Name*</label>
-            <input
-              type="text"
-              className={styles.formInputText}
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-          </div>
-          <div className={styles.formInput}>
-            {lastNameError && (
-              <p className={styles.errorText}>{lastNameError}</p>
-            )}
-            <label>Last Name*</label>
-            <input
-              type="text"
-              className={styles.formInputText}
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-          </div>
-        </div>
-        <div className={styles.formField}>
-          <div className={styles.formInput}>
-            {emailError && <p className={styles.errorText}>{emailError}</p>}
-            <label>Email*</label>
-            <input
-              type="text"
-              className={styles.formInputText}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className={styles.formInput}>
-            {subjectError && <p className={styles.errorText}>{subjectError}</p>}
-            <label>Subject*</label>
-            <input
-              type="text"
-              className={styles.formInputText}
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-            />
-          </div>
-        </div>
-        <div className={styles.formMessage}>
-          <label>Message</label>
-          <textarea
-            type="text"
-            className={styles.message}
-            placeholder="Type Message Here..."
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
-        <div className={styles.buttonArea}>
-          <button type="submit" className={`btn ${styles.sendButton}`}>
-            Send
-          </button>
-        </div>
-      </form>
+      <ContactForm />
+
+      <div className={styles.rainbowBottom}>
+        <Image
+          src="/Contact_Rainbow_Bottom.png"
+          alt="Decorative Rainbow Bottom"
+          fill="true"
+          style={{ objectFit: "contain" }}
+        />
+      </div>
     </main>
   );
 }
