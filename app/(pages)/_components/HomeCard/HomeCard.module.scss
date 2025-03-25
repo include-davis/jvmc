@@ -15,14 +15,27 @@
 
   position: relative;
   z-index: 2;
+
+  @include mixins.tablet {
+    width: 90%;
+    gap: 24px;
+  }
 }
 
 .card.left {
   flex-direction: row;
+
+  @include mixins.tablet {
+    flex-direction: column;
+  }
 }
 
 .card.right {
   flex-direction: row-reverse;
+
+  @include mixins.tablet {
+    flex-direction: column;
+  }
 }
 
 .img {
@@ -32,12 +45,26 @@
   min-width: 320px;
   min-height: 424px;
   border-radius: var(--card-border-radius);
+
+  @include mixins.tablet {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mixins.sm-phone {
+    min-width: 302px;
+    min-height: 197px;
+  }
 }
 
 .text {
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @include mixins.tablet {
+    gap: 24px;
+  }
 }
 
 .header {

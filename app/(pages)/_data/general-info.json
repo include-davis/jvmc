@@ -1,18 +1,19 @@
 {
-  "tagline": "Serving the health care needs of uninsured drug users, sex workers, trans folks, and their families regardless of documentation status.",
-  "address": "3647 40th St, Sacramento, CA 95817",
-  "hours": "Every Saturday: 1:00pm - 4:00pm",
-
-  "appointment_instructions": "No Appointments Needed! Open every Saturday 1-4pm",
-
-  "volunteer_page_description": "Once a month, our clinic conducts a mobile outreach program. There our volunteers work alongside Sacramento’s Gender Hormone Clinic and the Stockton Harm Reduction Program to provide the best care to our patients.\n\nOutside of our clinic, our undergraduate volunteers work in one of our seven committees to build and reinforce projects in the Oak Park Community, hosting events such as the Health Fair and the Harm Reduction Conference.",
-  "volunteer_image": "/volunteer-entrance.png",
-  "volunteer_image_alt_text": "JVMC volunteers posing at a drive in Sacramento",
-
-  "event_card_title": "Annual Health Fair",
-  "event_card_description": "JVMC will be hosting our Annual Health Fair this year on May 3rd, 2025. This event seeks to provide diverse health and wellness booths to provide free resources and supplies to the community members of Oak Park. Please refer to our Instagram for updates on time and location!",
-  "event_card_image": "/about-annual-health-fair.jpg",
-  "event_card_image_alt_text": "Health Fair",
-  "event_card_button_text": "Get Involved",
-  "event_card_button_url": "https://www.instagram.com/jvmclinic/"
-}
+    "tagline_desktop": "Serving the health care needs of uninsured drug users, sex workers, trans folks, and their families regardless of documentation status.",
+    "tagline_mobile": "Serving health care needs of uninsured drug users, sex workers, trans folks, and their families.",
+    "address": "3647 40th St, Sacramento, CA 95817",
+    "hours": "Every Saturday: 1:00pm - 4:00pm",
+  
+    "appointment_instruction": "No Appointments Needed! Open every Saturday 1-4pm",
+  
+    "volunteer_page_description": "Once a month, our clinic conducts a mobile outreach program. There our volunteers work alongside Sacramento’s Gender Hormone Clinic and the Stockton Harm Reduction Program to provide the best care to our patients.\n\nOutside of our clinic, our undergraduate volunteers work in one of our seven committees to build and reinforce projects in the Oak Park Community, hosting events such as the Health Fair and the Harm Reduction Conference.",
+    "volunteer_image": "/volunteer-entrance.png",
+    "volunteer_image_alt_text": "JVMC volunteers posing at a drive in Sacramento",
+  
+    "event_card_title": "Annual Health Fair",
+    "event_card_description": "JVMC will be hosting our Annual Health Fair this year on May 3rd, 2025. This event seeks to provide diverse health and wellness booths to provide free resources and supplies to the community members of Oak Park. Please refer to our Instagram for updates on time and location!",
+    "event_card_image": "/about-annual-health-fair.jpg",
+    "event_card_image_alt_text": "Health Fair",
+    "event_card_button_text": "Get Involved",
+    "event_card_button_url": "https://www.instagram.com/jvmclinic/"
+  }

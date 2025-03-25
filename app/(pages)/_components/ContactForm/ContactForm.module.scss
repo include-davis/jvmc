@@ -6,18 +6,34 @@
   align-items: center;
   width: 72.22%;
   color: var(--dark-grey);
+  z-index: 1;
+
+  @include mixins.phone {
+    width: 361px;
+  }
 }
 
 .formField {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @include mixins.phone {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // gap: 30px;
+  }
 }
 
 .formInput {
   width: 44.92%;
   margin-bottom: 20px;
   text-align: left;
+
+  @include mixins.phone {
+    width: 100%;
+  }
 }
 
 .formInput label {
@@ -75,7 +91,7 @@
 }
 
 .message.error {
-    border-color: red;
+  border-color: red;
 }
 
 .message:focus {
@@ -89,6 +105,10 @@
   flex-direction: row-reverse;
   width: 100%;
   padding-top: 50px;
+
+  @include mixins.phone {
+    padding-top: 30px;
+  }
 }
 
 .sendButton {
@@ -98,6 +118,10 @@
   font-family: var(--font2);
   width: 6rem;
   font-size: 1rem;
+
+  @include mixins.phone {
+    width: 100%;
+  }
 }
 
 /* Error messages */

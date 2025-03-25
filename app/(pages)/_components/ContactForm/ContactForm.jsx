@@ -21,13 +21,16 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    console.log("submit");
     e.preventDefault(); // Prevent automatic page reload
 
-    // Input Validation
-    let valid = true;
+    // Prevent multiple submissions while loading
     if (loading) return;
 
     setLoading(true);
+
+    // Input Validation
+    let valid = true;
 
     if (!firstName.trim()) {
       setFirstNameError("Please provide a first name");
@@ -67,6 +70,11 @@ export default function ContactForm() {
       setMessageError("");
     }
 
+    if (!valid) {
+      setLoading(false); // Reset loading state if validation fails
+      // return;
+    }
+
     const contactData = {
       firstName,
       lastName,
@@ -75,24 +83,29 @@ export default function ContactForm() {
       message,
     };
 
-    if (valid) {
-      // Send to API
-      try {
-        const res = await fetch("/api/sendEmail", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(contactData),
-        });
+    // Send to API
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(contactData),
+      });
 
-        if (!res.ok) throw new Error("Failed to send email");
+      if (!res.ok) throw new Error("Failed to send email");
 
-        const data = await res.json();
-        alert(data.message || "Email sent successfully!");
-      } catch (error) {
-          alert("Something went wrong. Try again.");
-      } finally {
-          setLoading(false);
-      }
+      const data = await res.json();
+      alert(data.message || "Email sent successfully!");
+
+      // Reset form fields after successful submission
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    } catch (error) {
+      alert("Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -107,7 +120,9 @@ export default function ContactForm() {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
-          {firstNameError && <p className={styles.errorText}>{firstNameError}</p>}
+          {firstNameError && (
+            <p className={styles.errorText}>{firstNameError}</p>
+          )}
         </div>
         <div className={styles.formInput}>
           <label>Last Name*</label>
@@ -154,7 +169,11 @@ export default function ContactForm() {
         {messageError && <p className={styles.errorText}>{messageError}</p>}
       </div>
       <div className={styles.buttonArea}>
-        <button type="submit" disabled={loading} className={`btn ${styles.sendButton}`}>
+        <button
+          type="submit"
+          disabled={loading}
+          className={`btn ${styles.sendButton}`}
+        >
           Send
         </button>
       </div>

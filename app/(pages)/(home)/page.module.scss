@@ -4,9 +4,10 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: 320px;
+  gap: var(--element-spacing);
   padding: var(--nav-to-element-spacing) 0;
   position: relative;
+  overflow: hidden;
 }
 
 .headerGradientContainer {
@@ -27,20 +28,36 @@
   margin: 0px -15%;
 }
 
+.teddyImage {
+  position: relative;
+  overflow: hidden;
+
+  width: 166px;
+  height: 123px;
+
+  @include mixins.tablet {
+    width: 110px;
+    height: 82px;
+  }
+
+  @include mixins.phone {
+    width: 90px;
+    height: 66px;
+  }
+}
+
 .titleWithButtonSection {
   position: relative;
-  // height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   gap: 36px;
-}
 
-.contactButton {
-  display: flex;
-  justify-content: center;
+  @include mixins.tablet {
+    gap: 24px;
+  }
 }
 
 .dots1 {
@@ -49,6 +66,15 @@
   left: -12px;
   z-index: -1;
   pointer-events: none; /* Prevents interaction issues */
+
+  @include mixins.sm-phone {
+    bottom: 550px;
+
+    img {
+      width: 126px;
+      height: 260px;
+    }
+  }
 }
 
 .dots2 {
@@ -57,6 +83,16 @@
   right: 8px;
   z-index: -1;
   pointer-events: none; /* Prevents interaction issues */
+
+  @include mixins.sm-phone {
+    bottom: 0px;
+    right: -35px;
+
+    img {
+      width: 237px;
+      height: 367px;
+    }
+  }
 }
 
 .dots3 {
@@ -65,6 +101,25 @@
   bottom: 600px;
   z-index: -1;
   pointer-events: none; /* Prevents interaction issues */
+
+  @include mixins.phone {
+    bottom: 630px;
+    left: 96px;
+
+    img {
+      width: 230px;
+      height: 272px;
+    }
+  }
+
+  @include mixins.sm-phone {
+    left: 40px;
+
+    img {
+      width: 185px;
+      height: 219px;
+    }
+  }
 }
 
 .titleAndSubtitleBox {
@@ -72,17 +127,39 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 12px;
+
+  @include mixins.sm-desktop {
+    width: 90%;
+  }
+
+  @include mixins.tablet {
+    gap: 16px;
+  }
 }
 
 .titleAndSubtitleBox h1 {
   color: var(--emerald);
-  font-size: 56px;
 }
 
-.titleAndSubtitleBox p {
+.taglineDesktop {
   text-align: center;
   width: calc(8px * 94);
+  padding: 10px;
+
+  @include mixins.phone {
+    display: none;
+  }
+}
+
+.taglineMobile {
+  display: none;
+
+  @include mixins.phone {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+  }
 }
 
 .cardSectionBox {
@@ -92,7 +169,6 @@
   flex-direction: column;
 
   gap: var(--vertical-card-gap);
-  // width: 1040px;  This will mess up the full-view
 
   position: relative;
   z-index: 0;
@@ -106,15 +182,22 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: var(--vertical-card-gap);
 
   height: calc(8px * 18);
   width: calc(8px * 85);
-  margin-bottom: calc(8px * 3);
 }
 
-.cardSectionHeader Image {
-  box-shadow: var(--drop-shadow-small);
-  background-color: transparent;
+.cardSectionHeader img {
+  @include mixins.tablet {
+    width: 520px;
+    height: 187px;
+  }
+
+  @include mixins.phone {
+    width: 390px;
+    height: 140px;
+  }
 }
 
 .cardSectionHeader h3 {
@@ -122,6 +205,10 @@
   color: var(--emerald);
   z-index: 1;
   width: 50%;
+
+  @include mixins.tablet {
+    width: 30%;
+  }
 }
 
 // Contact Card Section with Circle Gradient
@@ -129,6 +216,13 @@
   display: flex;
   justify-content: center;
   gap: var(--element-spacing);
+  padding: 0 40px;
+
+  @include mixins.tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 32px;
+  }
 }
 
 .contactInfoContainer {
@@ -136,6 +230,29 @@
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+
+  @include mixins.tablet {
+    gap: 32px;
+    align-items: center;
+  }
+}
+
+.contactInfoButton {
+  @include mixins.tablet {
+    width: 12rem;
+    height: 2.5rem;
+  }
+}
+
+.contactInfoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+
+  @include mixins.tablet {
+    gap: 32px;
+  }
 }
 
 .contactInfo {
@@ -160,6 +277,16 @@
   align-items: center;
   width: 512px;
   height: 454px;
+
+  @include mixins.tablet {
+    width: 341px;
+    height: 303px;
+  }
+
+  @include mixins.phone {
+    width: 256px;
+    height: 227px;
+  }
 }
 
 .contactImage {

@@ -7,28 +7,24 @@ import Image from "next/image";
 
 export default function CommunityPartnersCard({ index, partner }) {
   // Set class based on index and reverse if it is the first or third image
-  let containerClass = styles.cardContainer;
-  if (index === 0 || index === 2) {
-    containerClass += " " + styles.reverse;
-  }
 
   return (
-    <div className={containerClass}>
+    <div
+      className={`${styles.cardContainer} ${index % 2 == 0 ? styles.reverse : ""}`}
+    >
       <div className={styles.imageWrapper}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={partner.imageSrc}
-            style={{ objectFit: "cover" }}
-            fill={true}
-            alt={partner.imageAlt}
-          />
-        </div>
+        <Image
+          src={partner.imageSrc}
+          style={{ objectFit: "cover", objectPosition: "50% 20%" }}
+          fill={true}
+          alt={partner.imageAlt}
+        />
       </div>
 
       <div className={styles.partnersCard}>
-        <div>
-          <h4 className={styles.partnersName}>{partner.name}</h4>
-          <p className={styles.partnersDescription}>{partner.description}</p>
+        <div className={styles.header}>
+          <h4>{partner.name}</h4>
+          <p>{partner.description}</p>
         </div>
         <div className={styles.contactInfo}>
           <p className={styles.locationText}>
@@ -40,11 +36,13 @@ export default function CommunityPartnersCard({ index, partner }) {
             {partner.date}
           </p>
           <p className={styles.appointmentText}>
-            {index === 1 && <FaCircleExclamation className={styles.icon} />}
+            {partner.appointment && (
+              <FaCircleExclamation className={styles.icon} />
+            )}
             {partner.appointment}
           </p>
         </div>
-        <a className="btn" href={partner.website}>
+        <a className={`${styles.button} btn`} href={partner.website}>
           {partner.buttonText}
         </a>
       </div>

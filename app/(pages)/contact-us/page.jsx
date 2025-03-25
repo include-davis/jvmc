@@ -18,7 +18,7 @@ export async function getContactUsGeneralInfo() {
     // console.log(data);
     const contents = data.body[0];
     const parsedData = {
-      apptInstructions: contents.appointment_instructions,
+      apptInstructions: contents.appointment_instruction,
     };
     // console.log(parsedData);
     return parsedData;
@@ -28,7 +28,7 @@ export async function getContactUsGeneralInfo() {
     );
     return {
       apptInstructions:
-        ContactUsGeneralInfoFallbackData.appointment_instructions,
+        ContactUsGeneralInfoFallbackData.appointment_instruction,
     };
   }
 }
@@ -37,6 +37,8 @@ export default async function ContactUs() {
   const generalData = await getContactUsGeneralInfo();
   const { heading1, heading2 } = contactData.questionsCard;
 
+  console.log(generalData.apptInstructions);
+
   return (
     <main className={styles.contactUs}>
       {/* MAP COMPONENT */}
@@ -44,18 +46,8 @@ export default async function ContactUs() {
         <Image
           src="/Contact_Rainbow_Top.png"
           alt="Decorative Rainbow Top"
-          className={styles.rainbowTop}
-          width={1482}
-          height={1350}
-        />
-      </div>
-      <div className={styles.rainbowBottom}>
-        <Image
-          src="/Contact_Rainbow_Bottom.png"
-          alt="Decorative Rainbow Bottom"
-          className={styles.rainbowBottom}
-          width={1362}
-          height={1068}
+          fill="true"
+          style={{ objectFit: "contain" }}
         />
       </div>
       <h1>Contact Us</h1>
@@ -65,7 +57,6 @@ export default async function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.666409336778!2d-121.46305095896587!3d38.541457271919676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ad06c484a2647%3A0x4b342e5bcbaa8fff!2sMorrissey%20Flynn%20Building%2C%203647%2040th%20St%2C%20Sacramento%2C%20CA%2095817!5e0!3m2!1sen!2sus!4v1740808728482!5m2!1sen!2sus"
             width="100%"
             height="450"
-            style={{ border: 0, borderRadius: "12px" }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -83,25 +74,17 @@ export default async function ContactUs() {
       </section>
       {/* SOCIAL MEDIA COMPONENT */}
       <section className={styles.socialMedia}>
-        <h4>Visit our social media pages!</h4>
         <div className={styles.dotsContainer}>
           <div className={styles.dotsLeft}>
             <Image
-              src="/NEW_Contact_Middle_Left_Dots.png"
+              src="/images/NEW_Contact_Middle_Left_Dots.png"
               alt="Decorative Dots Left"
-              width={420}
-              height={412}
-            />
-          </div>
-          <div className={styles.dotsRight}>
-            <Image
-              src="/NEW_Contact_Middle_Left_Right.png"
-              alt="Decorative Dots Right"
-              width={432}
-              height={397}
+              fill="true"
+              style={{ objectFit: "contain" }}
             />
           </div>
         </div>
+        <h4>Visit our social media pages!</h4>
         <div className={styles.socialMediaIcons}>
           <a
             href="https://www.instagram.com/jvmclinic"
@@ -122,6 +105,16 @@ export default async function ContactUs() {
             @jvmcstudents
           </a>
         </div>
+        <div className={styles.dotsContainer}>
+          <div className={styles.dotsRight}>
+            <Image
+              src="/images/NEW_Contact_Middle_Left_Right.png"
+              alt="Decorative Dots Right"
+              fill="true"
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+        </div>
       </section>
       {/* QUESTIONS? COMPONENT */}
       <div className={styles.questionsCard}>
@@ -139,8 +132,18 @@ export default async function ContactUs() {
           </b>
         </p>
       </div>
+
       {/* CONTACT FORM COMPONENT */}
       <ContactForm />
+
+      <div className={styles.rainbowBottom}>
+        <Image
+          src="/Contact_Rainbow_Bottom.png"
+          alt="Decorative Rainbow Bottom"
+          fill="true"
+          style={{ objectFit: "contain" }}
+        />
+      </div>
     </main>
   );
 }
