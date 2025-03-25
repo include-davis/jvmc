@@ -1,11 +1,20 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
 .card {
   display: flex;
   flex-direction: column;
   width: calc(8px * 104);
   background-color: var(--white);
   box-shadow: var(--drop-shadow);
-  border-radius: 20px;
-  padding: 60px;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  border: 1px solid var(--mint);
+  gap: 50px;
+
+  @include mixins.tablet {
+    gap: 16px;
+    width: 90%;
+  }
 }
 
 .info {
@@ -18,7 +27,6 @@
 .tm {
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
   gap: 12px;
 }
 

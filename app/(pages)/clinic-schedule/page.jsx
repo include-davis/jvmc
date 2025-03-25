@@ -37,19 +37,21 @@ export default async function ClinicSchedule() {
               src="https://calendar.google.com/calendar/embed?src=a6298014dd9ccad37eb2b34842045e9e6991da9348b88ce3139b4688cb07bf58%40group.calendar.google.com&ctz=America%2FLos_Angeles"
               width="1040"
               height="696"
-            ></iframe>
+            />
           </div>
           <div className={styles.key}>
             <h4>Calendar Key</h4>
-            {data.map((clinic, key) => (
-              <div key={key} className={styles.keyElem}>
-                <div
-                  className={styles.circ}
-                  style={{ backgroundColor: `${clinic.color}` }}
-                ></div>
-                <p className={styles.title}>{clinic.title}</p>
-              </div>
-            ))}
+            <ul>
+              {data.map((clinic, key) => (
+                <li key={key} className={styles.keyElem}>
+                  <div
+                    className={styles.circ}
+                    style={{ backgroundColor: `${clinic.color}` }}
+                  />
+                  <p className={styles.title}>{clinic.title}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
