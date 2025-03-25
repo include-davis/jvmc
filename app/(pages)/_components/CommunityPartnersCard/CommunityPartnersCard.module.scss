@@ -1,14 +1,5 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
-.partnerContainer {
-  display: flex;
-  align-items: center;
-
-  @include mixins.phone {
-    flex-direction: column;
-  }
-}
-
 .partnersCard {
   background-color: var(--white);
   border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
@@ -21,12 +12,28 @@
   flex-direction: column;
   gap: 36px;
 
+  @include mixins.tablet {
+    width: 60%;
+    height: 400px;
+    gap: 20px;
+  }
+
   @include mixins.phone {
     width: 100%;
     height: auto;
     padding: 20px;
     border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
-    gap: 20px;
+    gap: 24px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h4 {
+    line-height: 150%;
   }
 }
 
@@ -36,6 +43,11 @@
   width: 434px;
   height: 452px;
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+
+  @include mixins.tablet {
+    width: 40%;
+    height: 400px;
+  }
 
   @include mixins.phone {
     width: 100%;
@@ -48,9 +60,12 @@
   display: flex;
   align-items: center;
 
+  @include mixins.tablet {
+    width: 90%;
+  }
+
   @include mixins.phone {
     flex-direction: column;
-    width: 100%;
   }
 }
 
@@ -93,8 +108,21 @@
 .appointmentText {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.button {
+  width: 12rem;
+  height: 3rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--emerald);
 
   @include mixins.phone {
-    font-size: 14px;
+    width: 16px;
+    height: 16px;
   }
 }
