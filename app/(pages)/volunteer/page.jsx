@@ -1,7 +1,6 @@
 import Link from "next/link";
-import data from "@/app/(pages)/_data/volunteer.json";
-import styles from "./page.module.scss";
 import Image from "next/image";
+import styles from "./page.module.scss";
 
 import VolunteerCard from "../_components/VolunteerCard/VolunteerCard";
 import VolunteerGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
@@ -83,7 +82,7 @@ export default async function Volunteer() {
     <main className={styles.page}>
       {/* Top Section */}
       <div className={styles.top}>
-        <div className={styles.header}>
+        <div className={styles.heading}>
           <h1 className={styles.title}>Volunteer at JVMC</h1>
           <h4 className={styles.sub_title}>
             JVMC runs smoothly with the help of our volunteers caring for our
@@ -91,13 +90,15 @@ export default async function Volunteer() {
           </h4>
         </div>
         <div className={styles.opening}>
-          <Image
-            className={styles.landing_photo}
-            src={generalData.landingImage}
-            width={521}
-            height={370}
-            alt={generalData.landingImageAlt}
-          />
+          <div className={styles.landingPhoto}>
+            <Image
+              src={generalData.landingImage}
+              style={{ objectFit: "cover" }}
+              fill={true}
+              alt={generalData.landingImageAlt}
+            />
+          </div>
+
           {/* Below is LONG_TEXT */}
           <div
             className={styles.intro}

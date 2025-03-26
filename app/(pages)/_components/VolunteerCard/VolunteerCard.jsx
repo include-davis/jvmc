@@ -14,28 +14,36 @@ export default function VolunteerCard({
 }) {
   return (
     <div className={`${styles.cardComponent} ${styles[direction]}`}>
-      <div className={`${styles.card} ${styles[direction]}`}>
-        <div className={styles.cardText}>
-          <div className={styles.cardTitle}>
-            <div className={styles.icon}>
-              <Image src={icon} alt={iconAlt} objectFit="cover" fill="true" />
-            </div>
-            <h4>{title}</h4>
+      <div className={styles.cardText}>
+        <div className={styles.cardTitle}>
+          <div className={styles.icon}>
+            <Image
+              src={icon}
+              alt={iconAlt}
+              style={{ objectFit: "cover" }}
+              fill={true}
+            />
           </div>
-          {/* Below is LONG_TEXT */}
-          <div
-            className={styles.cardBody}
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
-          {buttonLink && buttonText && (
-            <a href={buttonLink} target="_blank" className="btn">
-              {buttonText}
-            </a>
-          )}
+          <h4>{title}</h4>
         </div>
-        <div className={styles.cardImage}>
-          <Image src={image} alt={imageAlt} layout="fill" objectFit="cover" />
-        </div>
+        {/* Below is LONG_TEXT */}
+        <div
+          className={styles.cardBody}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+        {buttonLink && buttonText && (
+          <a href={buttonLink} target="_blank" className="btn">
+            {buttonText}
+          </a>
+        )}
+      </div>
+      <div className={`${styles.cardImage} ${styles[direction]}`}>
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill={true}
+          style={{ objectFit: "cover" }}
+        />
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ $logo-width: calc(8px * 20);
   grid-column: 1;
   grid-row: 1;
 
-  @include mixins.phone {
+  @include mixins.tablet {
     grid-column: 1;
     grid-row: 1;
     justify-self: center;
