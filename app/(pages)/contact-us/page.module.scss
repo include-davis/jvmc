@@ -127,13 +127,13 @@
   @include mixins.phone {
     width: 100%;
     padding: 30px;
+    gap: 12px;
   }
 }
 
 .infoCard {
   background-color: var(--white);
   text-align: center;
-  font-size: 36px;
   color: var(--emerald);
 }
 

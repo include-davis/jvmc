@@ -7,16 +7,71 @@ import VolunteerGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.j
 import VolunteerCardsFallbackData from "@/app/(pages)/_data/volunteer.json";
 
 export async function getVolunteerGeneralInfo() {
-  return {
-    landingDescription:
-      VolunteerGeneralInfoFallbackData.volunteer_page_description,
-    landingImage: VolunteerGeneralInfoFallbackData.volunteer_image,
-    landingImageAlt: VolunteerGeneralInfoFallbackData.volunteer_image_alt_text,
-  };
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/general-info?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const contents = data.body[0];
+    const parsedData = {
+      landingDescription: contents.volunteer_page_description,
+      landingImage: contents.volunteer_image[0],
+      landingImageAlt: contents.volunteer_image_alt_text,
+    };
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(
+      `Failed to fetch general-info for volunteer page: ${e.message}`
+    );
+    return {
+      landingDescription:
+        VolunteerGeneralInfoFallbackData.volunteer_page_description,
+      landingImage: VolunteerGeneralInfoFallbackData.volunteer_image,
+      landingImageAlt:
+        VolunteerGeneralInfoFallbackData.volunteer_image_alt_text,
+    };
+  }
 }
 
 export async function getVolunteerCards() {
-  return VolunteerCardsFallbackData;
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/volunteer-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const parsedData = data.body.map((card) => {
+      let button_text, button_link;
+      if (card.button_text_and_link) {
+        [button_text, button_link] = card.button_text_and_link.split(",");
+      }
+      return {
+        title: card.title,
+        description: card.description,
+        image: card.image[0],
+        image_alt_text: card.image_alt_text,
+        icon: card.icon[0],
+        icon_alt_text: card.icon_alt_text,
+        button_text: card.button_text_and_link ? button_text : null,
+        button_link: card.button_text_and_link ? button_link : null,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch volunteer-cards: ${e.message}`);
+    return VolunteerCardsFallbackData;
+  }
 }
 
 export default async function Volunteer() {
@@ -35,13 +90,15 @@ export default async function Volunteer() {
           </h4>
         </div>
         <div className={styles.opening}>
-          <Image
-            className={styles.landing_photo}
-            src={generalData.landingImage}
-            width={521}
-            height={370}
-            alt={generalData.landingImageAlt}
-          />
+          <div className={styles.landingPhoto}>
+            <Image
+              src={generalData.landingImage}
+              style={{ objectFit: "cover" }}
+              fill={true}
+              alt={generalData.landingImageAlt}
+            />
+          </div>
+
           {/* Below is LONG_TEXT */}
           <div
             className={styles.intro}
@@ -55,22 +112,20 @@ export default async function Volunteer() {
         {/* VolunteerCard components */}
         <h2 className={styles.header}>Ready to Volunteer with Us?</h2>
         <div className={styles.volunteerCards}>
-          {volunteerData.map((card, idx) => {
-            return (
-              <VolunteerCard
-                key={idx}
-                direction={idx % 2 === 0 ? "right" : "left"}
-                title={card.title}
-                description={card.description}
-                image={card.image}
-                imageAlt={card.image_alt_text}
-                icon={card.icon}
-                iconAlt={card.icon_alt_text}
-                buttonText={card.button_text}
-                buttonLink={card.button_link}
-              />
-            );
-          })}
+          {volunteerData.map((card, idx) => (
+            <VolunteerCard
+              key={idx}
+              direction={idx % 2 === 0 ? "right" : "left"}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+              imageAlt={card.image_alt_text}
+              icon={card.icon}
+              iconAlt={card.icon_alt_text}
+              buttonText={card.button_text}
+              buttonLink={card.button_link}
+            />
+          ))}
         </div>
 
         <div className={styles.gradient1Container}>

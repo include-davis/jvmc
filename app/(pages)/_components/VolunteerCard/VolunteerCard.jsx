@@ -17,7 +17,12 @@ export default function VolunteerCard({
       <div className={styles.cardText}>
         <div className={styles.cardTitle}>
           <div className={styles.icon}>
-            <Image src={icon} alt={iconAlt} objectFit="cover" fill="true" />
+            <Image
+              src={icon}
+              alt={iconAlt}
+              style={{ objectFit: "cover" }}
+              fill={true}
+            />
           </div>
           <h4>{title}</h4>
         </div>

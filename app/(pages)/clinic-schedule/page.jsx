@@ -4,7 +4,36 @@ import ClinicCardFallbackData from "../_data/clinic-schedule.json";
 import ClinicSchedulesCard from "../_components/ClinicSchedulesCard/ClinicSchedulesCard";
 
 async function getClinicSchedulesCards() {
-  return ClinicCardFallbackData;
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/calendar-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    return data.body.map((card) => {
+      let button_text, button_link;
+      if (card.action_button_text_and_link) {
+        [button_text, button_link] =
+          card.action_button_text_and_link.split(",");
+      }
+      return {
+        color: card.hex_code,
+        title: card.title,
+        paragraph: card.description,
+        time: card.hours,
+        message: card.appointment_instruction,
+        action: card.action_text ? card.action_text : null,
+        button_text: card.action_button_text_and_link ? button_text : null,
+        button_link: card.action_button_text_and_link ? button_link : null,
+      };
+    });
+  } catch (e) {
+    console.error(`Failed to fetch calendar-cards: ${e.message}`);
+    return ClinicCardFallbackData;
+  }
 }
 
 export default async function ClinicSchedule() {

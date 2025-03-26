@@ -24,23 +24,22 @@
   align-items: center;
   background-color: var(--color-white); //#F8F8F8;
   gap: var(--vertical-card-gap);
+  width: 100%;
 }
 
 .clinicRolesGradientContainer {
   position: absolute;
-  top: -364px;
-  height: 1000px;
-  width: 100%;
+  top: -520px;
   overflow: hidden;
+  width: 100%;
 }
 
 .clinicRolesGradient {
   position: relative;
   z-index: -1;
   pointer-events: none; /* Prevents interaction issues */
-  width: 110%;
-  height: 100%;
-  margin: 0 -5%;
+  width: 1572px;
+  height: 1300px;
 }
 
 .fairCard {

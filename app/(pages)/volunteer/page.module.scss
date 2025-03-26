@@ -20,7 +20,6 @@
   @include mixins.tablet {
     gap: 50px;
     width: 90%;
-    // width: auto;
   }
 }
 
@@ -48,26 +47,37 @@
   flex-direction: row;
   align-items: center;
   column-gap: 40px;
+  border: 1px solid red;
 
   @include mixins.tablet {
     flex-direction: column;
     row-gap: 24px;
+    width: 100%;
   }
 }
 
-.landing_photo {
+.landingPhoto {
+  position: relative;
+  overflow: hidden;
+
   border-radius: 20px;
   border: var(--mint-border);
   border: 2px solid var(--mint);
 
+  width: 520px;
+  height: 370px;
+
   /* mint-drop-shadow, not same as globals var */
   box-shadow: var(--drop-shadow-mint);
+
   @include mixins.tablet {
+    aspect-ratio: 8 / 5;
     width: 100%;
+    height: auto;
     max-width: 520px;
-    flex: 1;
   }
 }
+
 .intro {
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
 
@@ -84,8 +94,6 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding-top: var(--element-spacing);
-  padding-bottom: 160px;
   width: 100%;
   @include mixins.tablet {
     justify-content: center;

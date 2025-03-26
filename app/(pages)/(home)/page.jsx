@@ -10,21 +10,68 @@ import HomeGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
 import HomeCardsFallbackData from "@/app/(pages)/_data/home-cards.json";
 
 export async function getHomeGeneralInfo() {
-  return {
-    tagline_mobile: HomeGeneralInfoFallbackData.tagline_mobile,
-    tagline_desktop: HomeGeneralInfoFallbackData.tagline_desktop,
-    address: HomeGeneralInfoFallbackData.address,
-    hours: HomeGeneralInfoFallbackData.hours,
-  };
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/general-info?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const contents = data.body[0];
+    const parsedData = {
+      tagline_mobile: contents.tagline_mobile,
+      tagline_desktop: contents.tagline_desktop,
+      address: contents.address,
+      hours: contents.hours,
+    };
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch general-info for home page: ${e.message}`);
+    return {
+      tagline_mobile: HomeGeneralInfoFallbackData.tagline_mobile,
+      tagline_desktop: HomeGeneralInfoFallbackData.tagline_desktop,
+      address: HomeGeneralInfoFallbackData.address,
+      hours: HomeGeneralInfoFallbackData.hours,
+    };
+  }
 }
 
-export async function getHomeCards() {
-  return HomeCardsFallbackData;
+async function getHomeCards() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/home-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const parsedData = data.body.map((card) => {
+      return {
+        title: card.title,
+        description: card.description,
+        image: card.image[0],
+        image_alt_text: card.image_alt_text,
+        icon: card.icon[0],
+        icon_alt_text: card.icon_alt_text,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch home-cards: ${e.message}`);
+    return HomeCardsFallbackData;
+  }
 }
 
 export default async function Home() {
-  const homeData = await getHomeCards();
   const generalData = await getHomeGeneralInfo();
+  const homeData = await getHomeCards();
 
   return (
     <main className={styles.body}>
@@ -136,7 +183,7 @@ export default async function Home() {
             </div>
           </div>
           <Link
-            href={data.contactCard.button.link}
+            href={"/contact-us"}
             className={`btn ${styles.contactInfoButton}`}
           >
             Ask Us Questions
