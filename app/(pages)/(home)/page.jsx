@@ -44,6 +44,7 @@ export default async function Home() {
             alt={"JVMC Teddy Bear"}
             style={{ objectFit: "cover" }}
             fill={true}
+            sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
           />
         </div>
 
@@ -150,6 +151,7 @@ export default async function Home() {
               alt={"Group of medical students"}
               style={{ objectFit: "cover" }}
               fill={true}
+              sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
             />
           </div>
         </div>

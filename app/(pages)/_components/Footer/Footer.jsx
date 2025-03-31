@@ -17,8 +17,9 @@ export default function Footer() {
           <Image
             src={data.img}
             alt={data.imgAlt}
-            style={{ objectFit: "fill" }}
+            style={{ objectFit: "cover" }}
             fill={true}
+            sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
           />
         </div>
         <ul className={styles.socialLinks}>
