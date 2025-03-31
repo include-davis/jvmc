@@ -19,6 +19,7 @@ export default function CommunityPartnersCarousel({ images }) {
               alt={image.alt}
               fill={true}
               style={{ objectFit: "cover" }}
+              sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
             />
           </div>
         ))}
