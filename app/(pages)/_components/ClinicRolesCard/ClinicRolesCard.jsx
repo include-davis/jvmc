@@ -18,7 +18,7 @@ export default function ClinicRolesCard({
           style={{ objectFit: "cover" }}
           fill={true}
           alt={imgAlt}
-          sizes={"(max-width: 1048px) 33vw, (max-width: 720px) 50vw"}
+          sizes={"(max-width: 1048px) 33vw, (max-width: 720px) 50vw, 100vw"}
         />
       </div>
       <div className={styles.cardTop}>
