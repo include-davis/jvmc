@@ -62,6 +62,7 @@ export default function About() {
             src={data.fair.img}
             style={{ objectFit: "cover" }}
             fill={true}
+            sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 100vw"}
             alt={data.fair.imgAlt}
           />
         </div>

@@ -12,7 +12,13 @@ export default function AboutUsCard({ content, img, title, alt, alignment }) {
         ))}
       </div>
       <div className={`${styles.img} ${styles[alignment]}`}>
-        <Image src={img} style={{ objectFit: "cover" }} fill={true} alt={alt} />
+        <Image
+          src={img}
+          style={{ objectFit: "cover" }}
+          fill={true}
+          alt={alt}
+          sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 100vw"}
+        />
       </div>
     </div>
   );
