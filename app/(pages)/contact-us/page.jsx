@@ -51,6 +51,7 @@ export default function ContactUs() {
               alt="Decorative Dots Left"
               fill="true"
               style={{ objectFit: "contain" }}
+              sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
             />
           </div>
         </div>
@@ -82,6 +83,7 @@ export default function ContactUs() {
               alt="Decorative Dots Right"
               fill="true"
               style={{ objectFit: "contain" }}
+              sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
             />
           </div>
         </div>
