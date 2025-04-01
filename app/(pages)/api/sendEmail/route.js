@@ -24,23 +24,28 @@ export async function POST(req) {
 
     // Create transporter
     const transporter = nodemailer.createTransport({
-      host: "Zoho",
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_FROM,
+        pass: process.env.PASSWORD,
+      },
+      tls: {
+        // Do not fail on invalid certs
+        rejectUnauthorized: false,
       },
     });
 
     // Send email
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: "jvmc@gmail.com", // EDIT WITH ACTUAL CONTACT FORM EMAIL
+      from: process.env.EMAIL_FROM,
+      to: process.env.EMAIL_TO, // EDIT WITH ACTUAL CONTACT FORM EMAIL
       subject: subject,
       text: `
                 Name: ${firstName} ${lastName}
                 Email: ${email}
                 Message: ${message}
             `, // Can edit with name/email in body if needed
+      // HTML is another option for formatting
     };
 
     await transporter.sendMail(mailOptions);
