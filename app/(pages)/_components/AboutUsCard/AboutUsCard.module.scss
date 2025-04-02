@@ -64,8 +64,6 @@
   // overflow: hidden;
   flex: 1;
 
-  border: 1px solid green;
-
   @include mixins.phone {
     width: 100%;
     align-items: center;
