@@ -5,7 +5,7 @@ const cspHeader = `
   script-src-elem 'self' https://apis.google.com https://www.gstatic.com 'unsafe-inline';
   style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
   img-src 'self' https://*.googleusercontent.com data:;
-  font-src 'self' https://fonts.gstatic.com;
+  font-src 'self' https://fonts.gstatic.com data:;
   frame-src https://calendar.google.com https://www.google.com/maps https://maps.google.com https://*.google.com;
   connect-src 'self' https://*.googleapis.com;
   `;

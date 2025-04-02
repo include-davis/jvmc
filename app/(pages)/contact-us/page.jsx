@@ -17,6 +17,7 @@ export default function ContactUs() {
           alt="Decorative Rainbow Top"
           fill="true"
           style={{ objectFit: "contain" }}
+          priority={true}
         />
       </div>
       <h1>Contact Us</h1>
