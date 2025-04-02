@@ -11,7 +11,7 @@ export default function AboutUsCard({ content, img, title, alt, alignment }) {
           <p key={idx}>{text}</p>
         ))}
       </div>
-      <div className={`${styles.img} ${styles[alignment]}`}>
+      <div className={styles.img}>
         <Image src={img} style={{ objectFit: "cover" }} fill={true} alt={alt} />
       </div>
     </div>

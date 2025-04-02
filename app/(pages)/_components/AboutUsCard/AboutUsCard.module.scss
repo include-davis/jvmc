@@ -3,15 +3,19 @@
 .cardWrapper {
   display: flex;
 
-  width: calc(8px * 130);
+  max-width: calc(8px * 130);
   border-radius: var(--card-border-radius);
   box-shadow: var(--drop-shadow);
+
+  overflow: hidden;
+
+  border: 1px solid red;
 
   h3 {
     color: var(--emerald);
   }
   @include mixins.phone {
-    width: 350px; 
+    width: 100%; 
     border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow);
    // display: flex;
@@ -26,16 +30,18 @@
 
 .cardWrapper.left {
   flex-direction: row-reverse;
-  @mixin phone{
+  @include mixins.phone{
     //align-items: center;
+    flex-direction: column-reverse;
   }
 }
 
 .cardWrapper.right {
   flex-direction: row;
-  @mixin phone{
+  @include mixins.phone{
     
    // align-items: center;
+   flex-direction: column-reverse;
   }
 
 }
@@ -46,7 +52,7 @@
 
   gap: 20px;
   padding: var(--card-padding);
-  width: 100%;
+  flex: 1;
   @mixin phone{
     padding: 10px; 
     align-items: center;
@@ -55,14 +61,13 @@
 
 .img {
   position: relative;
-  overflow: hidden;
-  width: 100%;
+  // overflow: hidden;
+  flex: 1;
+
+  border: 1px solid green;
 
   @include mixins.phone {
-    position: absolute;
-  //  z-index: 1;
-    width: 90%;
-    height: 210px;
+    width: 100%;
     align-items: center;
     padding-bottom: 200px;
 
@@ -70,21 +75,3 @@
     //margin-bottom: 10px;
   }
 }
-
-.img.left {
- 
-  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-  @include mixins.phone {
-    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
-  }
-
-  
-}
-
-.img.right {
-  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
-  @include mixins.phone {
-    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
-  }
-}
-

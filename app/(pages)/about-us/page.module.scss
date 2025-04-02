@@ -31,6 +31,21 @@
 
 }
 
+.cardsWrapper {
+  padding: 0 var(--element-spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--vertical-card-gap);
+
+  @include mixins.sm-desktop {
+    padding: 0 calc(var(--element-spacing) / 2);
+  }
+
+  @include mixins.phone {
+    padding: 0 16px;
+  }
+}
+
 .clinicRolesGradientContainer {
   position: absolute;
   top: -364px;

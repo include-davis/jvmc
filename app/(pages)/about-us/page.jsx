@@ -14,16 +14,18 @@ export default function About() {
         </div>
 
         {/* About Us Cards are mapped here */}
-        {data.aboutUsCards.map((card, idx) => (
-          <AboutUsCard
-            key={idx}
-            title={card.title}
-            content={card.content}
-            img={card.image}
-            alt={card.alt}
-            alignment={idx % 2 === 0 ? "right" : "left"} // alternate alignment
-          />
-        ))}
+        <div className={styles.cardsWrapper}>
+          {data.aboutUsCards.map((card, idx) => (
+            <AboutUsCard
+              key={idx}
+              title={card.title}
+              content={card.content}
+              img={card.image}
+              alt={card.alt}
+              alignment={idx % 2 === 0 ? "right" : "left"} // alternate alignment
+            />
+          ))}
+        </div>
       </div>
 
       <div className={styles.clinicRoles}>
