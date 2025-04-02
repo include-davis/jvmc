@@ -21,10 +21,8 @@
 
   @include mixins.phone {
     width: 100%;
-    margin-top: -50px;
+    margin-top: -75px;
   }
-
-  border: 1px solid green;
 }
 
 .cardText {
@@ -34,7 +32,8 @@
   padding: 56px;
 
   @include mixins.phone {
-    padding-top: calc(56px + 100px);
+    padding: 32px;
+    padding-top: calc(56px + 75px);
   }
 }
 
@@ -67,16 +66,14 @@
   }
 
   .img {
-    border: 2px solid blue;
     top: 16px;
     right: -32px;
     transform: translate(50%, -50%); // moves 0, 0 point to center of image
 
     @include mixins.phone {
-      transform: none;
+      transform: translate(-50%, 0);
       top: 100px;
-      right: auto;
-      align-self: center;
+      right: -50%;
     }
   }
 }
@@ -89,15 +86,14 @@
   }
 
   .img {
-    border: 2px solid red;
     top: 24px;
     left: -60px;
     transform: translate(-50%, -50%); // moves 0, 0 point to center of image
 
     @include mixins.phone {
-      transform: none;
+      transform: translate(-50%, 0);
       top: 100px;
-      left: auto;
+      left: 50%;
     }
   }
 }

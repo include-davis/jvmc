@@ -25,11 +25,12 @@
   align-items: center;
   background-color: var(--color-white); //#F8F8F8;
   gap: var(--vertical-card-gap);
-  @include mixins.phone {
-    
-  }
- 
+}
 
+.clinicRoles {
+  @include mixins.phone {
+    padding: 0 16px;
+  }
 }
 
 .cardsWrapper {
