@@ -3,10 +3,12 @@
 // Top Section
 .page {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--nav-to-element-spacing) 0;
+  gap: var(--element-spacing);
 }
 
 .top {
@@ -14,11 +16,31 @@
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  width: 1040px;
+  max-width: 1040px;
+  @include mixins.tablet {
+    gap: 50px;
+    width: 90%;
+    // width: auto;
+  }
 }
 
-.header {
+.heading {
   text-align: center;
+  @include mixins.tablet {
+    h1 {
+      padding: 0 40px;
+    }
+
+    h4 {
+      padding-top: 16px;
+    }
+
+    @include mixins.phone {
+      h4 {
+        @include mixins.fontStyle(1rem, 700, 150%, var(--font2));
+      }
+    }
+  }
 }
 
 .opening {
@@ -26,6 +48,11 @@
   flex-direction: row;
   align-items: center;
   column-gap: 40px;
+
+  @include mixins.tablet {
+    flex-direction: column;
+    row-gap: 24px;
+  }
 }
 
 .landing_photo {
@@ -35,12 +62,20 @@
 
   /* mint-drop-shadow, not same as globals var */
   box-shadow: var(--drop-shadow-mint);
+  @include mixins.tablet {
+    width: 100%;
+    max-width: 520px;
+    flex: 1;
+  }
 }
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 24px;
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+    width: 100%;
+    max-width: 520px;
+  }
 }
 
 // Middle Cards
@@ -52,6 +87,9 @@
   padding-top: var(--element-spacing);
   padding-bottom: 160px;
   width: 100%;
+  @include mixins.tablet {
+    justify-content: center;
+  }
 }
 
 .volunteerCards {
@@ -59,20 +97,30 @@
   flex-direction: column;
   gap: var(--vertical-card-gap);
   align-items: center;
+  @include mixins.tablet {
+    row-gap: 150px;
+  }
 }
 
 .header {
-  color: var(--dark-grey);
   text-align: center;
+  padding: 0 32px;
+  @include mixins.tablet {
+    margin-bottom: 100px; //header won't overlap with card images
+  }
 }
 
 .gradient1Container {
   z-index: -1;
   position: absolute;
-  top: -48px;
+  top: -64px;
   height: 510px;
   width: 100%;
   overflow: hidden;
+
+  @include mixins.tablet {
+    top: -160px;
+  }
 }
 
 .gradient1 {
@@ -102,6 +150,16 @@
 
   width: 640px;
   text-align: center;
+
+  @include mixins.tablet {
+    h4 {
+      line-height: 150%;
+    }
+  }
+
+  @include mixins.phone {
+    width: 360px;
+  }
 }
 
 .about_us {
