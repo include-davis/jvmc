@@ -20,11 +20,13 @@ export default function ClinicRolesCard({
           alt={imgAlt}
         />
       </div>
-      <div className={styles.cardTop}>
-        <Image src={icon} width={39} height={39} alt={iconAlt} />
-        <h3>{subheader}</h3>
+      <div className={styles.cardText}>
+        <div className={styles.cardTop}>
+          <Image src={icon} width={39} height={39} alt={iconAlt} />
+          <h3>{subheader}</h3>
+        </div>
+        <p> {description} </p>
       </div>
-      <p> {description} </p>
     </div>
   );
 }
