@@ -7,11 +7,63 @@ import CarouselFallbackData from "@/app/(pages)/_data/community-partners-carouse
 
 // revalidateTag("cms")
 async function getCards() {
-  return CommunityPartnersFallbackData;
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/community-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const parsedData = data.body.map((card) => {
+      const [button_text, button_link] = card.button_text_and_link?.split(",");
+      return {
+        name: card.title,
+        description: card.description,
+        location: card.location,
+        date: card.hours,
+        appointment: card.appointment_instruction
+          ? card.appointment_instruction
+          : null,
+        website: button_link,
+        buttonText: button_text,
+        imageSrc: card.image[0],
+        imageAlt: card.image_alt_text,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch community-partners-cards: ${e.message}`);
+    return CommunityPartnersFallbackData;
+  }
 }
 
 async function getCarouselImages() {
-  return CarouselFallbackData;
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/community-carousel-images?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const parsedData = data.body.map((image) => {
+      return {
+        src: image.image[0],
+        alt: image.image_alt_text,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch community-carousel-images: ${e.message}`);
+    return CarouselFallbackData;
+  }
 }
 
 export default async function CommunityPartners() {

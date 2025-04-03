@@ -1,34 +1,112 @@
 import styles from "./page.module.scss";
+import AboutUsCardFallbackData from "@/app/(pages)/_data/about-us.json";
+import ClinicRolesCardFallbackData from "@/app/(pages)/_data/clinic-roles.json";
 import Image from "next/image";
 import ClinicRolesCard from "../_components/ClinicRolesCard/ClinicRolesCard";
-import AboutUsCard from "../_components/AboutUsCard/AboutUs";
-import AboutUsCardFallbackData from "../_data/about-us.json";
-import ClinicRolesCardFallbackData from "../_data/clinic-roles.json";
-import EventCardGeneralInfoFallbackData from "../_data/general-info.json";
+import AboutUsCard from "../_components/AboutUsCard/AboutUsCard";
+import EventCardGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
 
 async function getAboutUsCards() {
-  return AboutUsCardFallbackData;
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/about-us-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const parsedData = data.body.map((card) => {
+      return {
+        title: card.title,
+        description: card.description,
+        image: card.image[0],
+        image_alt_text: card.image_alt_text,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch about-us-cards: ${e.message}`);
+    return AboutUsCardFallbackData;
+  }
 }
 
 async function getClinicRolesCards() {
-  return ClinicRolesCardFallbackData;
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/clinic-roles-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const parsedData = data.body.map((card) => {
+      return {
+        title: card.title,
+        description: card.description,
+        image: card.image[0],
+        image_alt_text: card.image_alt_text,
+        icon: card.icon[0],
+        icon_alt_text: card.icon_alt_text,
+      };
+    });
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(
+      `Failed to fetch clinic-roles-cards in about us page: ${e.message}`
+    );
+    return ClinicRolesCardFallbackData;
+  }
 }
 
 export async function getEventCardGeneralInfo() {
-  return {
-    eventTitle: EventCardGeneralInfoFallbackData.event_card_title,
-    eventDescription: EventCardGeneralInfoFallbackData.event_card_description,
-    eventImage: EventCardGeneralInfoFallbackData.event_card_image,
-    eventImageAlt: EventCardGeneralInfoFallbackData.event_card_image_alt_text,
-    eventButtonText: EventCardGeneralInfoFallbackData.event_card_button_text,
-    eventButtonLink: EventCardGeneralInfoFallbackData.event_card_button_url,
-  };
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/general-info?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    // console.log(data);
+    const contents = data.body[0];
+    const parsedData = {
+      eventTitle: contents.event_card_title,
+      eventDescription: contents.event_card_description,
+      eventImage: contents.event_card_image[0],
+      eventImageAlt: contents.event_card_image_alt_text,
+      eventButtonText: contents.event_card_button_text,
+      eventButtonLink: contents.event_card_button_url,
+    };
+    // console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(
+      `Failed to fetch general-info for event card in about us page: ${e.message}`
+    );
+    return {
+      eventTitle: EventCardGeneralInfoFallbackData.event_card_title,
+      eventDescription: EventCardGeneralInfoFallbackData.event_card_description,
+      eventImage: EventCardGeneralInfoFallbackData.event_card_image,
+      eventImageAlt: EventCardGeneralInfoFallbackData.event_card_image_alt_text,
+      eventButtonText: EventCardGeneralInfoFallbackData.event_card_button_text,
+      eventButtonLink: EventCardGeneralInfoFallbackData.event_card_button_url,
+    };
+  }
 }
 
 export default async function About() {
   const aboutUsCardData = await getAboutUsCards();
   const clinicRolesCardData = await getClinicRolesCards();
   const eventCardData = await getEventCardGeneralInfo();
+
+  console.log(aboutUsCardData);
 
   return (
     <div className={styles.page}>
@@ -63,13 +141,13 @@ export default async function About() {
         {clinicRolesCardData.map((card, idx) => (
           <ClinicRolesCard
             key={idx}
-            icon={card.icon}
-            iconAlt={card.icon_alt_text}
+            title={card.title}
+            description={card.description}
             img={card.image}
             imgAlt={card.image_alt_text}
-            align={idx % 2 === 0 ? "left" : "right"}
-            subheader={card.title}
-            description={card.description}
+            icon={card.icon}
+            iconAlt={card.icon_alt_text}
+            align={idx % 2 === 0 ? "right" : "left"}
           />
         ))}
         <div className={styles.clinicRolesGradientContainer}>
@@ -94,8 +172,16 @@ export default async function About() {
         </div>
         <div className={styles.fairText}>
           <h4>{eventCardData.eventTitle}</h4>
-          <p>{eventCardData.eventDescription}</p>
-          <a className="btn" href={eventCardData.eventButtonLink} target="_blank">
+          <p
+            dangerouslySetInnerHTML={{
+              __html: eventCardData.eventDescription,
+            }}
+          />
+          <a
+            className="btn"
+            href={eventCardData.eventButtonLink}
+            target="_blank"
+          >
             {eventCardData.eventButtonText}
           </a>
         </div>
