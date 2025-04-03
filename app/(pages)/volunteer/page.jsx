@@ -95,6 +95,7 @@ export default async function Volunteer() {
               src={generalData.landingImage}
               style={{ objectFit: "cover" }}
               fill={true}
+              sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 50vw, 100vw"}
               alt={generalData.landingImageAlt}
             />
           </div>

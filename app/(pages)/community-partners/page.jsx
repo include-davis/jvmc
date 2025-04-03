@@ -107,6 +107,7 @@ export default async function CommunityPartners() {
             src={"/images/communityPartnersGradient.png"}
             alt={"Bottom gradient"}
             fill={true}
+            priority={true}
           />
         </div>
       </div>
