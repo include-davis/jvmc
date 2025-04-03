@@ -13,11 +13,13 @@ import "swiper/css/free-mode";
 
 export default function HomepageCarousel({ data }) {
   let slides = Object.values(data);
-  if (Object.keys(data).length < 4) {
-    slides = Object.values([...data, ...data])
+  
+  if (Object.keys(data).length === 1) {
+    slides = Object.values([...data, ...data, ...data, ...data]);
   }
-
-  console.log(slides);
+  if (Object.keys(data).length < 4) {
+    slides = Object.values([...data, ...data]);
+  }
 
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
