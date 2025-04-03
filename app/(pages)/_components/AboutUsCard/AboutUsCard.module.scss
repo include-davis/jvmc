@@ -76,7 +76,12 @@
   }
 }
 
+// long text
 .content {
+  ul {
+    margin-left: 30px;
+  }
+
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
 
   @include mixins.tablet {
