@@ -21,7 +21,7 @@ export default function HomepageCarousel({ data }) {
 
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
-  const numSlides = 4;
+  const numSlides = slides.length;
 
   const handleSwiperInit = (swiper) => {
     swiperRef.current = swiper;
