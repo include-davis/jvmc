@@ -18,7 +18,7 @@ export default function AboutUsCard({
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>
-      <div className={`${styles.img} ${styles[alignment]}`}>
+      <div className={styles.img}>
         <Image
           src={img}
           style={{ objectFit: "cover" }}
