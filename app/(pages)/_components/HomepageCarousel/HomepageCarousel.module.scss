@@ -23,13 +23,13 @@
   color: var(--dark-grey);
 }
 
-.swiper {
-  width: calc(8px * 123);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  overflow: visible !important;
+.swiper{
+    width: calc(8px * 123);
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow: visible !important;
 }
 
 .swiperslide {
@@ -68,7 +68,8 @@
 }
 
 .unshown {
-  display: none;
+    opacity: 1;
+    pointer-events: none !important;
 }
 
 .imageContainer {
