@@ -13,12 +13,14 @@
   gap: 36px;
 
   @include mixins.tablet {
+    min-width: 350px;
     width: 60%;
     height: 400px;
     gap: 20px;
   }
 
   @include mixins.phone {
+    min-width: unset;
     width: 100%;
     height: auto;
     padding: 20px;
@@ -45,11 +47,13 @@
   border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
 
   @include mixins.tablet {
+    min-width: 300px;
     width: 40%;
     height: 400px;
   }
 
   @include mixins.phone {
+    min-width: unset;
     width: 100%;
     height: 250px;
     border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
@@ -91,6 +95,11 @@
   @include mixins.phone {
     border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
   }
+}
+
+.partnerContainer {
+  display: flex;
+  align-items: center;
 }
 
 .contactInfo {

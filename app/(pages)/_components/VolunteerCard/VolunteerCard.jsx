@@ -14,7 +14,7 @@ export default function VolunteerCard({
 }) {
   return (
     <div className={`${styles.cardComponent} ${styles[direction]}`}>
-      <div className={styles.cardText}>
+      <div className={`${styles.cardText} ${styles[direction]}`}>
         <div className={styles.cardTitle}>
           <div className={styles.icon}>
             <Image

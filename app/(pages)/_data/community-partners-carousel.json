@@ -1,18 +1,18 @@
 [
-    {
-      "src": "/cm_carousel1.png",
-      "alt": "picture of the jvmc"
-    },
-    {
-      "src": "/cm_carousel2.png",
-      "alt": "jvmc volunteers"
-    },
-    {
-      "src": "/cm_carousel3.png",
-      "alt": "jvmc volunteers"
-    },
-    {
-      "src": "/cm_carousel4.png",
-      "alt": "jvmc volunteers"
-    }
-  ]
+  {
+    "src": "/cm_carousel1.png",
+    "alt": "picture of the jvmc"
+  },
+  {
+    "src": "/cm_carousel2.png",
+    "alt": "jvmc volunteers"
+  },
+  {
+    "src": "/cm_carousel3.png",
+    "alt": "jvmc volunteers"
+  },
+  {
+    "src": "/cm_carousel4.png",
+    "alt": "jvmc volunteers"
+  }
+]

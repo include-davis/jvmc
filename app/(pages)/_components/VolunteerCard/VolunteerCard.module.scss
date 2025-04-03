@@ -4,6 +4,7 @@
   display: flex;
   width: 1000px;
   position: relative;
+  text-align: left;
 
   background-color: var(--card-background);
   border-radius: var(--card-border-radius);
@@ -24,6 +25,8 @@
 .cardComponent.left {
   flex-direction: row-reverse;
   margin-left: 64px;
+  justify-content: flex-end;
+
   @include mixins.tablet {
     margin-left: 0px;
     flex-direction: column-reverse;
@@ -52,6 +55,18 @@
   }
 }
 
+.cardText.left {
+  margin-left: 240px;
+
+  @include mixins.sm-desktop {
+    margin-left: 135px;
+  }
+
+  @include mixins.tablet {
+    margin-left: 0px;
+  }
+}
+
 .cardTitle {
   display: flex;
   align-items: center;
@@ -72,8 +87,8 @@
 .icon {
   position: relative;
   overflow: hidden;
-  min-width: 40px;
-  min-height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .cardBody {
