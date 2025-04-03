@@ -21,6 +21,7 @@ export default function HomeCard({
           alt={imgAlt}
           fill={true}
           style={{ objectFit: "cover" }}
+          sizes={"(max-width: 1048px) 33vw, (max-width: 720px) 100vw"}
         />
       </div>
 
