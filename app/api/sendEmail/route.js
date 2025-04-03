@@ -38,7 +38,7 @@ export async function POST(req) {
     // Send email
     const mailOptions = {
       from: process.env.NODEMAILER_SENDER,
-      to: process.env.NODEMAILER_RECIEVER, // EDIT WITH ACTUAL CONTACT FORM EMAIL
+      to: process.env.NODEMAILER_RECEIVER, // EDIT WITH ACTUAL CONTACT FORM EMAIL
       subject: subject,
       html: `
         <!DOCTYPE html>

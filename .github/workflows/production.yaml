@@ -37,8 +37,8 @@ jobs:
           --build-env NODEMAILER_SENDER=${{ secrets.NODEMAILER_SENDER }}
           --env NODEMAILER_PASSWORD="${{ secrets.NODEMAILER_PASSWORD }}"
           --build-env NODEMAILER_PASSWORD="${{ secrets.NODEMAILER_PASSWORD }}"
-          --env NODEMAILER_RECIEVER=${{ secrets.NODEMAILER_RECIEVER }}
-          --build-env NODEMAILER_RECIEVER=${{ secrets.NODEMAILER_RECIEVER }}
+          --env NODEMAILER_RECEIVER=${{ secrets.NODEMAILER_RECEIVER }}
+          --build-env NODEMAILER_RECEIVER=${{ secrets.NODEMAILER_RECEIVER }}
 
       - name: Success
         run: echo "!! Deployment successful !!"
