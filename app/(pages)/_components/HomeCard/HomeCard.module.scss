@@ -62,6 +62,8 @@
   flex-direction: column;
   gap: 30px;
 
+  flex: 1;
+
   @include mixins.tablet {
     gap: 24px;
   }
