@@ -69,9 +69,44 @@ async function getHomeCards() {
   }
 }
 
+async function getHomepageCarouselCards() {
+  try {
+    const res = await fetch(
+      `${process.env.CMS_BASE_URL}/api/content/homepage-carousel-cards?_published=true`,
+      { next: { tag: "cms" } }
+    );
+    const data = await res.json();
+    if (!data.ok || !data.body || data.body.length === 0) {
+      throw new Error(data.error);
+    }
+    console.log(data);
+    const parsedData = data.body.map((card) => {
+      let button_text, button_link;
+      if (card.button_text_and_link) {
+        [button_text, button_link] = card.button_text_and_link.split(",");
+      }
+      return {
+        title: card.title,
+        hours: card.hours,
+        appointment_instruction: card.appointment_instruction,
+        image: card.image[0],
+        image_alt_text: card.image_alt_text,
+        button_text: button_text,
+        button_link: button_link,
+      };
+    });
+    console.log(parsedData);
+    return parsedData;
+  } catch (e) {
+    console.error(`Failed to fetch homepage-carousel-cards: ${e.message}`);
+    return HomeCardsFallbackData;
+  }
+}
+
 export default async function Home() {
   const generalData = await getHomeGeneralInfo();
   const homeData = await getHomeCards();
+  const homeCarouselData = await getHomepageCarouselCards();
 
   return (
     <main className={styles.body}>
@@ -150,7 +185,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <HomepageCarousel data={data.carousel} />
+      <HomepageCarousel data={homeCarouselData} />
 
       <div className={styles.contactCard}>
         <div className={styles.dots3}>

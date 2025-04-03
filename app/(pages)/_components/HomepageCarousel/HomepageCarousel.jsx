@@ -12,7 +12,13 @@ import "swiper/css";
 import "swiper/css/free-mode";
 
 export default function HomepageCarousel({ data }) {
-  const slides = Object.values(data);
+  let slides = Object.values(data);
+  if (Object.keys(data).length < 4) {
+    slides = Object.values([...data, ...data])
+  }
+
+  console.log(slides);
+
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
   const numSlides = 4;
@@ -65,8 +71,8 @@ export default function HomepageCarousel({ data }) {
               >
                 <div className={styles.imageContainer}>
                   <Image
-                    src={slideinfo.src}
-                    alt="image"
+                    src={slideinfo.image}
+                    alt={slideinfo.image_alt_text}
                     fill
                     style={{ objectFit: "cover" }}
                   />
@@ -79,7 +85,7 @@ export default function HomepageCarousel({ data }) {
                       size={20}
                       color="var(--emerald)"
                     />
-                    <p>{slideinfo.time}</p>
+                    <p>{slideinfo.hours}</p>
                   </div>
                   <div>
                     <IoMdInformationCircle
@@ -87,10 +93,10 @@ export default function HomepageCarousel({ data }) {
                       size={20}
                       color="var(--emerald)"
                     />
-                    <p>{slideinfo.info}</p>
+                    <p>{slideinfo.appointment_instruction}</p>
                   </div>
-                  <a href="/clinic-schedule" className="btn">
-                    Schedule Now
+                  <a href={slideinfo.button_link} className="btn">
+                    {slideinfo.button_text}
                   </a>
                 </div>
               </div>
