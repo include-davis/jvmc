@@ -106,8 +106,6 @@ export default async function About() {
   const clinicRolesCardData = await getClinicRolesCards();
   const eventCardData = await getEventCardGeneralInfo();
 
-  console.log(aboutUsCardData);
-
   return (
     <div className={styles.page}>
       <div className={styles.aboutUs}>
@@ -124,7 +122,7 @@ export default async function About() {
               title={card.title}
               content={card.description}
               img={card.image}
-              alt={card.image_alt_text}
+              imgAlt={card.image_alt_text}
               alignment={idx % 2 === 0 ? "right" : "left"} // alternate alignment
             />
           ))}
