@@ -18,14 +18,16 @@ export default function ClinicRolesCard({
           style={{ objectFit: "cover" }}
           fill={true}
           alt={imgAlt}
+          sizes={"(max-width: 1048px) 33vw, (max-width: 720px) 50vw, 100vw"}
         />
       </div>
-      <div className={styles.cardTop}>
-        <Image src={icon} width={40} height={40} alt={iconAlt} />
-        <h3>{title}</h3>
+      <div className={styles.cardText}>
+        <div className={styles.cardTop}>
+          <Image src={icon} width={40} height={40} alt={iconAlt} />
+          <h3>{title}</h3>
+        </div>
+        <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
       </div>
-      {/* Below is LONG TEXT */}
-      <p dangerouslySetInnerHTML={{ __html: description }} />
     </div>
   );
 }

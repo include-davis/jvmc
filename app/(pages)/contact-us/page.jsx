@@ -37,8 +37,6 @@ export default async function ContactUs() {
   const generalData = await getContactUsGeneralInfo();
   const { heading1, heading2 } = contactData.questionsCard;
 
-  console.log(generalData.apptInstructions);
-
   return (
     <main className={styles.contactUs}>
       {/* MAP COMPONENT */}
@@ -48,6 +46,7 @@ export default async function ContactUs() {
           alt="Decorative Rainbow Top"
           fill="true"
           style={{ objectFit: "contain" }}
+          priority={true}
         />
       </div>
       <h1>Contact Us</h1>
@@ -81,6 +80,7 @@ export default async function ContactUs() {
               alt="Decorative Dots Left"
               fill="true"
               style={{ objectFit: "contain" }}
+              sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
             />
           </div>
         </div>
@@ -112,6 +112,7 @@ export default async function ContactUs() {
               alt="Decorative Dots Right"
               fill="true"
               style={{ objectFit: "contain" }}
+              sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
             />
           </div>
         </div>

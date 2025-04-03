@@ -1,3 +1,5 @@
+@use "@/app/(pages)/_globals/mixins.scss";
+
 .page {
   display: flex;
   flex-direction: column;
@@ -9,14 +11,29 @@
 .card {
   width: 60%; // had to change this
   position: relative;
-  padding: 56px;
+  
   flex-direction: column;
-  background-color: var(--white);
-  box-shadow: var(--drop-shadow);
-  border-radius: var(--card-border-radius);
+  align-items: center;
 
   h3 {
     color: var(--emerald);
+  }
+
+  @include mixins.phone {
+    width: 100%;
+    margin-top: -75px;
+  }
+}
+
+.cardText {
+  background-color: var(--white);
+  box-shadow: var(--drop-shadow);
+  border-radius: var(--card-border-radius);
+  padding: 56px;
+
+  @include mixins.phone {
+    padding: 32px;
+    padding-top: calc(56px + 75px);
   }
 }
 
@@ -35,24 +52,56 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: var(--drop-shadow-mint);
+
+  @include mixins.phone {
+    position: relative;
+  }
 }
 
 .card.left {
   margin-right: 10%;
 
+  @include mixins.phone {
+    margin-right: 0;
+  }
+
   .img {
     top: 16px;
     right: -32px;
     transform: translate(50%, -50%); // moves 0, 0 point to center of image
+
+    @include mixins.phone {
+      transform: translate(-50%, 0);
+      top: 100px;
+      right: -50%;
+    }
   }
 }
 
 .card.right {
   margin-left: 10%;
 
+  @include mixins.phone {
+    margin-left: 0;
+  }
+
   .img {
     top: 24px;
     left: -60px;
     transform: translate(-50%, -50%); // moves 0, 0 point to center of image
+
+    @include mixins.phone {
+      transform: translate(-50%, 0);
+      top: 100px;
+      left: 50%;
+    }
+  }
+}
+
+.description {
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
   }
 }

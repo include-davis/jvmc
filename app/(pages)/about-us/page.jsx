@@ -106,6 +106,8 @@ export default async function About() {
   const clinicRolesCardData = await getClinicRolesCards();
   const eventCardData = await getEventCardGeneralInfo();
 
+  console.log(aboutUsCardData);
+
   return (
     <div className={styles.page}>
       <div className={styles.aboutUs}>
@@ -115,22 +117,24 @@ export default async function About() {
         </div>
 
         {/* About Us Cards are mapped here */}
-        {aboutUsCardData.map((card, idx) => (
-          <AboutUsCard
-            key={idx}
-            title={card.title}
-            content={card.description}
-            img={card.image}
-            imgAlt={card.image_alt_text}
-            alignment={idx % 2 === 0 ? "right" : "left"} // alternate alignment
-          />
-        ))}
+        <div className={styles.cardsWrapper}>
+          {aboutUsCardData.map((card, idx) => (
+            <AboutUsCard
+              key={idx}
+              title={card.title}
+              content={card.description}
+              img={card.image}
+              alt={card.image_alt_text}
+              alignment={idx % 2 === 0 ? "right" : "left"} // alternate alignment
+            />
+          ))}
+        </div>
       </div>
 
       <div className={styles.clinicRoles}>
         <div className={styles.header}>
           <h1>Clinic Roles</h1>
-          <h4>The incredible team that makes JVMC happen</h4>
+          <h4>The incredible team that makes JVMC happen.</h4>
         </div>
 
         {/* Clinic Roles Cards are mapped here */}
@@ -163,12 +167,14 @@ export default async function About() {
             src={eventCardData.eventImage}
             style={{ objectFit: "cover" }}
             fill={true}
+            sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 100vw"}
             alt={eventCardData.eventImageAlt}
           />
         </div>
         <div className={styles.fairText}>
           <h4>{eventCardData.eventTitle}</h4>
-          <p
+          <div
+            className={styles.eventDescription}
             dangerouslySetInnerHTML={{
               __html: eventCardData.eventDescription,
             }}

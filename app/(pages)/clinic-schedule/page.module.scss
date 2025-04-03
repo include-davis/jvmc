@@ -136,4 +136,9 @@
   flex-direction: column;
   align-items: center;
   gap: 64px;
+
+  @include mixins.tablet {
+    max-width: calc(8px * 104);
+    width: 90%;
+  }
 }

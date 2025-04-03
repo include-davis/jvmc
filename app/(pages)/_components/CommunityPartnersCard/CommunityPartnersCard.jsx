@@ -17,6 +17,7 @@ export default function CommunityPartnersCard({ index, partner }) {
           src={partner.imageSrc}
           style={{ objectFit: "cover", objectPosition: "50% 20%" }}
           fill={true}
+          sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 100vw"}
           alt={partner.imageAlt}
         />
       </div>

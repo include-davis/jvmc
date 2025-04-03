@@ -93,7 +93,6 @@
   text-decoration: none;
   color: var(--dark-grey);
   @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
-  // border: solid 1px green;
   transition:
     font-weight 0.2s ease,
     color 0.2s ease;

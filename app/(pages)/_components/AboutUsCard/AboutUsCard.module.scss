@@ -1,24 +1,51 @@
 @use "@/app/(pages)/_globals/mixins.scss";
 
 .cardWrapper {
+  align-self: center;
   display: flex;
 
-  width: calc(8px * 130);
+  width: 100%;
+  max-width: calc(8px * 130);
   border-radius: var(--card-border-radius);
   box-shadow: var(--drop-shadow);
+
+  overflow: hidden;
+
   background-color: var(--white);
 
   h3 {
     color: var(--emerald);
   }
+  @include mixins.phone {
+    width: 100%; 
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--drop-shadow);
+   // display: flex;
+    flex-direction: column;
+    justify-content: center; 
+   // align-items: center; 
+   h3 {
+    text-align: center;
+  }
+  }
 }
 
 .cardWrapper.left {
   flex-direction: row-reverse;
+  @include mixins.phone{
+    //align-items: center;
+    flex-direction: column-reverse;
+  }
 }
 
 .cardWrapper.right {
   flex-direction: row;
+  @include mixins.phone{
+    
+   // align-items: center;
+   flex-direction: column-reverse;
+  }
+
 }
 
 .cardContainer {
@@ -27,19 +54,32 @@
 
   gap: 20px;
   padding: var(--card-padding);
-  width: 100%;
+  flex: 1;
+  @mixin phone{
+    padding: 10px; 
+    align-items: center;
+  }
 }
 
 .img {
   position: relative;
-  overflow: hidden;
-  width: 100%;
+  // overflow: hidden;
+  flex: 1;
+
+  @include mixins.phone {
+    width: 100%;
+    align-items: center;
+    padding-bottom: 200px;
+
+    
+    //margin-bottom: 10px;
+  }
 }
 
-.img.left {
-  border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
-}
+.content {
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
 
-.img.right {
-  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
 }

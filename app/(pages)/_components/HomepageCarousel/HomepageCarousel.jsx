@@ -75,6 +75,7 @@ export default function HomepageCarousel({ data }) {
                     alt={slideinfo.image_alt_text}
                     fill
                     style={{ objectFit: "cover" }}
+                    sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 33vw"}
                   />
                 </div>
                 <div className={styles.info}>
