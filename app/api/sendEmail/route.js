@@ -26,8 +26,8 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_FROM,
-        pass: process.env.PASSWORD,
+        user: process.env.NODEMAILER_SENDER,
+        pass: process.env.NODEMAILER_PASSWORD,
       },
       tls: {
         // Do not fail on invalid certs
@@ -37,8 +37,8 @@ export async function POST(req) {
 
     // Send email
     const mailOptions = {
-      from: process.env.EMAIL_FROM,
-      to: process.env.EMAIL_TO, // EDIT WITH ACTUAL CONTACT FORM EMAIL
+      from: process.env.NODEMAILER_SENDER,
+      to: process.env.NODEMAILER_RECIEVER, // EDIT WITH ACTUAL CONTACT FORM EMAIL
       subject: subject,
       html: `
         <!DOCTYPE html>
