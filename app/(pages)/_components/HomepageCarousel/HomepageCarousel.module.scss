@@ -68,8 +68,8 @@
 }
 
 .unshown {
-    opacity: 1;
-    pointer-events: none !important;
+  opacity: 0;
+  pointer-events: none !important;
 }
 
 .imageContainer {
