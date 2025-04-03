@@ -33,6 +33,12 @@ jobs:
           --prod
           --env CMS_BASE_URL=${{ vars.CMS_BASE_URL }}
           --build-env CMS_BASE_URL=${{ vars.CMS_BASE_URL }}
+          --env NODEMAILER_SENDER=${{ secrets.NODEMAILER_SENDER }}
+          --build-env NODEMAILER_SENDER=${{ secrets.NODEMAILER_SENDER }}
+          --env NODEMAILER_PASSWORD="${{ secrets.NODEMAILER_PASSWORD }}"
+          --build-env NODEMAILER_PASSWORD="${{ secrets.NODEMAILER_PASSWORD }}"
+          --env NODEMAILER_RECIEVER=${{ secrets.NODEMAILER_RECIEVER }}
+          --build-env NODEMAILER_RECIEVER=${{ secrets.NODEMAILER_RECIEVER }}
 
       - name: Success
         run: echo "!! Deployment successful !!"
