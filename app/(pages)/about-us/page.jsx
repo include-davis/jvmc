@@ -167,12 +167,14 @@ export default async function About() {
             src={eventCardData.eventImage}
             style={{ objectFit: "cover" }}
             fill={true}
+            sizes={"(max-width: 1048px) 50vw, (max-width: 720px) 100vw"}
             alt={eventCardData.eventImageAlt}
           />
         </div>
         <div className={styles.fairText}>
           <h4>{eventCardData.eventTitle}</h4>
-          <p
+          <div
+            className={styles.eventDescription}
             dangerouslySetInnerHTML={{
               __html: eventCardData.eventDescription,
             }}

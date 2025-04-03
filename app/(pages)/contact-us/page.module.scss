@@ -32,19 +32,27 @@
   position: absolute;
   z-index: 0;
   pointer-events: none;
-  top: -810.41px;
-  // left: 364.59px;
-  left: 30%;
+  top: -730.41px;
+  left: 250px;
   rotate: 12deg;
   width: 1482px;
   height: 1350px;
 
+  @include mixins.tablet {
+    left: -50px;
+    top: -860px;
+  }
+
   @include mixins.phone {
-    top: -100px;
-    left: -30%;
+    top: -260px;
+    left: 0;
     rotate: 0deg;
     width: 1000px;
     height: 560px;
+  }
+
+  @include mixins.sm-phone {
+    left: 50px;
   }
 }
 

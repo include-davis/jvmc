@@ -47,7 +47,6 @@
   flex-direction: row;
   align-items: center;
   column-gap: 40px;
-  border: 1px solid red;
 
   @include mixins.tablet {
     flex-direction: column;

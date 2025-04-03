@@ -75,3 +75,11 @@
     //margin-bottom: 10px;
   }
 }
+
+.content {
+  @include mixins.fontStyle(1.1rem, 400, 150%, var(--font2));
+
+  @include mixins.tablet {
+    @include mixins.fontStyle(1rem, 400, 150%, var(--font2));
+  }
+}
