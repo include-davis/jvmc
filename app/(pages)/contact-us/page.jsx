@@ -15,12 +15,14 @@ export async function getContactUsGeneralInfo() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    // console.log(data);
+    console.log(data);
     const contents = data.body[0];
     const parsedData = {
+      address: contents.address,
+      hours: contents.hours,
       apptInstructions: contents.appointment_instruction,
     };
-    // console.log(parsedData);
+    console.log(parsedData);
     return parsedData;
   } catch (e) {
     console.error(
@@ -63,11 +65,11 @@ export default async function ContactUs() {
         </div>
         <div className={styles.boxCard}>
           <div className={styles.infoCard}>
-            <h3>3647 40th St</h3>
-            <h3>Sacramento, CA 95817</h3>
+            <h3>{generalData.address}</h3>
           </div>
           <div className={styles.textInfo}>
             <h4>{generalData.apptInstructions}</h4>
+            <h4>{generalData.hours}</h4>
           </div>
         </div>
       </section>
