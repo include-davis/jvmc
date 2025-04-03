@@ -85,6 +85,8 @@ export default function ContactForm() {
 
     // Send to API
     try {
+      if (!valid) throw new Error("Invalid input");
+
       const res = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -103,7 +105,9 @@ export default function ContactForm() {
       setSubject("");
       setMessage("");
     } catch (error) {
-      alert("Something went wrong. Try again.");
+      if (error.message !== "Invalid input") {
+        alert("Something went wrong. Try again.");
+      }
     } finally {
       setLoading(false);
     }
