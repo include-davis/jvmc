@@ -79,7 +79,7 @@ async function getHomepageCarouselCards() {
     if (!data.ok || !data.body || data.body.length === 0) {
       throw new Error(data.error);
     }
-    console.log(data);
+    // console.log(data);
     const parsedData = data.body.map((card) => {
       let button_text, button_link;
       if (card.button_text_and_link) {
@@ -95,7 +95,7 @@ async function getHomepageCarouselCards() {
         button_link: button_link,
       };
     });
-    console.log(parsedData);
+    // console.log(parsedData);
     return parsedData;
   } catch (e) {
     console.error(`Failed to fetch homepage-carousel-cards: ${e.message}`);
