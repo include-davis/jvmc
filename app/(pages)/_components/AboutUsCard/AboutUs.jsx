@@ -6,10 +6,6 @@ export default function AboutUsCard({ content, img, title, alt, alignment }) {
     <div className={`${styles.cardWrapper} ${styles[alignment]}`}>
       <div className={styles.cardContainer}>
         <h3>{title}</h3>
-        {/* Map chunks of text to <p> elements */}
-        {/* {content.map((text, idx) => (
-          <p key={idx}>{text}</p>
-        ))} */}
         <p>{content}</p>
       </div>
       <div className={styles.img}>
