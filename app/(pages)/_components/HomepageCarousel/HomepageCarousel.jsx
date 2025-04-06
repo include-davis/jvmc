@@ -13,7 +13,7 @@ import "swiper/css/free-mode";
 
 export default function HomepageCarousel({ data }) {
   let slides = Object.values(data);
-  
+
   if (Object.keys(data).length === 1) {
     slides = Object.values([...data, ...data, ...data, ...data]);
   }

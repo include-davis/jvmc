@@ -8,7 +8,6 @@
   align-items: center;
   gap: var(--element-spacing);
   padding: var(--nav-to-element-spacing) 0;
-
 }
 
 .header {
@@ -94,7 +93,7 @@
   @include mixins.phone {
     height: 200px;
     width: 363px;
-    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0 ;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
     border: none;
   }
 }

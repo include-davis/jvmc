@@ -17,22 +17,22 @@
     color: var(--emerald);
   }
   @include mixins.phone {
-    width: 100%; 
+    width: 100%;
     border-radius: var(--card-border-radius);
     box-shadow: var(--drop-shadow);
-   // display: flex;
+    // display: flex;
     flex-direction: column;
-    justify-content: center; 
-   // align-items: center; 
-   h3 {
-    text-align: center;
-  }
+    justify-content: center;
+    // align-items: center;
+    h3 {
+      text-align: center;
+    }
   }
 }
 
 .cardWrapper.left {
   flex-direction: row-reverse;
-  @include mixins.phone{
+  @include mixins.phone {
     //align-items: center;
     flex-direction: column-reverse;
   }
@@ -40,12 +40,10 @@
 
 .cardWrapper.right {
   flex-direction: row;
-  @include mixins.phone{
-    
-   // align-items: center;
-   flex-direction: column-reverse;
+  @include mixins.phone {
+    // align-items: center;
+    flex-direction: column-reverse;
   }
-
 }
 
 .cardContainer {
@@ -55,8 +53,8 @@
   gap: 20px;
   padding: var(--card-padding);
   flex: 1;
-  @mixin phone{
-    padding: 10px; 
+  @mixin phone {
+    padding: 10px;
     align-items: center;
   }
 }
@@ -71,7 +69,6 @@
     align-items: center;
     padding-bottom: 200px;
 
-    
     //margin-bottom: 10px;
   }
 }

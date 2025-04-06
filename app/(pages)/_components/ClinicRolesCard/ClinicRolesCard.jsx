@@ -26,7 +26,10 @@ export default function ClinicRolesCard({
           <Image src={icon} width={40} height={40} alt={iconAlt} />
           <h3>{title}</h3>
         </div>
-        <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
     </div>
   );

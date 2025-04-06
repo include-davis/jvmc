@@ -5,7 +5,6 @@ import CommunityPartnersCard from "../_components/CommunityPartnersCard/Communit
 import CommunityPartnersCarousel from "../_components/CommunityPartnersCarousel/CommunityPartnersCarousel";
 import CarouselFallbackData from "@/app/(pages)/_data/community-partners-carousel.json";
 
-// revalidateTag("cms")
 async function getCards() {
   try {
     const res = await fetch(
