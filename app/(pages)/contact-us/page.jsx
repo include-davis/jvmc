@@ -29,6 +29,8 @@ export async function getContactUsGeneralInfo() {
       `Failed to fetch general-info for contact us page: ${e.message}`
     );
     return {
+      address: ContactUsGeneralInfoFallbackData.address,
+      hours: ContactUsGeneralInfoFallbackData.hours,
       apptInstructions:
         ContactUsGeneralInfoFallbackData.appointment_instruction,
     };
