@@ -31,6 +31,7 @@ jobs:
           --token ${{ secrets.VERCEL_TOKEN }}
           -n ${{ vars.VERCEL_PROJECT }}
           --yes
+          --prod
           --env CMS_BASE_URL=${{ vars.CMS_BASE_URL }}
           --build-env CMS_BASE_URL=${{ vars.CMS_BASE_URL }}
           --env NODEMAILER_SENDER=${{ secrets.NODEMAILER_SENDER }}
