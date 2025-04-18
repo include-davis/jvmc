@@ -1,32 +1,32 @@
 [
-    {
-        "title": "Undergraduate Students at UC Davis",
-        "description": "New cohorts are recruited during Winter Quarter annually. More information regarding the application process as an undergraduate student at UC Davis can be found on our instagram page, @jvmcstudents. To qualify as a volunteer, undergraduates must: Be an active UC Davis student, be able to commit to 3 quarters of volunteer work, and be able to attend our weekly meetings. Please email jvmcvolunteer@gmail.com with questions about recruitment and/or volunteering. Fill out our interest form if you would like to keep up to date on our recruitment cycle!",
-        "image": "/images/UGrad.jpg",
-        "image_alt_text": "Undergraduate Students",
-        "icon": "/undergrad-icon.svg",
-        "icon_alt_text": "undergrad icon",
-        "button_text": "Volunteer Form",
-        "button_link": "https://forms.gle/5STumqF28u1dvUmTA"
-    },
-    {
-        "title": "Physicians",
-        "description": "To qualify as a physician volunteer with JVMC you must be covered by UC Davis School of Medicine's malpractice insurance. As a UC Davis Physician you are automatically covered! If you are not a part of the UC Davis Health System and would still love to volunteer, please contact us via email!",
-        "image": "/images/Physicians.jpg",
-        "image_alt_text": "Physicians", 
-        "icon": "/preceptor-icon.svg",
-        "icon_alt_text": "preceptor icon",
-        "button_text": "Email Us",
-        "button_link": "mailto:jvmcvolunteer@gmail.com"
-    },
-    {
-        "title": "Medical Students: MD, PA, & NP Students",
-        "description": "If you are looking to volunteer with JVMC as a Medical Students, please arrive at the clinic location at 12:30 PM. Clinic hours are from 1:00 PM-5:00 PM. Please wear a scrub top and jeans or scrub bottoms instead of your white coats to be respectful to our patients. Additionally, please bring your student ID card and a stethoscope to the clinic.",
-        "image": "/images/MD_Student.jpg",
-        "image_alt_text": "MD Students", 
-        "icon": "/medicine-chest-icon.svg",
-        "icon_alt_text": "medicine chest icon",
-        "button_text": "Contact Us",
-        "button_link": "/contact-us"
-    }
+  {
+    "title": "Undergraduate Students at UC Davis",
+    "description": "New cohorts are recruited during Winter Quarter annually. More information regarding the application process as an undergraduate student at UC Davis can be found on our instagram page, @jvmcstudents. To qualify as a volunteer, undergraduates must: Be an active UC Davis student, be able to commit to 3 quarters of volunteer work, and be able to attend our weekly meetings. Please email jvmcvolunteer@gmail.com with questions about recruitment and/or volunteering. Fill out our interest form if you would like to keep up to date on our recruitment cycle!",
+    "image": "/images/UGrad.jpg",
+    "image_alt_text": "Undergraduate Students",
+    "icon": "/undergrad-icon.svg",
+    "icon_alt_text": "undergrad icon",
+    "button_text": "Volunteer Form",
+    "button_link": "https://forms.gle/5STumqF28u1dvUmTA"
+  },
+  {
+    "title": "Physicians",
+    "description": "To qualify as a physician volunteer with JVMC you must be covered by UC Davis School of Medicine's malpractice insurance. As a UC Davis Physician you are automatically covered! If you are not a part of the UC Davis Health System and would still love to volunteer, please contact us via email!",
+    "image": "/images/Physicians.jpg",
+    "image_alt_text": "Physicians",
+    "icon": "/preceptor-icon.svg",
+    "icon_alt_text": "preceptor icon",
+    "button_text": "Email Us",
+    "button_link": "mailto:jvmcvolunteer@gmail.com"
+  },
+  {
+    "title": "Medical Students: MD, PA, & NP Students",
+    "description": "If you are looking to volunteer with JVMC as a Medical Students, please arrive at the clinic location at 12:30 PM. Clinic hours are from 1:00 PM-5:00 PM. Please wear a scrub top and jeans or scrub bottoms instead of your white coats to be respectful to our patients. Additionally, please bring your student ID card and a stethoscope to the clinic.",
+    "image": "/images/MD_Student.jpg",
+    "image_alt_text": "MD Students",
+    "icon": "/medicine-chest-icon.svg",
+    "icon_alt_text": "medicine chest icon",
+    "button_text": "Contact Us",
+    "button_link": "/contact-us"
+  }
 ]
