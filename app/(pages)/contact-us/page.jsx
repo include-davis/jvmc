@@ -19,7 +19,6 @@ export async function getContactUsGeneralInfo() {
     const contents = data.body[0];
     const parsedData = {
       address: contents.address,
-      hours: contents.hours,
       apptInstructions: contents.appointment_instruction,
     };
     console.log(parsedData);
@@ -71,7 +70,6 @@ export default async function ContactUs() {
           </div>
           <div className={styles.textInfo}>
             <h4>{generalData.apptInstructions}</h4>
-            <h4>{generalData.hours}</h4>
           </div>
         </div>
       </section>
