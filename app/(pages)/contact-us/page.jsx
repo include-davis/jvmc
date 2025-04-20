@@ -29,7 +29,6 @@ export async function getContactUsGeneralInfo() {
     );
     return {
       address: ContactUsGeneralInfoFallbackData.address,
-      hours: ContactUsGeneralInfoFallbackData.hours,
       apptInstructions:
         ContactUsGeneralInfoFallbackData.appointment_instruction,
     };
