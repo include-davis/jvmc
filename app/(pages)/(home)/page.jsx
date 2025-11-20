@@ -8,6 +8,8 @@ import HomeCard from "../_components/HomeCard/HomeCard";
 import HomeGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
 import HomeCardsFallbackData from "@/app/(pages)/_data/home-cards.json";
 
+export const dynamic = "force-dynamic";
+
 export async function getHomeGeneralInfo() {
   try {
     const res = await fetch(

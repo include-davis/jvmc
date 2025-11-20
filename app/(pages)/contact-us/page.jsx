@@ -5,6 +5,8 @@ import Image from "next/image";
 import ContactUsGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
 import ContactForm from "../_components/ContactForm/ContactForm";
 
+export const dynamic = "force-dynamic";
+
 export async function getContactUsGeneralInfo() {
   try {
     const res = await fetch(

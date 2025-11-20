@@ -6,6 +6,8 @@ import VolunteerCard from "../_components/VolunteerCard/VolunteerCard";
 import VolunteerGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
 import VolunteerCardsFallbackData from "@/app/(pages)/_data/volunteer.json";
 
+export const dynamic = "force-dynamic";
+
 export async function getVolunteerGeneralInfo() {
   try {
     const res = await fetch(

@@ -6,6 +6,8 @@ import ClinicRolesCard from "../_components/ClinicRolesCard/ClinicRolesCard";
 import AboutUsCard from "../_components/AboutUsCard/AboutUsCard";
 import EventCardGeneralInfoFallbackData from "@/app/(pages)/_data/general-info.json";
 
+export const dynamic = "force-dynamic";
+
 async function getAboutUsCards() {
   try {
     const res = await fetch(

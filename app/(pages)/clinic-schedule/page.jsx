@@ -3,6 +3,8 @@ import Image from "next/image";
 import ClinicCardFallbackData from "../_data/clinic-schedule.json";
 import ClinicSchedulesCard from "../_components/ClinicSchedulesCard/ClinicSchedulesCard";
 
+export const dynamic = "force-dynamic";
+
 async function getClinicSchedulesCards() {
   try {
     const res = await fetch(
